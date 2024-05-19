@@ -74,21 +74,21 @@
 
 #### QA：
 
-##### a. 为什么是专业版？旗舰版不是更NB功能更广吗？
+**a. 为什么是专业版？旗舰版不是更NB功能更广吗？**
 
 旗舰版比专业版只多三个主要功能:Bitlocker、Bitlocker To Go和多语言界面。而且专业版被官方支持的时间更久。还有一点，专业版有VL版，而旗舰版没有。  
 虽然我很喜欢Bitlocker（可能挺多人不喜欢吧……），但Windows 7中的Bitlocker是**不能向后兼容**的：Windows 7创建的Bitlocker加密磁盘，可以被Windows 7以后的系统读取；但Windows 8.1以后的系统创建的Bitlocker加密磁盘，无法被Windows 8.1以前的系统读取。既然是个残废那还不如不用。
 
-##### b. 什么是VL版？不是VL版可以吗？
+**b. 什么是VL版？不是VL版可以吗？**
 
 VL是Volume Licensing for organizations的简称，即“团体批量许可证”，面向一次采购大量系统副本的大客户。VL版在安装时不要求立即输入激活密钥，在安装后可以统一通过企业联网激活。
 不是VL版当然可以。提倡支持正版的意识。
 
-##### c. 不下载SP1可以吗？
+**c. 不下载SP1可以吗？**
 
 呃……本教程旨在把所有的更新装完，装完之后不就是SP1了吗……
 
-##### d. 我需要选择64位还是32位安装镜像？
+**d. 我需要选择64位还是32位安装镜像？**
 
 我的推荐是只要CPU支持64位指令集，就选64位的，具体CPU支不支持64位指令集，可以搜索一下。
 
@@ -99,4 +99,21 @@ VL是Volume Licensing for organizations的简称，即“团体批量许可证�
 
 打开Windows Update（控制面板 - 系统和安全 - Windows Update，或者开始菜单 - 所有程序 - Windows Update），点击左边的“检查更新”，然后在弹出更新选项后，选中需要更新的更新。推荐只要列表中针对Windows 7和.net Framework的更新能更新都更新，无论是重要还是可选；对于明确不需要的更新，右键更新 - 忽略来隐藏特定更新。
 
+![WU0.png](WU0.png)  
+~二级菜单的图忘截了~
+
 刚刚装好官方镜像的Windows 7 SP1，系统状态还停留在2011年5月。要让Windows Update能够跟上近年来微软的更新调整，在进行系统更新之前，Windows Update平台应该会先进行自我更新。更新完Windows Update平台后，就可以进一步使用Windows Update自动扫描Windows 7缺失的补丁了。
+
+> 如果想要提前下载离线补丁包对Windows Update平台进行更新，请依次下载并安装以下补丁：  
+[KB3138612 - Windows 7 和 Windows Server 2008 R2 的 Windows 更新客户端：2016 年 3 月](https://www.microsoft.com/zh-CN/download/details.aspx?id=51212)  
+[KB4474419 - 适用于 Windows Server 2008 R2、Windows 7 和 Windows Server 2008 的 SHA-2 代码签名支持更新：2019 年 9 月 23 日](https://catalog.update.microsoft.com/search.aspx?q=kb4474419) - 这个更新也是安装火绒的必需补丁  
+[KB4490628 - Windows 7 SP1 和 Windows Server 2008 R2 SP1 的服务堆栈更新：2019 年 3 月 12 日](https://catalog.update.microsoft.com/search.aspx?q=4490628)  
+[KB4575903 - 适用于 Windows 7 SP1 和 Windows Server 2008 R2 SP1 的扩展安全更新（ESU）许可准备程序包的更新](https://www.catalog.update.microsoft.com/Search.aspx?q=kb4575903)  
+[KB4592510 - 2020-适用于 Windows 7 的 12 服务堆栈更新，适合基于 x64 的系统](https://www.catalog.update.microsoft.com/Search.aspx?q=4592510)  
+由于Windows 7在2020 年1月14日后结束扩展支持，理论上没有续费ESU的Windows 7将无法更新任何补丁号大于KB4522133的补丁。这点将在后面进行说明。
+
+对于隐藏的更新，如果要恢复，在Windows Update中点击左栏的“还原隐藏的更新”。
+
+![WU1.png](WU1.png)
+
+但这基本上是不可能的。
