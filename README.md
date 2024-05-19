@@ -22,7 +22,8 @@ Markdown速查表（经过编辑）：[markdown-cheat-sheet.md](markdown-cheat-s
 
 文章列表：
 
-- [Quirks - 技巧集合](/Quirks%20-%20技巧集合/Quirks%20-%20技巧集合.md)
+- [技巧集合](/Quirks%20-%20技巧集合/Quirks%20-%20技巧集合.md)
+- [制作自己的Windows 7安装镜像](/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)
 
 ---
 
