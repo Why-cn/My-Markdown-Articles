@@ -617,6 +617,8 @@ NTLite在修改完wim镜像后会自动保存在一开始其加载镜像的位�
 
 至此，一个自己的Windows 7安装镜像正式制作完成，可以将其烧录在U盘上（使用如 *[Rufus](https://rufus.ie/)* 一类的软件）制作最新版Windows 7启动盘或者放入虚拟机使用。
 
+// TODO: Placeholder
+
 请注意：
 
 1. 你不该相信网络上任何非微软官方发布的系统安装镜像。
@@ -666,4 +668,3 @@ VirtualBox 7.0.6的VBoxSVGA在Aero特效启动时会产生画面颤动，即使�
 
 - 加入软媒魔方独立程序，内含软媒雷达和软媒虚拟光驱。
 - 更新了ISO安装镜像文件名：windows_7_professional_with_sp2_vl_final_build26321_with_ESU_x64_UEFI_v3_1.iso
-
