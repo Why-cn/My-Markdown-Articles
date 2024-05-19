@@ -440,7 +440,7 @@ UI汉化文件：
 
 ![BypassESU0.png](BypassESU0.png)  
 ![BypassESU1.png](BypassESU1.png)  
-![BypassESU3.webp](BypassESU3.webp)
+![BypassESU2.webp](BypassESU2.webp)
 
 然后，将修改过的 *install.wim* 移动回 *工作文件夹* 的原位置里。
 
@@ -448,4 +448,6 @@ UI汉化文件：
 （试用版NTLite可能存在不稳定的情况。以下操作请尽量一次性完成，即出成果前最好不要涉及到软件的开关。）
 
 首先打开NTLite 2.1，点击 *“映像” - “添加” - “映像文件夹”* ，选择 *工作文件夹* ：
+
+![ntlite1.webp](ntlite1.webp)  
 
