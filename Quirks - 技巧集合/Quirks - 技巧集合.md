@@ -40,9 +40,7 @@
 
 使用任意工具（需要ROOT）打开
 
-```Shell
-/sys/devices/platform/soc/1d84000.ufshc/health_descriptor/
-```
+`/sys/devices/platform/soc/1d84000.ufshc/health_descriptor/`
 
 下面三个文件，其中life_time_estimation_a和life_time_estimation_b一般是相同的可视作一个量，初始健康度这两个值都应该是“0x01”。
 
