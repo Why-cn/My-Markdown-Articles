@@ -486,16 +486,16 @@ DISM++支持Vista至Windows 11所有系统（也包括服务器、ARM、嵌入�
 
 运行时不会出现任何窗口或提示，这是正常现象，请不要惊慌而运行多次。耐心等待20秒~10分钟（取决于想要隐藏的更新多少），最后会 *弹出一个窗口* 提示你有多少更新被成功隐藏了。请注意，**再次运行该更新只会显示新成功隐藏的更新，而不会显示已经隐藏的更新**。
 
-![Windows_Update0.PNG](Windows_Update0.PNG)  
+![Windows_Update0.png](Windows_Update0.png)  
 *(1) 新安装系统第一次检查更新，有多个更新等待安装*  
 
-![Windows_Update1.PNG](Windows_Update1.PNG)  
+![Windows_Update1.png](Windows_Update1.png)  
 *(2) 新安装系统没有隐藏的更新*  
 
 ![Script.png](Script.png)  
 *(3) 正确运行脚本后的弹窗信息。截图仅为示例。*  
 
-![Windows_Update2.PNG](Windows_Update2.PNG)  
+![Windows_Update2.png](Windows_Update2.png)  
 *(4) 正确运行脚本后隐藏的更新。截图仅为示例。*
 
 ### 如何修改？
