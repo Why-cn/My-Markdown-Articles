@@ -237,7 +237,7 @@ certutil -hashfile <文件名> SHA1
 
 ### 6. 下载所有最新离线更新包并归档
 
-按照2-5的操作，你现在应该已经取得了经过Windows清理过的所需更新列表，并手动从微软更新目录中再次筛选出一部分过时更新，并下载到了所有没有被取代的、最新版本的离线更新了。我自己整理的最终更新列表如下（手动删掉了一些空格）：
+按照 *2-5* 的操作，你现在应该已经取得了经过Windows清理过的所需更新列表，并手动从微软更新目录中再次筛选出一部分过时更新，并下载到了所有没有被取代的、最新版本的离线更新了。我自己整理的最终更新列表如下（手动删掉了一些空格）：
 
 （如果你懒得按上面2-5步骤查看需要的更新列表，也可以直接用这个：）
 
@@ -617,12 +617,18 @@ NTLite在修改完wim镜像后会自动保存在一开始其加载镜像的位�
 
 至此，一个自己的Windows 7安装镜像正式制作完成，可以将其烧录在U盘上（使用如 *[Rufus](https://rufus.ie/)* 一类的软件）制作最新版Windows 7启动盘或者放入虚拟机使用。
 
-// TODO: Placeholder
-
-请注意：
+我将在此处放入我自己制作的Windows 7安装镜像，**请注意：**
 
 1. 你不该相信网络上任何非微软官方发布的系统安装镜像。
 2. 即使要安装第三方系统镜像，在应用到实体机前，应先安装在虚拟机上测试其安全性和功能性。
+
+windows_7_professional_with_sp2_vl_final_build26321_with_ESU_x64_UEFI_v3_1.iso，链接：[https://pan.baidu.com/s/1EMmM5hAKPy4mk8h20B1TRQ?pwd=win7](https://pan.baidu.com/s/1EMmM5hAKPy4mk8h20B1TRQ?pwd=win7)
+
+ISO镜像SHA256: 
+
+`da850e20f6aac76d53fa1225710980bb34fc902040a92515cc1a0a46a0011d50`
+
+SP2是我瞎写的，Win7只有SP1。这个镜像的全部制作过程都在上面，如果日后更新，会在文章中同步更新。
 
 我在最近一段时间在虚拟机上测试刚制作的镜像，发现的问题有：
 
@@ -636,13 +642,13 @@ NTLite在修改完wim镜像后会自动保存在一开始其加载镜像的位�
 - 由于没有安装在带有Nvme SSD和USB3.0的实体机上，无法测试Nvme驱动和USB3.0驱动是否生效。
 
 - 资源管理器左边栏设置没有应用。怀疑是OOBE设置家庭组时重置了这些设置。其他设置成功应用。
-VirtualBox 7.0.6的VBoxSVGA在Aero特效启动时会产生画面颤动，即使是安装了VBox来宾系统附加组件驱动。这可能说明VirtualBox 7.0.6的VBoxSVGA的硬件加速功能无法在Windows 7 SP1上实现，使得一些需要硬件加速才能正常显示的软件出现无法显示的问题，尚不清楚是否由于宿主机使用英特尔核显导致。
+- VirtualBox 7.0.6的VBoxSVGA在Aero特效启动时会产生画面颤动，即使是安装了VBox来宾系统附加组件驱动。这可能说明VirtualBox 7.0.6的VBoxSVGA的硬件加速功能无法在Windows 7 SP1上实现，使得一些需要硬件加速才能正常显示的软件出现无法显示的问题，尚不清楚是否由于宿主机使用英特尔核显导致。**20240522更新**：VMware Workstation 17 Pro 17.5.2的VMWare SVGA 3D在Aero特效上没有任何问题。
 
 ## 五、本文的更新
 
 在写完本文的续章——制作自己的Windows 8.1安装镜像时，我又发现了一些我制作的Windows 7 SP2安装镜像中的失误，故在此更新一波。先放续章链接：
 
-// TODO: Placeholder
+[Build your own Windows 8.1 installation image - 制作自己的Windows 8.1安装镜像](../Build%20your%20own%20Windows%208.1%20installation%20image%20-%20制作自己的Windows%208.1安装镜像/Build%20your%20own%20Windows%208.1%20installation%20image%20-%20制作自己的Windows%208.1安装镜像.md)
 
 20230413更新：
 
