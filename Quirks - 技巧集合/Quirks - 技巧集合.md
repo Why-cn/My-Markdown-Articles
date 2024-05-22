@@ -81,9 +81,11 @@ MIUI云控这个事吧，我觉得没必要非得彻底干掉它，第一是完�
 
 以前使用Virtual Box和Hyper-V的时候从来没遇到过这样的问题。我的内存足够给虚拟机开这么多的虚拟内存，完全不需要VMware帮我swap到本地硬盘中。写这段之前通过搜索并编辑了VMware的配置文件.vmx解决了这个问题，不过在切换到Workstation Pro之后发现这个配置可以直接在设置中更改，下面是更改的步骤：
 
-1. 在VMware Workstation中，打开“编辑 - 首选项 - 内存”。
-    <img alt="VMware_RAM.png" src="VMware_RAM.png" width="60%" title="This image has been scaled to 60% of its original size.">
+1. 在VMware Workstation中，打开 *“编辑 - 首选项 - 内存”* 。  
+    <img alt="VMware_RAM0.png" src="VMware_RAM0.png" width="60%" title="This image has been scaled to 60% of its original size.">
 2. 在“额外内存”选项块中，选中“调整所有虚拟机内存使其适应预留的主机 RAM”。
+3. 对于某个虚拟机实例，打开 *虚拟机 - 设置 - 选项 - 高级 - 设置* ，勾选 *“禁用内存页面调整”* 。  
+    <img alt="VMware_RAM1.png" src="VMware_RAM1.png" width="60%" title="This image has been scaled to 60% of its original size.">
 
 这样，VMware便会在主机内存剩余空间足够的情况下，不会再将虚拟机内存转储（或swap）到主机本地硬盘中。因为我是将虚拟机虚拟硬盘放在了机械硬盘中（Windows 7也不需要很高的I/O性能），所以在原来VMware Player总是动不动就swap，导致虚拟机一直卡的不行，这下终于是解决了。
 
