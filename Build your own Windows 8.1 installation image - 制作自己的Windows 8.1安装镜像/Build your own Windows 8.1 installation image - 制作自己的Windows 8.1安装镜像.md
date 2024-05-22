@@ -514,12 +514,18 @@ DISM++支持Vista至Windows 11所有系统（也包括服务器、ARM、嵌入�
 
 至此，一个自己的Windows 8.1安装镜像正式制作完成，可以将其烧录在U盘上（使用如Rufus一类的软件）制作最新版Windows 8.1安装盘或者放入虚拟机使用。
 
-// TODO: Placeholder
-
-**请注意：**
+我将在此处放入我自己制作的Windows 7安装镜像，**请注意：**
 
 1. 你不该相信网络上任何非微软官方发布的系统安装镜像。
 2. 即使要安装第三方系统镜像，在应用到实体机前，应先安装在虚拟机上测试其安全性和功能性。
+
+windows_8.1_pro_vl_final_9600_20778_x64_v2.iso，链接：[https://pan.baidu.com/s/1SjXlLQ3kAPKtXq6q-dXeHw?pwd=win8](https://pan.baidu.com/s/1SjXlLQ3kAPKtXq6q-dXeHw?pwd=win8)
+
+由于上传限制，分割为两个压缩包，ISO镜像SHA256: 
+
+`ec45f6b938624a9e21ef69003cd79349c5c092c9405fd62041db966bdf29242a`
+
+这个镜像的全部制作过程都在上面，如果日后更新，会在文章中同步更新。
 
 我在最近一段时间在虚拟机和一台i3-3240实体机上测试刚制作的镜像。目前发现的问题有：
 
