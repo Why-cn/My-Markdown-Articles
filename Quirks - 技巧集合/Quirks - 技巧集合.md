@@ -83,7 +83,7 @@ MIUI云控这个事吧，我觉得没必要非得彻底干掉它，第一是完�
 
 1. 在VMware Workstation中，打开 *“编辑 - 首选项 - 内存”* 。  
     <img alt="VMware_RAM0.png" src="VMware_RAM0.png" width="60%" title="This image has been scaled to 60% of its original size.">
-2. 在“额外内存”选项块中，选中“调整所有虚拟机内存使其适应预留的主机 RAM”。
+2. 在“额外内存”选项块中，选中 *“调整所有虚拟机内存使其适应预留的主机 RAM”* 。
 3. 对于某个虚拟机实例，打开 *虚拟机 - 设置 - 选项 - 高级 - 设置* ，勾选 *“禁用内存页面调整”* 。  
     <img alt="VMware_RAM1.png" src="VMware_RAM1.png" width="60%" title="This image has been scaled to 60% of its original size.">
 
@@ -122,3 +122,8 @@ Windows Registry Editor Version 5.00
 ## 在Linux上惯用的Markdown编辑器
 
 原本是想在Linux中找一个支持Web App的Markdown编辑器，这样能省得安装一个App来编辑了，顺便还能在Chrome OS中使用。（顺便说一下好像火狐浏览器不支持Web App）找来找去，最后还是[Visual Studio Code网页版](https://vscode.dev/)最好用，因为其能够编辑本地文件并随时保存到本地。结果发现vscode.dev作为Web App无法跨域，也就是说，仅可以编辑.md文件，但无法用链接（相对路径）预览本地图片。最后还是得安装应用。
+
+## 跨平台的局域网间测速工具——iperf3
+
+[iperf3测速服务器搭建和使用指南](https://www.zhihu.com/tardis/bd/art/473778492)
+
