@@ -32,6 +32,7 @@
 [解决VMware Workstation长期占用硬盘和卡顿的问题](#解决vmware-workstation长期占用硬盘和卡顿的问题)  
 [跨平台的局域网间测速工具——iperf3](#跨平台的局域网间测速工具iperf3)  
 [真正的跨平台性能测试工具——Geekbench 6](#真正的跨平台性能测试工具geekbench-6)  
+[局域网临时数据传送，仅需浏览器](#局域网临时数据传送仅需浏览器)
 
 ### 无Tag
 
@@ -165,3 +166,7 @@ Windows Registry Editor Version 5.00
 跨平台性能测试我主要用于测手（折）游（腾）在不同平台上的运行性能（毕竟大型PC游戏也没有比较的必要）。目前来看（粗测，Vulkan），Nvidia GeForce RTX 2060是Apple silicon A15 Bionic的5倍多，A15是Qualcomm Snapdragon 865的2倍。
 
 [Geekbench 6 - Cross-Platform Benchmark](https://www.geekbench.com/)
+
+## 局域网临时数据传送，仅需浏览器
+
+[PairDrop | Transfer Files Cross-Platform. No Setup, No Signup.](https://pairdrop.net/)
