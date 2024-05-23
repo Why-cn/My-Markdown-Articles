@@ -6,6 +6,37 @@
 
 查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“菜单”（⋮☰）按钮。
 
+## 综合目录
+
+根据Tag进行分类的一个综合目录
+
+### Windows
+
+[设置ADB到Windows环境变量中](#设置adb到windows环境变量中)  
+[Windows查询MD5值](#windows查询md5值)  
+[卸载Windows 11小组件](#卸载windows-11小组件)  
+[关闭Windows 11开始菜单的Bing网络搜索](#关闭windows-11开始菜单的bing网络搜索)  
+
+### Andriod
+
+[去除MIUI（6+）开机系统完整性验证（破解卡米）](#去除miui6开机系统完整性验证破解卡米)  
+[安卓手机双系统（同安卓版本，不同ROM）制作](#安卓手机双系统同安卓版本不同rom制作)  
+[安卓设备查看UFS闪存损耗程度（健康信息）](#安卓设备查看ufs闪存损耗程度健康信息)  
+[MIUI查询电池健康](#miui查询电池健康)  
+[MIUI线刷降级报错MiFlash update sparse crc list failed](#miui线刷降级报错miflash-update-sparse-crc-list-failed)  
+[MIUI云控的一些讨论](#miui云控的一些讨论)  
+[监控哪些安卓应用在内部存储空间拉屎](#监控哪些安卓应用在内部存储空间拉屎)  
+
+### 虚拟机与跨平台
+
+[解决VMware Workstation长期占用硬盘和卡顿的问题](#解决vmware-workstation长期占用硬盘和卡顿的问题)  
+[跨平台的局域网间测速工具——iperf3](#跨平台的局域网间测速工具iperf3)  
+[真正的跨平台性能测试工具——Geekbench 6](#真正的跨平台性能测试工具geekbench-6)  
+
+### 无Tag
+
+[在Linux上惯用的Markdown编辑器](#在linux上惯用的markdown编辑器)  
+
 ## 设置ADB到Windows环境变量中
 
 假设 *<ADB文件夹地址>* 为D:\Program Files (UWPfree)\Android Debug Bridge，那么使用Windows徽标键 + R打开“运行”，输入“SYSDM.CPL”，回车打开“系统属性”，点击“高级”选项卡，点击下方“环境变量”按钮，在弹出的“环境变量”页面中选中下方“系统变量”(或“用户变量”)中的“Path”一行，点击“编辑”按钮，在弹出的“编辑环境变量”页面中点击“新建”按钮，然后输入ADB文件夹的地址，一路确定。
@@ -127,3 +158,10 @@ Windows Registry Editor Version 5.00
 
 [iperf3测速服务器搭建和使用指南](https://www.zhihu.com/tardis/bd/art/473778492)
 
+## 真正的跨平台性能测试工具——Geekbench 6
+
+一直用3DMark测综合性能，但是3DMark免不了不支持Linux、Vulkan API需要的功能较多、奇怪的设备上支持较少（比如虚拟机等），Geekbench 6能支持的就比较全面支持Windows、Linux、Android、iOS等，真正的综合分数能跨平台测试的工具。而且Vulkan API要求的功能比较少，像3DMark Wild Life就不能在树莓派4b上的安卓14运行，也不能在Bliss OS 15 Android 12L x86上运行，但Geekbench 6可以。
+
+跨平台性能测试我主要用于测手（折）游（腾）在不同平台上的运行性能（毕竟大型PC游戏也没有比较的必要）。目前来看（粗测，Vulkan），Nvidia GeForce RTX 2060是Apple silicon A15 Bionic的5倍多，A15是Qualcomm Snapdragon 865的2倍。
+
+[Geekbench 6 - Cross-Platform Benchmark](https://www.geekbench.com/)
