@@ -66,7 +66,7 @@ PC端目前便设置好了。
    你可以在下载完系统镜像后，对镜像文件进行SHA256值校验，若其和网站上对应镜像给出的 *“Download”* 按钮下方的 *“Show SHA256 file integrity hash:”* 中的SHA256值相同，则文件没有损坏。  
 2. 下载Rufus镜像刷写软件  
    进入[Rufus - 轻松创建 USB 启动盘](https://rufus.ie/zh/)下载页面，向下滚动，找到 *“下载”* ，选择前两种版本其一即可。  
-   ![Rufus0.png](Rufus0.png)  
+   <img alt="Rufus0.png" src="Rufus0.png" width="70%" title="This image has been scaled to 70% of its original size.">  
    下载后请将其安装或放在某一文件夹下，并启动。
 
 打开Rufus，在 *设备* 处选择你的MicroSD卡。在 *引导类型选择* 处选择 *镜像文件（请选择）* ，点击右边的 *选择* 按钮，选中刚才下载的Raspberry Pi OS系统镜像（本例中为`2024-03-15-raspios-bookworm-arm64.img.xz`）。其余一切选项维持默认。
@@ -77,12 +77,56 @@ PC端目前便设置好了。
 
 待烧录完成后，带有Raspberry Pi OS的MicroSD卡便制作好了。
 
-### 2. 使用树莓派启动Raspberry Pi OS
+### 2. 使用树莓派安装并启动Raspberry Pi OS
 
 将MicroSD卡插入到树莓派中的SD卡读卡器中。将树莓派接入到供电能力在15W及以上的电源中（包括充电宝，这很重要），接入显示输出设备及输入设备。
 
 > 没有任何显示输出设备和输入设备，也可以通过局域网访问远程桌面的方式访问树莓派，并使用远程桌面进行操作。具体方式请在网络上搜索。推荐使用显示输出设备及输入设备，本文也将在此基础上进行说明。
 
-显示器将先显示一个树莓派Logo和一段代码，然后显示一个色盘，最后进入到Raspberry Pi OS OOBE中：
+显示器将先显示一个树莓派Logo和一段代码，然后显示一个色盘，最后进入到Raspberry Pi OS OOBE中：  
+*（此处的截图由运行在x86虚拟机平台下的Raspberry Pi Desktop bullseye截图而来，与树莓派上的安装程序相差不大）*
 
+首先是欢迎语和Logo；待其准备完成后显示新的欢迎语，点击 *“Next”* ：
 
+![Raspberry_Pi_Desktop_11_0.png](Raspberry_Pi_Desktop_11_0.png)  
+![Raspberry_Pi_Desktop_11_1.png](Raspberry_Pi_Desktop_11_1.png)  
+
+设置 *区域和语言* ，完成后点击 *“Next”* 。
+
+![Raspberry_Pi_Desktop_11_2.png](Raspberry_Pi_Desktop_11_2.png)  
+
+创建 *用户* ，输入 *用户名（Enter username）* 并输入两遍 *密码(Enter password和Confirm password)* ，完成后点击 *“Next”* 。请注意：用户名最好不要用常见预留用户名如“root”“pi”。
+
+![Raspberry_Pi_Desktop_11_3.png](Raspberry_Pi_Desktop_11_3.png)  
+
+之后OOBE应该会让你选择 *WiFi接入* 。（由于我是在虚拟机上截的图，默认是主机NAT，此处Raspberry Pi Desktop认为我通过有线网络访问互联网故跳过了WiFi选择，所以此处没有截图。）
+
+我印象中，OOBE还会让你选择安装哪款浏览器：Chromium或火狐，或两款均装；哪种办公套件，LibreOffice或FreeOffice，或两款均装。这个看个人喜好。
+
+在你成功接入网络后，OOBE会提示你是否要进行 *升级系统和软件* 。如果你的网络环境好，可以在此处选择 *“Next”* 进行升级，这在树莓派4B上运行的时间还挺长的，大概要半个小时？当然，你也可以在此处选择 *“Skip”* 暂时跳过升级，在进入桌面后也可以自行升级。
+
+![Raspberry_Pi_Desktop_11_5.png](Raspberry_Pi_Desktop_11_5.png)  
+![Raspberry_Pi_Desktop_11_6.png](Raspberry_Pi_Desktop_11_6.png)  
+
+在升级安装完成后/跳过升级后，OOBE将提示 *安装完成* ，此时点击 *“Restart”* 按钮，重启设备，进入系统。
+
+![Raspberry_Pi_Desktop_11_7.png](Raspberry_Pi_Desktop_11_7.png)  
+
+### 3. 进行必要设置并安装必要软件
+
+**3.1 个性化设置**
+
+    a. 桌面设置
+
+在 *桌面* 上点击 *右键 - 桌面偏好设置* ，进入 *外观设置* ：
+
+![Raspberry_Pi_OS_Appearance.png](Raspberry_Pi_OS_Appearance.png)  
+
+以下为部分设置解释：
+
+> - Desktop（桌面）选项卡：  
+> Picture（壁纸）：选择桌面壁纸  
+> - Menu Bar（菜单栏）选项卡：  
+> Size（图标大小）：调整任务栏图标大小  
+> - System（系统）选项卡：  
+> Theme（主题）：调整系统主题（亮色或暗色）
