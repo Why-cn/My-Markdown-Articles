@@ -38,7 +38,7 @@
 
 首先，确定你安装了Geforce Experience软件，如果没有，可以根据上文*软硬件环境*中的链接进行下载。在安装后需要登陆英伟达账号（一个显卡驱动优化软件为啥还非得登录账号呢），然后点击右上角的 *设置（⚙️）* 图标，点击左边栏的 *“SHIELD”* ，然后打开 *“GAMESTREAM”* 开关。
 
-![Geforce_Experience.png](Geforce_Experience.png)
+![Geforce_Experience_SHIELD0.png](Geforce_Experience_SHIELD0.png)
 
 PC端目前便设置好了。
 
@@ -191,8 +191,70 @@ curl -1sLf 'https://dl.cloudsmith.io/public/moonlight-game-streaming/moonlight-q
 sudo apt install moonlight-qt
 ```
 
-（因为写文章的时候已将装完了所以没得截图）正常情况下，安装应该是无人值守的，直接一步到完成。安装完成后，在 *“开始菜单 - 游戏”* 中应该会存在 *“Moonlight”* 。（图见 *三、3.2 b* ）
+（因为写文章的时候已将装完了所以没得截图）正常情况下，安装应该是无人值守的，直接一步到完成。安装完成后，在 *“开始菜单 - 游戏”* 中应该会存在 *“Moonlight”* 。（图见 *二、3.1 b* ）
 
-## 三、进行连接测试（可选）
+## 三、进行局域网速度测试（可选）
 
+因为串流是要通过网络传输编码的视频数据包，因此一个稳定而快速的网络环境是很有必要的。常见的网络测速方式，如speedtest.net，只能测试与互联网的连接速度，并不能测局域网内设备间的连接速度。因此，可以使用一款名为iperf的开源软件进行局域网内测速，目前已经发展到第三代，可根据下面的文章进行测试，在此不再赘述。本节的操作不是必要的，但能让你对你所处的局域网性能有一个基础的认识。
 
+[iperf3测速服务器搭建和使用指南](https://www.zhihu.com/tardis/bd/art/473778492)
+
+文章中仅介绍了iperf3在Windows端和安卓/iOS端进行测速的操作，这里补充一下在树莓派上的操作：
+
+由于局域网间互传基本属于等价双向的（除非你的硬件或设置造成了某设备上传和下载产生明显差异），因此，如果要测试设备A和设备B之间的传输速度，没有必要非得指定其中的某一设备为服务端而另一端为客户端，两端角色可互换。本节将以PC作为服务端，其他所有设备作为客户端来测试。
+
+在树莓派的终端中执行以下命令来安装iperf3：
+
+```Shell
+sudo apt install iperf3
+```
+
+一般来说，apt将会一同安装两个支持库，然后在安装过程中问你要不要将iperf3安装为一项服务，这样每次树莓派开机后都会在后台自动运行一个iperf3。这个看个人喜好，我由于不是每次开机都想测速就不装了。 *（再次忘截图了，欸嘿）*
+
+如何获知服务端的局域网DHCP IP地址？对于Windows 11，可以打开 *“开始菜单 - 设置 - 网络和 Internet - <你目前连接局域网的网络> - 属性 - IPv4 地址：”* 来获取；或者直接在 *Windows命令提示符* 或 *终端* 中输入
+
+```PowerShell
+ipconfig
+```
+
+在输出的结果中，找到目前你连接的网络，然后找到其中的 *“IPv4 地址”* ，后面的一串数字便是你这台Windows设备的局域网DHCP IP地址。如果不知道哪个是正在连接的网络，只要找到以`192.168`开头的、不以`0`或`1`结尾的地址，一般就是本机的局域网DHCP IP地址。
+
+<img alt="ipconfig.png" src="ipconfig.png" width="70%" title="This image has been scaled to 70% of its original size.">  
+
+之后你就可以按照上面的知乎文章在树莓派上用iperf3作为客户端进行测速了。
+
+<img alt="iperf3局域网速度测试_20240527_18h44m19s.png" src="iperf3局域网速度测试_20240527_18h44m19s.png" width="80%" title="This image has been scaled to 80% of its original size.">  
+
+可见在我的PC - 路由器 - 树莓派4B的环境中，局域网传输速度约为100 Mbps (12.5 MB/s)。
+
+虽然树莓派4B上的这块 *博通BCM4345/6 Wifi芯片* 在5Ghz（IEEE 802.11ac）下的理论最高速度为433.3 Mbps（[来源](https://www.digikey.de/htmldatasheets/production/1955355/0/0/1/bcm43455.html)），但我搜到的大部分测速结果都封顶在110 Mbps左右，那我估计树莓派4B的Wifi性能也就到这了。但树莓派4B上的有线网络可是用的实打实的千兆网卡，所以如果条件允许，还是推荐接入有线网络到路由器。 *（但我不想在床上拉网线就算了）* 
+
+***对照对比：***
+
+**树莓派4B安装[LineageOS 21 (Android 14)](https://konstakang.com/devices/rpi4/LineageOS21/)** 运行iperf3测速结果：
+
+![iperf3局域网速度测试_20240522-204746.png](iperf3局域网速度测试_20240522-204746.png)
+
+可能是运行效率或者驱动的问题，其封顶在约85 Mbps且极不稳定。在该平台上串流的效果不是很理想：
+
+![Moonlight串流测试_(1080p60默认码率)20240522-222043.png](Moonlight串流测试_(1080p60默认码率)20240522-222043.png)
+
+左上角基本一目了然了。
+
+**iPhone 13 mini** 运行iperf3测速结果：
+
+<img alt="对比：iPhone%2013%20mini_iperf3局域网速度测试_20240522.png" src="对比：iPhone%2013%20mini_iperf3局域网速度测试_20240522.png" width="40%" title="This image has been scaled to 40% of its original size.">  
+
+速度快效果就好吗？其实根本卡的不能玩：
+
+![对比：iPhone%2013%20mini_Moonlight串流测试_(1125p60默认码率)20240404-0138.png](对比：iPhone%2013%20mini_Moonlight串流测试_(1125p60默认码率)20240404-0138.png)
+
+但Moonlight强大的一点是，我在这三个平台上的输入基本无感延迟，无论画面卡不卡。
+
+## 四、使用Moonlight Qt客户端进行串流游戏
+
+打开树莓派上的Moonlight客户端，因为在 *一、* 中已经设置好了Geforce Experience SHIELD Gamestream或Sunshine，所以此时在 *计算机列表* 中应该直接出现局域网上的PC服务端：
+
+<img alt="Moonlight0.png" src="Moonlight0.png" width="40%" title="This image has been scaled to 40% of its original size.">  
+
+其中显示的计算机名为你的PC的计算机名（Network ID）。
