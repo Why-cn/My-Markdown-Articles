@@ -101,7 +101,7 @@ PC端目前便设置好了。
 
 之后OOBE应该会让你选择 *WiFi接入* 。（由于我是在虚拟机上截的图，默认是主机NAT，此处Raspberry Pi Desktop认为我通过有线网络访问互联网故跳过了WiFi选择，所以此处没有截图。）
 
-我印象中，OOBE还会让你选择安装哪款浏览器：Chromium或火狐，或两款均装；哪种办公套件，LibreOffice或FreeOffice，或两款均装。这个看个人喜好。
+我印象中，OOBE还会让你选择安装哪款浏览器：Chromium或火狐，或两款均装。这个看个人喜好。
 
 在你成功接入网络后，OOBE会提示你是否要进行 *升级系统和软件* 。如果你的网络环境好，可以在此处选择 *“Next”* 进行升级，这在树莓派4B上运行的时间还挺长的，大概要半个小时？当然，你也可以在此处选择 *“Skip”* 暂时跳过升级，在进入桌面后也可以自行升级。
 
@@ -114,9 +114,9 @@ PC端目前便设置好了。
 
 ### 3. 进行必要设置并安装必要软件
 
-**3.1 个性化设置**
+#### 3.1 个性化设置
 
-    a. 桌面设置
+**a. 桌面设置**
 
 在 *桌面* 上点击 *右键 - 桌面偏好设置* ，进入 *外观设置* ：
 
@@ -128,5 +128,71 @@ PC端目前便设置好了。
 > Picture（壁纸）：选择桌面壁纸  
 > - Menu Bar（菜单栏）选项卡：  
 > Size（图标大小）：调整任务栏图标大小  
+> Position（任务栏位置）：调整任务栏位置（屏幕上方或下方）  
 > - System（系统）选项卡：  
 > Theme（主题）：调整系统主题（亮色或暗色）
+
+**b. 任务栏设置**
+
+![Raspberry_Pi_OS_Taskbar.png](Raspberry_Pi_OS_Taskbar.png)  
+
+> - 红色：编辑任务栏组件  
+> 在任务栏上 *右键* ，选择 *“Add/Remove Plugins”* ，在弹出的窗口中编辑任务栏组件。在本例中，任务栏添加了CPU占用率、SoC温度、GPU占用率监控图表。  
+> - 蓝色：固定开始菜单项到任务栏  
+> 在 *开始菜单项* 上 *右键* ，选择 *“Add to Launcher”* ，即可将开始菜单项固定到任务栏。  
+> - 绿色：取消固定到任务栏  
+> 在 *已固定到任务栏的项目* 上 *右键* ，选择 *“Remove from Launcher”* ，即可将已固定到任务栏的项目移除。
+
+**c. 高刷新率设置（当接入到显示输出设备且设备支持高刷新率）**
+
+![Raspberry_Pi_OS_Screen.png](Raspberry_Pi_OS_Screen.png)  
+
+> 选择 *“开始菜单 - 首选项 - Screen Configuration”* ，在弹出的 *“Screen Layout Editor”* 窗口中，选择 *“布局 - Screens - <你目前插入的HDMI口> - Frequency”* ，选择你喜欢的屏幕刷新率。然后，点击 *“Apply”* 使之生效，屏幕此时应该会更改为你选择的刷新率。若显示正常，则在弹出的窗口选择确认。
+
+**d. 时区设置与Wifi地区设置**
+
+![Raspberry_Pi_OS_Localization.png](Raspberry_Pi_OS_Localization.png)  
+
+#### 3.2 安装Xbox手柄驱动
+
+默认情况下Raspberry Pi OS是不安装手柄驱动的。要安装Xbox手柄驱动，需要先打开命令行终端。选择 *“开始菜单 - 附件 - LX 终端”* ，或者按下 *“Ctrl + Alt + T”* ，打开 *LX 终端* 。
+
+如果想要调整终端中的字体大小，可以使用 *“Ctrl + Shift + =”，“Ctrl + Shift + -”* 。
+
+首先输入如下语句，对系统和软件进行完整升级；如果在安装Raspberry Pi OS时进行了 *升级系统和软件* ，则此处执行如下语句应该不会有什么变化：  
+```Shell
+sudo apt update
+sudo apt upgrade
+```  
+在Windows中你不升级可能还能用各种软件，在Linux中最好还是升级了吧。然后执行以下语句，安装Xbox手柄驱动：  
+```Shell
+sudo apt install xboxdrv
+```  
+
+<img alt="Terminal.png" src="Terminal.png" width="70%" title="This image has been scaled to 70% of its original size.">  
+
+打开浏览器搜索“在线手柄测试”，测试手柄是否正确连接且被系统识别。下面是一个支持在线手柄测试的网站：
+
+[Gamepad Tester - Check Controllers and Joysticks Online](https://hardwaretester.com/gamepad)
+
+你可能需要重新插拔Xbox手柄并按一下西瓜键来激活它。当手柄输入在网站上有反应，那么手柄工作正常。*（我只测试了有线连接因为没钱买Xbox专用无线接收器。DS4手柄没带来所以也没测试。）*
+
+![Gamepad_Tester.png](Gamepad_Tester.png)
+
+#### 3.3 安装Moonlight Qt客户端
+
+建议跟着官方安装指南进行安装，因为官方的文档总是最新最合适的：
+
+[Installing Moonlight Qt on Raspberry Pi 4 · moonlight-stream/moonlight-docs Wiki](https://github.com/moonlight-stream/moonlight-docs/wiki/Installing-Moonlight-Qt-on-Raspberry-Pi-4)
+
+请确保你在上一步中将系统更新到最新。在终端中运行以下命令（直接整个复制粘贴到终端中并按回车键运行）：  
+```Shell
+curl -1sLf 'https://dl.cloudsmith.io/public/moonlight-game-streaming/moonlight-qt/setup.deb.sh' | distro=raspbian codename=$(lsb_release -cs) sudo -E bash
+sudo apt install moonlight-qt
+```
+
+（因为写文章的时候已将装完了所以没得截图）正常情况下，安装应该是无人值守的，直接一步到完成。安装完成后，在 *“开始菜单 - 游戏”* 中应该会存在 *“Moonlight”* 。（图见 *三、3.2 b* ）
+
+## 三、进行连接测试（可选）
+
+
