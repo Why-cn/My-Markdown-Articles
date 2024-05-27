@@ -25,6 +25,7 @@ Markdown速查表（经过编辑）：[markdown-cheat-sheet.md](markdown-cheat-s
 - [技巧集合](/Quirks%20-%20技巧集合/Quirks%20-%20技巧集合.md)
 - [制作自己的Windows 7安装镜像](/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)
 - [制作自己的Windows 8.1安装镜像](/Build%20your%20own%20Windows%208.1%20installation%20image%20-%20制作自己的Windows%208.1安装镜像/Build%20your%20own%20Windows%208.1%20installation%20image%20-%20制作自己的Windows%208.1安装镜像.md)
+- [用树莓派躺床上玩PC游戏](Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)
 
 ---
 
