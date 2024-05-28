@@ -327,10 +327,8 @@ Geekbench 6是一个我很喜欢用的跨平台设备性能基准测试工具（
 然后，Geekbench-LinuxARMPreview便会开始对树莓派的CPU处理性能进行测试。测试完成后，如果树莓派已经连接到互联网，测试结果会自动上传到Geekbench的数据库中，在命令行的最后将给出一个类似于`https://browser.geekbench.com/v6/cpu/???????`的链接，进入该链接便可获取到详细的测试结果。
 
 ![Geekbench-LinuxARMPreview1.png](Geekbench-LinuxARMPreview1.png)  
+![Geekbench-LinuxARMPreview3.png](Geekbench-LinuxARMPreview3.png)  
+*（这个红框中的链接就是测试结果，是的我又忘截图了，从另一台Linux电脑上跑了一遍，然后新截的图）*  
 <img alt="Geekbench-LinuxARMPreview2.png" src="Geekbench-LinuxARMPreview2.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 
-虽然Geekbench 6已经算是最能跨平台的测试工具了，但在GPU测试这方面还是没法对多样的API和驱动做到面面俱到。理论上，Linux上的Geekbench 6应该能通过`TODO`命令对GPU性能进行测试，但Geekbench-LinuxARMPreview并没有检测到运行在Raspberry Pi OS上的树莓派4B的GPU，也就无法对其进行GPU测试。查看Geekbench 6能够检测到哪些硬件，可以运行以下命令：  
-```Shell
-./geekbench6 --sysinfo
-```  
-其结果如上面的终端截图类似。此处没有显示`TODO`和对应的API，表示Geekbench 6不支持树莓派4B的GPU。
+虽然Geekbench 6已经算是最能跨平台的测试工具了，但在GPU测试这方面还是没法对多样的API和驱动做到面面俱到。目前这个前瞻版的Geekbench-LinuxARM貌似无法针对在Linux ARM上的设备进行GPU基准测试。
