@@ -251,10 +251,58 @@ ipconfig
 
 但Moonlight强大的一点是，我在这三个平台上的输入基本无感延迟，无论画面卡不卡。
 
-## 四、使用Moonlight Qt客户端进行串流游戏
+## 四、使用Moonlight Qt客户端进行串流
 
 打开树莓派上的Moonlight客户端，因为在 *一、* 中已经设置好了Geforce Experience SHIELD Gamestream或Sunshine，所以此时在 *计算机列表* 中应该直接出现局域网上的PC服务端：
 
 <img alt="Moonlight0.png" src="Moonlight0.png" width="40%" title="This image has been scaled to 40% of its original size.">  
 
-其中显示的计算机名为你的PC的计算机名（Network ID）。
+其中显示的PC服务端计算机名为你的PC的计算机名（Network ID）。
+
+点击它进行连接，Moonlight客户端将提供给你一个4位数字配对码，同时在PC上将会相应地要求你输入这个配对码： *（本节仅介绍Geforce Experience SHIELD Gamestream）* 
+
+<img alt="Moonlight1.png" src="Moonlight1.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+<img alt="Geforce_Experience_SHIELD1.png" src="Geforce_Experience_SHIELD1.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+PC服务端确定输入配对码正确后，服务端和客户端正式建立连接。此时在Moonlight客户端中，PC服务端计算机上面的锁应该会消失。
+
+<img alt="Moonlight2.png" src="Moonlight2.png" width="40%" title="This image has been scaled to 40% of its original size.">  
+
+点击PC服务端计算机图标，进入到服务端应用列表。默认情况下，Geforce Experience SHIELD Gamestream服务端会给出一个Steam图标（如果你在服务端安装了Steam），Sunshine服务端会给出Steam和桌面。关于如何配置PC服务端中的应用列表，请见 *一、* 中的链接。
+
+<img alt="Moonlight3.png" src="Moonlight3.png" width="40%" title="This image has been scaled to 40% of its original size.">  
+
+调整Moonlight客户端串流的设置，请点击应用右上角的*设置（⚙️）* 图标。对于Moonlight串流，客户端占主导地位，因此画质设置等一般情况下服务端会根据客户端设置进行优化。对于Sunshine，其提供了更多的服务端手动设置和覆盖选项。关于如何进行这些设置，请见 *一、* 中的链接。
+
+![Moonlight4.png](Moonlight4.png)  
+*提醒下(一开始我就理解错了)“视频比特率”指的是串流的视频流的比特率而不是网络连接速率，Moonlight会尝试网络连接能够运行的最大速率，比如我目前的速率大概能稳定在95 Mbps，那么Moonlight将使用剩下的95 - 24 = 71 Mbps来优化串流体验（并不会把全部的带宽都占用到）。如果24 Mbps下的串流速度体验十分流畅，那么适当提高视频比特率将带来更好的串流画质体验，但也会更考验局域网网络质量。*
+
+点击应用图标，开始串流并打开服务端相应的应用。
+
+![Moonlight_Streaming0.png](Moonlight_Streaming0.png)  
+*体验强于手机很多，左上角的统计信息也可看出这一点*
+
+**最终成品：**
+
+<img alt="Final.jpeg" src="Final.jpeg" width="50%" title="This image has been scaled to 50% of its original size.">  
+
+如果要进一步减少设备复杂度，可以使用双口输出均大于15w的充电宝给便携屏和树莓派供电，Xbox手柄也可以使用专用无线接收器并将其直接插在PC上，鼠标侧键可录制宏来一键开关统计信息、暂停串流等。其实如果有大屏电视，尤其是装在那种可移动画架式电视支架上的，那在床上/客厅沙发上只拿一个手柄就够了。
+
+但这套玩玩PC上的手游这种还行，大型3A游戏还是坐在电脑桌前玩吧。
+
+## 五、杂项
+
+### 1. 显示统计信息
+
+在Moonlight串流时显示统计信息（视频流、解码、网络等）：按下 *“Ctrl + Alt + Shift + S”*。统计信息将显示在串流画面的左上角，图见 *四、* 。
+
+目前（202405），Moonlight Qt客户端并未在设置中添加如手机客户端那样的全局开启开关，但可能在不远的将来将会推出这一功能（见此[Pull request](https://github.com/moonlight-stream/moonlight-qt/pull/1209)）。
+
+### 2. 使用手柄暂停串流
+
+如果是Xbox手柄，按下 *“LB + RB + View + Menu”* ；对于DS手柄，按下 *“L1 + R1 + Select + Start”* 。
+
+### 3. 使用PC上的无线耳机
+
+先将无线耳机连接到PC并设定为默认输出设备。取消勾选Moonlight客户端设置中的 *“音频设置 - 流式传输启动时将目标计算机的扬声器静音”* 。如果树莓派连接到了音频输出，断开音频或者将树莓派静音。
+
