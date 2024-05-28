@@ -310,3 +310,27 @@ PC服务端确定输入配对码正确后，服务端和客户端正式建立连
 
 先将无线耳机连接到PC并设定为默认输出设备。取消勾选Moonlight客户端设置中的 *“音频设置 - 流式传输启动时将目标计算机的扬声器静音”* 。如果树莓派连接到了音频输出，断开音频或者将树莓派静音。
 
+### 4. Geekbench-LinuxARMPreview
+
+Geekbench 6是一个我很喜欢用的跨平台设备性能基准测试工具（也因为实在找不到别的类似的工具），可以跨Windows、MacOS、Linux、安卓和iOS平台进行基准测试。对于Linux平台，其官网仅提供了Linux x86下的软件包下载，其实他们有Linux ARM下的软件包，但其为测试版，所以就不在仅提供稳定版的官网上提供下载了。我找到一个提供Geekbench 6测试版软件包下载的网站：
+
+[geekbench packages dissection - Repology](https://repology.org/project/geekbench/information)
+
+向下滚动网页，在 *“Download”* 部分，找到文件名为`Geekbench-6.<最新版本>-LinuxARMPreview.tar.gz`。比如目前（202405）Geekbench 6的最新版本为6.3.0，那么应该下载的文件就是`Geekbench-6.3.0-LinuxARMPreview.tar.gz`。
+
+![Geekbench-LinuxARMPreview0.png](Geekbench-LinuxARMPreview0.png)
+
+下载之后，可以通过Archiver解压到一个有用户操作权限的路径内 *（又忘截图了）* 。打开Raspberry Pi OS中的 *“文件管理器 PCManFM”*，导航到该路径后按下 *F4键* （或 *“工具 - 在终端中打开当前文件夹”* ），然后在打开的 *LX 终端* 窗口中，输入  
+```Shell
+./geekbench6
+```  
+然后，Geekbench-LinuxARMPreview便会开始对树莓派的CPU处理性能进行测试。测试完成后，如果树莓派已经连接到互联网，测试结果会自动上传到Geekbench的数据库中，在命令行的最后将给出一个类似于`https://browser.geekbench.com/v6/cpu/???????`的链接，进入该链接便可获取到详细的测试结果。
+
+![Geekbench-LinuxARMPreview1.png](Geekbench-LinuxARMPreview1.png)  
+<img alt="Geekbench-LinuxARMPreview2.png" src="Geekbench-LinuxARMPreview2.png" width="80%" title="This image has been scaled to 80% of its original size.">  
+
+虽然Geekbench 6已经算是最能跨平台的测试工具了，但在GPU测试这方面还是没法对多样的API和驱动做到面面俱到。理论上，Linux上的Geekbench 6应该能通过`TODO`命令对GPU性能进行测试，但Geekbench-LinuxARMPreview并没有检测到运行在Raspberry Pi OS上的树莓派4B的GPU，也就无法对其进行GPU测试。查看Geekbench 6能够检测到哪些硬件，可以运行以下命令：  
+```Shell
+./geekbench6 --sysinfo
+```  
+其结果如上面的终端截图类似。此处没有显示`TODO`和对应的API，表示Geekbench 6不支持树莓派4B的GPU。
