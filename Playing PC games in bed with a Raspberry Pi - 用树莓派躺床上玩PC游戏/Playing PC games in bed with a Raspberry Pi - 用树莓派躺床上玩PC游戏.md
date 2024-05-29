@@ -73,9 +73,9 @@ PC端目前便设置好了。
 
 <img alt="Rufus1.png" src="Rufus1.png" width="40%" title="This image has been scaled to 40% of its original size.">
 
-准备完成后，点击 *“开始”* 按钮，对MicroSD卡进行系统烧录。再次提醒：此操作会抹掉MicroSD卡上的所有数据，如有重要数据请提前进行备份。
+准备完成后，点击 *“开始”* 按钮，对MicroSD卡进行系统刷写。再次提醒：此操作会抹掉MicroSD卡上的所有数据，如有重要数据请提前进行备份。
 
-待烧录完成后，带有Raspberry Pi OS的MicroSD卡便制作好了。
+待刷写完成后，带有Raspberry Pi OS的MicroSD卡便制作好了。
 
 ### 2. 使用树莓派安装并启动Raspberry Pi OS
 
@@ -332,3 +332,37 @@ Geekbench 6是一个我很喜欢用的跨平台设备性能基准测试工具（
 <img alt="Geekbench-LinuxARMPreview2.png" src="Geekbench-LinuxARMPreview2.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 
 虽然Geekbench 6已经算是最能跨平台的测试工具了，但在GPU测试这方面还是没法对多样的API和驱动做到面面俱到。目前这个前瞻版的Geekbench-LinuxARM貌似无法针对在Linux ARM上的设备进行GPU基准测试。
+
+### 5. 树莓派4B安装Windows 11 on ARM
+
+跟着Windows on R官方教程做就可以。  
+[Home | Windows on R](https://worproject.com/)
+
+有几点要提出的：
+1. 目前（202405）来看，Windows on R项目目前进度很慢接近停滞。原因可能见下面的 *3.* 。
+2. 目前Windows on R项目不支持树莓派4B上的 *博通BCM4345/6 Wifi芯片* 。官方支持基于 *瑞昱 RTL8187 Wifi芯片* 的外围设备（见[FAQ | Windows on R](https://worproject.com/faq#usb-wi-fi-drivers)）。树莓派4B上有线网络可以正常工作。
+3. Windows Build 22621 (22H2)之后的Windows 11引入了大量ARM v8.1的专有指令，这是不被树莓派4B的博通BCM2711中的Cortex-A72所支持的；微软可能是将主力调整为面向将来可能推出的高通骁龙X Plus的Windows PC而放弃了对相对较老的不支持新ARM v8.1指令集的设备的兼容性支持。  
+树莓派5的博通BCM2712中的Cortex-A76支持新的ARM v8.1指令集，但Windows on R项目官方表面不支持树莓派5：[FAQ | Windows on R](https://worproject.com/faq#is-raspberry-pi-5-or-newer-supported)  
+我自己测试Build 22621.1072可以在树莓派4B上运行。因此221219之前的Windows on ARM系统镜像应该都可以在树莓派4B上运行，之后的不保证。  
+4. 镜像刷写器Windows on Raspberry imager支持esd系统镜像。Windows on ARM esd系统镜像可在Windows on R项目官方获取：[ESD Image Downloader | Windows on R](https://worproject.com/esd)  
+<img alt="WoR0.png" src="WoR0.png" width="50%" title="This image has been scaled to 50% of its original size.">  
+*图中选项仅为参考*  
+5. **重要：低速MicroSD卡会导致系统卡在安装过程/重启反复显示安装失败！如果遇到这样的情况，尝试更换为高速MicroSD卡或使用U盘/M.2硬盘/USB移动硬盘作为系统引导设备。**  
+*亲身经历，低速MicroSD卡真的装不来，21年试过装Windows on ARM怎么也装不上，试过各种办法就是没怀疑过是卡的问题😂换了USB 3.1 U盘终于装上了。这里的低速并不是指顺序读写速度慢，而是随机读写（random I/O）速度慢。*  
+6. 使用高速MicroSD卡安装Windows 11 on ARM，可能需要在启动时按ESC先进入 *UEFI设置页面 - Boot Maintenance Manager* 调整启动顺序，把SD/MMC开头的调到第一位。默认情况下可能先从网络启动，需要等待约半小时后轮询到SD卡。使用U盘安装没遇到这个问题，但还是推荐先进UEFI看一下。
+7. 首次安装Windows on ARM，在进入OOBE前**请不要进行任何干预！安装过程超过45分钟后再考虑是不是安装过程卡住了。** 在此期间强行退出或断电将造成安装镜像损坏，只能重新刷写！
+8. 如果OOBE要求必须联网，可以按 *Shift + F10* 打开 *命令提示符* ，输入  
+   ```PowerShell
+   oobe\bypassnro
+   ```  
+   来跳过必须联网的要求。此时会自动重启，重启后便可以跳过联网。
+9. Windows on ARM启动进入桌面以后，可以重启进入 *UEFI设置页面 - Device Manager - Raspberry Pi Configuration - Advanced Configuration* 中解除3GB内存限制，这样就能用4G/8G内存了。有说用Windows 11的话不能首次启动就改，不然会卡在正在准备设备，我没试。  
+
+安装成果：
+
+![WoR1.png](WoR1.png)
+
+但是Geekbench 6跑不起来：
+
+![WoR2.png](WoR2.png)  
+*Geekbench 6支持Windows on ARM不过我卸了之后才想起来要检查一下是不是真跑的是ARM编译版本，懒了也不想装回来了*
