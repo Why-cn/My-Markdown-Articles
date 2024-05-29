@@ -345,8 +345,8 @@ Geekbench 6是一个我很喜欢用的跨平台设备性能基准测试工具（
 树莓派5的博通BCM2712中的Cortex-A76支持新的ARM v8.1指令集，但Windows on R项目官方表面不支持树莓派5：[FAQ | Windows on R](https://worproject.com/faq#is-raspberry-pi-5-or-newer-supported)  
 我自己测试Build 22621.1072可以在树莓派4B上运行。因此221219之前的Windows on ARM系统镜像应该都可以在树莓派4B上运行，之后的不保证。  
 4. 镜像刷写器Windows on Raspberry imager支持esd系统镜像。Windows on ARM esd系统镜像可在Windows on R项目官方获取：[ESD Image Downloader | Windows on R](https://worproject.com/esd)  
-<img alt="WoR0.png" src="WoR0.png" width="50%" title="This image has been scaled to 50% of its original size.">  
-*图中选项仅为参考*  
+   <img alt="WoR0.png" src="WoR0.png" width="50%" title="This image has been scaled to 50% of its original size.">  
+   *图中选项仅为参考*  
 5. **重要：低速MicroSD卡会导致系统卡在安装过程/重启反复显示安装失败！如果遇到这样的情况，尝试更换为高速MicroSD卡或使用U盘/M.2硬盘/USB移动硬盘作为系统引导设备。**  
 *亲身经历，低速MicroSD卡真的装不来，21年试过装Windows on ARM怎么也装不上，试过各种办法就是没怀疑过是卡的问题😂换了USB 3.1 U盘终于装上了。这里的低速并不是指顺序读写速度慢，而是随机读写（random I/O）速度慢。*  
 6. 使用高速MicroSD卡安装Windows 11 on ARM，可能需要在启动时按ESC先进入 *UEFI设置页面 - Boot Maintenance Manager* 调整启动顺序，把SD/MMC开头的调到第一位。默认情况下可能先从网络启动，需要等待约半小时后轮询到SD卡。使用U盘安装没遇到这个问题，但还是推荐先进UEFI看一下。
