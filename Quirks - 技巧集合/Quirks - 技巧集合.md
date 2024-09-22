@@ -13,7 +13,7 @@
 ### Windows
 
 [设置ADB到Windows环境变量中](#设置adb到windows环境变量中)  
-[Windows查询MD5值](#windows查询md5值)  
+[Windows查询校验和](#windows查询校验和)  
 [卸载Windows 11小组件](#卸载windows-11小组件)  
 [关闭Windows 11开始菜单的Bing网络搜索](#关闭windows-11开始菜单的bing网络搜索)  
 
@@ -80,10 +80,10 @@
 
 <img alt="bPreEOLInfo.jpg" src="bPreEOLInfo.jpg" width="40%" title="This image has been scaled to 40% of its original size.">
 
-## Windows查询MD5值
+## Windows查询校验和
 
 ```PowerShell
-certutil -hashfile <文件路径> MD5
+certutil -hashfile <文件路径> <校验算法>
 ```
 ![certutil.png](certutil.png)
 
