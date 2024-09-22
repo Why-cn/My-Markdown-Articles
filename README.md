@@ -16,7 +16,7 @@ Article list:
 
 一个储存我的文章的库，旨在将以前和之后写的文章储存在一种便携的、有一定规范的、开源的格式中。
 
-文章先写于中文，然后翻译为英文。如有严重语义错误，请在issue中提出，谢谢。
+文章先写于中文，然后翻译为英文。如有严重语义错误，请在issues中提出，谢谢。
 
 Markdown速查表（经过编辑）：[markdown-cheat-sheet.md](markdown-cheat-sheet.md)
 
@@ -27,6 +27,7 @@ Markdown速查表（经过编辑）：[markdown-cheat-sheet.md](markdown-cheat-s
 - [制作自己的Windows 8.1安装镜像](/Build%20your%20own%20Windows%208.1%20installation%20image%20-%20制作自己的Windows%208.1安装镜像/Build%20your%20own%20Windows%208.1%20installation%20image%20-%20制作自己的Windows%208.1安装镜像.md)
 - [用树莓派躺床上玩PC游戏](/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)
 - [解决Windows下某些AI工具整合包中的PyTorch无法启用的问题](/Solve%20Torch%20is%20not%20able%20to%20use%20GPU%20-%20解决Windows下某些AI工具整合包中的PyTorch无法启用的问题/Solve%20Torch%20is%20not%20able%20to%20use%20GPU%20-%20解决Windows下某些AI工具整合包中的PyTorch无法启用的问题.md)
+- [Windows 11 + Kubuntu双系统安全启动和使用体验](Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)
 
 ---
 
