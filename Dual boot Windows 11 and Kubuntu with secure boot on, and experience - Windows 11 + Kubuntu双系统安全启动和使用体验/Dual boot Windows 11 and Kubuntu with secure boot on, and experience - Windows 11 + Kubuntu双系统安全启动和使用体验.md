@@ -6,9 +6,11 @@
 
 ---
 
+![Cover.png](Cover.png)
+
 网络上有很多关于使Windows 10以上的Windows系统和Linux系统多重启动的文章，第一件事便是要求关闭UEFI中的安全启动功能，甚至这算作是一项必要条件。我理解很多Linux用户对于微软主导的安全启动嗤之以鼻甚至恨之入骨（见过有的Arch Linux社区问安全启动就关帖），但是吧，我认为安全启动还是有一定可取之处的。比如说我主力平台是Windows 11，而且Bitlocker对于我来说是真的有用😂。所以还是不想在关闭安全启动的情况下，希望Linux和Windows可以共存。
 
-在之前弃过坑的，在电脑上使用Manjaro Linux并尝试安全启动多种方式多次失败之后（超长的挫败历程），最后只能遗憾地其装进虚拟机。之前（202405）再次尝试再次失败（在联想拯救者R9000P 2020上，MokManager死活无法录入rEFInd的签名，不知道是不是主板限制）。不过听说这几年终于有Linux发行版将其引导efi文件签入了安全启动密钥库，其中就有大名鼎鼎的Ubuntu。Arch系及其衍生发行版如Manjaro Linux极度痛恨安全启动，就别想了。由于之前使用Manjaro KDE Plasma给我留下了很深的印象，我非常想要继续在KDE Plasma上的桌面体验，于是便找到了Kubuntu——默认使用KDE Plasma桌面的Ubuntu分支。
+在之前弃过坑的，在PC上使用Manjaro Linux并尝试安全启动，在多种方式多次失败之后（超长的挫败历程），最后只能遗憾地其装进虚拟机。之前（202405）再次尝试再次失败（在联想拯救者R9000P 2020上，MokManager死活无法录入rEFInd的签名，不知道是不是主板限制）。不过听说这几年终于有Linux发行版将其引导efi文件签入了安全启动密钥库，其中就有大名鼎鼎的Ubuntu。Arch系及其衍生发行版如Manjaro Linux极度痛恨安全启动，就别想了。由于之前使用Manjaro KDE Plasma给我留下了很深的印象，我非常想要继续在KDE Plasma上的桌面体验，于是便找到了Kubuntu——默认使用KDE Plasma桌面环境的Ubuntu分支。
 
 （本来打算5月写的，后来躺了，开学了之后课上要求必须使用Linux被强制催更……）
 
@@ -74,7 +76,7 @@
 
 <img alt="coreboot.jpeg" src="coreboot.jpeg" width="70%" title="This image has been scaled to 70% of its original size.">
 
-另一种选择是，由于本文介绍的是Windows已经安装到电脑中的情况，也可使用已经安装在Windows系统中的Windows Boot Manager（Windows启动管理器）引导进入启动U盘。
+另一种选择是，由于本文介绍的是Windows已经安装到电脑中的情况，也可使用已经安装在Windows系统中的 *Windows Boot Manager（Windows启动管理器）* 引导进入启动U盘。
 
 （以Windows 11为例）在PC运行中，将 *启动U盘* 插入PC，然后点击 *“开始菜单” - “电源”*，在按住键盘上的 *“Shift键”* 的同时，点击 *电源选项* 中的 *“↺重启”*。
 
@@ -391,13 +393,6 @@ sudo apt install <字体包名>
 
 <img alt="KDE_settings27.png" src="KDE_settings27.png" width="70%" title="This image has been scaled to 70% of its original size.">  
 
-**5.6 修改应用程序启动器图标（可选）**
-
-// TODO：挪到个性化部分
-打开 *“应用程序启动器”* ，点击右上角的 *“配置应用程序启动器…”* 按钮，打开 *“应用程序启动器 设置”* 窗口。点击左侧栏的 *“常规”* ，在 *“常规”* 面板中，点击 *“图标：”* 按钮，选择下拉菜单中的 *“选择…”* 项。在打开的 *“选择图标”* 窗口中，从下拉菜单中选择分类，在右上角的 *搜索框* 中搜索；如果没有想要的，点击左下角的 *“浏览…”* 按钮，选择自定义的图标文件作为应用程序启动器图标。然后，点击 *“确定”* 按钮。最后，点击 *“确定”* 按钮。
-
-![KDE_settings30.png](KDE_settings30.png)  
-
 ### 6. 区域和语言设置
 
 在 *系统设置* 中点击左侧栏的 *“个性化 - 语言和区域设置 - 区域和语言”* ，在右侧的 *“区域和语言”* 设置页面中，依需求修改语言和各项标准设置。如需修改，点击要修改的项目右侧的 *“修改…”* 按钮。最后，点击 *“确定”* 按钮。
@@ -444,13 +439,11 @@ sudo apt install <字体包名>
 
 ![KDE_settings37.png](KDE_settings37.png)  
 
-// TODO：外观：个性化部分
-
 ### 9. 安装驱动
 
 一般情况下，Ubuntu及其衍生发行版会在系统安装时自动检测和安装驱动，但这些驱动仅限 **开源驱动** ，一些非开源的专利驱动不会被安装（常见的就是 *Nvidia显卡驱动* ）。如果要使这些硬件发挥最大作用，可以使用 *“驱动管理器”* 下载非Ubuntu软件源的驱动并安装。
 
-在 *系统设置* 中点击左侧栏的 *“硬件 - 驱动管理器”* ，一般情况下，会自动弹出 *“以 root 运行”* 窗口；若没有，点击 *“驱动管理器”* 面板中的 *“重新打开驱动管理器”* 按钮。在 *“以 root 运行”* 窗口中的 *“密码：”* 密码框中输入 *“账户密码”* ，然后点击 *“确定”* 按钮。在弹出的 *“驱动管理器”* 窗口中，点击 *“Additional Drivers”* 选项卡，在下方的页面中应该会显示可供选装的第三方（非Ubuntu软件源）驱动，如专利驱动等。
+在 *系统设置* 中点击左侧栏的 *“硬件 - 驱动管理器”* ，一般情况下，会自动弹出 *“以 root 运行”* 窗口；若没有，点击 *“驱动管理器”* 设置页面中的 *“重新打开驱动管理器”* 按钮。在 *“以 root 运行”* 窗口中的 *“密码：”* 密码框中输入 *“账户密码”* ，然后点击 *“确定”* 按钮。在弹出的 *“驱动管理器”* 窗口中，点击 *“Additional Drivers”* 选项卡，在下方的页面中应该会显示可供选装的第三方（非Ubuntu软件源）驱动，如专利驱动等。
 
 ![KDE_settings35.png](KDE_settings35.png)  
 
@@ -465,7 +458,7 @@ sudo apt install <字体包名>
 
 ### 10. 拼音输入法设置
 
-在 *系统设置* 中点击左侧栏的 *“个性化 - 区域和语言设置 - 输入法”* ，在右侧的 *“输入法”* 面板中，点击列表中的 *“输入法开启 - Pinyin - 配置”* 按钮。
+在 *系统设置* 中点击左侧栏的 *“个性化 - 区域和语言设置 - 输入法”* ，在右侧的 *“输入法”* 设置页面中，点击列表中的 *“输入法开启 - Pinyin - 配置”* 按钮。
 
 ![KDE_settings38.png](KDE_settings38.png) 
 
@@ -655,6 +648,171 @@ sudo ./setup-audio
 参考：
 [sound - How to install Chromebook audio drivers in Ubuntu? - Ask Ubuntu](https://askubuntu.com/questions/1486278/how-to-install-chromebook-audio-drivers-in-ubuntu)
 
-## 四、个性化设置和一些软件的安装
+### 15. 修改GRUB菜单
 
-### 1. VS Code on Linux
+ *GRUB 2* 是Linux上一款经典的跨平台通用引导加载器，其功能类似于Windows的 *Windows Boot Manager（Windows启动管理器）* ，可以通过该引导加载器引导进入系统。我曾经尝试过让 *Windows Boot Manager* 引导几个Linux发行版，均以失败告终；而让 *GRUB 2* 引导Windows则可以正常进入系统，两个引导加载器均是引导至.efi文件，可能我当初在 *Windows Boot Manager* 注册错了.efi文件，反正也懒得管了，有个能用的就行。
+
+尽管尝试着去找了带GUI的修改方式—— *“Grub Customizer”* ，但搜索Kubuntu软件仓库无果，尝试网络搜索才发现该软件包已经被Ubuntu官方软件仓库撤下，这篇文章解释了一部分原因：[Easy Linux Tips Project: Grub Customizer: why you shouldn't use it](https://easylinuxtipsproject.blogspot.com/p/grub-customizer.html)。看来还是得手动改配置文件了。
+
+假设你的Windows没有将引导.efi文件顺序的首位改回 *Windows Boot Manager* ，那么在Kubuntu中，使用 *Dolphin 文件管理器* 导航到`/etc/default`路径下，找到`grub`文件， *双击* 打开，或是在文件上 *右键 - “使用 Kate文本编辑器 打开”* 。
+
+![KDE_settings30.png](KDE_settings30.png)  
+
+可以对该配置文件中的条目进行以下修改（部分）：
+
+1. `GRUB_DEFAULT="xxx"` 设置默认引导项为指定 *GRUB菜单条目名称* 。在 *终端* 中输入以下命令获取所有的 *GRUB菜单条目名称* ：
+   
+   ```Shell
+   sudo cat /boot/grub/grub.cfg | grep "menuentry '"
+   ```
+
+   并按 *回车（Enter）* 键执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）* 键确定。之后， *终端* 的返回信息将显示当前的所有 *GRUB菜单条目名称* 。
+
+   ![KDE_settings61.png](KDE_settings61.png)  
+    *（在我的笔记本上有8个GRUB菜单条目。）* 
+   
+   在每个`menuentry`的一对单引号中的文本，即是一个 *GRUB菜单条目名称* 。例如，我的笔记本上安装的Windows 11的引导项，在此对应为`Windows Boot Manager (on /dev/nvme0n1p1)`。
+
+   > 注意：若要使用该条目名称来指定默认引导项，则必须使用全长名称，不得省略。
+
+   例：将Windows 11设置为默认引导项，则修改为`GRUB_DEFAULT="Windows Boot Manager (on /dev/nvme0n1p1)"`。
+2. `GRUB_DEFAULT=saved`和`GRUB_SAVEDEFAULT=true`两项，设置每次启动的引导项为上次开机的引导项。
+3. `GRUB_TIMEOUT=x`在x秒后，引导默认引导项。例：设置5秒无输入则引导至默认引导项，则修改为`GRUB_TIMEOUT=5`。
+4. `GRUB_GFXMODE=640x480`GRUB显示的分辨率列表，GRUB将从前到后尝试。例：`GRUB_GFXMODE=640x480,1920x1080`，则GRUB将先尝试以640x480分辨率显示，若无法以该分辨率显示，再尝试使用1920x1080分辨率显示。 *（我的笔记本上GRUB只能用这两个分辨率，绝了）* 
+
+> 若文件中没有出现你想要修改的条目，就新建一行并加入该条目。  
+
+> 在任意条目前加入 *“#（井号）”* 可以将该条注释掉， *GRUB 2* 将自动以程序默认值执行。  
+
+> 对于`GRUB_GFXMODE=`一项，如果不清楚 *GRUB 2* 可以使用哪些分辨率，可以在系统引导至GRUB界面时按 *c* 键打开GRUB的命令行模式，在该模式下输入`videoinfo`并按回车， *GRUB 2* 将显示其支持的分辨率列表。
+> ![KDE_settings62.jpeg](KDE_settings62.jpeg)  
+> 但开启了安全启动的电脑上，这一步是废的😓
+
+修改后保存，在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮。
+
+![KDE_settings68.png](KDE_settings68.png)  
+
+要使更改后的配置文件生效，还需要最后一步：在 *终端* 中输入以下命令：
+   
+```Shell
+sudo update-grub
+```
+
+并按 *回车（Enter）* 键执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）* 键确定。 *终端* 返回的信息若无报错且最后显示`done`，则修改生效。
+
+![KDE_settings63.png](KDE_settings63.png)  
+
+### 16. 登录屏幕配套和行为
+
+在自定义 *登录屏幕（SDDM）* 之后，登录屏幕居然不像进入桌面之后那样会自动将NumLock打开。一开始无头绪地折腾了一会，后来瞎点居然给弄好了。
+
+在 *系统设置* 中点击左侧栏的 *“工作区 - 开机与关机 - 登录屏幕（SDDM）”* ，在右侧的 *登录屏幕（SDDM）* 设置页面中，可以选择一个偏好的 *登录屏幕样式* 。**这时候 *登录屏幕样式* 并未与整体外观和其他Plasma桌面设置配套**（例如开机时NumLock键状态），需要点击下方的 *“应用 Plasma 设置…”* 来使其配套。
+
+![KDE_settings64.png](KDE_settings64.png)  
+
+ *登录屏幕* 还可以设置登录时是否自动登录，点击下方的 *“行为设置…”* 按钮，进入 *“行为设置”* 设置页面。勾选 *“自动登录：”* 复选框并选择要自动登录的用户，在下次Kubuntu启动后，便会自动登录到这个用户的账户中。最后，点击 *“确定”* 按钮。
+
+<img alt="KDE_settings65.png" src="KDE_settings65.png" width="70%" title="This image has been scaled to 70% of its original size."> 
+
+### 17. 修改注销屏幕超时时间
+
+厌倦了每次想关机/重启的时候都要弹出的30秒 *注销屏幕* 吗？在 *系统设置* 中点击左侧栏的 *“工作区 - 开机与关机 - 桌面会话”* ，在右侧的 *桌面会话* 设置页面中，取消 *“显示：”* 复选框即可。
+
+![KDE_settings66.png](KDE_settings66.png)  
+
+或许，也可以修改这个等待的秒数，只不过没有快捷的修改设置，只能从代码下手。使用 *Dolphin 文件管理器* 导航到`/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/logout`路径下，找到`Logout.qml`文件， *双击* 打开，或是在文件上 *右键 - “使用 Kate文本编辑器 打开”* 。然后，在 *Kate文本编辑器* 中找到约在44行的
+
+```qt
+property real timeout: 30
+```
+
+将这个30秒改为你想要的秒数。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮。
+
+<img alt="KDE_settings67.png" src="KDE_settings67.png" width="80%" title="This image has been scaled to 80% of its original size."> 
+
+再弹出的 *注销屏幕* 的倒计时现在都会变为新的倒计时秒数了。不过，每次系统（KDE Plasma）更新都会覆盖掉这个更改，需要再次修改才能继续生效。
+
+参考：  
+[Change the 30 second timeout for shutdown, reboot, and log off? - Help - KDE Discuss](https://discuss.kde.org/t/change-the-30-second-timeout-for-shutdown-reboot-and-log-off/1502)
+
+### 18. 修改键盘键位映射
+
+在用奇奇怪怪的脚本之前，先记得全盘备份。
+// TODO
+
+## 四、个性化设置、个人应用偏好、小技巧
+
+完成上一节，你的Kubuntu终于可以进入正式使用的阶段了。下面是我的一些个人的个性化设置、应用偏好和小技巧。
+
+### a. 个性化设置
+
+#### 1. 修改应用程序启动器图标
+
+打开 *“应用程序启动器”* ，点击右上角的 *“配置应用程序启动器…”* 按钮，打开 *“应用程序启动器 设置”* 窗口。点击左侧栏的 *“常规”* ，在 *“常规”* 面板中，点击 *“图标：”* 按钮，选择下拉菜单中的 *“选择…”* 项。在打开的 *“选择图标”* 窗口中，从下拉菜单中选择分类，在右上角的 *搜索框* 中搜索；如果没有想要的，点击左下角的 *“浏览…”* 按钮，选择自定义的图标文件作为应用程序启动器图标。然后，点击 *“确定”* 按钮。最后，点击 *“确定”* 按钮。
+
+![Personal_perf0.png](Personal_perf0.png)  
+
+<img alt="Personal_perf1.png" src="Personal_perf1.png" width="70%" title="This image has been scaled to 70% of its original size.">  
+
+#### 2. 修改任务栏行为
+
+// TODO
+
+<img alt="Personal_perf2.png" src="Personal_perf2.png" width="70%" title="This image has been scaled to 70% of its original size.">  
+
+#### 3. 添加任务栏系统监视器小组件
+
+// TODO
+
+#### 4. 更改锁屏壁纸为每日一图
+
+// TODO
+
+![Personal_perf3.png](Personal_perf3.png)  
+
+![Personal_perf4.png](Personal_perf4.png)  
+
+#### 5. Dolphin 文件管理器永久显示标签栏
+
+// TODO：不行，没这设置项
+
+#### 6. 修改GRUB背景
+
+// TODO
+
+![Personal_perf5.png](Personal_perf5.png)  
+
+![Personal_perf6.jpeg](Personal_perf6.jpeg)  
+ *（SHODAN is watching you boot.）* 
+
+### b. 个人应用偏好
+
+#### 1. 富文本编辑器： VS Code on Linux
+
+// TODO
+
+#### 2. Office套件：Microsoft 365 Web 应用
+
+// TODO
+
+### c. 小技巧
+
+#### 1. 任务栏滚轮滚动
+
+&ensp;&ensp;&ensp;&ensp;**1.1 使用滚轮在窗口间切换**
+
+// TODO
+
+&ensp;&ensp;&ensp;&ensp;**1.2 使用滚轮快捷调整托盘设置**
+
+// TODO
+
+## 五、性能测试
+
+// TODO
+
+## 彩蛋
+
+我勒个时光机啊
+
+![Easter_egg.png](Easter_egg.png) 
