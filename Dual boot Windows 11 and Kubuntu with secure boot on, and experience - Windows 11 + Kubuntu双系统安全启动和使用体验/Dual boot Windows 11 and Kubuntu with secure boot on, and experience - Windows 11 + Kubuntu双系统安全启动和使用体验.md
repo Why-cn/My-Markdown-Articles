@@ -776,7 +776,7 @@ property real timeout: 30
 
 <img alt="Personal_perf2.png" src="Personal_perf2.png" width="70%" title="This image has been scaled to 70% of its original size.">  
 
-#### 3. 添加任务栏系统监视器小组件
+#### 3. 固定应用到任务栏
 
 // TODO
 
@@ -828,11 +828,17 @@ property real timeout: 30
 
 #### 6. AI LLM对话工具：Microsoft Copilot （Web 应用）
 
-[个人 AI 助手 | Microsoft Copilot](https://www.microsoft.com/zh-cn/microsoft-copilot/personal-ai-assistant)是 *微软* 推出的一款人工智能大语言模型对话工具，结合OpenAI GPT 4和DALL-E 3、Microsoft Designer等AI工具，对日常生活、生产力和娱乐方面有着不错的助力效果。
+[个人 AI 助手 | Microsoft Copilot](https://www.microsoft.com/zh-cn/microsoft-copilot/personal-ai-assistant)是 *微软* 推出的一款人工智能大语言模型对话工具，结合OpenAI GPT 4和DALL-E 3、Microsoft Designer等AI工具，对日常生活、生产力和娱乐方面有着不错的助力。
 
 安装方式见 *三、11.4.b*，网址为[Copilot](https://copilot.microsoft.com/)。
 
 ![Personal_perf8.png](Personal_perf8.png)  
+
+#### 7. 类似于Windows 任务管理器的Linux 任务管理器：SysMonTask
+
+// TODO
+
+[KrispyCamel4u/SysMonTask: Linux system monitor with the compactness and usefulness of windows task manager to allow higher control and monitoring.](https://github.com/KrispyCamel4u/SysMonTask)
 
 ### c. 小技巧
 
@@ -847,6 +853,8 @@ property real timeout: 30
 // TODO
 
 #### 2. KDE Connect
+
+KDE Connect 是一个用于在多个设备之间实现无缝连接和交互的开源软件，设计之初是用于连接使用 *KDE桌面环境* 的Linux电脑与Android设备，**现已扩展到许多设备和平台**，成为一种通用的解决方案，甚至可完全脱离Linux。它通过使用局域网连接，让用户可以在设备之间共享数据和执行多种功能，包括通知同步、文件传输、远程控制、共享剪贴板、远程输入、设备电量监控等功能。
 
 [【开源】全平台文件共享设备互联 KDE Connect——iOS 最新版本演示（AirDrop 跨全平台替代）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Yu411o7zM)
 
