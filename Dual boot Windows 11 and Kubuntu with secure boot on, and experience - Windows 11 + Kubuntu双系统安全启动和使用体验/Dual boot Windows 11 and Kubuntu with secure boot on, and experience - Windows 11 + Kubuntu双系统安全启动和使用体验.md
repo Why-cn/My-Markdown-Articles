@@ -490,9 +490,9 @@ sudo apt install <字体包名>
 
 >  *Discover 软件管理中心* 可能无法完全卸载掉所有的依赖，即使这些依赖已经不再被任何软件（包）依赖。要更完整地卸载应用，请使用APT。对于Linux轻量用户，卸不干净也没事，这些残留不会有影响。
 
-&ensp;&ensp;&ensp;&ensp;**11.1.c 更新应用**
+&ensp;&ensp;&ensp;&ensp;**11.1.c 更新应用/系统**
 
-在 *Discover 软件管理中心* 中，点击左下角的 *“更新(U)”* 标签即可浏览系统中可被更新的应用。**此处的应用不限于被 *Discover 软件管理中心* 收录于否，只要是 *系统软件源* 内的软件均可被检查。** 该更新列表并不是随时更新的，所以可以按右上角的 *“刷新”* 按钮来刷新更新列表。如果更新列表中有可以更新的软件（包），可以点击它们的卡片来查看详情。勾选各软件（包）卡片左边的复选框，即可将其标记为待更新软件（包）；或是点击下方的 *“全部选中”* 按钮来全选所有软件（包）。最后，点击右上角的 *“更新选中项目”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始更新各软件（包）。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
+在 *Discover 软件管理中心* 中，点击左下角的 *“更新(U)”* 标签即可浏览系统中可被更新的应用。**此处的应用不限于被 *Discover 软件管理中心* 收录于否，只要是 *系统软件源* 内的软件均可被检查。系统更新也由此处进行更新（如果不使用命令行工具）。** 该更新列表并不是随时更新的，所以可以按右上角的 *“刷新”* 按钮来刷新更新列表。如果更新列表中有可以更新的软件（包），可以点击它们的卡片来查看详情。勾选各软件（包）卡片左边的复选框，即可将其标记为待更新软件（包）；或是点击下方的 *“全部选中”* 按钮来全选所有软件（包）。最后，点击右上角的 *“更新选中项目”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始更新各软件（包）。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
 
 ![KDE_settings43.png](KDE_settings43.png) 
 
@@ -502,7 +502,7 @@ sudo apt install <字体包名>
 
 有时， *Discover 软件管理中心* 并不能囊括我们想要下载的所有软件，尤其是那些不开源的专利软件，比如Google Chrome浏览器。具体使用下载到的软件包安装应用的方法，在本大节的1. 便介绍过了。
 
-**11.3 使用包管理器安装、更新、卸载应用**
+**11.3 使用包管理器安装、更新、卸载应用/系统**
 
 在本大节的3. 曾简略地提到过使用`apt`命令来安装软件包，这个命令即是Linux中最知名的几个命令之一——高级打包工具（Advanced Packaging Tools），APT。
 
@@ -571,7 +571,7 @@ apt list --installed | grep <你想要查找的软件包关键字>
 
 因为有时Web应用所能提供的功能已经足够轻量级使用，更别提有些所谓桌面应用就是网页套壳，所以有些时候与其去找一款在Linux上的Windows平替软件，不如看看这些软件是否已经提供了Web应用，逛逛Chrome应用商店也挺好的。
 
-### 12. Linux的文件与磁盘管理
+### 12. Kubuntu的磁盘管理
 
 **12.1 访问本地磁盘上的已格式化、非Linux创建的分区**
 
@@ -753,8 +753,15 @@ property real timeout: 30
 
 ### 18. 修改键盘键位映射
 
-在用奇奇怪怪的脚本之前，先记得全盘备份。
+在用奇奇怪怪的脚本之前，先记得全盘备份。具体方式在之前的[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)文章中的 *一、4* 中已经介绍过，在此不再赘述。
+
 // TODO
+
+### 19. 更改桌面图标排列方式
+
+KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不习惯。在 *桌面* 的空白处上 *右键 - 图标 - 排列方式 - 从上到下* 可将图标的排列方式改为纵向从上到下排列。
+
+<img alt="KDE_settings71.png" src="KDE_settings71.png" width="70%" title="This image has been scaled to 70% of its original size."> 
 
 ## 四、个性化设置、个人应用偏好、小技巧
 
@@ -811,22 +818,16 @@ property real timeout: 30
 
 // TODO
 
-#### 3. 彻底卸载LibreOffice
-
-无论是从 *Discover 软件管理中心* 还是手动使用apt命令卸载LibreOffice，都删不干净， *Dolphin 文件管理器* 的新建项目中还是留有LibreOffice的项目。因此搜索到了这篇文章：[Debian 彻底卸载 LibreOffice](https://blog.baicai.me/article/2023/debian_remove_libreoffice/)，按照文章中的步骤，已完全卸载且目前未遇到问题。以下为执行命令的部分截图：
-
-![Personal_perf7.png](Personal_perf7.png)  
-
-#### 4. 查看硬件信息：hwinfo
+#### 3. 查看硬件信息：hwinfo
 
 // TODO
 
-#### 5. Linux原生游戏：OpenRA
+#### 4. Linux原生游戏：OpenRA
 
 // TODO
 [OpenRA Romanov's Vengeance 红警2Linux原生版本_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QT4y1j75k)
 
-#### 6. AI LLM对话工具：Microsoft Copilot （Web 应用）
+#### 5. AI LLM对话工具：Microsoft Copilot （Web 应用）
 
 [个人 AI 助手 | Microsoft Copilot](https://www.microsoft.com/zh-cn/microsoft-copilot/personal-ai-assistant)是 *微软* 推出的一款人工智能大语言模型对话工具，结合OpenAI GPT 4和DALL-E 3、Microsoft Designer等AI工具，对日常生活、生产力和娱乐方面有着不错的助力。
 
@@ -834,11 +835,19 @@ property real timeout: 30
 
 ![Personal_perf8.png](Personal_perf8.png)  
 
-#### 7. 类似于Windows 任务管理器的Linux 任务管理器：SysMonTask
+#### 6. 类似于Windows 任务管理器的Linux 任务管理器：SysMonTask
 
 // TODO
 
 [KrispyCamel4u/SysMonTask: Linux system monitor with the compactness and usefulness of windows task manager to allow higher control and monitoring.](https://github.com/KrispyCamel4u/SysMonTask)
+
+#### 7. 游戏平台：Steam
+
+// TODO
+
+#### 8. 电子邮件：Thunderbird
+
+// TODO
 
 ### c. 小技巧
 
@@ -857,6 +866,22 @@ property real timeout: 30
 KDE Connect 是一个用于在多个设备之间实现无缝连接和交互的开源软件，设计之初是用于连接使用 *KDE桌面环境* 的Linux电脑与Android设备，**现已扩展到许多设备和平台**，成为一种通用的解决方案，甚至可完全脱离Linux。它通过使用局域网连接，让用户可以在设备之间共享数据和执行多种功能，包括通知同步、文件传输、远程控制、共享剪贴板、远程输入、设备电量监控等功能。
 
 [【开源】全平台文件共享设备互联 KDE Connect——iOS 最新版本演示（AirDrop 跨全平台替代）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Yu411o7zM)
+
+### d. 个人卸载预装应用偏好
+
+这里没有特别提到卸载方式的，均可按 *三、11.* 中介绍的方式进行卸载。
+
+**1. 彻底卸载LibreOffice**
+
+不是不喜欢LibreOffice，只是在线的 *Microsoft 365* 已经足够用了，而且还整合了 *Microsoft OneDrive* ，像我这样被微软生态绑架的还省去了学习成本，因此就没必要留了。
+
+无论是从 *Discover 软件管理中心* 还是手动使用apt命令卸载LibreOffice，都删不干净， *Dolphin 文件管理器* 的新建项目中还是留有LibreOffice的项目。因此搜索到了这篇文章：[Debian 彻底卸载 LibreOffice](https://blog.baicai.me/article/2023/debian_remove_libreoffice/)，按照文章中的步骤，已完全卸载且目前未遇到问题。以下为执行命令的部分截图：
+
+![Personal_perf7.png](Personal_perf7.png)  
+
+**2. 卸载NeoChat**
+
+官网说是个端到端的开源IM程序，我个人觉得没啥用。
 
 ## 五、无法解决的问题
 
