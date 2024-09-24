@@ -2,7 +2,7 @@
 
 *版本：1.0*
 
-查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“菜单”（⋮☰）按钮。
+查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“目录”（⋮☰）按钮。
 
 ---
 
@@ -108,7 +108,7 @@
 
 > 之前有种说法是，在安装时尽量选择英语，因为一些Linux发行版在安装后会根据安装时选择的系统语言对 *主文件夹* 下的各默认用户分类文件夹使用对应的语言进行命名，如选择英语则有“Document”“Download”文件夹，选择中文则会有“文档”“下载”文件夹。一些优化或没有考虑到不同系统语言的软件可能会因为非英语用户分类文件夹名而产生问题。但就我个人近期使用经验，Manjaro Linux和Kubuntu均无这个问题；而且如果使用英文语言进行安装，则许多内置软件的中文界面包不会被系统安装程序自动安装，需要一个个地在系统安装后手动安装。因此此处的语言选项应按照具体情况选择，本文中将以 *简体中文 (中国) - Chinese (China)* 作为例子。
 
-> 如果你可以顺畅通过网关连接到国际互联网，则我推荐在此处就连接到互联网；否则不推荐在此处联网，在系统安装完成后再联网。如果选择通过WiFi联网，点击 *“Internet Connection”* 菜单中的 *你的局域网SSID: Disconnected* ，然后输入你的 *WiFi密码* ，并点击 *“Connect”* 。
+> 如果你可以顺畅通过网关连接到国际互联网，则我推荐在此处就连接到互联网；否则不推荐在此处联网，在系统安装完成后再联网。如果选择通过WiFi联网，点击 *“Internet Connection”* 菜单中的 *“你的WiFi SSID: Disconnected”* ，然后输入你的 *WiFi密码* ，并点击 *“Connect”* 。
 
 >  *“Try Kubuntu”* 选项将会将此Kubuntu启动U盘作为 *“LiveCD”* 启动，进入到一个小型的、临时的Linux环境中，类似于Windows的Windows PE系统，常用于故障恢复。
 
@@ -435,7 +435,7 @@ sudo apt install <字体包名>
 
 **8.2 调整锁屏超时**
 
-在 *系统设置* 中点击左侧栏的 *“工作区 - 工作区行为 - 锁屏”* ，在右侧的 *“锁屏”* 设置页面中，更改 *“自动锁定屏幕：”* 和 *“锁屏多久后需要密码：”* 。最后，点击 *“应用”* 按钮。
+在 *系统设置* 中点击左侧栏的 *“工作区 - 工作区行为 - 锁屏”* ，在右侧的 *“锁屏”* 设置页面中，更改 *“自动锁定屏幕：”* 和 *“锁屏多久后需要密码解锁：”* 。最后，点击 *“应用”* 按钮。
 
 ![KDE_settings37.png](KDE_settings37.png)  
 
@@ -539,6 +539,8 @@ apt list --installed | grep <你想要查找的软件包关键字>
 
 即：这些Web应用可以像真正安装在电脑上的应用一样，可以通过图标启动，可以离线运行，可以接受更新，也可以操作本地文件。只不过载体是浏览器罢了。以 *[Microsoft 365](https://www.microsoft365.com/?auth=1)* Web应用为例：
 
+&ensp;&ensp;&ensp;&ensp;**11.4.a 安装一般Web应用**
+
 在访问了一款可以作为Web应用安装的网页后，其在 *Chromium内核* 的浏览器中（如 *Google Chrome* 或 *Brave 浏览器* 等），在 *“地址栏”* 的右侧将显示一个 *“安装“Web应用名””* 的按钮，点击该按钮，在弹出的 *“安装应用”* 弹窗中，点击 *“安装”* 按钮。
 
 ![KDE_settings45.png](KDE_settings45.png) 
@@ -548,6 +550,20 @@ apt list --installed | grep <你想要查找的软件包关键字>
 ![KDE_settings46.png](KDE_settings46.png) 
 
 每次打开Web应用，浏览器都将自动检查应用更新。
+
+&ensp;&ensp;&ensp;&ensp;**11.4.b 将任意网页安装为Web应用**
+
+想在Kubuntu上安装 *Microsoft Copilot* ，但进入到[Copilot](https://copilot.microsoft.com/)网站后却发现， *Copilot* 的页面 *“地址栏”* 的右侧没有“安装“Copilot””的按钮。只能说微软真鸡贼啊，Windows上的 *Copilot* 明明就是Web应用，被强制只能使用 *Microsoft Edge* 打开也就算了，居然还限制别的浏览器安装Web应用。但毕竟 *Microsoft Edge* 也是Chromium内核的浏览器，Chrome肯定也能以Web应用形式使用的。
+
+以 *Google Chrome浏览器* 为例，打开 *Google Chrome浏览器* ，点击右上角的三点菜单按钮 *“自定义及控制 Google Chrome” - 投放、保存和分享 - 将网页作为应用安装…* ，在弹出的 *“将网页作为应用安装”* 窗口中，点击 *“安装”* 按钮。
+
+![KDE_settings69.png](KDE_settings69.png) 
+
+这样， *Copilot* 便从网页安装为了一款Web应用了。
+
+![KDE_settings70.png](KDE_settings70.png) 
+
+&ensp;&ensp;&ensp;&ensp;**11.4.c 卸载Web应用**
 
 要卸载Web应用，打开 *要卸载的Web应用* ，点击右上角的 *“自定义和控制（Web应用）”* 按钮，选择 *“卸载（Web应用）”* ，在弹出的 *“要删除“（Web应用）”吗”* 弹窗中，点击 *“移除”* 按钮。
 
@@ -791,9 +807,32 @@ property real timeout: 30
 
 // TODO
 
-#### 2. Office套件：Microsoft 365 Web 应用
+#### 2. Office套件：Microsoft 365 （Web 应用）
 
 // TODO
+
+#### 3. 彻底卸载LibreOffice
+
+无论是从 *Discover 软件管理中心* 还是手动使用apt命令卸载LibreOffice，都删不干净， *Dolphin 文件管理器* 的新建项目中还是留有LibreOffice的项目。因此搜索到了这篇文章：[Debian 彻底卸载 LibreOffice](https://blog.baicai.me/article/2023/debian_remove_libreoffice/)，按照文章中的步骤，已完全卸载且目前未遇到问题。以下为执行命令的部分截图：
+
+![Personal_perf7.png](Personal_perf7.png)  
+
+#### 4. 查看硬件信息：hwinfo
+
+// TODO
+
+#### 5. Linux原生游戏：OpenRA
+
+// TODO
+[OpenRA Romanov's Vengeance 红警2Linux原生版本_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QT4y1j75k)
+
+#### 6. AI LLM对话工具：Microsoft Copilot （Web 应用）
+
+[个人 AI 助手 | Microsoft Copilot](https://www.microsoft.com/zh-cn/microsoft-copilot/personal-ai-assistant)是 *微软* 推出的一款人工智能大语言模型对话工具，结合OpenAI GPT 4和DALL-E 3、Microsoft Designer等AI工具，对日常生活、生产力和娱乐方面有着不错的助力效果。
+
+安装方式见 *三、11.4.b*，网址为[Copilot](https://copilot.microsoft.com/)。
+
+![Personal_perf8.png](Personal_perf8.png)  
 
 ### c. 小技巧
 
@@ -807,7 +846,20 @@ property real timeout: 30
 
 // TODO
 
-## 五、性能测试
+#### 2. KDE Connect
+
+[【开源】全平台文件共享设备互联 KDE Connect——iOS 最新版本演示（AirDrop 跨全平台替代）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Yu411o7zM)
+
+## 五、无法解决的问题
+
+个人遇到的一些无法解决的问题的集合，你不一定会遇到相同问题，这里只是留着以后钻牛角尖用。
+
+- Fcitx5界面无法更改为中文。
+- 我的Chromebook内置左扬声器会播放两个声道的音频，而内置右扬声器则完全不发声。
+- 我的Chromebook在设置 *“硬件 - 电源管理 - 省电功能 - 合上笔记本盖时 - 关机”* 后，在合盖时会死机，强行重启后GRUB会进入到“上次未正常关机，关闭倒计时引导默认选项”的状态。怀疑是Kubuntu对Chromebook的AHCI支持还不够完好。
+- 我的Chromebook在使用Kubuntu时，如果某个USB端口没有在开机的时候插入usb设备，则该端口会直接关闭，直到下次重启。排除了GRUB的`usbcore.autosuspend`项，因为无论如何设置，GRUB也检测不到后插入的USB设备。Windows下没有这个问题，再次怀疑是Kubuntu对Chromebook的AHCI支持还不够完好。
+
+## 六、性能测试
 
 // TODO
 
