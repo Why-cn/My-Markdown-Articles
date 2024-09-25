@@ -312,6 +312,8 @@ sudo apt install <字体包名>
 
 <img alt="KDE_settings8.png" src="KDE_settings8.png" width="60%" title="This image has been scaled to 60% of its original size.">
 
+> 不建议在此处更改字体大小。如果觉得显示字体小，请在 *上一小节（2.2、2.3）* 中调整字体API和桌面缩放。
+
 **3.3 字体微调（可选）**
 
 上图的上图中蓝色框中的下拉菜单 *“微调”* ，类似于Windows中的ClearType（[Microsoft ClearType - Typography | Microsoft Learn](https://learn.microsoft.com/zh-cn/typography/cleartype/)）：通过微调字体在液晶显示屏上的对齐方式，使得字体可以渲染地更加清晰。这是一项纯靠体验改变的选项——即调成什么样，效果好不好全凭个人感觉。选择你认为清晰的一项，然后点击 *“应用”* 按钮。
@@ -462,11 +464,23 @@ sudo apt install <字体包名>
 
 ![KDE_settings38.png](KDE_settings38.png) 
 
-不知道是设置里的哪步出问题了，我这里的输入法设置界面只有英文。如果需要详细设置说明，还请另寻他处吧😂。
+不知道是设置里的哪步出问题了（估计是区域设置），我这里的输入法设置界面只有英文。如果需要详细设置说明，还请另寻他处吧😂。
 
 <img alt="KDE_settings39.png" src="KDE_settings39.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
-如果想要安装第三方输入法，可以阅读这篇文章：[再也不用为中文输入法而烦恼了 - 四叶草](https://www.fkxxyz.com/d/cloverpinyin/)。
+**更改切换输入法热键** ：如果你也像我一样苦恼于默认的更改切换输入法热键 *Ctrl + 空格键（Space）* 与一些IDE的代码提示热键相冲，又不想改变IDE的热键，那么可以更改切换输入法的热键。在上一步中的 *“输入法”* 设置页面中，点击下方的 *“配置全局选项…”* 按钮，在 *“全局选项”* 面板中，点击 *Hotkeys（热键设置） - Trigger Input Method:（切换输入法：）* 后面的 *快捷键选择框* ，点击后，在键盘上按下你想要用来设置的快捷（组合）键。如我设置成和Windows下 *切换输入语言* 的热键相同： *Windows徽标键 + 空格键（Space）* ，在Linux下， *Windows徽标键* 被定义为 *超级键（Super）* 。
+
+![KDE_settings72.png](KDE_settings72.png) 
+
+**更改Fcitx5输入面板主题** ：还是在 *“输入法”* 设置页面中，点击下方的 *“配置附加组件…”* 按钮，在 *“附加组件”* 面板中，点击下方列表中的 *界面 - Classic User Interface（经典用户界面）* 右方的 *配置* 按钮。在打开的 *Classic User Interface* 面板中，调整 *“Font:（字体：）”“Menu Font:（菜单字体：）”“Tray Font:（托盘字体：）”* 三个字体选项。如果你觉得输入面板字体较小，那么适当在此处调整字体大小。字体设置下方的 *“Prefer Text Icon:（偏好文字图示：）”* 的作用是使托盘处的输入法指示图标从 *“⌨️ - ☐拼”* 变为 *“en - 拼”* 。再下方， *“Theme:（亮色主题：）”“Dark Theme:（暗色主题：）”* 右侧的下拉菜单中可以分别选择输入面板的亮色和暗色主题； *“Follow system light/dark color scheme:（跟随系统亮/暗色样式）”* 复选框则可以使输入面板的亮/暗色主题跟随系统亮/暗色主题。
+
+![KDE_settings73.png](KDE_settings73.png) 
+
+> *Classic User Interface* 面板下方的 *“Force font DPI on Wayland:（在Wayland中使用强制字体DPI：）”* 功能无效，我只能调字体大小来改变输入面板样式的大小。
+
+<img alt="KDE_settings74.png" src="KDE_settings74.png" width="60%" title="This image has been scaled to 60% of its original size."> 
+
+如果想要安装 **第三方输入法**，可以阅读这篇文章：[再也不用为中文输入法而烦恼了 - 四叶草](https://www.fkxxyz.com/d/cloverpinyin/)，或者这个Github仓库：[iDvel/rime-ice: Rime 配置：雾凇拼音 | 长期维护的简体词库](https://github.com/iDvel/rime-ice)
 
 ### 11. 安装与卸载应用
 
@@ -846,6 +860,10 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 // TODO
 
 #### 8. 电子邮件：Thunderbird
+
+// TODO
+
+#### 9. 倒计时工具：
 
 // TODO
 
