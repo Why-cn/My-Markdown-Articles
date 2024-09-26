@@ -94,11 +94,9 @@
 
 *（由于饶罗翔实在是太难绷了，因此此处选择在虚拟机上安装来方便截图。具体操作和实体机上相同，实在无法同步的点会继续饶罗翔）*
 
-在上一步的操作之后，应该可以引导到安装U盘的GRUB界面：
+在上一步的操作之后，应该可以引导到安装U盘的GRUB界面；等待自动进入默认选项，或者使用键盘上的方向键，将高亮的选项选择到第一项 *“Try or Install Kubuntu”* ，然后按下 *回车（Enter）键* 。
 
 ![Kubuntu_install0.png](Kubuntu_install0.png)
-
-等待自动进入默认选项，或者使用键盘上的方向键，将高亮的选项选择到第一项 *“Try or Install Kubuntu”* ，然后按下 *回车（Enter）* 键。
 
 稍等片刻，安装程序将进入GUI安装界面：
 
@@ -490,9 +488,11 @@ sudo apt install <字体包名>
 
 &ensp;&ensp;&ensp;&ensp;**11.1.a 安装应用**
 
-依次打开 *“应用程序启动器 - 系统 - Discover 软件管理中心”* ，进入 *Discover 软件管理中心* 。点击左下角的 *“主页”* 标签即可浏览Discover中的热门应用，或者在左侧的各项分类标签中进行浏览。在左上角的 *“搜索…”* 搜索框内输入关键词并按下 *回车（Enter）* 键，即可在选中的标签内进行搜索。
+依次打开 *“应用程序启动器 - 系统 - Discover 软件管理中心”* ，进入 *Discover 软件管理中心* 。
 
 <img alt="KDE_settings40.png" src="KDE_settings40.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+点击左下角的 *“主页”* 标签即可浏览Discover中的热门应用，或者在左侧的各项分类标签中进行浏览。在左上角的 *“搜索…”* 搜索框内输入关键词并按下 *回车（Enter）* 键，即可在选中的标签内进行搜索。在搜索结果中查找想要安装的应用，点击应用卡片可以展开详细信息页面，在页面中查看截图、发行商/开发者、支持页面是否符合预期。若是，点击右上角的 *“⬇️安装”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始安装任务。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
 
 ![KDE_settings41.png](KDE_settings41.png) 
 
@@ -516,7 +516,7 @@ sudo apt install <字体包名>
 
 有时， *Discover 软件管理中心* 并不能囊括我们想要下载的所有软件，尤其是那些不开源的专利软件，比如Google Chrome浏览器。具体使用下载到的软件包安装应用的方法，在本大节的1. 便介绍过了。
 
-**11.3 使用包管理器安装、更新、卸载应用/系统**
+**11.3 使用包管理器APT安装、更新、卸载应用/系统**
 
 在本大节的3. 曾简略地提到过使用`apt`命令来安装软件包，这个命令即是Linux中最知名的几个命令之一——高级打包工具（Advanced Packaging Tools），APT。
 
@@ -530,19 +530,31 @@ sudo apt install <字体包名>
 
 &ensp;&ensp;&ensp;&ensp;**11.3.a apt list**
 
-维基中没有提到的另一项十分重要的`apt`命令：查看软件包列表。在 *“终端”* 中输入以下命令：
+维基中没有提到的另一项十分重要的`apt`命令：查看软件包列表。在 *“终端”* 中输入以下命令并执行：
 
 ```Shell
 apt list | grep <你想要查找的软件包关键字>
 ```
 
-可以显示在 ***软件仓库*** 中的所有含有该关键字的软件包。在 *“终端”* 中输入以下命令：
+可以显示在 ***软件仓库*** 中的所有含有该关键字的软件包。在 *“终端”* 中输入以下命令并执行：
 
 ```Shell
 apt list --installed | grep <你想要查找的软件包关键字>
 ```
 
 可以显示在 ***本地已经安装的*** 所有含有该关键字的软件包。
+
+&ensp;&ensp;&ensp;&ensp;**11.3.b apt autoremove**
+
+维基中没有提到的另一项十分重要的`apt`命令：自动卸载不再被依赖的软件包，尤其适用于 *Discover 软件管理中心* 卸不干净的应用。在 *“终端”* 中输入以下命令并执行：
+
+```Shell
+sudo apt autoremove
+```
+
+若有残留软件包，则`apt autoremove`会提问用户是否执行自动卸载。再确认一下给出的卸载列表中没有需要保留的软件包，然后按 *“回车（Enter）键”* 确认，或输入 *n* 再按 *“回车（Enter）键”* 取消。
+
+// TODO apt autoremove截图
 
 **11.4 使用网络应用程序代替一般应用程序**
 
@@ -551,7 +563,7 @@ apt list --installed | grep <你想要查找的软件包关键字>
 > “渐进式 Web 应用” 这一术语由设计师 Frances Berriman 和 Google Chrome 工程师 Alex Russell 于 2015 年首次提出，指的是利用现代浏览器支持的新功能的应用程序，这些应用程序最初在 Web 浏览器选项卡内运行，但后来可以完全离线运行，并且无需在浏览器中输入应用程序 URL 即可启动。
 > > [Web application - Wikipedia](https://en.wikipedia.org/wiki/Web_application#History)
 
-即：这些Web应用可以像真正安装在电脑上的应用一样，可以通过图标启动，可以离线运行，可以接受更新，也可以操作本地文件。只不过载体是浏览器罢了。以 *[Microsoft 365](https://www.microsoft365.com/?auth=1)* Web应用为例：
+即：这些Web应用可以像真正安装在电脑上的应用一样，可以通过图标启动，可以离线运行，可以接受更新，也可以操作本地文件。只不过载体是浏览器罢了。以 *[Microsoft 365](https://www.microsoft365.com/)* Web应用为例：
 
 &ensp;&ensp;&ensp;&ensp;**11.4.a 安装一般Web应用**
 
@@ -567,7 +579,7 @@ apt list --installed | grep <你想要查找的软件包关键字>
 
 &ensp;&ensp;&ensp;&ensp;**11.4.b 将任意网页安装为Web应用**
 
-想在Kubuntu上安装 *Microsoft Copilot* ，但进入到[Copilot](https://copilot.microsoft.com/)网站后却发现， *Copilot* 的页面 *“地址栏”* 的右侧没有“安装“Copilot””的按钮。只能说微软真鸡贼啊，Windows上的 *Copilot* 明明就是Web应用，被强制只能使用 *Microsoft Edge* 打开也就算了，居然还限制别的浏览器安装Web应用。但毕竟 *Microsoft Edge* 也是Chromium内核的浏览器，Chrome肯定也能以Web应用形式使用的。
+想在Kubuntu上安装 *Microsoft Copilot* ，但进入到[Copilot](https://copilot.microsoft.com/)网站后却发现， *Copilot* 的页面 *“地址栏”* 的右侧没有“安装“Copilot””的按钮。只能说微软真鸡贼啊，Windows上的 *Copilot* 明明就是Web应用，被强制只能使用 *Microsoft Edge* 打开也就算了，居然还不提供安装Web应用的标识。但毕竟 *Microsoft Edge* 也是Chromium内核的浏览器，Chrome肯定也能以Web应用形式使用的。
 
 以 *Google Chrome浏览器* 为例，打开 *Google Chrome浏览器* ，点击右上角的三点菜单按钮 *“自定义及控制 Google Chrome” - 投放、保存和分享 - 将网页作为应用安装…* ，在弹出的 *“将网页作为应用安装”* 窗口中，点击 *“安装”* 按钮。
 
@@ -663,7 +675,7 @@ KDE中的 *Dolphin 文件管理器* 已经整合了访问Bitlocker加密的卷�
 sudo ./setup-audio
 ```
 
-并按下 *回车（Enter）* 键。
+并按下 *回车（Enter）键* 。
 
 ![KDE_settings53.png](KDE_settings53.png) 
 
@@ -696,7 +708,7 @@ sudo ./setup-audio
    sudo cat /boot/grub/grub.cfg | grep "menuentry '"
    ```
 
-   并按 *回车（Enter）* 键执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）* 键确定。之后， *终端* 的返回信息将显示当前的所有 *GRUB菜单条目名称* 。
+   并按 *回车（Enter）键* 执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。之后， *终端* 的返回信息将显示当前的所有 *GRUB菜单条目名称* 。
 
    ![KDE_settings61.png](KDE_settings61.png)  
     *（在我的笔记本上有8个GRUB菜单条目。）* 
@@ -714,7 +726,7 @@ sudo ./setup-audio
 
 > 在任意条目前加入 *“#（井号）”* 可以将该条注释掉， *GRUB 2* 将自动以程序默认值执行。  
 
-> 对于`GRUB_GFXMODE=`一项，如果不清楚 *GRUB 2* 可以使用哪些分辨率，可以在系统引导至GRUB界面时按 *c* 键打开GRUB的命令行模式，在该模式下输入`videoinfo`并按回车， *GRUB 2* 将显示其支持的分辨率列表。
+> 对于`GRUB_GFXMODE=`一项，如果不清楚 *GRUB 2* 可以使用哪些分辨率，可以在系统引导至GRUB界面时按 *c* 键打开GRUB的命令行模式，在该模式下输入`videoinfo`并按 *回车（Enter）键* ， *GRUB 2* 将显示其支持的分辨率列表。
 > ![KDE_settings62.jpeg](KDE_settings62.jpeg)  
 > 但开启了安全启动的电脑上，这一步是废的😓
 
@@ -728,7 +740,7 @@ sudo ./setup-audio
 sudo update-grub
 ```
 
-并按 *回车（Enter）* 键执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）* 键确定。 *终端* 返回的信息若无报错且最后显示`done`，则修改生效。
+并按 *回车（Enter）键* 执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。 *终端* 返回的信息若无报错且最后显示`done`，则修改生效。
 
 ![KDE_settings63.png](KDE_settings63.png)  
 
@@ -822,18 +834,31 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 ![Personal_perf6.jpeg](Personal_perf6.jpeg)  
  *（SHODAN is watching you boot.）* 
 
+#### 7. 修改账户头像和名称
+
+打开 *“应用程序启动器”* ，点击左上角的头像按钮 *“打开用户设置”* ，或者在 *系统设置* 中点击左侧栏的 *“个性化 - 用户”* ，在右侧的 *管理用户* 设置页面中，选择左侧 *“您的帐号”* 列表中要修改账户头像和名称的账户。在面板右侧，点击 *“头像”* 可以进入 *“更换头像”* 面板，可在里面挑选一个偏好的头像，或者点击第一排第一个 *“选择文件…”* 按钮来选择一张图片作为头像；修改 *“名称：”* 文本框可以修改账户用于UI显示的账户名称，类似于Windows中 *微软账户* 中的 *“全名”* ；而修改 *“用户名：”* 文本框可以修改账户用于系统中的账户名，类似于Windows中`C:\Users\`下的账户名。
+
+![Personal_perf12.png](Personal_perf12.png)  
+
+> 可以尝试多种图片格式作为用户头像，我使用.svg图像可以作为头像使用。
+
 ### b. 个人应用偏好
 
-#### 1. 富文本编辑器： VS Code on Linux
+以下没有特别提到安装方式的，均可使用 *三、11.* 中介绍的各种方式来进行安装。
 
+#### 1. 富文本编辑器： Visual Studio Code
+
+ *Visual Studio Code* 可在 *Discover 软件管理中心* 安装。
 // TODO
 
-#### 2. Office套件：Microsoft 365 （Web 应用）
+#### 2. Office套件：Microsoft 365 （Web应用）
 
+ *Microsoft 365* Web应用可在 *[Microsoft 365](https://www.microsoft365.com/)* 安装。
 // TODO
 
 #### 3. 查看硬件信息：hwinfo
 
+ *hwinfo* 可在 *APT* 安装。
 // TODO
 
 #### 4. Linux原生游戏：OpenRA
@@ -841,13 +866,15 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 // TODO
 [OpenRA Romanov's Vengeance 红警2Linux原生版本_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QT4y1j75k)
 
-#### 5. AI LLM对话工具：Microsoft Copilot （Web 应用）
+#### 5. AI LLM对话工具：Microsoft Copilot （Web应用）（还需斟酌）
+
+ *Microsoft Copilot* Web应用可在 *[Copilot](https://copilot.microsoft.com/)* 安装。
 
 [个人 AI 助手 | Microsoft Copilot](https://www.microsoft.com/zh-cn/microsoft-copilot/personal-ai-assistant)是 *微软* 推出的一款人工智能大语言模型对话工具，结合OpenAI GPT 4和DALL-E 3、Microsoft Designer等AI工具，对日常生活、生产力和娱乐方面有着不错的助力。
 
-安装方式见 *三、11.4.b*，网址为[Copilot](https://copilot.microsoft.com/)。
-
 ![Personal_perf8.png](Personal_perf8.png)  
+
+> 淦哦，不用 *Microsoft Edge浏览器* 打开 *Copilot* 居然每次对话只限制5次，这下不推荐了，还是老老实实用ChatGPT吧。
 
 #### 6. 类似于Windows 任务管理器的Linux 任务管理器：SysMonTask
 
@@ -857,15 +884,54 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 
 #### 7. 游戏平台：Steam
 
+我感觉Steam没啥好介绍的了吧……想特别提到的一点是，Steam Deck使用的系统—— *SteamOS* 就是使用的 *KDE Plasma桌面环境* ，不过发行版是 *Arch Linux* ，这么说其实有点像 *Manjaro KDE* 。
+
+本节将介绍使用 *Discover 软件管理中心* 安装 *Steam* 。
+
+**7.1 安装安装器**
+
+此处已作为 ***使用Discover 软件管理中心安装、更新、卸载应用*** 的示例，具体请见 *三、11.1.a* 。
+
+**7.2 安装器安装**
+
+依次打开 *“应用程序启动器 - 游戏 - Install Steam”* ，进入 *Steam installer* ，然后点击 *“Install”* 按钮。
+
+<img alt="Personal_perf9.png" src="Personal_perf9.png" width="65%" title="This image has been scaled to 65% of its original size.">  
+
+在弹出几个弹窗后，安装器应正确安装 *Steam* 。此时会自动弹出 *Steam登录窗口* 。默认情况下，它是英文的：
+
+<img alt="Personal_perf10.png" src="Personal_perf10.png" width="70%" title="This image has been scaled to 70% of its original size.">
+
+ *（登录后可在 *“Steam - Settings - Interface - Steam client language”* 处修改界面语言。）* 
+
+也可通过依次打开 *“应用程序启动器 - 游戏 - Steam”* ，进入 *Steam*。
+
+<img alt="Personal_perf11.png" src="Personal_perf11.png" width="70%" title="This image has been scaled to 70% of its original size.">
+
+#### 8. 电子邮件：Mozilla Thunderbird
+
 // TODO
 
-#### 8. 电子邮件：Thunderbird
+#### 9. 倒计时工具：KTimer
 
-// TODO
+为了在Kubuntu里找一款能倒计时并在倒计时结束后发送通知并发出声音的应用废了死劲了，以前还嘲笑过 *Windows 11* 预装的 *时钟* 应用简朴，结果在Kubuntu里翻了好几个都不堪用，最后找到的这个也只是将将凑活。怎么找个Kubuntu下的倒计时工具这么难……
 
-#### 9. 倒计时工具：
+要使用能发送通知并发出声音的倒计时工具，需要安装一个应用和一个软件包：
 
-// TODO
+1.  *KTimer* ，可在 *Discover 软件管理中心* 安装。
+2.  *pulseaudio-utils* ，可在 *APT* 安装。
+
+安装完成后，在 *主文件夹（~）* 下的任意路径中创建一个名为`timer_notify_alarm.sh`的文件。本节以`/home/user/Public/timer_notify_alarm.sh`为例。
+
+将以下内容粘贴进`timer_notify_alarm.sh`并保存：
+
+```bash
+#!/bin/bash
+notify-send "KTimer 倒计时程序" "计时完毕。"
+paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
+```
+
+
 
 ### c. 小技巧
 
@@ -884,6 +950,10 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 KDE Connect 是一个用于在多个设备之间实现无缝连接和交互的开源软件，设计之初是用于连接使用 *KDE桌面环境* 的Linux电脑与Android设备，**现已扩展到许多设备和平台**，成为一种通用的解决方案，甚至可完全脱离Linux。它通过使用局域网连接，让用户可以在设备之间共享数据和执行多种功能，包括通知同步、文件传输、远程控制、共享剪贴板、远程输入、设备电量监控等功能。
 
 [【开源】全平台文件共享设备互联 KDE Connect——iOS 最新版本演示（AirDrop 跨全平台替代）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Yu411o7zM)
+
+#### 3. Spectacle截图工具和Gwenview标注工具
+
+// TODO
 
 ### d. 个人卸载预装应用偏好
 
