@@ -840,7 +840,7 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 
 ![Personal_perf12.png](Personal_perf12.png)  
 
-> 可以尝试多种图片格式作为用户头像，我使用.svg图像可以作为头像使用。
+> 可以尝试多种图片格式作为用户头像，我用.svg图像可以作为头像使用。
 
 ### b. 个人应用偏好
 
@@ -866,7 +866,7 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 // TODO
 [OpenRA Romanov's Vengeance 红警2Linux原生版本_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QT4y1j75k)
 
-#### 5. AI LLM对话工具：Microsoft Copilot （Web应用）（还需斟酌）
+#### 5. AI LLM对话工具：Microsoft Copilot（Web应用）（还需斟酌）
 
  *Microsoft Copilot* Web应用可在 *[Copilot](https://copilot.microsoft.com/)* 安装。
 
@@ -930,6 +930,19 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 notify-send "KTimer 倒计时程序" "计时完毕。"
 paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
 ```
+
+依次打开 *“应用程序启动器 - 工具 - KTimer 倒计时程序启动器”* ，进入 *KTimer 倒计时程序启动器* 。在窗口右侧可以新建倒计时计划，或移除选定的计划。选中一条计划，在下方的 *“设置”* 面板中，编辑 *“命令行：”* 的文本框或者点击右侧 *“打开文件对话框”* 按钮，选择脚本文件或者可执行文件。在下方的 *“延迟：”* 处，调整要计时的时间。最后，使用右下角的 *“状态”* 面板上方的三个按键 *“>开始倒计时”“⏸️暂停倒计时”“⏹️停止倒计时”* 来控制计时进度。
+
+本例使用两条计划：
+
+1. 第一条使用 *“打开文件对话框”* 按钮，选择刚才的`timer_notify_alarm.sh`文件。这样使得倒计时结束后发送通知并发出声音提醒。
+2. 第二条编辑 *“命令行：”* 的文本框，输入：
+   ```sh
+   notify-send "KTimer 倒计时程序" "计时完毕。"
+   ```
+   这样使得倒计时结束后只发送通知但不发出声音提醒。
+
+![Personal_perf13.png](Personal_perf13.png)  
 
 
 
