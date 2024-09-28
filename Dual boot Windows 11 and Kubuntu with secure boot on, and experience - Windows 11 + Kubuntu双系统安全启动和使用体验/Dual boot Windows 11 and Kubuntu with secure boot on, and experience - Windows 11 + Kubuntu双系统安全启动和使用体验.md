@@ -973,6 +973,17 @@ KDE Connect 是一个用于在多个设备之间实现无缝连接和交互的�
 
 // TODO
 
+#### 4. Dolphin 文件管理器管理文件权限和查看校验和
+
+**4.1 管理文件权限**
+
+// TODO  
+<img alt="Personal_perf15.png" src="Personal_perf15.png" width="80%" title="This image has been scaled to 80% of its original size."> 
+
+**4.2 查看文件校验和**
+
+// TODO
+
 ### d. 个人卸载预装应用偏好
 
 这里没有特别提到卸载方式的，均可按 *三、11.* 中介绍的方式进行卸载。
