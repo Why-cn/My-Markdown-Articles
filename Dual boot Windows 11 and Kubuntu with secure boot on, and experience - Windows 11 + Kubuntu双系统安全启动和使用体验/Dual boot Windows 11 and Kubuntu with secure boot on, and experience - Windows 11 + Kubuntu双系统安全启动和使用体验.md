@@ -294,7 +294,7 @@ sudo apt install <字体包名>
 
 ![KDE_settings14.png](KDE_settings14.png)
 
-由于`apt install`是高权限操作（类似于在Windows Vista及以后的Windows中，向`%ProgramFiles%`和`%ProgramFiles(x86)%`中安装软件，默认情况下需要通过UAC管理员批准），该命令需要 *超级管理员* 权限批准。`sudo`是实现该批准的一种方法，在命令或批处理脚本前加入此命令字段可以使之后的操作获得 *超级管理员* 批准。注意：在一个 *终端会话* 中第一次使用该命令，则该命令要求提供 *当前用户* 的 *账户密码* 。**该密码在 *终端* 中输入时不会显示任何字符，包括“*（星号）”。** 在盲输完成后，按 *“回车（Enter）”* 确定。
+由于`apt install`是高权限操作（类似于在Windows Vista及以后的Windows中，向`%ProgramFiles%`和`%ProgramFiles(x86)%`中安装软件，默认情况下需要通过UAC管理员批准），该命令需要 *超级管理员* 权限批准。`sudo`是实现该批准的一种方法，在命令或批处理脚本前加入此命令字段可以使之后的操作获得 *超级管理员* 批准。注意：在一个 *终端会话* 中第一次使用该命令，则该命令要求提供 *当前用户* 的 *账户密码* 。**该密码在 *“终端”* 中输入时不会显示任何字符，包括“*（星号）”。** 在盲输完成后，按 *“回车（Enter）”* 确定。
 
 <img alt="KDE_settings15.png" src="KDE_settings15.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
@@ -316,7 +316,7 @@ sudo apt install <字体包名>
 
 上图的上图中蓝色框中的下拉菜单 *“微调”* ，类似于Windows中的ClearType（[Microsoft ClearType - Typography | Microsoft Learn](https://learn.microsoft.com/zh-cn/typography/cleartype/)）：通过微调字体在液晶显示屏上的对齐方式，使得字体可以渲染地更加清晰。这是一项纯靠体验改变的选项——即调成什么样，效果好不好全凭个人感觉。选择你认为清晰的一项，然后点击 *“应用”* 按钮。
 
-### 4. 开机NumLock状态和更改光标速度
+### 4. 开机NumLock状态、更改光标和滚轮速度
 
 **4.1 调整开机NumLock状态**
 
@@ -329,6 +329,10 @@ sudo apt install <字体包名>
 在 *系统设置* 中点击左侧栏的 *“输入设备 - 鼠标”* ，在右侧的 *“鼠标”* 设置页面中，调整 *“光标速度”* 选项，然后点击 *“应用”* 按钮。
 
 ![KDE_settings11.png](KDE_settings11.png)
+
+**4.3 更改滚轮速度**
+
+// TODO
 
 ### 5. 任务栏与应用程序启动器的操作与设置
 
@@ -344,20 +348,28 @@ sudo apt install <字体包名>
 
 <img alt="KDE_settings18.png" src="KDE_settings18.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
-**5.2 固定项目到任务栏**
+**5.2 固定项目到图标任务管理器**
 
-对于 *任务栏* 上已经固定的项目，在其 *图标* 上 *右键 - “取消固定到任务栏”* ，可以使其不再固定到 *任务栏* 上。对于没有固定到 *任务栏* 的项目，在其 *图标* 上 *右键 - “固定到任务栏”* ，可以使其固定到 *任务栏* 上。
+> 为避免与屏幕下方的整条 *任务栏* 相混淆，此处使用专有名词 *图标任务管理器* 来指代 *任务栏* 中显示窗口任务图标的这一组件。  
+> ![KDE_settings78.png](KDE_settings78.png)
 
-![KDE_settings19.png](KDE_settings19.png)
+&ensp;&ensp;&ensp;&ensp;**5.2.a 通过图标任务管理器添加**
 
-对于没有出现在 *任务栏* 上的项目，可以通过拖拽其图标到任务栏的方式将其固定在任务栏上。不同于Windows 11（截止到编写时的23H2正式版本），任意用 *Dolphin 文件管理器* 能够双击打开的文件都可以固定到 *任务栏* 上，这意味着文件、文件夹甚至是脚本都可以固定在 *任务栏* 上。
+对于 *图标任务管理器* 上已经固定的项目，在其 *图标* 上 *右键 - 取消固定到任务栏* ，可以使其不再固定到 *图标任务管理器* 上。对于没有固定到 *图标任务管理器* 的项目，在其 *图标* 上 *右键 - 固定到任务栏* ，可以使其固定到 *图标任务管理器* 上。
+
+<img alt="KDE_settings19.png" src="KDE_settings19.png" width="40%" title="This image has been scaled to 40% of its original size.">  
+
+&ensp;&ensp;&ensp;&ensp;**5.2.b 通过应用程序启动器添加**
+
+对于没有出现在 *图标任务管理器* 上但存在于 *应用程序启动器* 的应用，可以在 *应用程序启动器* 中的应用上 *右键 - 固定到任务管理器* 来固定到 *图标任务管理器* 上。
+
+<img alt="KDE_settings79.png" src="KDE_settings79.png" width="80%" title="This image has been scaled to 80% of its original size."> 
 
 **5.3 调整任务栏高度**
 
-在 *任务栏* 上的空白位置上 *右键 - “进入编辑模式”* ，在弹出的 *浮动任务栏与配置面板* 上，调整 *“面板高度”* 到你偏好的高度，然后按 *退出（ESC）* 。
+在 *任务栏* 上的空白位置上 *右键 - 进入编辑模式* ，在弹出的 *浮动任务栏与配置面板* 上，调整 *“面板高度”* 到你偏好的高度，然后按 *退出（ESC）* 键或按屏幕最上方的 *红叉❌* 。
 
 ![KDE_settings20.png](KDE_settings20.png)  
-*（这里的红叉是退出配置面板，要退出编辑模式请按屏幕最上方的红叉或者按 *退出（ESC）* ，这里改完图才想起来，懒得再截了。）*
 
 **5.4 调整系统托盘图标可见性**
 
@@ -506,16 +518,19 @@ sudo apt install <字体包名>
 
 &ensp;&ensp;&ensp;&ensp;**11.1.c 更新应用/系统**
 
-在 *Discover 软件管理中心* 中，点击左下角的 *“更新(U)”* 标签即可浏览系统中可被更新的应用。**此处的应用不限于被 *Discover 软件管理中心* 收录于否，只要是 *系统软件源* 内的软件均可被检查。** 该更新列表并不是随时更新的，所以可以按右上角的 *“刷新”* 按钮来刷新更新列表。如果更新列表中有可以更新的软件（包），可以点击它们的卡片来查看详情。勾选各软件（包）卡片左边的复选框，即可将其标记为待更新软件（包）；或是点击下方的 *“全部选中”* 按钮来全选所有软件（包）。最后，点击右上角的 *“更新选中项目”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始更新各软件（包）。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
+在 *Discover 软件管理中心* 中，点击左下角的 *“更新(U)”* 标签即可浏览系统中可被更新的应用。**此处的应用不限于被 *Discover 软件管理中心* 收录于否，只要是 *系统软件源* 内的软件均可被检查。** 该更新列表并不是随时更新的，所以可以按右上角的 *“刷新”* 按钮来刷新更新列表。如果更新列表中有可以更新的软件（包），可以点击它们的卡片来查看简介，也可点击 *“更多信息…”* 按钮查看详情。勾选各软件（包）卡片左边的复选框，即可将其标记为待更新软件（包）；或是点击下方的 *“全部选中”* 按钮来全选所有软件（包）。最后，点击右上角的 *“更新选中项目”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始更新各软件（包）。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
 
 ![KDE_settings43.png](KDE_settings43.png) 
 
 由于操作系统也是由许多软件（包）构成，所以此处 *Discover 软件管理中心* 对所有软件源内的软件（包）更新，也可以覆盖到**系统更新**。这点与许多商业操作系统不同，它们（如 *Windows* 、 *MacOS* 、*Andriod* 等）往往将系统更新放在单独的设置页面中。
 
+![KDE_settings77.png](KDE_settings77.png) 
+
 > 有些应用/软件包要在应用重启/系统重启后才能使更新生效。  
 > 系统软件更新必须在系统重启后才能生效。  
 > <img alt="KDE_settings75.png" src="KDE_settings75.png" width="50%" title="This image has been scaled to 50% of its original size.">  
-> // TODO
+> <img alt="KDE_settings76.jpeg" src="KDE_settings76.jpeg" width="50%" title="This image has been scaled to 50% of its original size.">  
+>  *（重启后安装更新时的进度条）* 
 
 **11.2 使用下载的软件包安装应用**
 
@@ -557,7 +572,7 @@ apt list --installed | grep <你想要查找的软件包关键字>
 sudo apt autoremove
 ```
 
-若有残留软件包，则`apt autoremove`会提问用户是否执行自动卸载。再确认一下给出的卸载列表中没有需要保留的软件包，然后按 *“回车（Enter）键”* 确认，或输入 *n* 再按 *“回车（Enter）键”* 取消。
+在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。若有残留软件包，则`apt autoremove`会提问用户是否执行自动卸载。再确认一下给出的卸载列表中没有需要保留的软件包，然后按 *“回车（Enter）键”* 确认，或输入 *n* 再按 *“回车（Enter）键”* 取消。
 
 // TODO apt autoremove截图
 
@@ -568,7 +583,7 @@ sudo apt autoremove
 > “渐进式 Web 应用” 这一术语由设计师 Frances Berriman 和 Google Chrome 工程师 Alex Russell 于 2015 年首次提出，指的是利用现代浏览器支持的新功能的应用程序，这些应用程序最初在 Web 浏览器选项卡内运行，但后来可以完全离线运行，并且无需在浏览器中输入应用程序 URL 即可启动。
 > > [Web application - Wikipedia](https://en.wikipedia.org/wiki/Web_application#History)
 
-即：这些Web应用可以像真正安装在电脑上的应用一样，可以通过图标启动，可以离线运行，可以接受更新，也可以操作本地文件。只不过载体是浏览器罢了。以 *[Microsoft 365](https://www.microsoft365.com/)* Web应用为例：
+即：这些Web应用可以像真正安装在电脑上的应用一样，可以通过图标启动，可以离线运行，可以接受更新，也可以操作本地文件。只不过载体是浏览器罢了。优点是，只要有支持Web应用的浏览器就可以安装，无论操作系统和CPU指令集，完全跨平台；缺点是稳定性较差，且网页能做的不如真正安装在电脑上的应用能做的功能多。以 *[Microsoft 365](https://www.microsoft365.com/)* Web应用为例：
 
 &ensp;&ensp;&ensp;&ensp;**11.4.a 安装一般Web应用**
 
@@ -674,13 +689,13 @@ KDE中的 *Dolphin 文件管理器* 已经整合了访问Bitlocker加密的卷�
 
 ![KDE_settings51.png](KDE_settings51.png) 
 
-打开的 *“终端”* 窗口中，应该显示目前处于刚才的路径下。输入命令
+打开的 *“终端”* 窗口中，应该显示目前处于刚才的路径下。输入以下命令并执行：
 
 ```Shell
 sudo ./setup-audio
 ```
 
-并按下 *回车（Enter）键* 。
+在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。
 
 ![KDE_settings53.png](KDE_settings53.png) 
 
@@ -707,13 +722,13 @@ sudo ./setup-audio
 
 可以对该配置文件中的条目进行以下修改（部分）：
 
-1. `GRUB_DEFAULT="xxx"` 设置默认引导项为指定 *GRUB菜单条目名称* 。在 *终端* 中输入以下命令获取所有的 *GRUB菜单条目名称* ：
+1. `GRUB_DEFAULT="xxx"` 设置默认引导项为指定 *GRUB菜单条目名称* 。在 *“终端”* 中输入以下命令获取所有的 *GRUB菜单条目名称* ：
    
    ```Shell
    sudo cat /boot/grub/grub.cfg | grep "menuentry '"
    ```
 
-   并按 *回车（Enter）键* 执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。之后， *终端* 的返回信息将显示当前的所有 *GRUB菜单条目名称* 。
+   并按 *回车（Enter）键* 执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。之后， *“终端”* 的返回信息将显示当前的所有 *GRUB菜单条目名称* 。
 
    ![KDE_settings61.png](KDE_settings61.png)  
     *（在我的笔记本上有8个GRUB菜单条目。）* 
@@ -739,13 +754,13 @@ sudo ./setup-audio
 
 ![KDE_settings68.png](KDE_settings68.png)  
 
-要使更改后的配置文件生效，还需要最后一步：在 *终端* 中输入以下命令：
+要使更改后的配置文件生效，还需要最后一步：在 *“终端”* 中输入以下命令：
    
 ```Shell
 sudo update-grub
 ```
 
-并按 *回车（Enter）键* 执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。 *终端* 返回的信息若无报错且最后显示`done`，则修改生效。
+并按 *回车（Enter）键* 执行命令。在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。 *“终端”* 返回的信息若无报错且最后显示`done`，则修改生效。
 
 ![KDE_settings63.png](KDE_settings63.png)  
 
@@ -810,29 +825,67 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 
 #### 2. 修改任务栏行为
 
-// TODO
+在 *任务栏* 上的空白位置上 *右键 - 配置图标任务管理器…* ，在弹出的 *图标任务管理器* 上，点击左侧 *“行为”* 按钮，在右侧的 *“行为”* 面板中，调整 *“分组：”* 下拉菜单： *“按程序名称”* 则将会使相同程序的不同窗口的任务栏图标合并为一个，并在下面加一个绿色的 *“＋”* 图标；或者选择 *“不分组”* 来关掉合并功能。勾选 *“鼠标滚轮：”* 项中的 *“循环切换任务”* ，则在光标悬停在 *图标任务管理器* 上时，滚动鼠标滚轮可以在不同窗口中轮换；取消勾选 *“跳过最小化的任务”* 则可以使滚轮滚动也可滚动到已最小化的窗口，此时该窗口将取消最小化。最后，点击 *“确定”* 按钮。
 
 <img alt="Personal_perf2.png" src="Personal_perf2.png" width="70%" title="This image has been scaled to 70% of its original size.">  
 
-#### 3. 固定应用到任务栏
+#### 3. 固定应用或文件到任务栏
 
-// TODO
+为避免混淆，此处 *任务栏* 指代的是除 *三、5.2* 中提到的 *图标任务管理器* 外的屏幕下方的整条 *任务栏* 空间。此处固定的应用或文件将作为 *任务栏* 的“小组件”。
 
-#### 4. 更改锁屏壁纸为每日一图
+**3.1 通过应用程序启动器添加**
 
-// TODO
+打开 *“应用程序启动器”* ，在想要添加为小组件的应用上 *“右键 - 添加到面板（挂件）”* 来作为小组件固定到 *任务栏* 上。此时，该应用图标将出现在 *任务栏* 上且不在 *图标任务管理器* 中。
+
+![Personal_perf8.png](Personal_perf8.png)  
+
+若要调整位置或删除该小组件，在 *任务栏* 上的空白位置上 *“右键 - 进入编辑模式”* ，在弹出的 *浮动任务栏与配置面板* 上，按住并左右拖动小组件的图标可以调整小组件在 *任务栏* 上的位置；或者将光标悬停在小组件上并点击 *“移除”* 按钮来移除该小组件。
+
+![Personal_perf16.png](Personal_perf16.png)  
+ *（进入此配置面板的截图请见 *三、5.3* 。）* 
+
+**3.2 通过Dolphin 文件管理器添加**
+
+不同于Windows 11（截止到编写时的23H2正式版本），任意用 *Dolphin 文件管理器* 能够双击打开的文件都可以通过拖拽其图标到 *任务栏* 的方式将其作为一个小组件固定在 *任务栏* 上。这意味着文件、文件夹甚至是脚本都可以固定在 *任务栏* 上。
+
+#### 4. 更改锁屏壁纸；更改壁纸
+
+**4.1 更改锁屏壁纸（以必应每日一图为例）**
+
+在 *系统设置* 中点击左侧栏的 *“工作区行为 - 锁屏 - 配置”* ，在右侧的 *“外观”* 设置页面中，依个人偏好更改设置，本例以更换为必应每日一图为例：在 *“壁纸类型：”* 下拉菜单中选择 *“每日一图”* ， *“提供：”* 下拉菜单中选择 *“必应”* ；如果显示器非标准16:9显示比例，则可以调整 *“位置：”* 下拉菜单。
 
 ![Personal_perf3.png](Personal_perf3.png)  
 
+> 点击 *“应用”* 按钮保存当前设置但不退出 *锁屏 外观* 面板；点击 *“确定”* 按钮保存当前设置并退出 *锁屏 外观* 面板。
+
 ![Personal_perf4.png](Personal_perf4.png)  
+
+**4.2 更改桌面壁纸**
+
+在 *桌面* 上的空白位置上 *右键 - 配置桌面和壁纸…* ，在弹出的 *桌面文件夹 设置* 窗口上，点击左侧 *“壁纸”* 按钮，在右侧的 *“壁纸”* 面板中，依个人偏好更改设置。 
+
+![Personal_perf16.png](Personal_perf17.png)  
+
+> 点击 *“应用”* 按钮保存当前设置但不退出 *桌面文件夹 设置* 窗口；点击 *“确定”* 按钮保存当前设置并退出 *桌面文件夹 设置* 窗口。
 
 #### 5. Dolphin 文件管理器永久显示标签栏
 
-// TODO：不行，没这设置项
+在Windows 7时代我就期待 *Windows 资源管理器* 有一天可以像浏览器那样多标签页了，直到Windows 11 22H2才实现了这一点。KDE的 *Dolphin 文件管理器* 自带多标签页功能，但没有像Windows 11的*Windows 资源管理器* 那样，标签页常驻且有 *“＋添加新标签”* 按钮。查了一下， *Dolphin 文件管理器* 的开发者们好像无意添加这一功能：[Add options to always show tab bar and to hide close buttons on tabs (!269) · 合并请求 · System / Dolphin · GitLab](https://invent.kde.org/system/dolphin/-/merge_requests/269)。哎，看来只能用快捷键或者右键菜单来添加新标签页了。
+
+![Personal_perf18.png](Personal_perf18.png) 
 
 #### 6. 修改GRUB背景
 
-// TODO
+厌倦了黑底的 *GRUB 2* 启动菜单，想要发挥开源软件高度可自定的特性，搞杀马特 *GRUB 2* 背景吗？更改 *GRUB 2* 背景的方式有多种，本节介绍一种相对简单的：首先将想要显示的背景图片放在一可访问路径中，如`~/Downloads`下。然后，在 *“终端”* 中输入以下命令：
+
+```Shell
+sudo cp <想要显示的背景图片路径> /boot/grub/
+sudo update-grub
+```
+
+在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。若在 *“终端”* 的返回信息中出现`Found background image: <想要显示的背景图片文件名>`，则更换 *GRUB 2* 背景成功。
+
+>  *GRUB 2* 接受的背景图片格式为PNG、JPG/JPEG和TGA。具体格式请见[Grub2/Displays - Community Help Wiki](https://help.ubuntu.com/community/Grub2/Displays#Choosing_a_GRUB_2_Background_Image)。 *GRUB 2* 可以自动拉抻和缩放图片，但无法手动调整拉抻和缩放方式，且可能不总是生效。
 
 ![Personal_perf5.png](Personal_perf5.png)  
 
@@ -847,57 +900,25 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 
 > 可以尝试多种图片格式作为用户头像，我用.svg图像可以作为头像使用。
 
-### b. 个人应用偏好
+### b. 个人Kubuntu下的应用偏好
 
 以下没有特别提到安装方式的，均可使用 *三、11.* 中介绍的各种方式来进行安装。
 
-#### 1. 富文本编辑器： Visual Studio Code
+#### 0. 通用
 
- *Visual Studio Code* 可在 *Discover 软件管理中心* 安装。
-// TODO
+在另一篇文章[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)中介绍了一些不指定发行版和桌面环境的个人偏好应用的安装和使用体验，均可使用在Kubuntu中，此处不再赘述。其中还介绍了在Linux环境下运行Windows应用的方式。
 
-#### 2. Office套件：Microsoft 365 （Web应用）
-
- *Microsoft 365* Web应用可在 *[Microsoft 365](https://www.microsoft365.com/)* 安装。
-// TODO
-
-#### 3. 查看硬件信息：hwinfo
-
- *hwinfo* 可在 *APT* 安装。
-// TODO
-
-#### 4. Linux原生游戏：OpenRA
-
-// TODO
-[OpenRA Romanov's Vengeance 红警2Linux原生版本_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QT4y1j75k)
-
-#### 5. AI LLM对话工具：Microsoft Copilot（Web应用）（还需斟酌）
-
- *Microsoft Copilot* Web应用可在 *[Copilot](https://copilot.microsoft.com/)* 安装。
-
-[个人 AI 助手 | Microsoft Copilot](https://www.microsoft.com/zh-cn/microsoft-copilot/personal-ai-assistant)是 *微软* 推出的一款人工智能大语言模型对话工具，结合OpenAI GPT 4和DALL-E 3、Microsoft Designer等AI工具，对日常生活、生产力和娱乐方面有着不错的助力。
-
-![Personal_perf8.png](Personal_perf8.png)  
-
-> 淦哦，不用 *Microsoft Edge浏览器* 打开 *Copilot* 居然每次对话只限制5次，这下不推荐了，还是老老实实用ChatGPT吧。
-
-#### 6. 类似于Windows 任务管理器的Linux 任务管理器：SysMonTask
-
-// TODO
-
-[KrispyCamel4u/SysMonTask: Linux system monitor with the compactness and usefulness of windows task manager to allow higher control and monitoring.](https://github.com/KrispyCamel4u/SysMonTask)
-
-#### 7. 游戏平台：Steam
+#### 1. 游戏平台：Steam
 
 我感觉Steam没啥好介绍的了吧……想特别提到的一点是，Steam Deck使用的系统—— *SteamOS* 就是使用的 *KDE Plasma桌面环境* ，不过发行版是 *Arch Linux* ，这么说其实有点像 *Manjaro KDE* 。
 
 本节将介绍使用 *Discover 软件管理中心* 安装 *Steam* 。
 
-**7.1 安装安装器**
+**1.1 安装安装器**
 
 此处已作为 ***使用Discover 软件管理中心安装、更新、卸载应用*** 的示例，具体请见 *三、11.1.a* 。
 
-**7.2 安装器安装**
+**1.2 安装器安装**
 
 依次打开 *“应用程序启动器 - 游戏 - Install Steam”* ，进入 *Steam installer* ，然后点击 *“Install”* 按钮。
 
@@ -913,11 +934,7 @@ KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不�
 
 <img alt="Personal_perf11.png" src="Personal_perf11.png" width="70%" title="This image has been scaled to 70% of its original size.">
 
-#### 8. 电子邮件：Mozilla Thunderbird
-
-// TODO
-
-#### 9. 倒计时工具：KTimer
+#### 2. 倒计时工具：KTimer
 
 为了在Kubuntu里找一款能倒计时并在倒计时结束后发送通知并发出声音的应用废了死劲了，以前还嘲笑过 *Windows 11* 预装的 *时钟* 应用简朴，结果在Kubuntu里翻了好几个都不堪用，最后找到的这个也只是将将凑活。怎么找个Kubuntu下的倒计时工具这么难……
 
@@ -953,15 +970,19 @@ paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
 
 ### c. 小技巧
 
-#### 1. 任务栏滚轮滚动
+#### 1. 全局滚轮切换
 
-&ensp;&ensp;&ensp;&ensp;**1.1 使用滚轮在窗口间切换**
+&ensp;&ensp;&ensp;&ensp;**1.1 使用滚轮在任意标签间切换**
 
-// TODO
+无论是 *图标任务管理器* 中的各窗口图标、 *Google Chrome 浏览器* 的各网页标签页，还是 *“终端”* 和 *Dolphin 文件管理器* 的各标签页，KDE桌面环境均支持当光标悬停在标签栏上时，使用鼠标滚轮可以在各个标签页之间轮换。希望Windows有一天也可以跟进。
 
 &ensp;&ensp;&ensp;&ensp;**1.2 使用滚轮快捷调整托盘设置**
 
-// TODO
+当将光标悬停在 *任务栏* 上的 *系统托盘* 上的 *系统设置图标* 上时，滚动鼠标滚轮可以更改某些系统设置：比如悬停在 *“🔉”* 上时滚动滚轮可以调整音量大小， 悬停在*“🔋”* 上时滚动滚轮可以调整屏幕亮度（对于拥有内置屏幕的设备，外接显示器没有测试过），等等。同时，鼠标中键单击这些图标也可以更改一些设置。
+
+<img alt="Personal_perf19.png" src="Personal_perf19.png" width="70%" title="This image has been scaled to 70% of its original size."> 
+
+ *（问ChatGPT回答KDE在2000年初就实现了这一功能，但问Copilot两次都说是Windows 11先实现的，啊这……）*
 
 #### 2. KDE Connect
 
