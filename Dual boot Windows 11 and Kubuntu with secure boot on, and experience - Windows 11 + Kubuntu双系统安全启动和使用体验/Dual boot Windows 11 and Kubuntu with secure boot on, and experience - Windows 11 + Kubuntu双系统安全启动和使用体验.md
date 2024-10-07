@@ -995,14 +995,15 @@ paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
 &ensp;&ensp;&ensp;&ensp;**2.1 测试平台、安装与启动位置**
 
 本节将介绍在仅两台设备间使用 *KDE Connect* 的情景，仅简单介绍，无性能测试。
-  
-<div>设备及版本简介：</div>  
-<div>Asus Chromebook Vibe CX55 Flip<div style="float:right">Apple iPhone 13 mini</div></div>  
-<div>Kubuntu 24.04 LTS<div style="float:right">iOS 17.3</div></div>  
-<div>KDE Connect 23.08.5<div style="float:right">KDE Connect 0.4.1</div></div>  
-<div>WiFi连接<div style="float:right">WiFi连接</div></div> 
-<div>随KDE桌面环境预装，或从Discover 软件管理中心安装，或`apt install kdeconnect`<div style="float:right">App Store - KDE Connect</div></div> 
-<div><i>“应用程序启动器 - 互联网 - KDE Connect”或“任务栏 - 系统托盘 - KDE Connect”</i><div style="float:right"><i>“主屏幕 - KDE Connect”或“App资源库 - 效率与财务 - KDE Connect”</i></div></div> 
+
+| 设备及版本简介： |   |
+|:----------------- | -----------------:|
+| Asus Chromebook Vibe CX55 Flip | Apple iPhone 13 mini |
+| Kubuntu 24.04 LTS | iOS 17.3 |
+| KDE Connect 23.08.5 | KDE Connect 0.4.1 |
+| WiFi连接 | WiFi连接 |
+| 随KDE桌面环境预装，或从Discover 软件管理中心安装，或`apt install kdeconnect` | App Store - KDE Connect |
+| *“应用程序启动器 - 互联网 - KDE Connect”或“任务栏 - 系统托盘 - KDE Connect”* | *“主屏幕 - KDE Connect”或“App资源库 - 效率与财务 - KDE Connect”* |
 
 &ensp;&ensp;&ensp;&ensp;**2.2 配对**
 
