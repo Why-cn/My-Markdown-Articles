@@ -94,7 +94,7 @@
 
 *（由于饶罗翔实在是太难绷了，因此此处选择在虚拟机上安装来方便截图。具体操作和实体机上相同，实在无法同步的点会继续饶罗翔）*
 
-在上一步的操作之后，应该可以引导到安装U盘的GRUB界面；等待自动进入默认选项，或者使用键盘上的方向键，将高亮的选项选择到第一项 *“Try or Install Kubuntu”* ，然后按下 *回车（Enter）键* 。
+在上一步的操作之后，应该可以引导到安装U盘的GRUB界面；等待自动进入默认选项，或者使用键盘上的 *方向键* ，将高亮的选项选择到第一项 *“Try or Install Kubuntu”* ，然后按下 *回车（Enter）键* 。
 
 ![Kubuntu_install0.png](Kubuntu_install0.png)
 
@@ -278,7 +278,7 @@ $$PPI = \frac{\sqrt{像素宽度（个）^2 + 像素高度（个）^2}}{屏幕�
 apt list | grep <关键字>
 ```
 
-在本例中，输入`apt list | grep fira`，按 *“回车（Enter）”* 执行：
+在本例中，输入`apt list | grep fira`，按 *“回车（Enter）键”* 执行：
 
 ![KDE_settings13.png](KDE_settings13.png)
 
@@ -290,11 +290,11 @@ apt list | grep <关键字>
 sudo apt install <字体包名>
 ```
 
-在本例中，输入`sudo apt install fonts-firacode`，按 *“回车（Enter）”* 执行：
+在本例中，输入`sudo apt install fonts-firacode`，按 *“回车（Enter）键”* 执行：
 
 ![KDE_settings14.png](KDE_settings14.png)
 
-由于`apt install`是高权限操作（类似于在Windows Vista及以后的Windows中，向`%ProgramFiles%`和`%ProgramFiles(x86)%`中安装软件，默认情况下需要通过UAC管理员批准），该命令需要 *超级管理员* 权限批准。`sudo`是实现该批准的一种方法，在命令或批处理脚本前加入此命令字段可以使之后的操作获得 *超级管理员* 批准。注意：在一个 *终端会话* 中第一次使用该命令，则该命令要求提供 *当前用户* 的 *账户密码* 。**该密码在 *“终端”* 中输入时不会显示任何字符，包括“*（星号）”。** 在盲输完成后，按 *“回车（Enter）”* 确定。
+由于`apt install`是高权限操作（类似于在Windows Vista及以后的Windows中，向`%ProgramFiles%`和`%ProgramFiles(x86)%`中安装软件，默认情况下需要通过UAC管理员批准），该命令需要 *超级管理员* 权限批准。`sudo`是实现该批准的一种方法，在命令或批处理脚本前加入此命令字段可以使之后的操作获得 *超级管理员* 批准。注意：在一个 *终端会话* 中第一次使用该命令，则该命令要求提供 *当前用户* 的 *账户密码* 。**该密码在 *“终端”* 中输入时不会显示任何字符，包括“*（星号）”。** 在盲输完成后，按 *“回车（Enter）键”* 确定。
 
 <img alt="KDE_settings15.png" src="KDE_settings15.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
@@ -332,7 +332,7 @@ sudo apt install <字体包名>
 
 **4.3 更改滚轮速度**
 
-// TODO
+本来是某次启动后滚轮速度变得很慢，先在此处标记待后面修复再来记录，结果重启了一下又好了，emm……
 
 ### 5. 任务栏与应用程序启动器的操作与设置
 
@@ -478,7 +478,7 @@ sudo apt install <字体包名>
 
 <img alt="KDE_settings39.png" src="KDE_settings39.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
-**更改切换输入法热键** ：如果你也像我一样苦恼于默认的更改切换输入法热键 *Ctrl + 空格键（Space）* 与一些IDE的代码提示热键相冲，又不想改变IDE的热键，那么可以更改切换输入法的热键。在上一步中的 *“输入法”* 设置页面中，点击下方的 *“配置全局选项…”* 按钮，在 *“全局选项”* 面板中，点击 *Hotkeys（热键设置） - Trigger Input Method:（切换输入法：）* 后面的 *快捷键选择框* ，点击后，在键盘上按下你想要用来设置的快捷（组合）键。如我设置成和Windows下 *切换输入语言* 的热键相同： *Windows徽标键 + 空格键（Space）* ，在Linux下， *Windows徽标键* 被定义为 *超级键（Super）* 。
+**更改切换输入法热键** ：如果你也像我一样苦恼于默认的更改切换输入法热键 *Ctrl + 空格键（Space）* 与一些IDE的代码提示热键相冲，又不想改变IDE的热键，那么可以更改切换输入法的热键。在上一步中的 *“输入法”* 设置页面中，点击下方的 *“配置全局选项…”* 按钮，在 *“全局选项”* 面板中，点击 *Hotkeys（热键设置） - Trigger Input Method:（切换输入法：）* 后面的 *快捷键选择框* ，点击后，在键盘上按下你想要用来设置的快捷（组合）键。如我设置成和Windows下 *切换输入语言* 的热键相同： *Windows徽标键 + 空格键（Space）* ，在Linux下， *Windows徽标键* 被定义为 *超级（Super）键* 或 *元（Meta）键* 。
 
 ![KDE_settings72.png](KDE_settings72.png) 
 
@@ -504,13 +504,13 @@ sudo apt install <字体包名>
 
 <img alt="KDE_settings40.png" src="KDE_settings40.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
-点击左下角的 *“主页”* 标签即可浏览Discover中的热门应用，或者在左侧的各项分类标签中进行浏览。在左上角的 *“搜索…”* 搜索框内输入关键词并按下 *回车（Enter）* 键，即可在选中的标签内进行搜索。在搜索结果中查找想要安装的应用，点击应用卡片可以展开详细信息页面，在页面中查看截图、发行商/开发者、支持页面是否符合预期。若是，点击右上角的 *“⬇️安装”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始安装任务。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
+点击左下角的 *“主页”* 标签即可浏览Discover中的热门应用，或者在左侧的各项分类标签中进行浏览。在左上角的 *“搜索…”* 搜索框内输入关键词并按下 *回车（Enter）键* ，即可在选中的标签内进行搜索。在搜索结果中查找想要安装的应用，点击应用卡片可以展开详细信息页面，在页面中查看截图、发行商/开发者、支持页面是否符合预期。若是，点击右上角的 *“⬇️安装”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始安装任务。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
 
 ![KDE_settings41.png](KDE_settings41.png) 
 
 &ensp;&ensp;&ensp;&ensp;**11.1.b 卸载应用**
 
-在 *Discover 软件管理中心* 中，点击左下角的 *“已安装的软件包”* 标签即可浏览系统中已被安装并被 *Discover 软件管理中心* 收录的应用。在左上角的 *“在“已安装的软件包”中搜索…”* 搜索框内输入关键词并按下 *回车（Enter）* 键，即可在这些应用中搜索。对于右方的搜索结果，点击想要卸载的应用卡片右方的 *“移除”* 按钮。 *Discover 软件管理中心* 将会自动准备卸载该应用和其全部的独立依赖软件（只被该应用依赖，而不被任何其他软件依赖的依赖软件）。如果该应用是其他软件的依赖，则会弹出 *“确认移除软件包”* 弹窗。如果其中提到的一并移除的软件包也不是你想要保留的软件包，点击 *“移除”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始卸载任务。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
+在 *Discover 软件管理中心* 中，点击左下角的 *“已安装的软件包”* 标签即可浏览系统中已被安装并被 *Discover 软件管理中心* 收录的应用。在左上角的 *“在“已安装的软件包”中搜索…”* 搜索框内输入关键词并按下 *回车（Enter）键* ，即可在这些应用中搜索。对于右方的搜索结果，点击想要卸载的应用卡片右方的 *“移除”* 按钮。 *Discover 软件管理中心* 将会自动准备卸载该应用和其全部的独立依赖软件（只被该应用依赖，而不被任何其他软件依赖的依赖软件）。如果该应用是其他软件的依赖，则会弹出 *“确认移除软件包”* 弹窗。如果其中提到的一并移除的软件包也不是你想要保留的软件包，点击 *“移除”* 按钮。在之后弹出的 *“需要进行身份验证 — PolicyKit1 KDE 代理程序”* 窗口中，输入 *“账户密码”* ，然后点击 *“确定”* 按钮， *Discover 软件管理中心* 将会开始卸载任务。此时在左下角将显示 *任务进度条* ，点击该进度条可以看到详细任务进度。
 
 ![KDE_settings42.png](KDE_settings42.png) 
 
@@ -986,24 +986,91 @@ paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
 
 #### 2. KDE Connect
 
-KDE Connect 是一个用于在多个设备之间实现无缝连接和交互的开源软件，设计之初是用于连接使用 *KDE桌面环境* 的Linux电脑与Android设备，**现已扩展到许多设备和平台**，成为一种通用的解决方案，甚至可完全脱离Linux。它通过使用局域网连接，让用户可以在设备之间共享数据和执行多种功能，包括通知同步、文件传输、远程控制、共享剪贴板、远程输入、设备电量监控等功能。
+（本节不是一个详细介绍 *KDE Connect* 的说明。如果将来要扩展 *KDE Connect* 到其他平台且使用更多功能，可能会移动到其他文章中。）
+
+ *KDE Connect* 是一个用于在多个设备之间实现无缝连接和交互的开源软件，设计之初是用于连接使用 *KDE桌面环境* 的Linux电脑与Android设备，**现已扩展到许多设备和平台**，成为一种通用的解决方案，甚至可完全脱离Linux。它通过使用局域网连接，让用户可以在设备之间共享数据和执行多种功能，包括通知同步、文件传输、远程控制、共享剪贴板、远程输入、设备电量监控等功能。
 
 [【开源】全平台文件共享设备互联 KDE Connect——iOS 最新版本演示（AirDrop 跨全平台替代）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Yu411o7zM)
 
-#### 3. Spectacle截图工具和Gwenview标注工具
+&ensp;&ensp;&ensp;&ensp;**2.1 测试平台、安装与启动位置**
 
-// TODO
+本节将介绍在仅两台设备间使用 *KDE Connect* 的情景，仅简单介绍，无性能测试。
+  
+<div>设备及版本简介：</div>  
+<div>Asus Chromebook Vibe CX55 Flip<span style="float:right">Apple iPhone 13 mini</span></div>  
+<div>Kubuntu 24.04 LTS<span style="float:right">iOS 17.3</span></div>  
+<div>KDE Connect 23.08.5<span style="float:right">KDE Connect 0.4.1</span></div>  
+<div>WiFi连接<span style="float:right">WiFi连接</span></div> 
+<div>随KDE桌面环境预装，或从Discover 软件管理中心安装，或`apt install kdeconnect`<span style="float:right">App Store - KDE Connect</span></div> 
+<div><i>“应用程序启动器 - 互联网 - KDE Connect”或“任务栏 - 系统托盘 - KDE Connect”</i><span style="float:right"><i>“主屏幕 - KDE Connect”或“App资源库 - 效率与财务 - KDE Connect”</i></span></div> 
+
+&ensp;&ensp;&ensp;&ensp;**2.2 配对**
+
+在KDE桌面环境中，（本节以 *“任务栏 - 系统托盘 - KDE Connect”* 方式启动为例）启动 *KDE Connect* 之后，点击 *“配对设备…”* 或右上角的 *“KDE Connect 设置…”* 按钮，进入 *“配置”* 设置页面。保留此页面待命。
+
+![Personal_perf22.png](Personal_perf22.png)  
+
+在iOS中，启动 *KDE Connect* 之后，等待 *KDE Connect* 搜寻局域网中的其他使用 *KDE Connect* 的设备。在两端 *KDE Connect* 均处于前台的情况下，在各自的设备列表中，将看到对方设备的图标和 *KDE Connect 设备名* 。
+
+点击KDE桌面环境 *KDE Connect* 中左侧的设备列表中的iOS端设备，在右方设备详情和可用插件列表面板中， *设备名（未配对）* 下方将显示一行 *“密钥：”* ，该密钥在每次新建连接时产生，你可以当作本次连接的唯一密钥。密钥的前8位将用于iOS *KDE Connect* 向用户确认设备身份。
+
+点击iOS *KDE Connect* 中的 *“DISCOVERED DEVICES（发现的设备）”* 列表中的电脑端设备，iOS *KDE Connect* 将弹出确认窗口 *“Initiate Pairing?（启动配对？）”* ，在 *“Verification key:（验证密钥：）”* 处将显示KDE桌面环境 *KDE Connect* 的密钥的前8位；或点击KDE桌面环境 *KDE Connect* 左侧设备列表中的iOS端设备，*KDE Connect* 将显示配对进度条，iOS *KDE Connect* 将弹出确认窗口 *“Incoming Pairing Request（传入配对请求）”* ，在 *“Verification key:（验证密钥：）”* 处将显示KDE桌面环境 *KDE Connect* 的密钥的前8位。在确认两个前8位密钥无误后，点击 *“Pair（配对）”* 按钮。
+
+![Personal_perf23.png](Personal_perf23.png)  
+
+如果列表中没有出现对方设备，可以尝试在KDE桌面环境 *KDE Connect* 左下角的 *“刷新”* 按钮，或是iOS *KDE Connect* 右上角的 *“菜单○···”* 按钮，然后选择 *“Refresh Discovery（刷新发现的设备）”* 。
+
+<img alt="Personal_perf24.png" src="Personal_perf24.png" width="60%" title="This image has been scaled to 60% of its original size."> 
+
+KDE桌面环境 *KDE Connect* 在设备名旁边显示 *“已配对”* ，且iOS *KDE Connect* 弹出 *“Pairing Complete（配对已成功）”* 窗口且在 *“CONNECTED DEVICES（已配对设备）”* 列表中出现电脑端设备，则配对成功。
+
+![Personal_perf25.png](Personal_perf25.png)  
+
+&ensp;&ensp;&ensp;&ensp;**2.3 使用**
+
+目前iOS端 *KDE Connect* （0.4.1）还无法实现 *KDE Connect* 退出前台后保持连接的功能（就iOS这个留后台的能力我估计也不行），KDE桌面环境 *KDE Connect* 倒是可以保留在后台（可作为常驻系统服务）。
+
+**a. 远程键盘输入**
+
+在iOS *KDE Connect* 中的 *“CONNECTED DEVICES（已配对设备）”* 列表中选择电脑端设备，然后选择 *“Remote Input（远程输入）”* ，在打开的 *“Remote Input（远程输入）”* 页面中，其中间的整个区域便是一个虚拟触摸板，在其上的输入会被同步推送到电脑端。但这里有个问题，一个是传输受网络影响太大，其次点按并拖动手指触发的拖动手势敏感度很奇怪，经常误触。好在我并不需要模拟触摸板（出行带一个无线鼠标没什么问题），最让我头大的是模拟键盘。
+
+![Personal_perf26.png](Personal_perf26.png)  
+
+点击 *“Remote Input（远程输入）”* 页面右上角的 *“模拟键盘⌨️”* 按钮，展开 *iOS键盘* ，在此使用字母输入法即可直接将字母发送到电脑端。但该模式受到iOS逻辑限制：1. 在App内没有输入框就无法唤起中文输入法，意味着此处的中文输入法废了 2. 点击 *iOS键盘* 以外的位置会使 *iOS键盘* 缩回，误触很烦。而且App此处的设计也不符合我的需求：我希望此处的虚拟键盘可以模拟真正的84键键盘，因为 *iOS键盘* 可没有 *Ctrl、Alt、Tab、Shift* 等功能键。你问为什么我要给笔记本弄虚拟84键键盘，其实我也不是给笔记本准备的，我想买个 *联想 Legion Go* 。
+
+#### 3. Spectacle截图工具和Gwenview的标注工具
+
+ *Spectacle 截图工具* 是KDE桌面环境自带的截图工具，默认情况下可以通过按下 *Print Screen/Prt Scr/Ptrsc键* 来唤出，或者依次打开 *“应用程序启动器 - 工具 - Spectacle 截图工具”* 。在 *Spectacle 截图工具* 的上方操作栏，可以对截图结果进行复制或保存，打开 *“显示标注工具”* 以及 *“配置”* 。下左方为截图预览，注意**这个截图预览并不是活动的，其只显示应用切换到前台时的截图，实际截图仍以执行截图操作后刷新的预览为准**。下右方为截图操作按钮以及截图快捷设置。光标悬停在截图操作按钮上可以看到快捷键提示。 *“延迟：”* 为按下截图操作按钮后， *Spectacle 截图工具* 在执行截图前等待的延迟时间。比如要截某一二级菜单，在菜单显示后快捷键被菜单独占而无法使用 *Print Screen/Prt Scr/Ptrsc键* 进行截图时，就可使用延迟功能截图。
+
+ 点击操作栏中的 *“配置”* 按钮进入 *Spectacle 截图工具* 的 *“配置”* 窗口。点击左侧 *“保存”* 按钮，进入 *“保存”* 设置页面，可以自定义默认保存位置、图像质量和文件名格式。保存位置和文件名仅影响操作栏中的  *“保存”* 按钮和 *自动保存* 功能。
+
+ 要更改 *Spectacle 截图工具* 各项截图模式的快捷键，在 *系统设置* 中点击左侧栏的 *“工作区 - 快捷键 - 快捷键”* ，在右侧的 *“快捷键”* 设置页面的左侧列表中选择 *“应用程序 - Spectacle 截图工具”* ，然后在右侧更改快捷键。在Linux下， *Windows徽标键* 被定义为 *超级（Super）键* 或 *元（Meta）键* 。
+
+![Personal_perf21.png](Personal_perf21.png)  
+
+KDE桌面环境自带的可实现标注功能的工具有两个，1.  *Spectacle 截图工具 - 显示标注工具* 和 2. *Gwenview - 显示编辑工具 - 图像操作 - 标注* 。这两个标注工具试了一下，感觉都没有特别好用，没办法和Windows 11上的新版UWP *画图* 拉开差距，尤其是新版UWP *画图* 还加入了分层功能，虽然 *画图* 的形状工具里的箭头还是一坨。所以此处仅留一段占位，将来如果遇到了更好的Linux端标注工具再更新。本文中涉及KDE界面的大部分图片均是使用 *Spectacle 截图工具* 和新版UWP *画图* 编辑并制作的。
 
 #### 4. Dolphin 文件管理器管理文件权限和查看校验和
 
 **4.1 管理文件权限**
 
-// TODO  
+对于一些文件，可能想要更改其访问权限来预防潜在的误操作，或阻止某些程序访问它们。虽然这可以在 *“终端”* 中通过`chmod`命令来更改，但毕竟本篇主要介绍的是通过UI操作，所以此处使用 *Dolphin 文件管理器* 来实现这一点。
+
+在 *Dolphin 文件管理器* 中，在想要更改访问权限的文件上 *右键 - 属性* ，在弹出的 *““...”的属性”* 窗口中，选择 *“权限”* 选项卡，更改 *“访问权限”* 中的三个下拉菜单 *“所有者：”“所有组：”“其他：”* 以及勾选/不勾选 *“可执行”* 复选框。比如，如果一个文件你只想要它可读而不可写来避免失误覆盖内容，可以将三个复选框全部选择为 *“可查看”* ；具体情境和解释请在线搜索。最后，点击 *“确定”* 按钮。
+
 <img alt="Personal_perf15.png" src="Personal_perf15.png" width="80%" title="This image has been scaled to 80% of its original size."> 
+
+> 即使被设置为只读的文件，仍然可以通过提权（如`sudo`）来进行写入。这只是加了一道安全措施，并不是绝对安全。
 
 **4.2 查看文件校验和**
 
-// TODO
+对重要的、经过传输的大文件进行校验和校验是一项很好的习惯，你也不想费半天劲下载下来的.iso安装镜像出现传输错误，或者在安装半截才发现数据错误，甚至安装后才发现吧。
+
+对于提供了校验和的文件，在传输完成后，可以在 *Dolphin 文件管理器* 中定位到并在其上 *右键 - 属性* ，在弹出的 *““...”的属性”* 窗口中，选择 *“校验和”* 选项卡。在下方的方框中， *Dolphin 文件管理器* 提供了四种校验方式： *MD5、SHA1、SHA256和SHA512* 。根据提供的校验和方法选择对应的校验和计算，如在 *一、1.* 中提到的Kubuntu安装镜像，官方提供的是SHA256方式，则此处也选择SHA256进行计算。文件越大计算时间越长。将提供的校验和结果（数字和字母文本串，不含空格和文件名）粘贴进 *“校验和”* 选项卡上方的文本框中，若计算校验和结果和提供校验和相同，则文本框变绿且下方提示 *“校验和一致。”* 。这样，传输的文件便可证明是完全与原址相同了。
+
+![Personal_perf20.png](Personal_perf20.png)  
+
+>  *Dolphin 文件管理器* 暂不提供对文件夹的校验功能，如需要还请使用其他工具。
 
 ### d. 个人卸载预装应用偏好
 
@@ -1030,7 +1097,7 @@ KDE Connect 是一个用于在多个设备之间实现无缝连接和交互的�
 - 我的Chromebook在设置 *“硬件 - 电源管理 - 省电功能 - 合上笔记本盖时 - 关机”* 后，在合盖时会死机，强行重启后GRUB会进入到“上次未正常关机，关闭倒计时引导默认选项”的状态。怀疑是Kubuntu对Chromebook的AHCI支持还不够完好。
 - 我的Chromebook在使用Kubuntu时，如果某个USB端口没有在开机的时候插入usb设备，则该端口会直接关闭，直到下次重启。排除了GRUB的`usbcore.autosuspend`项，因为无论如何设置，GRUB也检测不到后插入的USB设备。Windows下没有这个问题，再次怀疑是Kubuntu对Chromebook的AHCI支持还不够完好。
 
-## 六、性能测试
+## 六、与Windows 11的性能对比测试
 
 // TODO
 
