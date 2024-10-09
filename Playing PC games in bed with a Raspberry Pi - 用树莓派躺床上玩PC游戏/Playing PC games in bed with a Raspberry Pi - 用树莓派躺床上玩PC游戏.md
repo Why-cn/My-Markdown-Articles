@@ -1,6 +1,6 @@
 # 用树莓派躺床上玩PC游戏
 
-*版本：1.0*
+*版本：1.1*
 
 查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“菜单”（⋮☰）按钮。
 
@@ -312,23 +312,10 @@ PC服务端确定输入配对码正确后，服务端和客户端正式建立连
 
 ### 4. Geekbench-LinuxARMPreview
 
-Geekbench 6是一个我很喜欢用的跨平台设备性能基准测试工具（也因为实在找不到别的类似的工具），可以跨Windows、MacOS、Linux、安卓和iOS平台进行基准测试。对于Linux平台，其官网仅提供了Linux x86下的软件包下载，其实他们有Linux ARM下的软件包，但其为测试版，所以就不在仅提供稳定版的官网上提供下载了。我找到一个提供Geekbench 6测试版软件包下载的网站：
+Geekbench 6的介绍、下载、安装与基本操作步骤位于另一篇文章[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)的 *二、8.* ，此处直接展示结果。
 
-[geekbench packages dissection - Repology](https://repology.org/project/geekbench/information)
+在默认电源设定（未超频）、足够电源供电的情况下进行一次冷测试，结果如下：
 
-向下滚动网页，在 *“Download”* 部分，找到文件名为`Geekbench-6.<最新版本>-LinuxARMPreview.tar.gz`。比如目前（202405）Geekbench 6的最新版本为6.3.0，那么应该下载的文件就是`Geekbench-6.3.0-LinuxARMPreview.tar.gz`。
-
-![Geekbench-LinuxARMPreview0.png](Geekbench-LinuxARMPreview0.png)
-
-下载之后，可以通过Archiver解压到一个有用户操作权限的路径内 *（又忘截图了）* 。打开Raspberry Pi OS中的 *“文件管理器 PCManFM”*，导航到该路径后按下 *F4键* （或 *“工具 - 在终端中打开当前文件夹”* ），然后在打开的 *LX 终端* 窗口中，输入  
-```Shell
-./geekbench6
-```  
-然后，Geekbench-LinuxARMPreview便会开始对树莓派的CPU处理性能进行测试。测试完成后，如果树莓派已经连接到互联网，测试结果会自动上传到Geekbench的数据库中，在命令行的最后将给出一个类似于`https://browser.geekbench.com/v6/cpu/???????`的链接，进入该链接便可获取到详细的测试结果。
-
-![Geekbench-LinuxARMPreview1.png](Geekbench-LinuxARMPreview1.png)  
-![Geekbench-LinuxARMPreview3.png](Geekbench-LinuxARMPreview3.png)  
-*（这个红框中的链接就是测试结果，是的我又忘截图了，从另一台Linux电脑上跑了一遍，然后新截的图）*  
 <img alt="Geekbench-LinuxARMPreview2.png" src="Geekbench-LinuxARMPreview2.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 
 虽然Geekbench 6已经算是最能跨平台的测试工具了，但在GPU测试这方面还是没法对多样的API和驱动做到面面俱到。目前这个前瞻版的Geekbench-LinuxARM貌似无法针对在Linux ARM上的设备进行GPU基准测试。
