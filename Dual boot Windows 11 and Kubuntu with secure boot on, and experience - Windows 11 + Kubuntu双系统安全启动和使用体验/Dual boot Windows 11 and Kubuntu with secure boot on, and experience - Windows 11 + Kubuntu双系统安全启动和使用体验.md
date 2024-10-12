@@ -29,7 +29,7 @@
 
 ### 1. 下载Kubuntu镜像
 
-进入Kubuntu官网：[Kubuntu | Friendly Computing](https://kubuntu.org/)，直接点击 *“Download Kubuntu”* ，网页将自动下载最新的LTS版Kubuntu。
+进入Kubuntu官网：[Kubuntu | Friendly Computing](https://kubuntu.org/)，直接点击 *“Download Kubuntu”* 链接，网页将自动下载最新的LTS版Kubuntu。
 
 ![Kubuntu_org0.png](Kubuntu_org0.png)
 
@@ -451,7 +451,9 @@ sudo apt install <字体包名>
 
 ![KDE_settings37.png](KDE_settings37.png)  
 
-### 9. 安装驱动
+### 9. Kubuntu驱动的安装与显卡驱动的验证
+
+**9.1 安装驱动**
 
 一般情况下，Ubuntu及其衍生发行版会在系统安装时自动检测和安装驱动，但这些驱动仅限 **开源驱动** ，一些非开源的专利驱动不会被安装（常见的就是 *Nvidia显卡驱动* ）。如果要使这些硬件发挥最大作用，可以使用 *“驱动管理器”* 下载非Ubuntu软件源的驱动并安装。
 
@@ -467,6 +469,47 @@ sudo apt install <字体包名>
    <img alt="KDE_settings36.png" src="KDE_settings36.png" width="50%" title="This image has been scaled to 50% of its original size.">  
 
 如果以上都无法解决你的问题，那可能需要手动安装驱动，从硬件提供商或者网络上的其他资源来安装。
+
+**9.2 验证显卡驱动正确安装**
+
+&ensp;&ensp;&ensp;&ensp;**9.2.a 通过图形实际表现粗略验证**
+
+与在Windows上验证图形驱动表现类似，一个在安装了满足基础使用要求的驱动的系统中，应该有以下表现：
+
+1. 系统能够自动探测到显示器的最大物理分辨率支持、最大刷新率支持
+2. 系统UI，如展开和关闭 *开始菜单* / *应用程序启动器* 、拖动窗口等不会出现卡顿和延迟
+3. 可以在理论性能上流畅运行对图形性能有一定需求的应用，如播放高码率视频；或使用DirectX/Vulkan/OpenGL等高性能图形API的程序，如游戏
+
+如果显卡驱动被正确安装，那么上面三条应该被满足；但满足了上面三条要求并不一定说明显卡驱动安装了最佳的版本。如果要进一步验证（或者直接跳过粗略验证），可以使用下面的方式。
+
+&ensp;&ensp;&ensp;&ensp;**9.2.b 通过驱动信息以及性能测试工具验证**
+
+为了查看详细的驱动信息，可以安装 *hwinfo* 和 *inxi* 。两个工具的介绍、下载、安装位于另一篇文章[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)的 *二、3.* 。
+
+以我使用的 *Intel Xe Graphics (80EU)* 集成显卡为例：
+
+在 *“终端”* 中输入以下命令并执行：
+
+```Shell
+hwinfo --gfxcard
+inxi -G
+```
+
+在 *hwinfo* 输出的结果中，查找`Driver Info #?:`部分。对于Intel显卡，若显卡驱动被正确安装，则必定有一个存在`i915 is active`的行。
+
+在 *inxi* 输出的结果中，查找`API:`部分。对于任何显卡，若显卡驱动被正确安装，则其`drivers:`或`renderer:`属性下应存在驱动/渲染器名称。
+
+![KDE_settings80.png](KDE_settings80.png) 
+
+> Intel将其在Linux上的开源驱动程序统称为 *“i915”* 。详情可见[Intel - Gentoo Wiki](https://wiki.gentoo.org/wiki/Intel/zh-cn)。
+
+> 在 *inxi* `API:`部分输出的结果中显示`N/A`并不一定是该驱动没有被安装，也有可能是该API的驱动未被 *inxi* 检测到。本例在下面的 *六、1.* 中有更多信息。
+
+对于 *英伟达* 显卡，则此处会变得更复杂一些，也是我为什么在上一小子节中说 *“并不一定说明显卡驱动安装了最佳的版本。”* 英伟达驱动由于不开源的原因，其官方驱动适配只能由 *英伟达* 官方提供，该适配效果也只能由官方保证；这意味着，如果 *英伟达* 不愿意提供广泛而强劲的适配，开源社区对此毫无办法——开源社区无法探知驱动的代码，便也无法探知其中出现的问题以及帮助开发解决方案；即使能够逆向到代码，也将面临 *英伟达* 的法律诉讼。即使是 *英伟达* 官方也在其[下载 NVIDIA 官方驱动 | NVIDIA](https://www.nvidia.cn/drivers/lookup/)中指出（2024年10月）：
+
+![KDE_settings81.png](KDE_settings81.png) 
+
+因此， *英伟达* 显卡在Linux上的驱动，社区完全开源/社区半开源/官方闭源/移植等版本的驱动性能表现各异，问题也各异，换句话说就算上面的两中方法都验证成功，也不能说明就是安装了那个性能最好的、问题最少的、兼容性最强的 *英伟达* 显卡驱动。
 
 ### 10. 拼音输入法设置
 
@@ -490,7 +533,7 @@ sudo apt install <字体包名>
 
 <img alt="KDE_settings74.png" src="KDE_settings74.png" width="60%" title="This image has been scaled to 60% of its original size."> 
 
-如果想要安装 **第三方输入法**，可以阅读这篇文章：[再也不用为中文输入法而烦恼了 - 四叶草](https://www.fkxxyz.com/d/cloverpinyin/)，或者这个Github仓库：[iDvel/rime-ice: Rime 配置：雾凇拼音 | 长期维护的简体词库](https://github.com/iDvel/rime-ice)
+如果想要安装 **第三方输入法**，可以阅读这篇文章：[再也不用为中文输入法而烦恼了 - 四叶草](https://www.fkxxyz.com/d/cloverpinyin/)，或者这个Github仓库：[iDvel/rime-ice: Rime 配置：雾凇拼音 | 长期维护的简体词库](https://github.com/iDvel/rime-ice)。
 
 ### 11. 安装、更新和卸载应用；系统更新
 
@@ -801,6 +844,9 @@ property real timeout: 30
 
 在用奇奇怪怪的脚本之前，先记得全盘备份。具体方式在之前的[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)文章中的 *一、4* 中已经介绍过，在此不再赘述。
 
+参考：  
+[keyboard - How to make function keys work on a Chromebook running Ubuntu? - Ask Ubuntu](https://askubuntu.com/questions/1451097/how-to-make-function-keys-work-on-a-chromebook-running-ubuntu)
+
 // TODO
 
 ### 19. 更改桌面图标排列方式
@@ -908,33 +954,7 @@ sudo update-grub
 
 在另一篇文章[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)中介绍了一些不指定发行版和桌面环境的个人偏好应用的安装和使用体验，均可使用在Kubuntu中，此处不再赘述。其中还介绍了在Linux环境下运行Windows应用的方式。
 
-#### 1. 游戏平台：Steam
-
-我感觉Steam没啥好介绍的了吧……想特别提到的一点是，Steam Deck使用的系统—— *SteamOS* 就是使用的 *KDE Plasma桌面环境* ，不过发行版是 *Arch Linux* ，这么说其实有点像 *Manjaro KDE* 。
-
-本节将介绍使用 *Discover 软件管理中心* 安装 *Steam* 。
-
-**1.1 安装安装器**
-
-此处已作为 ***使用Discover 软件管理中心安装、更新、卸载应用*** 的示例，具体请见 *三、11.1.a* 。
-
-**1.2 安装器安装**
-
-依次打开 *“应用程序启动器 - 游戏 - Install Steam”* ，进入 *Steam installer* ，然后点击 *“Install”* 按钮。
-
-<img alt="Personal_perf9.png" src="Personal_perf9.png" width="65%" title="This image has been scaled to 65% of its original size.">  
-
-在弹出几个弹窗后，安装器应正确安装 *Steam* 。此时会自动弹出 *Steam登录窗口* 。默认情况下，它是英文的：
-
-<img alt="Personal_perf10.png" src="Personal_perf10.png" width="70%" title="This image has been scaled to 70% of its original size.">
-
- *（登录后可在 *“Steam - Settings - Interface - Steam client language”* 处修改界面语言。）* 
-
-也可通过依次打开 *“应用程序启动器 - 游戏 - Steam”* ，进入 *Steam*。
-
-<img alt="Personal_perf11.png" src="Personal_perf11.png" width="70%" title="This image has been scaled to 70% of its original size.">
-
-#### 2. 倒计时工具：KTimer
+#### 1. 倒计时工具：KTimer
 
 为了在Kubuntu里找一款能倒计时并在倒计时结束后发送通知并发出声音的应用废了死劲了，以前还嘲笑过 *Windows 11* 预装的 *时钟* 应用简朴，结果在Kubuntu里翻了好几个都不堪用，最后找到的这个也只是将将凑活。怎么找个Kubuntu下的倒计时工具这么难……
 
@@ -1100,6 +1120,55 @@ KDE桌面环境自带的可实现标注功能的工具有两个，1.  *Spectacle
 
 ## 六、与Windows 11的性能对比测试
 
+测试平台：// TODO
+
+### a. 跨平台测试
+
+#### 1. Geekbench 6
+
+Linux下 *Geekbench 6* 的介绍、下载、安装与基本操作步骤位于另一篇文章[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)的 *二、8.* ，此处直接展示结果。
+
+Linux下 *Geekbench 6* CPU性能测试结果：
+
+![Kubuntu_Geekbench_Plug_in_Performance0.png](Kubuntu_Geekbench_Plug_in_Performance0.png)  
+ *（冷机单次测试）* 
+
+Linux下 *Geekbench 6* GPU性能测试结果：
+
+// TODO
+
+#### 2. 跨平台游戏测试
+
+我得先找到一个原生跨平台的、不太吃配置又不能一点配置都不吃的游戏，先等我找到吧💦  
+20241011更新：找到了，但是都不太爱玩：
+
+- [Steam 上的 Hollow Knight](https://store.steampowered.com/app/367520/Hollow_Knight/)
+- [Steam 上的 塔罗斯的法则](https://store.steampowered.com/app/257510/)
+
+20241011更新：啊！找到能玩的了！
+
+- [Steam 上的 Shadow of the Tomb Raider: Definitive Edition](https://store.steampowered.com/app/750920/Shadow_of_the_Tomb_Raider_Definitive_Edition/)
+
+![Personal_perf9.png](Personal_perf9.png) 
+
+原来一直都在我愿望单里放着，汗流浃背了💦
+
+虽然在Steam页面和游戏启动器上两次提醒不支持英特尔GPU运行，但实测是可以运行的，只是需要在启动器 *“高级选项”* 中选中 *“Intel(R) Xe Graphics with Vulkan (...)”* 渲染器选择项。
+
+![Personal_perf11.png](Personal_perf11.png) 
+
+// TODO
+
+### b. Windows兼容测试
+
+#### 1. 3DMark
+
+[Running 3DMark on Steam Deck :: 3DMark 综合讨论](https://steamcommunity.com/app/223850/discussions/0/5586172045660180811/)
+
+// TODO
+
+#### 2. Windows兼容游戏测试
+
 // TODO
 
 ## 彩蛋
@@ -1107,3 +1176,7 @@ KDE桌面环境自带的可实现标注功能的工具有两个，1.  *Spectacle
 我勒个时光机啊
 
 ![Easter_egg.png](Easter_egg.png) 
+
+// TODO：电池保护
+
+// TODO：Perf10
