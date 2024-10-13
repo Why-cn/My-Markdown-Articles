@@ -16,6 +16,7 @@
 [Windows查询校验和](#windows查询校验和)  
 [卸载Windows 11小组件](#卸载windows-11小组件)  
 [关闭Windows 11开始菜单的Bing网络搜索](#关闭windows-11开始菜单的bing网络搜索)  
+[跳过Windows 11 OOBE时的登入微软账户需求](#跳过windows-11-oobe时的登入微软账户需求)
 
 ### Andriod
 
@@ -30,13 +31,14 @@
 ### 虚拟机与跨平台
 
 [解决VMware Workstation长期占用硬盘和卡顿的问题](#解决vmware-workstation长期占用硬盘和卡顿的问题)  
+[VMWare虚拟磁盘使用SCSI和SATA的比较](#VMWare虚拟磁盘使用SCSI和SATA的比较)  
 [跨平台的局域网间测速工具——iperf3](#跨平台的局域网间测速工具iperf3)  
 [真正的跨平台性能测试工具——Geekbench 6](#真正的跨平台性能测试工具geekbench-6)  
-[局域网临时数据传送，仅需浏览器](#局域网临时数据传送仅需浏览器)
+[局域网间跨平台临时数据传送，仅需浏览器](#局域网间跨平台临时数据传送仅需浏览器)
 
 ### 无Tag
 
-[在Linux上惯用的Markdown编辑器](#在linux上惯用的markdown编辑器)  
+
 
 ## 设置ADB到Windows环境变量中
 
@@ -58,7 +60,7 @@
 
 [保姆级-小米手机双系统制作教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV133411n7QW)
 
-根据教程，本人已经成功将红米K30S刷入MIUI国际版 V12.5.8.0和Nusantara Project LTS A11并可灵活切换。Dot OS 5.2.1失败，是刷机包的问题，鉴于Dot OS开发组目前的懒狗状况也只能叹息一下了。
+根据教程，我已经成功将红米K30S刷入MIUI国际版 V12.5.8.0和Nusantara Project LTS A11并可灵活切换。Dot OS 5.2.1失败，是刷机包的问题，鉴于Dot OS开发组目前的懒狗状况也只能叹息一下了。
 
 视频中没有提到的几点：
 
@@ -76,9 +78,10 @@
 
 下面三个文件，其中life_time_estimation_a和life_time_estimation_b一般是相同的可视作一个量，初始健康度这两个值都应该是“0x01”。
 
+<div>
 <img alt="life_time_estimation.jpg" src="life_time_estimation.jpg" width="40%" title="This image has been scaled to 40% of its original size.">
-
 <img alt="bPreEOLInfo.jpg" src="bPreEOLInfo.jpg" width="40%" title="This image has been scaled to 40% of its original size.">
+</div>
 
 ## Windows查询校验和
 
@@ -151,22 +154,44 @@ Windows Registry Editor Version 5.00
 
 这样开始菜单搜索就不会联网搜索了，只会显示本地相关结果。
 
-## 在Linux上惯用的Markdown编辑器
-
-原本是想在Linux中找一个支持Web App的Markdown编辑器，这样能省得安装一个App来编辑了，顺便还能在Chrome OS中使用。（顺便说一下好像火狐浏览器不支持Web App）找来找去，最后还是[Visual Studio Code网页版](https://vscode.dev/)最好用，因为其能够编辑本地文件并随时保存到本地。结果发现vscode.dev作为Web App无法跨域，也就是说，仅可以编辑.md文件，但无法用链接（相对路径）预览本地图片。最后还是得安装应用。
-
 ## 跨平台的局域网间测速工具——iperf3
 
 [iperf3测速服务器搭建和使用指南](https://www.zhihu.com/tardis/bd/art/473778492)
 
 ## 真正的跨平台性能测试工具——Geekbench 6
 
-一直用3DMark测综合性能，但是3DMark免不了不支持Linux、Vulkan API需要的功能较多、奇怪的设备上支持较少（比如虚拟机等），Geekbench 6能支持的就比较全面支持Windows、Linux、Android、iOS等，真正的综合分数能跨平台测试的工具。而且Vulkan API要求的功能比较少，像3DMark Wild Life就不能在树莓派4b上的安卓14运行，也不能在Bliss OS 15 Android 12L x86上运行，但Geekbench 6可以。
+一直用3DMark测综合性能，但是3DMark免不了不支持Linux、Vulkan API需要的功能较多、奇怪的设备上支持较少（比如虚拟机等），Geekbench 6能支持的就比较全面支持Windows、Linux、Android、iOS等，真正的综合分数能跨平台测试的工具。而且其Vulkan API要求的功能比较少，像3DMark Wild Life就不能在树莓派4b上的安卓14运行，也不能在Bliss OS 15 Android 12L x86上运行，但Geekbench 6可以。
 
 跨平台性能测试我主要用于测手（折）游（腾）在不同平台上的运行性能（毕竟大型PC游戏也没有比较的必要）。目前来看（粗测，Vulkan），Nvidia GeForce RTX 2060是Apple silicon A15 Bionic的5倍多，A15是Qualcomm Snapdragon 865的2倍。
 
 [Geekbench 6 - Cross-Platform Benchmark](https://www.geekbench.com/)
 
-## 局域网临时数据传送，仅需浏览器
+## 局域网间跨平台临时数据传送，仅需浏览器
 
 [PairDrop | Transfer Files Cross-Platform. No Setup, No Signup.](https://pairdrop.net/)
+
+## 跳过Windows 11 OOBE时的登入微软账户需求
+
+1.  *Shift + F10* 
+2. `oobe\bypassnro`
+
+## VMWare虚拟磁盘使用SCSI和SATA的比较
+
+**1. 不同类型之间的互相转换**
+
+ *“编辑虚拟机设置 - 硬件 - 添加 - 硬盘 - 下一步 - <选择虚拟硬盘类型> - 下一步 - 使用现有虚拟磁盘 - 下一步 - 现有磁盘文件 - 完成”* 
+
+<img alt="VMware_HardDrive0.png" src="VMware_HardDrive0.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+**2. 同虚拟机内虚拟磁盘两种模式的比较**
+
+虚拟机系统：Windows 7 SP1 x86_64，CrystalDiskMark 8.0.4  
+实体磁盘：HGST HTS721010A9E630 1TB
+测试结果：左（或上）：SATA；右（或下）：SCSI
+
+<div>
+<img alt="VMWare_SATA_VirtualDisk_(on_HDD)_CrystalDiskMark_20240522193628.png" src="VMWare_SATA_VirtualDisk_(on_HDD)_CrystalDiskMark_20240522193628.png" width="45%" title="This image has been scaled to 45% of its original size.">  
+<img alt="VMWare_SCSI_VirtualDisk_(on_HDD)_CrystalDiskMark_20240521230444.png" src="VMWare_SCSI_VirtualDisk_(on_HDD)_CrystalDiskMark_20240521230444.png" width="45%" title="This image has been scaled to 45% of its original size."> 
+</div>
+
+从测试结果可见，VMWare的虚拟SCSI磁盘在顺序读取和4K效果上有优势，而在顺序写入逊于虚拟SATA磁盘。综合来说，选择虚拟SCSI磁盘在大多数常见使用场景下更好。
