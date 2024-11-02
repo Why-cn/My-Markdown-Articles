@@ -1,6 +1,6 @@
 # 技巧集合
 
-*版本：1.0 本文章不提供英文版*
+*版本：1.2; This article is not available in English.*
 
 一些杂七杂八的小技巧合集，主要是怕忘了，哪天可以捡起来接着看。
 
