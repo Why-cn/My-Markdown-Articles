@@ -28,6 +28,7 @@ Markdown速查表（经过编辑）：[markdown-cheat-sheet.md](markdown-cheat-s
 - [用树莓派躺床上玩PC游戏](/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)
 - [解决Windows下某些AI工具整合包中的PyTorch无法启用的问题](/Solve%20Torch%20is%20not%20able%20to%20use%20GPU%20-%20解决Windows下某些AI工具整合包中的PyTorch无法启用的问题/Solve%20Torch%20is%20not%20able%20to%20use%20GPU%20-%20解决Windows下某些AI工具整合包中的PyTorch无法启用的问题.md)
 - [Windows 11 + Kubuntu双系统安全启动和使用体验](Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)
+- [联想Legion Go使用体验和自定义](/Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义/Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义.md)
 
 ---
 
