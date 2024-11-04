@@ -329,13 +329,13 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 尽管 *AIDA64* 具有对GPU进行压力测试的功能，该功能尚且无法与其他专业GPU压力测试拉开差距。真正能榨干显卡光栅性能的压力测试，还是得用 *FurMark 2* （但 *FurMark 2* 无法针对在 *AI生成帧技术* 和 *实时光线追踪技术* 下进行压力测试。要对这两项进行压力测试，请使用 *3DMark* 压力测试。）。
 
-结合这两款软件，你或许将获得Windows下的最强压力测试工具，做到真正的“烤机”。不过需要注意：这种达到“烤机”效果的压力测试，其目的为将PC的性能推至极限；但对于运行游戏来说，常常达不到（甚至远达不到）这么极限的压力，因此“烤机”性能仅能作为参考，在散热效果没有产生较大影响时，不必纠结于“烤机”性能的好坏。打个比方，假设一台PC的出厂预设性能为90%，“烤机”是冲着120%的性能释放去的，而游戏往往只占用10%~90%的性能。**对于小白来说，通过 *3DMark* 压力测试即可说明PC的性能发挥符合预期，没必要再进行“烤机”。**
+结合这两款软件，或许将获得Windows下的最强压力测试工具，做到真正的“烤机”。不过需要注意：这种达到“烤机”效果的压力测试，其目的为将PC的性能推至极限；但对于运行游戏来说，常常达不到（甚至远达不到）这么极限的压力，因此“烤机”性能仅能作为参考，在散热效果没有产生较大影响时，不必纠结于“烤机”性能的好坏。打个比方，假设一台PC的出厂预设性能为90%，“烤机”是冲着120%的性能释放去的，而游戏往往只占用10%~90%的性能。**对于小白来说，通过 *3DMark* 压力测试即可说明PC的性能发挥符合预期，没必要再进行“烤机”。**
 
 &ensp;&ensp;&ensp;&ensp;**10.2.a 下载并安装**
 
 进入 *AIDA64* 官网[Home | AIDA64](https://www.aida64.com/)，点击右上角导航栏中的 *“Downloads（下载）”* 项，然后在跳转的下载页面查看 *“Stable Downloads（稳定版本） - AIDA64 Business”* ，确定最新版本号。
 
-和许多提供试用版本的软件一样， *AIDA64* 要求必须经电子邮件申请才能获取到下载地址。当然，你也可以在网络上搜索分享的试用版本安装程序，不过在使用前，务必确认该安装程序安全，如通过反病毒软件扫描、虚拟机试运行等。
+和许多提供试用版本的软件一样， *AIDA64* 要求必须经电子邮件申请才能获取到下载地址。当然，也可以在网络上搜索分享的试用版本安装程序，不过在使用前，务必确认该安装程序安全，如通过反病毒软件扫描、虚拟机试运行等。
 
 ![Characterization43.png](Characterization43.png)  
 
@@ -347,7 +347,7 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 ![Characterization44.png](Characterization45.png)  
 
-之后你会发现， *AIDA64* 的界面将会显示乱码。原因在于，AIDA64默认情况下是不开启Unicode支持的。可以调整系统设置，调整不支持Unicode的程序的默认字符集。打开 *设置 - 时间和语言 - 语言和区域 - 管理语言设置* 进入到 *区域 - 管理* 设置页面。
+之后会发现， *AIDA64* 的界面将会显示乱码。原因在于，AIDA64默认情况下是不开启Unicode支持的。可以调整系统设置，调整不支持Unicode的程序的默认字符集。打开 *“设置 - 时间和语言 - 语言和区域 - 管理语言设置”* 进入到 *“区域 - 管理”* 设置页面。
 
 ![Characterization44.png](Characterization46.png)  
 
@@ -377,7 +377,7 @@ Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 SSD作为�
 
 ![Characterization51.png](Characterization51.png)
 
-如果你在安装时选择使用中文安装，那么在看到安装程序显示 *“卸载成功！”* 便已成功安装。
+如果在安装时选择使用中文安装，那么在看到安装程序显示 *“卸载成功！”* 便已成功安装。
 
 <img alt="CrystalDiskMark_SN740-SDDPMQD-512G.png" src="Characterization52.png" width="50%" title="This image has been scaled to 50% of its original size.">  
 
@@ -415,7 +415,7 @@ Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 SSD作为�
 
 <img alt="Characterization28.png" src="Characterization28.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
-### 13. 显示输出测试与Miracast
+### 13. 显示输出测试、Miracast、坏点检测和生产力模式
 
 #### 13.1 USB-C with DP Alt Mode 输出测试
 
@@ -453,15 +453,36 @@ Legion Go的两个全功能USB Type-C接口为其扩展到办公场景提供了�
 
 Miracast功能使得在旅行中位于支持Miracast投放的酒店时，可以将屏幕投放至酒店的电视中。
 
+#### 13.3 屏幕坏点测试
+
+还是使用本大节 *10.2* 提到的 *AIDA64* ，点击右上角 *“⋮（菜单）”* 按钮，在弹出的菜单中选择 *“工具 - 显示器检测”* ，在弹出的 *“Monitor Diagnostics（显示器检测）”* 窗口中，选择上方菜单栏中的 *“Selection（选择） - Clear Selection（清除所有选择）”* ，然后选择下方的 *“Color Tests（颜色测试）”* 选项卡，勾选在选项卡中几个格子里的测试项目复选框： *“Solid Fills（纯色填充）”* 、 *“Gradient Fills（渐变填充）”* 、 *“Color Palettes（调色板）”* 。一般来说，对于屏幕坏点测试，仅全选纯色填充即可。最后，点击 *“Run Selected Tests（运行选中的测试）”* 按钮进行显示器检测。
+
+![Characterization56.png](Characterization56.png)
+
+在显示器检测运行中，会按照前面选择的测试项目进行测试，按 *“左键”* 或 *“空格键”* 进入下一测试项目，按 *“Esc键”* 中断退出。
+
+#### 13.4 生产力模式
+
+ *Legion Space 侧边栏* 提供了 *“生产力模式”* ，开启该模式可以使外屏成为主显示器，避免如新程序弹窗只在主屏幕中弹出、缩放有误、屏幕设置中相对位置乱动的问题。具体开启方式见 *三、1.a. Legion Space 侧边栏* 。我开了，什么变化也没有，不知道是哪里的问题，不如在显示设置里设为 *“仅在 2 上显示”* 来的直接。
+
+不过仅在外屏显示确实解决了游玩《星际争霸2》在Legion Go的屏幕上字看不清的问题，可预见地，生产力也应该能提高吧（笑）。
+
+![Characterization57.jpeg](Characterization57.jpeg)  
+ *（《星际争霸2》不支持多屏幕，上图为两张图片拼贴而成。）* 
+
 ### 14. 续航测试
 
 Legion Go有着在 *零、* 里几个x86掌机中最小的电池容量（仅49.2Wh，仅多于ROG Ally），同时拥有着最大的屏幕（无论是大小还是分别率），这不得让人对其续航能力产生一些担忧。由于没有拿到专业的续航测试脚本，也买不起昂贵的 *PCMark 10 Professional Edition* ，所以只能拿现有的免费软件和买过的游戏凑活测试一下这样子。
 
 #### 14.1 媒体持续播放续航测试
 
-使用[PotPlayer - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8bsbgqw2dks0)硬解 + *Google Chrome* 浏览器背景播放续航测试结果：
-
-// TODO
+媒体持续播放续航测试使用[PotPlayer - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8bsbgqw2dks0)硬件解码
+// TODO 视频规格 2K
+，和 *Google Chrome* 浏览器硬件解码在背景播放
+// TODO 720p音乐视频
+，TDP输出设定在两个软件同时播放时不会卡顿的最低功率：
+// TODO W
+，电量由100%到5%自动休眠时的持续时间：
 
 #### 14.2 游戏续航测试
 
@@ -577,7 +598,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 **手柄设置**
 
-按键映射配置与快速切换。它调整按键映射的时候，UI会有2~3秒的延迟，不过也习惯了比微星的软件快多了。这里仅截取部分画面。
+按键映射配置与快速切换。它调整按键映射的时候，UI会有2~10秒的延迟，不过也习惯了比微星的软件快多了。这里仅截取部分画面。
 
 ![Experience&Setup_Win11_4.png](Experience&Setup_Win11_4.png)
 
@@ -612,6 +633,11 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 ![Experience&Setup_Win11_12.png](Experience&Setup_Win11_12.png)
 
 但是在开启了 *垂直鼠标模式* 之后这两个键又复原了，映射还调不了，感觉这个功能就是应付一下社区用的。
+
+在按下 *Legion L + LB* 组合键后，将显示 *Legion Space* 服务运行时的 *TrueStrike手柄* 预设快捷键列表。
+
+![Experience&Setup_Win11_35.png](Experience&Setup_Win11_35.png)  
+ *（那我缺的这个 *Xbox键* 实体按键谁给我补啊？）* 
 
 **设置 - 通用**
 
@@ -686,11 +712,13 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 >  *（不是联想，25W输出好意思叫野兽模式？我一开始寻思着野兽模式不得小超到35W结果查了才知道是25W？一开始开着野兽模式测3DMark差点吓得我要退货了）* 
 
+> 我发现当分离使用 *TrueStrike手柄* 时， *TrueStrike右手柄* 无法在休眠计时超时后自动关闭。目前只能通过按住 *Legion R键* 三秒将其手动关闭。
+
 ![Experience&Setup_Win11_17.png](Experience&Setup_Win11_17.png)
 
 第四个是 *“系统快设”* 页面，方便在没有外接键盘时快速使用手柄或触摸屏幕向系统发送系统级快捷键，如切换窗口等。由于 *“LS侧边栏”* 是作为全局置顶覆盖层，向系统发送 *“Alt + Tab”* 组合快捷键不会影响 *“LS侧边栏”* 显示在最上层（它甚至可以覆盖在锁屏上）。
 
-第五个是 *“生产力模式”* 页面，这个还没测试。// TODO
+第五个是 *“生产力模式”* 页面，测试见 *二、13.4* 。
 
 最后一个是 *“帮助”* 页面，有一系列按钮转到各种Legion Go相关链接。不知道是不是因为我买的是美版的缘故，这里的 *“Legion Community Forum”* 转到的是拯救者全球论坛的Legion Go版块：[Discover Powerful Gaming on the Go with Legion | Lenovo Gaming](https://gaming.lenovo.com/legion-go)。
 
@@ -698,7 +726,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 ![Experience&Setup_Win11_23.png](Experience&Setup_Win11_23.png)
 
-手柄 - 查看布局：
+手柄 - 查看布局（有快捷键查看预设快捷键列表，但查看手柄布局则必须进入 *“LS侧边栏”* 查看）：
 
 ![Experience&Setup_Win11_24.png](Experience&Setup_Win11_24.png)
 
@@ -717,7 +745,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 ![Experience&Setup_Win11_19.png](Experience&Setup_Win11_19.png)
 
-如果你想要将本地其他PC/Linux设备上已安装的 *Steam 库* 内的游戏转移到Legion Go的 *Steam 库* 中，仅需在这两个设备上同时登录 *Steam* ，然后让Legion Go下载同一游戏即可，该游戏会从局域网传输而不是互联网；传输速度将取决于局域网内速度，而不是互联网。
+如果想要将本地其他PC/Linux设备上已安装的 *Steam 库* 内的游戏转移到Legion Go的 *Steam 库* 中，仅需在这两个设备上同时登录 *Steam* ，然后让Legion Go下载同一游戏即可，该游戏会从局域网传输而不是互联网；传输速度将取决于局域网内速度，而不是互联网。
 
 ![Experience&Setup_Win11_20.png](Experience&Setup_Win11_20.png)
 
@@ -855,13 +883,13 @@ Android版本和App的适用性可能会有很多变数，或许没有一个万�
 
 &ensp;&ensp;&ensp;&ensp;**c.3 启动Android实例并在模拟器内设置**
 
-如果你有多个Android实例，可以在 *MSI App Player 多開管理器（多开管理器）* 中启动；如果你只有一个Android实例，则可以直接在 *MSI App Player* 主页面的左下角点击 *“App Player”* 来启动实例。
+如果有多个Android实例，可以在 *MSI App Player 多開管理器（多开管理器）* 中启动；如果只有一个Android实例，则可以直接在 *MSI App Player* 主页面的左下角点击 *“App Player”* 来启动实例。
 
 进入模拟器后，点击右上角标题栏中的 *“菜单☰”* 按钮，然后在菜单中选择 *“設定（设置）”* 。
 
 ![Experience&Setup_Win11Android18.png](Experience&Setup_Win11Android18.png)  
 
-在 *設定（设置）* 页面中，选择左侧栏中的 *“偏好設置（偏好设置）”* ，在右侧的设置页中，可更改 *“語言（语言）”* 下拉菜单为你偏好的语言。在本例中，以 *简体中文* 为例。在 *“ESC鍵用途（ESC键用途）”* 中，关掉 *“結束全螢幕（退出全屏幕）”* 开关。ESC键在Android中有原生 *返回键* 作用，这里 *Esc键* 被作为退出全屏幕快捷键被独占还挺难受的：既然都连键盘了，为啥不用 *F11* 这个不和其他任何快捷键干扰的按键来退出全屏呢。然后，点击 *“儲存變更（保存变更）”* 按钮来保存变更并使设置生效。
+在 *設定（设置）* 页面中，选择左侧栏中的 *“偏好設置（偏好设置）”* ，在右侧的设置页中，可更改 *“語言（语言）”* 下拉菜单为偏好的语言。在本例中，以 *简体中文* 为例。在 *“ESC鍵用途（ESC键用途）”* 中，关掉 *“結束全螢幕（退出全屏幕）”* 开关。ESC键在Android中有原生 *返回键* 作用，这里 *Esc键* 被作为退出全屏幕快捷键被独占还挺难受的：既然都连键盘了，为啥不用 *F11* 这个不和其他任何快捷键干扰的按键来退出全屏呢。然后，点击 *“儲存變更（保存变更）”* 按钮来保存变更并使设置生效。
 
 ![Experience&Setup_Win11Android19.png](Experience&Setup_Win11Android19.png)  
 
@@ -955,7 +983,7 @@ Android模拟器优秀的一点就是，他不像 *Google Play Games beta* 那�
 ![Experience&Setup_Win11Android35.png](Experience&Setup_Win11Android35.png)  
  *（中间龙盾图标为侧载安装的《明日方舟》中国大陆版。）* 
 
-如果你想测试模拟器对连接的手柄的适配情况，可以安装这个应用：[Gamepad Tester - Google Play 上的应用](https://play.google.com/store/apps/details?id=com.chimera.saturday.evogamepadtester)。安装并打开 *Gamepad Tester* 应用，选择最左方 *“Android Gamepad”* 按钮。
+如果想测试模拟器对连接的手柄的适配情况，可以安装这个应用：[Gamepad Tester - Google Play 上的应用](https://play.google.com/store/apps/details?id=com.chimera.saturday.evogamepadtester)。安装并打开 *Gamepad Tester* 应用，选择最左方 *“Android Gamepad”* 按钮。
 
 ![Experience&Setup_Win11Android36.png](Experience&Setup_Win11Android36.png)  
 
@@ -1184,6 +1212,36 @@ Google Gemini生成
 
 来源：[Does any1 knows how to create vita3k game's shortcuts? : r/EmulationOnPC](https://www.reddit.com/r/EmulationOnPC/comments/1c2j5ku/does_any1_knows_how_to_create_vita3k_games/)
 
+&ensp;&ensp;&ensp;&ensp;**i. 全屏模式网页和Web App**
+
+本子节仅介绍 *Chromium* 内核浏览器，以 *Microsoft Edge* 浏览器为例。首先找到 *开始* 中的浏览器快捷方式：定位到 *开始 - 所有应用 - Microsoft Edge* ，在 *Microsoft Edge* 上 *“右键 - 更多 - 打开文件位置”* ，
+
+![Experience&Setup_Win11Library52.png](Experience&Setup_Win11Library52.png) 
+
+在弹出的 *Windows 资源管理器* 中，复制 *Microsoft Edge* 快捷方式到桌面。
+
+![Experience&Setup_Win11Library53.png](Experience&Setup_Win11Library53.png) 
+
+类似于上一子节 *i.* 中添加参数的方式，在 *“目标：”* 文本框的后方输入以下参数：
+
+```cmd
+ --start-fullscreen <网址>
+```
+
+<img alt="Experience&Setup_Win11Library54.png" src="Experience&Setup_Win11Library54.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+最后，点击 *“确定”* 按钮保存。对创建的快捷方式重命名为合适的名称。
+
+要使全屏启动生效，必须要保证启动之前没有 *Microsoft Edge* 的进程在后台运行。打开 *Microsoft Edge* ，点击右上角的 *“...（设置及其他）”* 按钮或按下 *“Alt + F”* 组合快捷键。在弹出的 *“设置及其他”* 菜单中，滚动到下方并点击 *“设置”* 项。在弹出的 *“设置”* 网页中，点击左上角的 *“☰（设置 菜单）”* 按钮，然后点击左侧栏中的 *“系统和性能”* 项。
+
+![Experience&Setup_Win11Library55.png](Experience&Setup_Win11Library55.png) 
+
+在打开的页面中，关闭 *“系统 - 在 Microsoft Edge 关闭后继续运行后台扩展和应用”* 开关。
+
+![Experience&Setup_Win11Library56.png](Experience&Setup_Win11Library56.png)  
+
+一些网页还支持作为Web App安装到系统。具体操作方式，请参考另一篇文章《[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)》。
+
 &ensp;&ensp;&ensp;&ensp;**z. 获取URI和运行参数**
 
 对于添加到 *桌面* 的快捷方式，在其上 *“右键 - 属性”* 或者在选中时按下 *“Alt + Enter”* 组合键，打开该快捷方式的属性。
@@ -1220,12 +1278,12 @@ Google Gemini生成
    - 启动选项：附加启动参数。如果仅使用 *“目标”* 就可以启动，那就不要动这里。
    - 在游戏中启用 Steam 叠加界面：字面意思，酌情开关。
 2. 控制器（此处还在探索）
-   - 控制器配置器：更改Steam输入的配置，如组合键映射
+   - 控制器配置器：更改 *Steam输入* 的配置，如组合键映射
    - ...的先决替代：
-      - 禁用Steam输入：不清楚
-      - 使用默认设置：不清楚
-      - 启用Steam输入：不清楚
-   - 在启动器中使用桌面配置：不清楚
+      - 禁用Steam输入：禁止 *Steam输入* ，游戏将检测手柄并控制输入
+      - 使用默认设置：使用 *“STEAM 设置 - 控制器”* 中的手柄输入设置
+      - 启用Steam输入：强制游戏使用 *Steam输入* 而不是直接控制输入
+   - 在启动器中使用桌面配置：在游戏中使用 *“STEAM 设置 - 控制器”* 中的 *“非游戏控制器布局 - 桌面布局”* 
 
 所有设置都是立即生效。配置好后，回到 *Steam 库* 中的游戏详细信息页面，点击 *“▶ 开始游戏”* 按键，测试游戏是否可以正常经 *Steam* 启动。
 
@@ -1456,6 +1514,74 @@ Google Gemini生成
 装上主题插件前的 *Playnite* 还没给我能如此高度自定义的感觉；在调整 *Playnite* 为Windows 11默认系统字体 *“Windows Yahei UI”* 后，类 *XBOX Series* 全屏模式主题插件就更沉浸了。虽说感觉整体功能性还是不如 *Steam 大屏幕模式* ，比如社交（好友动态）、讨论、指南、愿望单等功能的缺失，使我目前还是倾向于使用 *Steam 大屏幕模式* 来实现统一游戏库的设想，但 *Playnite* 着实还是惊艳了我一下。这也让我体会到 *Steam* 深深的护城河，不是某些打着反垄断旗号的游戏库可以染指的。
 
 感谢：[Make your Legion Go even Better - YouTube](https://www.youtube.com/watch?v=7LijE9DGZkc)
+
+### 6. 手柄按键映射
+
+Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”* ，也没有一个按键用于截图。我尝试使用 *Legion Space* 软件中的手柄按键映射功能，结果发现其中根本没有 *“Xbox键”* ；组合键无法使用手柄组合键，且键盘组合键中没有 *Print Screen/Prt Scr/Ptrsc键* ，意味着虽然我可以使用 *“Windows徽标 + Shift + S”* 组合键唤出 *Windows 截图工具* ，但无法使用 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键直接进行全屏截图。
+
+![Experience&Setup_Win11_27.png](Experience&Setup_Win11_27.png)  
+
+![Experience&Setup_Win11_28.png](Experience&Setup_Win11_28.png)  
+
+就只想要两个功能键，这俩还个个做不到，联想真是太幽默了。到网上搜索一番，发现拯救者论坛中有人在7个月前就提到过这个问题：
+
+![Experience&Setup_Win11_29.png](Experience&Setup_Win11_29.png)  
+ *“等联想给你弄，希望渺茫。”（[How are we still unable to map Xbox guide button?](https://gaming.lenovo.com/legion-go/post/how-are-we-still-unable-to-map-xbox-guide-button-s00zotWltkPmZKd)）*  
+
+不过，用户“m33ts4k0z m33ts4k0z”提到了一个词：“HandheldCompanion”。什么是“HandheldCompanion”？
+
+#### 6.1 Handheld Companion（掌机伴侣）
+
+经过简单搜索发现， *Handheld Companion* 是一个旨在优化Windows掌机体验的第三方系统工具软件，拥有陀螺仪控制与映射（支持接收外部陀螺仪）、侧边快捷工具栏、映射手柄按键、按程序启动脚本、3D控制器屏显和系统参数屏显等功能。
+
+&ensp;&ensp;&ensp;&ensp;**a. 下载并安装Handheld Companion**
+
+进入官方仓库发布页链接：[Releases · Valkirie/HandheldCompanion](https://github.com/Valkirie/HandheldCompanion/releases/)，点击带有 *“Latest（最新）”* 标签的发布卡片中的 *“Assets（资源） - HandheldCompanion-\*.exe
+”* 链接，下载 *Handheld Companion* 安装程序。
+
+![Experience&Setup_Win11_30.png](Experience&Setup_Win11_30.png)  
+
+运行安装程序进行安装，在安装过程中将弹出多个安装程序窗口，用于安装所有必要的软件运行库。程序要求在安装后重启PC，重启即可。重启后运行 *Handheld Companion* ，首次运行将弹出以下窗口，询问用户是否允许上传无隐私遥感数据。
+
+<img alt="Experience&Setup_Win11_31.png" src="Experience&Setup_Win11_31.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+ *Handheld Companion* 启动之后的第一观感很舒服，采用了 *Microsoft Fluent 2 Design* 设计语言，和Windows 11很搭；且该界面支持使用手柄操控。
+
+![Experience&Setup_Win11_32.png](Experience&Setup_Win11_32.png)  
+
+点击左侧栏 *“Settings（设置）”* 项，在右侧的页面中向下滚动，找到 *“Language（语言）”* 项，在右侧的下拉菜单中选择偏好的语言。
+
+![Experience&Setup_Win11_33.png](Experience&Setup_Win11_33.png)  
+
+点击左侧栏 *“Notification（通知）”* 项，可以看到右侧提示 *“Legion Space Tasks and Services are active（Legion Space进程和服务正在活动）”* 。因为 *Handheld Companion* 会和 *Legion Space* 冲突（显而易见的），所以此处可以点击 *“Disable Legion Space（禁用Legion Space）”* 按钮来禁用 *Legion Space* ，依个人偏好决定。
+
+![Experience&Setup_Win11_34.png](Experience&Setup_Win11_34.png)  
+
+&ensp;&ensp;&ensp;&ensp;**b. 使用Handheld Companion**
+
+点击左侧栏 *“热键”* 项，在右侧的页面中，点击 *“New Hotkey”* 按钮可以新建一个热键，点击下方新建热键的右侧 *“v”* 按钮展开设置，点击 *“Press to define hotkey input（点击来定义热键输入）”* 按钮，然后按下要绑定的热键。注意此时 *Handheld Companion* 录入的是原生输入，即如果你按下的是 *Legion Space* 默认映射的 *“Xbox键”* 组合键： *“Legion L + RS”* ， *Handheld Companion* 将录入 *“Legion L + RS”* 组合键而不是 *“Xbox键”* 。
+
+这里我以 *TrueStrike左手柄* 背部的 *“Y3”* 键绑定为Windows全屏截图快捷键 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键为例：更改 *“Command type（指令类别）”* 下来菜单为 *“Key strokes（映射按键）”* ，设定 *“Command name（指令名称）”* 为偏好的名称，最后点击 *“Output（输出）”* 右侧的 *“Press to define hotkey output（点击来定义热键输出）”* 按钮，然后按下想要映射的组合键： *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 。
+
+![Experience&Setup_Win11_36.png](Experience&Setup_Win11_36.png)  
+
+ *Handheld Companion* 还可以为不支持手柄操作的界面（如桌面、即时战略类游戏等）提供类键鼠映射。点击左侧栏 *“手柄”* 项，在右侧的页面中向下滚动，找到 *“非游戏手柄布局”* ，然后进行设置。这里略过。
+
+![Experience&Setup_Win11_37.png](Experience&Setup_Win11_37.png)  
+
+不过用了之后感觉就为了这一个功能装整个软件有点臃肿了……虽然 *Legion Space* 按键映射功能和 *“Xbox键”* 很幽默，但其他功能还是挺好用的。
+
+#### 6.2 Legion Space + PowerToys
+
+兜兜转转还是想起了之前在Chromebook上装Windows 11之后用来在Windows 11上重映射按键的工具—— *Microsoft PowerToys* 。 *PowerToys* 是一系列用在Windows上的小工具集合，原本是开源的，后来被微软收编为旗下软件但代码仍为开源。
+
+ *PowerToys* 可从 *Microsoft Store* 安装：[Microsoft PowerToys - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp89dcgq3k6vld)。安装后转到 *PowerToys* 设置，在左侧栏向下滚动并选择 *“键盘管理器”* 项，在右侧的页面中点击 *“重新映射快捷键”* 项，在弹出的 *“重新映射快捷键”* 窗口中，先点击下方的 *“➕ 添加快捷方式重新映射”* ，在上方新增的卡片中，点击 *“选择 - 快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下想要绑定的、不与其他应用和系统快捷键冲突的组合快捷键（如 *“Windows徽标 + Alt + 字母”* 组合键）作为 *“中间快捷键”* ，一会儿解释；然后，点击 *“选择 - 映射到： - 操作”* 右侧的下拉菜单，选择 *“发送键/快捷键”* ，然后点击下方 *“快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下要映射的键，如 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键。
+
+![Experience&Setup_Win11_38.png](Experience&Setup_Win11_38.png)  
+
+上面提到的 *“中间快捷键”* 的作用是，既然 *Legion Space* 的按键映射功能中没有需要按下的键，但它起码已经有很多键能按了，其中还包括了 *“Windows徽标键”* ，那可以先让 *Legion Space* 将 *TrueStrike手柄* 中的功能键映射到一个作“中间人”的快捷键中，然后通过 *PowerToys* 接收到这个“中间人”，而使用 *PowerToys* 去映射更为丰富的按键，甚至触发复杂操作。
+
+现在打开 *Legion Space* 并将 *TrueStrike左手柄* 背部的 *“Y3”* 键绑定为 *“Windows徽标 + Alt + S”* 组合键，便可以触发 *PowerToys* 发送 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键，以触发Windows全屏截图。虽然拐来拐去的，起码我的设想实现了，而且 *Legion Space* 也避免了被禁用的命运。但使用 *TrueStrike手柄* 功能键发送 *“Xbox键”* 的设想还是没实现，因为虽然 *PowerToys* 可以检测到按下 *“Xbox键”* 为 *“VK 7键”* ，但无法将其发送至系统。
 
 ## 四、安装类SteamOS双系统
 
