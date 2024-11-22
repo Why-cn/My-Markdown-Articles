@@ -1083,6 +1083,8 @@ KDE桌面环境 *KDE Connect* 在设备名旁边显示 *“已配对”* ，且i
 
 ![Personal_perf21.png](Personal_perf21.png)  
 
+> 为了和主力Windows 11 PC上的截图快捷键同步，我将 *“截取整个桌面”* 和 *“截取活动窗口”* 的快捷键进行了对调。
+
 KDE桌面环境自带的可实现标注功能的工具有两个，1.  *Spectacle 截图工具 - 显示标注工具* 和 2. *Gwenview - 显示编辑工具 - 图像操作 - 标注* 。这两个标注工具试了一下，感觉都没有特别好用，没办法和Windows 11上的新版UWP *画图* 拉开差距，尤其是新版UWP *画图* 还加入了分层功能，虽然 *画图* 的形状工具里的箭头还是一坨。所以此处仅留一段占位，将来如果遇到了更好的Linux端标注工具再更新。本文中涉及KDE界面的大部分图片均是使用 *Spectacle 截图工具* 和新版UWP *画图* 编辑并制作的。
 
 #### 4. Dolphin 文件管理器管理文件权限和查看校验和
@@ -1136,9 +1138,11 @@ KDE桌面环境自带的可实现标注功能的工具有两个，1.  *Spectacle
 
 测试平台：  
 
-![Personal_perf27.png](Personal_perf27.png) 
+<img alt="Personal_perf27.png" src="Personal_perf27.png" width="80%" title="This image has been scaled to 80% of its original size."> 
 
 // TODO 
+
+以下测试结果均基于此测试平台。
 
 ### a. 跨平台测试
 
@@ -1201,7 +1205,13 @@ Linux下通过 *Steam Play 兼容性* 运行 *3DMark Fire Strike* 的基准性�
 
 #### 2. Windows兼容游戏测试
 
-// TODO
+&ensp;&ensp;&ensp;&ensp;**2.1 《命令与征服：红色警戒3》**
+
+在画面设置全高、抗锯齿下调至8x、使用Proton Experimental的情况下，可以维持30FPS，个别多粒子画面会掉帧。
+
+![Personal_perf28.png](Personal_perf28.png) 
+
+// TODO Ashed of the Singularity
 
 ## 彩蛋
 
