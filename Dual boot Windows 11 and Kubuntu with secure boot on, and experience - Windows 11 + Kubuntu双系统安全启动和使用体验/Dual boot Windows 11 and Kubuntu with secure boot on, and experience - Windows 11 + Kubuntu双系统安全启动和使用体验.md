@@ -461,6 +461,12 @@ sudo apt install <字体包名>
 
 ![KDE_settings35.png](KDE_settings35.png)  
 
+对于 *Nvidia显卡* ，如果偏好开源驱动，则选择 *Nouveau* 驱动，这也是Ubuntu系发行版默认的 *Nvidia显卡驱动* ，完全开源，但性能远逊于专利驱动；如果偏好英伟达专利驱动，下面是 *ChatGPT 4o* 给出的各不同后缀解释：
+
+![KDE_settings83.png](KDE_settings83.png)  
+
+勾选偏好的驱动的单选框，然后点击 *“Apply Changes”* 按钮， *“驱动管理器”* 会自动下载并安装驱动，并在安装完成后要求重新启动。重启后，再次打开 *“驱动管理器”* ，可以看到 *“驱动管理器”* 提示的是否安装了推荐的驱动（ *“This device is using the recommended driver.”* ）和已安装的专利驱动的数量（ *“\* proprietary driver(s) in use.”* ）。
+
 如果在此处没有你想要找的驱动，有以下几种情况：
 
 1. 你电脑上不存在非开源驱动涉及到的硬件。比如对于显卡来说，Intel、AMD官方均为Linux提供了开源驱动，所以如果你使用的这两个提供商提供的显卡（集成显卡、独立显卡），那么Ubuntu软件源中应该已经提供了能够很好支持的开源驱动。
@@ -855,7 +861,7 @@ property real timeout: 30
 参考：  
 [keyboard - How to make function keys work on a Chromebook running Ubuntu? - Ask Ubuntu](https://askubuntu.com/questions/1451097/how-to-make-function-keys-work-on-a-chromebook-running-ubuntu)
 
-// TODO
+// TODO 修好电脑后
 
 ### 19. 更改桌面图标排列方式
 
@@ -1109,6 +1115,18 @@ KDE桌面环境自带的可实现标注功能的工具有两个，1.  *Spectacle
 
 >  *Dolphin 文件管理器* 暂不提供对文件夹的校验功能，如需要还请使用其他工具。
 
+#### 5. root用户切换全局深色主题
+
+打开 *终端* ，输入以下命令并运行：
+
+```Shell
+sudo systemsettings5
+```
+
+然后在打开的 *快速设置 - 系统设置* 窗口中，选择 *“主题： - Breeze 微风深色”* ，然后点击 *“✅应用”* 按钮。
+
+![Personal_perf29.png](Personal_perf29.png)  
+
 ### d. 个人卸载预装应用偏好
 
 这里没有特别提到卸载方式的，均可按 *三、11.* 中介绍的方式进行卸载。
@@ -1140,7 +1158,7 @@ KDE桌面环境自带的可实现标注功能的工具有两个，1.  *Spectacle
 
 <img alt="Personal_perf27.png" src="Personal_perf27.png" width="80%" title="This image has been scaled to 80% of its original size."> 
 
-// TODO 
+// TODO 修好电脑后
 
 以下测试结果均基于此测试平台。
 
@@ -1211,12 +1229,12 @@ Linux下通过 *Steam Play 兼容性* 运行 *3DMark Fire Strike* 的基准性�
 
 ![Personal_perf28.png](Personal_perf28.png) 
 
-// TODO Ashed of the Singularity
+&ensp;&ensp;&ensp;&ensp;**2.2 《奇点灰烬：扩展版》**
+
+// TODO 修好电脑后
 
 ## 彩蛋
 
 我勒个时光机啊
 
 ![Easter_egg.png](Easter_egg.png) 
-
-// TODO：电池保护
