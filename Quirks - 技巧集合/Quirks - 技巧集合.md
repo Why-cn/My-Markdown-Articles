@@ -44,7 +44,7 @@
 
 假设 *<ADB文件夹地址>* 为D:\Program Files (UWPfree)\Android Debug Bridge，那么使用Windows徽标键 + R打开“运行”，输入“SYSDM.CPL”，回车打开“系统属性”，点击“高级”选项卡，点击下方“环境变量”按钮，在弹出的“环境变量”页面中选中下方“系统变量”(或“用户变量”)中的“Path”一行，点击“编辑”按钮，在弹出的“编辑环境变量”页面中点击“新建”按钮，然后输入ADB文件夹的地址，一路确定。
 
-![adb.png](adb.png)
+![adb0.png](adb0.png)
 
 在任意位置打开命令提示符，输入“adb”并回车，如果出现大量提示符并在第三行显示“Installed as *<ADB文件夹地址>*\adb.exe”，就说明adb环境变量设置成功了。
 
@@ -181,7 +181,7 @@ Windows Registry Editor Version 5.00
 
  *“编辑虚拟机设置 - 硬件 - 添加 - 硬盘 - 下一步 - <选择虚拟硬盘类型> - 下一步 - 使用现有虚拟磁盘 - 下一步 - 现有磁盘文件 - 完成”* 
 
-<img alt="VMware_HardDrive0.png" src="VMware_HardDrive0.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+![VMware_HardDrive0.png](VMware_HardDrive0.png)
 
 **2. 同虚拟机内虚拟磁盘两种模式的比较**
 
@@ -195,3 +195,11 @@ Windows Registry Editor Version 5.00
 </div>
 
 从测试结果可见，VMWare的虚拟SCSI磁盘在顺序读取和4K效果上有优势，而在顺序写入逊于虚拟SATA磁盘。综合来说，选择虚拟SCSI磁盘在大多数常见使用场景下更好。
+
+## Chrome浏览器内置截图功能
+
+1. 在Google Chrome浏览器中，按下 *“F12键”* 或 *“Ctrl + Shift + I”* 组合键，或 *“自定义及控制Google Chrome - 更多工具 - 开发者工具”* 打开 *“开发者工具”* 。
+2. 在 *“开发者工具 - 控制台”* 中，按下*“Ctrl + Shift + P”* 组合键，或 *“自定义及控制DevTools - 运行命令”* 打开 *“运行命令”* 面板。
+3. 在 *“运行命令”* 面板中，输入`Screenshot`或`截图`关键字来搜索截图相关功能。
+   <img alt="Chrome_Screenshot.png" src="Chrome_Screenshot.png" width="80%" title="This image has been scaled to 80% of its original size.">  
+4.  *“截取完整尺寸的屏幕截图”* 可以截取网页目前渲染出的整个页面（Chrome设置页面和插件内部页面无法完整截图）； *“截取屏幕截图”* 则可以截取到目前网页显示在Chrome浏览器的网页浏览区域。
