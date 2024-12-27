@@ -1,6 +1,6 @@
 # 联想Legion Go使用体验和自定义
 
-*版本：1.0*
+*版本：1.2*
 
 查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“目录”（⋮☰）按钮。
 
@@ -171,7 +171,9 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 #### 5.2 进入UEFI设置界面
 
-在关机的情况下，按住Legion Go的 *“音量+键”* 的同时按下 *“电源键”* ，进入 *“Novo Button Menu”* 。在该页面点击 *“BIOS Setup”* 。
+在关机的情况下，按住Legion Go的 *“音量+键”* 的同时按下 *“电源键”* ，进入 *“Novo Button Menu”* 。在该页面点击（或使用方向键选中并按下 *“Enter（回车）键”* ） *“BIOS Setup”* 。
+
+<img alt="Characterization82.jpeg" src="Characterization82.jpeg" width="40%" title="This image has been scaled to 40% of its original size.">  
 
 或者，在开机并进入Windows 11系统中时，点击 *“开始菜单 - 电源”*，然后在按住键盘上的 *“Shift键”* 的同时，点击 *电源选项* 中的 *“↺重启”*。
 
@@ -204,9 +206,22 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 ### 7. 调整任务栏高度
 
-// TODO：在11月11日之后
+在调整屏幕缩放比例到较高值之后，Windows 11的任务栏高度也会相应地放大；更绝的是Windows 11不像以往的Windows那样可以调整任务栏高度，甚至无法调整位于桌面的位置，导致在桌面下方的任务栏占用了太多空间。
 
-[How To Change Taskbar Size in Windows 11? - GeeksforGeeks](https://www.geeksforgeeks.org/how-to-change-taskbar-size-in-windows-11/)
+![Experience&Setup_Win11Library52.png](Experience&Setup_Win11Library52.png)
+ *设定前* 
+
+在网上搜索了很多办法，修改注册表的方式已经随着更新作废了，使用第三方修补程序还收费，最后找到这篇文章：[How To Change Taskbar Size in Windows 11? - GeeksforGeeks](https://www.geeksforgeeks.org/how-to-change-taskbar-size-in-windows-11/)，终于是找到开源的解决办法了。
+
+首先，下载 *Windhawk* ： *Windhawk* 是一个通过注入.dll动态链接库等方式以实现对Windows个性化的开源工具，通过社区提供的模组进行调整。进入官方网站：[Windhawk](https://windhawk.net/)，点击 *“Download（下载）”* 按钮下载安装程序。
+
+![Characterization76.png](Characterization76.png)
+
+ *Windhawk* 在安装过程中和下载模组时都需要连接到Github下载支持文件。安装完成后，根据前面GeeksforGeeks文章中的 *Method 2 Step 3* 继续操作即可。
+
+// TODO 设定后
+
+ *Windhawk* 还有很多有用的模组，如：[Vertical Taskbar for Windows 11 - Windhawk](https://windhawk.net/mods/taskbar-vertical)，可以让Windows 11的任务栏放置在屏幕的左侧，但不兼容前面的 *“Taskbar height and icon size”* 模组；[Windows 11 Start Menu Styler - Windhawk](https://windhawk.net/mods/windows-11-start-menu-styler)，可以去掉Windows 11 *开始* 中烦人的 *“推荐的项目”* ，并将其改为类Windows 10、7、Android启动器抽屉、混合等样式（但无法恢复Windows 10 开始菜单中的磁贴）；[Windows 11 Taskbar Styler - Windhawk](https://windhawk.net/mods/windows-11-taskbar-styler)，可以更改Windows 11任务栏的样式，如全透明任务栏、类Dock任务栏等；[Better file sizes in Explorer details - Windhawk](https://windhawk.net/mods/explorer-details-better-file-sizes)，可以让 *文件资源管理器* 中显示文件大小均从`?B`改为显示`?iB`；[Force Chinese IME Mode - Windhawk](https://windhawk.net/mods/force-chinese-ime)，可以让微软拼音输入法锁定为输入中文，而不是那个脑瘫的自动切换英文；等等。
 
 ### 8. 垂直鼠标模式与分体手柄设计
 
@@ -248,9 +263,9 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 #### 9.1 3DMark 30W TDP测试结果
 
- *UL 3DMark* 是这世界上最知名的 **Windows** PC性能测试软件之一，其拥有广泛的基准测试，绝大部分用户使用其中的基准测试用例来测试PC的 **游戏性能** 。 *3DMark* 是 *付费软件* ，可以通过[Steam 上的 3DMark](https://store.steampowered.com/app/223850/)获取。
+ *UL 3DMark* 是这世界上最知名的 **Windows** PC性能测试软件之一，其拥有广泛的基准测试，绝大部分用户使用其中的基准测试用例来测试PC的 **游戏性能** 。 *3DMark* 是付费软件，可以通过[Steam 上的 3DMark](https://store.steampowered.com/app/223850/)获取。
 
-以下结果是在使用65W供电、 *Legion Space* 中设置性能模式为自定义 - TDP 30W SPPT 35W FPPT 41W、电源模式为性能、风扇为自定义（自动）设定下的3DMark各基准测试的结果分数：
+以下结果是在使用65W供电、 *Legion Space* 中设置性能模式为自定义 - TDP 30W SPPT 35W FPPT 41W、电源模式为最佳性能、风扇为自定义（自动）设定下的3DMark各基准测试的结果分数：
 
 <img alt="Characterization19.png" src="Characterization19.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 
@@ -319,7 +334,7 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 这个不用要求太高，一般超过96%即可认为性能稳定性为佳。超不过96%，可以从上方各项影响因素中寻找导致稳定性较低的原因。
 
 ![Characterization32.png](Characterization32.png)  
- *（Legion Go在和本节 *9.1* 中的相同设定下，可以通过稳定性测试下98%的帧率稳定度。）* 
+ *（Legion Go在和本大节 *9.1* 中的相同设定下，可以通过稳定性测试下98%的帧率稳定度。）* 
 
 #### 10.2 使用AIDA64与Geeks3D FurMark 2压力测试结果判断掌机散热效能（不推荐）
 
@@ -367,6 +382,40 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 进行烤机测试：[测试合集第八期-双烤测试_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1kP411D73T/)
 
+#### 10.3 使用HWiNFO绘制性能图表
+
+ *HWiNFO* 是一种用于硬件分析和监控的一体化解决方案，支持广泛的操作系统（类DOS、Microsoft Windows 95 - 11、WinPE）和指令平台（x86、x64 和 ARM64）。由于其对个人非盈利用途的使用免费，近年已逐渐蚕食 *AIDA64* 在系统性能信息监控这一领域上的市场。
+
+进入 *HWiNFO* 官网[HWiNFO - Free System Information, Monitoring and Diagnostics](https://www.hwinfo.com/)，点击 *“Free Download（免费下载）”* 按钮或是上方导航栏中的 *“Download（下载）”* 按钮，跳转到下载页面。在下载页面中，将光标移动到下方 *“Installer（安装程序）”* 或是 *“Portable（便携式）”* 卡片中的 *“Free Download（免费下载）”* 按钮上，在弹出的下载选项中点击 *“SourceForge [Fast CDN]”* 按钮从 *SourceForge* 网站下载，或是 *“Local（\*）”* 按钮从 *HWiNFO* 网站分配的下载通道下载。
+
+![Characterization61.png](Characterization61.png)  
+
+运行 *HWiNFO* ，在弹出的窗口中点击 *“开始”* 按钮（熟悉使用之后也可勾选 *“仅显示传感器”* 来直接进入 *传感器状态* 页面或勾选 *“仅显示概要”* 来仅进入 *系统信息* 页面），进入 *系统信息* 页面。点击上方 *“传感器”* 按钮进入 *传感器状态* 页面。
+
+在 *传感器状态* 页面中，下方列表中的各条信息即是 *HWiNFO* 收集到的系统硬件传感器信息。点击左侧 *树状控件按钮(“>”“v”)* 可以展开或折叠子项。选中行并按下 *“Delete键”* 可以停止收集该遥测信息，或是按下 *“Insert键”* 恢复收集该遥测信息，也可作用于汇总/标题行。
+
+调整好需要监控的遥测信息之后，可以点击右下角的 *“📄➕开始日志记录”* 按钮，选择保存的位置之后， *HWiNFO* 会对上列进行收集的遥测信息记录到.csv文件中。点击右下角的 *“📄❌停止日志记录”* 按钮，结束日志记录。
+
+![Characterization62.png](Characterization62.png)  
+ *（但无论是 *HWiNFO* 还是 *AIDA64* 都无法读取到Legion Go的风扇转速）* 
+
+日志记录完毕后，打开 *Microsoft Excel* （以 *Microsoft 365* 为例），新建工作表，点击上方功能区选项卡中的 *“数据 - 获取和转换数据 - 从文本/CSV”* 按钮，选择刚才记录的.csv日志，然后在弹出的数据解析窗口中，从 *“文件原始格式”* 下拉菜单中选择正确的文件编码，在下方的预览窗口中查看数据是否被正确解析无乱码、是否无缺列情况，最后点击 *“加载”* 按钮。
+
+![Characterization63.png](Characterization63.png)  
+ *（无论怎么改编码，几个显示中文字符的数据列永远是乱码）* 
+
+依需求酌情删除不需要的列、段数据，修改超出正常取值范围的值（如清0因读盘而造成的超长帧生成时间）。
+
+![Characterization64.png](Characterization64.png)  
+
+修整好数据后，点击上方功能区选项卡中的 *“插入 - 图表 - 推荐的图表”* 按钮，在弹出的 *“修改图表类型”* 窗口中，选择 *“推荐的图表 - 折线图”* ，然后点击 *“确定”* 按钮。之后，新建的性能图表便会显示在工作表中。在图标空白处 *“右键 - 另存为图片…”* ，即可将单独将图表输出为图片。
+
+![Characterization65.png](Characterization65.png)  
+
+由于不是介绍怎么调整 *Excel* 图表的文章，精修部分略过。
+
+ *HWiNFO* 无法完全替代 *AIDA64* 的原因已经体现在其名称上了：“iNFO”，而不是“& Benchmark”。如果要实现大部平替 *AIDA64* ，还需要加入CPU压力测试软件如 *Prime95* ：[GIMPS - Free Prime95 software downloads - PrimeNet](https://www.mersenne.org/download/)、 *OCCT* ：[OCBASE/OCCT : Free, all-in-one stability, stress test, benchmark and monitoring tool for your PC](https://www.ocbase.com/)等。
+
 ### 11. SSD性能测试、管理软件与TF(Micro SD)卡槽测试
 
 Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 SSD作为内部存储，型号为`SDDPMQD-512G-1101`，寿命为300TBW，跑测试完成之后可以达到66°C（运行温度区间为0~85°C）。（20241026更新：不是测试完成后66°C，而是这货待机就小70°C）
@@ -397,9 +446,9 @@ Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 SSD作为�
 
 由于没办法在文章里插入音频，因此在这里就不加入对比了（实际狂喜）。我只能说，Legion Go的内置扬声器品质实在是有些一般，可能只比近两年淘宝性价比便携显示器里面的内置2W小破喇叭好一点。当然我也是可以理解的，毕竟手柄可拆卸的话，就没办法把扬声器放在手柄里了，也就没办法像 *ROG Ally X* 和 *Steam deck OLED* 那样将扬声器放置在两个摇杆下方并面向用户出声了。拆下手柄后，整个正面就一大块屏幕，塞下个光线传感器都不容易，哪里有空间再塞个扬声器呢。若搞分离式扬声器，多少感觉有点诡异……
 
-因此，Legion Go选择在机身背部上方放置两个扬声器并在机身上方开口，使声音向上发出（见上一小节最后图中橙圈内）。这样除了会导致正面音质降低以外，还会和散热口发出的噪音相混合，所以如果是玩游戏并使用内置扬声器的话，那基本也就听个参与度。但我一般玩游戏的时候戴2.4G或者蓝牙耳机，所以这个不算是个大问题。只能说要让我做产品设计，这也是我能想到的最佳解决方案了。但如果是对掌机扬声器音质有需求的人，那就得考虑考虑这一点了。
+因此，Legion Go选择在机身背部上方放置两个扬声器并在机身上方开口，使声音向上发出（见上一小节最后图中橙圈内）。这样除了会导致正面音质降低以外，还会和散热口发出的噪音相混合，所以如果是玩游戏并使用内置扬声器的话，那基本也就听个参与度。但我一般玩游戏的时候戴无线2.4G或者蓝牙耳机，所以这个不算是个大问题。只能说要让我做产品设计，这也是我能想到的最佳解决方案了。但如果是对掌机扬声器音质有需求的人，那就得考虑考虑这一点了。
 
-一个折中的方案是使用第三方软件EQ来有限地改善音质，或者连接有线外置音响。对于软件EQ，我在台式机上一直使用[FxSound - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8jk4tbq03lz4):
+一个折中的方案是使用第三方软件EQ来有限地改善音质，或者连接有线外置音响。对于软件EQ，我在台式机上一直使用免费的[FxSound - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8jk4tbq03lz4):
 
 ![Characterization27.png](Characterization27.png)
 
@@ -461,6 +510,8 @@ Miracast功能使得在旅行中位于支持Miracast投放的酒店时，可以�
 
 在显示器检测运行中，会按照前面选择的测试项目进行测试，按 *“左键”* 或 *“空格键”* 进入下一测试项目，按 *“Esc键”* 中断退出。
 
+如果不喜欢付费软件，也可使用DeviceTests网站：[Dead Pixel & Monitor Test 🖥️ | DeviceTests](https://devicetests.com/dead-pixel-test)进行在线屏幕坏点测试。
+
 #### 13.4 生产力模式
 
  *Legion Space 侧边栏* 提供了 *“生产力模式”* ，开启该模式可以使外屏成为主显示器，避免如新程序弹窗只在主屏幕中弹出、缩放有误、屏幕设置中相对位置乱动的问题。具体开启方式见 *三、1.a. Legion Space 侧边栏* 。我开了，什么变化也没有，不知道是哪里的问题，不如在显示设置里设为 *“仅在 2 上显示”* 来的直接。
@@ -470,23 +521,164 @@ Miracast功能使得在旅行中位于支持Miracast投放的酒店时，可以�
 ![Characterization57.jpeg](Characterization57.jpeg)  
  *（《星际争霸2》不支持多屏幕，上图为两张图片拼贴而成。）* 
 
-### 14. 续航测试
+### 14. 调整电源计划与续航测试
 
-Legion Go有着在 *零、* 里几个x86掌机中最小的电池容量（仅49.2Wh，仅多于ROG Ally），同时拥有着最大的屏幕（无论是大小还是分别率），这不得让人对其续航能力产生一些担忧。由于没有拿到专业的续航测试脚本，也买不起昂贵的 *PCMark 10 Professional Edition* ，所以只能拿现有的免费软件和买过的游戏凑活测试一下这样子。
+Legion Go有着在 *零、* 里几个x86掌机中最小的电池容量（仅49.2Wh，仅多于ROG Ally），同时拥有着最大的屏幕（无论是大小还是分别率），这不得让人对其续航能力产生一些担忧。由于没有拿到专业的续航测试脚本，也买不起昂贵的 *PCMark 10 Professional Edition* ，所以只能拿现有的免费软件和买过的游戏凑活测试一下这样子。至于办公续航，放到 *五、* 大节中再讨论。
 
-#### 14.1 媒体持续播放续航测试
+#### 14.1 调整电源计划
 
-媒体持续播放续航测试使用[PotPlayer - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8bsbgqw2dks0)硬件解码
-// TODO 视频规格 2K
-，和 *Google Chrome* 浏览器硬件解码在背景播放
-// TODO 720p音乐视频
-，TDP输出设定在两个软件同时播放时不会卡顿的最低功率：
-// TODO W
-，电量由100%到5%自动休眠时的持续时间：
+想要调整连接电源和使用电池时的闲置关闭屏幕时间和闲置睡眠时间，可以导航到 *设置 - 系统 - 电源和电池 - 电池 - 屏幕和睡眠* 项，调整下面的四个下拉菜单。调整下方的 *“电源模式”* 下拉菜单可以调整Windows 11对系统性能的调配情况。
 
-#### 14.2 游戏续航测试
+![Characterization58.png](Characterization58.png)
 
-// TODO 30W 25W 15W
+Windows 11 23H2并未将所有原 *控制面板* 中的设置项目移动到新的 *设置* UWP应用中。想要调整如 *“关键电池水平”* 这类高级电源设置，需要从 *控制面板* 中的 *“编辑电源计划”* 中进行设置。点击 *开始* ，在 *“开始”菜单* 上面的搜索框中输入`电池`关键字，在下面的搜索结果中，选择 *“编辑电源计划”* 并点击右侧卡片中的 *“打开”* 项。在打开的 *“控制面板 - 硬件和声音 - 电源选项 - 选择或自定义电源计划”* 页面中，可以看到只有一个活动的电源计划 *“平衡”* 。点击其右侧 *“更改计划设置”* 链接，在跳转的 *“更改计划的设置：平衡”* 页面中，可以看到其中的显示和睡眠设置与之前 *设置* UWP应用中的相同。点击 *“更改高级电源设置”* 链接。
+
+![Characterization59.png](Characterization59.png)
+
+本节仅介绍更改 *“关键电池水平”* 与相关操作。在弹出的 *“电源计划”* 窗口中，在 *“高级设置”* 选项卡中的滚动面板中向下滚动，找到 *“电池”* ，然后更改 *“关键级别电池操作”* 中的两个选项 *“使用电池”* 和 *“接通电源”* 的下拉菜单均为 *“休眠”* 项；更改 *“关键电池电量水平”* 中的两个选项 *“使用电池”* 和 *“接通电源”* 的数字输入框均不小于5%。最后，点击 *“确定”* 按钮。
+
+<img alt="Characterization60.png" src="Characterization60.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+#### 14.2 媒体持续播放续航测试
+
+媒体持续播放续航测试使用[PotPlayer - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8bsbgqw2dks0)硬件解码在前台播放
+`H.264+AAC，2304x1440，52.3FPS，视频57.9Mbps，音频192Kbps（静音）`视频并循环
+，同时使用 *Microsoft Edge* 浏览器硬件解码在背景播放
+`AV1+AAC，1920x1080，29.4~30FPS，视频128~2568Kbps（背景播放），音频127~314Kbps`
+音乐视频并列表循环（来源：[「碧蓝档案OST🎵」音乐合集~Vol.1（320K）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Fh411s7ps/?p=2)）
+。TDP输出设定在两个软件同时播放时不会卡顿、丢帧（低于3‰）的最低功率： **9W** ，开启蓝牙，不连接外设，显示分辨率2560x1600，显示刷新率144hz，自动亮度28%，扬声器35%，无非必要后台程序，电量由100%到5%自动休眠时的持续时间：
+
+![Characterization74.png](Characterization74.png)  
+
+最终测试结果的性能图表如下：
+
+![Characterization75.png](Characterization75.png)  
+
+**续航时间为3小时8分钟（188分钟）。** 输出功率在14.4（无干预播放）~16W（碰了下鼠标）附近，平均为14.5W。Windows 11 23H2貌似会在用户持续观看视频，无输入时将画面刷新率降到与视频帧率同步，当有输入时恢复至高刷新率，能够稍微节省电量（Literally稍微，前方高刷区间平均14.8W，后方高刷区间平均15.2W，若按节约0.7W来算理论可延长——9分钟）。还有一点有趣的是，从开始播放到结束，显存占用一直在走高。
+
+#### 14.3 游戏续航（和简单性能）测试
+
+在和本大节 *9.1* 中的相同设定下（关闭蓝牙，自动亮度41%，扬声器54%），使用电池运行 *《荒野大镖客：救赎与不死梦魇（2024）》* ，1600p@144hz，图形-质量预设等级-低，未开启FSR，使用和本大节 *10.3* 中介绍的方法绘制45分钟性能图表，分类结果有下列各图：
+
+![Characterization66.png](Characterization66.png)  
+ *（充电速度、CPU封装功率、CPU 核心功率 (SVI3 TFN)）* 
+
+从图中可以看出，电池在大部分时间下的输出功率在34W附近，平均为32.6W（除去日志开始和结束处没有启动游戏的时间）。以34W计，Legion Go在30W TDP下的续航时间为
+
+$$\frac{49.2Wh \cdot (100\% - 5\%)}{34W} = 1.375h = 85min$$
+
+约1小时25分钟。
+
+我还发现从 *HWiNFO* 收集到的电池输出功率（负`充电速度`）大致等于`CPU封装功率` + `CPU 核心功率 (SVI3 TFN)` + 0~5W ，莫非这个0到5W是周边功率？
+
+在13:37到13:43约6分钟的时间内，有许多性能指标进行了剧烈的变化，如下图（但我忘了当时游戏在干嘛了）：其中横轴刻度间隔为24秒，折线波谷多在8~16秒跨度。
+
+![Characterization67.png](Characterization67.png)  
+
+虽然无法获知风扇的转速，不过通过图表可以发现，CPU SOC的温度每次在达到65°C的时候都会引起多项数值大幅变化，**猜测**联想可能将温度墙设置在65°C，在画面稳定时，触及温度墙后将会有小幅的降频，温度稍降后会恢复性能，频率调整的间隔通常在8秒左右，而恢复后的性能维持时间与许多其他因素有关。有意思的是，SSD温度从待机时的70°C上下降到了游戏中的不超过52°C。
+
+将GPU频率缩放-100倍，并和CPU SOC温度比较：
+
+![Characterization68.png](Characterization68.png)  
+
+发现每次GPU降频都会将频率降到持续输出时的41%左右，降频持续时间很短（8秒）。
+
+&ensp;&ensp;&ensp;&ensp;**14.3.a 30W TDP 游戏 + 录制 续航（和简单性能）测试**
+
+在和本大节 *9.1* 中的相同设定下（关闭蓝牙，自动亮度28%，扬声器54%），使用电池运行 *《荒野大镖客：救赎与不死梦魇（2024）》* ，1600p@144hz，图形-质量预设等级-低，未开启FSR，并在后台开启 *Microsoft Game DVR* 录制（高质量，60FPS，在录制1小时2分钟后停止），记录图表如下：
+
+![Characterization69.png](Characterization69.png)  
+
+**续航时间为1小时10分钟（70分钟）。** 输出功率在35~36W附近，平均为33.6W。猜测可能后台录制多占用了一些性能输出。录制的视频将作为上一子节的背景播放视频。
+
+&ensp;&ensp;&ensp;&ensp;**14.3.b 25W TDP 游戏 续航（和简单性能）测试**
+
+在使用 *Legion Space 侧边栏* 的“野兽模式”（25W TDP）设定下（关闭蓝牙，自动亮度28%，扬声器54%），使用电池运行 *《荒野大镖客：救赎与不死梦魇（2024）》* ，1600p@144hz，图形-质量预设等级-低，未开启FSR，记录图表如下：
+
+![Characterization70.png](Characterization70.png)  
+
+**续航时间为1小时26分钟（86分钟）。** 输出功率在30.5W附近，平均为30.1W。在“野兽模式（25W TDP）”且画面设定未改变的情况下，众数帧率却显得比30W TDP时更高了，虽然明显能看出来帧率的变化也要比30W TDP时更为剧烈。对比30W TDP时，25W TDP在温度控制上更优秀，SoC全程维持在60°C以下；而30W TDP时触温度墙达到了4次以上。而且我发现电池的变化曲线在7.3%前后会有一次跳变。
+
+&ensp;&ensp;&ensp;&ensp;**14.3.c 均衡模式 游戏 续航（和简单性能）测试**
+
+在使用 *Legion Space 侧边栏* 的“均衡模式”（15W TDP）设定下（关闭蓝牙，自动亮度28%，扬声器54%），使用电池运行 *《荒野大镖客：救赎与不死梦魇（2024）》* ，1600p@144hz，图形-质量预设等级-低，未开启FSR，记录图表如下：
+
+![Characterization71.png](Characterization71.png)  
+
+**续航时间为1小时52分钟（112分钟）。** 输出功率在24.4W附近，平均为24.1W。在进一步限制输出功率的情况下，众数帧率确实下降了，在保持60FPS上也力不从心。在这次的图表中可以清晰地看到，在开始游戏后，SSD温度骤降，从待机时的70°C到维持在45°C左右，玩游戏养机了属于是。但电池输出功率明显不像前几次仅和TDP设定相差4~5W，而是来到了9W，如果不是AMD调度的问题，那么难道联想在更新 *Legion Space* 的过程中悄悄更改“均衡模式”输出到20W TDP了？而且在30W和25W的性能对比中，降低这5W并未给帧数带来负面影响，那是否是25W已经足够 图形-质量预设等级-低 运行了，在30W时可以稍微提升画面质量预设？
+
+&ensp;&ensp;&ensp;&ensp;**14.3.d 8W TDP 游戏 续航（和简单性能）测试**
+
+在使用 *Legion Space 侧边栏* 的“安静模式”（8W TDP）设定下（关闭蓝牙，自动亮度28%，扬声器54%），使用电池运行 *《荒野大镖客：救赎与不死梦魇（2024）》* ，1600p@144hz，图形-质量预设等级-低，未开启FSR，记录图表如下（其中有51分钟闲置：保持游戏中画面显示，但无输入）：
+
+![Characterization73.png](Characterization73.png)  
+
+**续航时间略低于3小时19分钟（199分钟）。** 输出功率在13.6W附近，平均为13.4W（除去闲置时间）。在8W TDP的设定下，续航时间做到了均衡模式的178%，25W TDP的231%，30W TDP的284%；代价是帧数和帧生成时间两条折线产生了对调：平均帧率19.7FPS（除去闲置时间），而平均帧生成时间51.25ms（除去闲置时间）。这3小时我都是在“电竞帧数”下玩的，那叫一个究极折磨，我再也不是当初那个用 *Nvidia GeForce GT 550M* 降到720p玩《末日之战3》的孩子了。不过温度倒是控制地非常棒，SoC和SSD温度在稳定后一直未超过40°C，风扇声在手持时也基本无感。
+
+&ensp;&ensp;&ensp;&ensp;**14.3.e 30W TDP 游戏 提升画面质量（简单性能）测试**
+
+为了验证本子节 *14.3.c* 中的疑问，在和 *14.3.a* 中的相同设定下，充满电并连接65W供电运行 *《荒野大镖客：救赎与不死梦魇（2024）》* ，1600p@144hz，图形-质量预设等级-中，未开启FSR，无后台任务，记录图表如下：
+
+![Characterization72.png](Characterization72.png)  
+
+频率坚持了5分钟就降了，但稳定GPU频率比 *14.3.a* 中更高，可能是因为这次没有在后台进行画面录制；即使 *14.3.a* 中有持续向硬盘写入录像的操作，但 图形-质量预设等级-中 比 低 多占用了约2400MB显存，可以说更高的游戏画面设定，需要更多地从硬盘中读取纹理，这要比录制游戏录像还要更吃硬盘性能；画面虽然有肉眼上的提升，但帧数甚至没办法保证50FPS。因此，或许 **使用25W TDP（“野兽模式”）并在不太压榨性能上限的游戏画面设定下，Legion Go才能够达到性能和损耗的平衡。** 毕竟 *西部数据 SN740* 的运行温度最高为85°C，而在上图中仅持续运行了15分钟，SSD温度就达到了85°C且维持上升趋势；且Legion Go的SSD通过 *石墨导热贴* 与 *电池组支架* 相连，这俩谁也接受不了长时间高温。
+
+#### 14.4 Legion Go续航总结
+
+我在 *零、* 的废话里说过，曾设想把Legion Go卡在经济舱夹板上。从媒体持续播放续航测试中可见，其续航能力大概够看两部约1个半小时的电影，或3集半美剧。 **降低刷新率对延长续航时间的效果微乎其微，除非蓝光片源，8W TDP的“安静模式”已经足够在播放视频的同时保证系统响应不卡顿。** 5W左右的周边功率貌似是无法再降低的了，因此Legion Go所能做到的最低的非游戏功率消耗应该就是13W左右，且这个功率应该无法应付办公，只能用于观看视频。
+
+对于游戏性能，自从录完 *14.3.e* 我是再也不敢把TDP、SPPT、FPPT三条拉满再压榨性能了，起码是想办法解决SSD过热的问题之前不会再压榨了。对于帧数表现，在使用电池供电时25W TDP对于30W TDP在平均帧数上甚至还能再领先一些，虽然帧数变化不如30W TDP稳定，不过30W TDP又一直在触温度墙。 **当两种设定均能够保证目标帧数（如我的最低要求是60FPS）的情况下，更低的TDP设定无疑是更好的，其能提供显著更低的发热量和稍微长一点的续航时间。** 与其为了获得多26分钟的续航时间而忍受平均45.4FPS的112分钟游戏体验，那我还不如保持在60FPS以上爽玩86分钟。当然，这点见仁见智。
+
+### 15. 电源键动作与滑动关机
+
+导航到 *“设置 - 系统 - 电源 - 电源和睡眠 按钮控件 - 按电源按钮将使我的电脑”* ，在右侧下拉菜单中，选择偏好的动作。如果希望按下时保存游戏状态并关闭电源，并在再次启动时恢复，可选择 *“休眠”* 。
+
+![Characterization78.png](Characterization78.png)  
+ *（从 *设置* 更改电源键动作仅限Windows 11 24H2及以后版本。）* 
+
+>  *“休眠”* 选项并不保证所有应用都可顺利从休眠恢复。
+
+长按3秒电源键，可以以滑动方式关机。
+
+![Characterization77.png](Characterization77.png)  
+
+### 16. 屏幕OSD显示
+
+ *Legion Space* 的OSD（屏上显示，On-screen Display）无法显示电量， *Steam* 和 *AMD Software: Adrenalin Edition* 也没有，这使得我在玩游戏时只能通过暂时调出 *Legion Space 侧边栏* 来查看剩余电量，而当没有连接 *TrueStrike 手柄* 时则只能通过触摸手势调出任务栏来查看。我希望可以在使用电池进行游戏时密切关注剩余电量，在前面的 *10.3* 小节已经介绍了可以检测这一数值的工具—— *HWiNFO* ，现在就剩解决将其显示在屏幕上这个需求了。
+
+早先能够在游戏上显示FPS（Frames Per Second，每秒帧数）的工具是 *FRAPS* ，稍微暴露年龄的玩家可能还记得当年这几乎是录制游戏视频唯一的选择。但 *FRAPS* 仅能显示FPS这一数据且在2013年就停止更新了。随着 *微星 Afterburner* 软件的逐渐流行，与其绑定的 *RTSS* （Rivatuner Statistics Server，Rivatuner统计服务）也逐渐被玩家接受并广泛使用。 *RTSS* 一开始作为 *Rivatuner* ，一款显卡超频软件，的数据统计和可视化工具，后来显卡越来越难调了（API和内部优化机制的改变），但大家对可视化统计数据的需求还很高涨，导致主程序 *Rivatuner* 在2013年便停止更新，反而 *RTSS* 更新至今。
+
+本来想要介绍使用 *HWiNFO* + *RTSS* 实现OSD的，但是在调试 *HWiNFO* 时突然发现其设置中有两个OSD选项： *“OSD”* 和 *“OSD(RTSS)”* 。如果只能使用 *RTSS* 实现OSD，那么前者显得有些多余，莫非 *HWiNFO* 自己已经能显示OSD了？
+
+搜了一下还真是：[硬件监测软件 HWiNFO 更新 7.73 测试版：引入原生 OSD，放弃 Windows XP 支持 - IT之家](https://www.ithome.com/0/752/650.htm)在20240327的8.0正式版本， *HWiNFO* 已经完整地支持OSD显示而不需要共享给第三方软件实现了。本来想搜一下有没有类似教程，结果没搜到（截至20241224），那看来还得我来写。
+
+首先，打开 *HWiNFO* 的 *“传感器状态”* 页面，点击右下角的 *“⚙配置传感器”* 按钮。在打开的 *“传感器设置”* 页面中，点击 *“OSD”* 选项卡。之后，按照下图进行配置：
+
+![Characterization80.png](Characterization80.png)  
+
+0. 参照两个标⓪的橙色细边方框，这两个选项是全局设置，影响到整个OSD显示。  
+   - 勾选 *“启用OSD”* 复选框将启用 *HWiNFO* 的OSD，反之不启用。
+   - *“宽度”* 文本框中的数字为一行传感器数据的宽度（像素），太高会导致数据溢出屏幕，太低会让数据变为多行显示。
+   - *“放大”* 文本框中的数字为OSD的放大系数。如果觉得OSD中的数据较小，推荐在下方更改字体字号而不是在此处更改放大系数。
+   - *“覆盖或独立窗口”* 下拉菜单可以更改OSD是覆盖在程序界面上还是单独作为一个不可控窗口盖在程序窗口上。对于一些检测屏幕覆盖的游戏可能有用。
+   - *“Custom”* 下拉菜单调整OSD在程序界面上的位置，可以是左上角、左下角、右上角和右下角。但游戏的UI一般也就位于这四个角，所以我选择将其置于正上方。选择下拉菜单中的 *“Custom（自定义）”* ，更改右侧 *“X”* 和 *“Y”* 两个数字文本框中的数字为OSD在屏幕上的起始位置。以(X,Y)的形式，屏幕左上角为(0,0)，右下角为(屏幕宽度最大像素数,屏幕高度最大像素数)。以Legion Go在2560x1440分辨率横屏下的设置，正上方为(1280,0)，正下方为(1280,1440)。
+   - *“切换OSD输出”* 中，勾选 *“启用切换热键”* 复选框可以在按下指定的热键时开启/关闭OSD。
+1. 参照标①的橙色细边方框，先在 *“条目”* 列表中选中想要显示在OSD的项目，如 *“Battery（电池） - 电池电量”* 。
+2. 参照标②的橙色细边方框，选择该条目显示在OSD中的位置，该位置从上至下递增。如果有两个项目同时选择为同一个位置，新指定的条目会覆盖旧指定的条目。
+3. 参照标③的橙色细边方框，
+   - 勾选 *“在OSD中显示为：”* 复选框，来启用在OSD中显示该条目。其右侧的下拉菜单可以调整为显示数据文本还是动态图表。
+   - 勾选 *“在OSD中显示标签”* 复选框，来显示该数据项的标签，如`电池电量`。不勾选则只显示数据。
+   - 勾选 *“在OSD中显示单位”* 复选框，来显示该数据项的单位，如`°C`。不勾选则只显示数据。
+   - 点击 *“更改字体”* 按钮来更改该行传感器数据中的文本的字体。如果觉得OSD中的数据较小，可以增大字体字号。
+   - 更改 *“显示值类型：”* 下拉菜单，可以调整显示的数据为当前值、最小值、最大值还是平均值。
+4. 参照标④的橙色细边方框，点击 *“文本颜色：”* 、 *“图标线条颜色：”* 、 *“图标填充颜色：”* 右侧的按钮，可以切换该数据项显示的颜色。更改它们右侧的 *“不透明度：”* 滑动块可以更改该数据项显示的透明度。
+
+其他项目保持默认即可。如果要增加多个OSD数据项，只需重复1-4步，并在第2步时分配不同的位置。免费版 *HWiNFO* 最多能添加5个OSD数据项，这对我来说已经够用了。在开启OSD显示后，所有使用 *Direct3D（DirectX）、OpenGL、Vulkan* 进行硬件加速的程序都会显示OSD，除了游戏之外，也包含如 *PotPlayer* （下图）、UWP（非Win32打包）程序等。
+
+![Characterization81.png](Characterization81.png)  
+ *（最终效果，显示在 *PotPlayer* 上。）* 
+
+> 如果在确认OSD设置后更改屏幕缩放比例，则会使OSD显示位置发生偏移。
 
 ### * 关于强制更新显示驱动
 
@@ -503,6 +695,8 @@ Legion Go有着在 *零、* 里几个x86掌机中最小的电池容量（仅49.2
 > 无论是华硕还是联想提供的 *AMD Radeon GPU (780M)* 驱动软件，貌似安装过程都是通过复制驱动文件并在Windows设备管理器中注册的方式完成的，侧面反映出这些驱动确实是高度OEM化的。
 
 > 20241030补充：在Bilibili上看到了安装7840U上的780M驱动教程：[ROG ALLY X 外接AMD显卡，拯救者掌机安装7840U公版驱动 | ONEXGPU、GPD G1显卡坞 Legion Go连接教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ea4y1y7vM/)，但看反应说小问题不少，那暂且先观望吧。
+
+> 20241222补充：在20241213，联想给Legion Go更新到`32.0.11030.1`，此时AMD官方驱动版本号更新至`32.0.12033.1030`，华硕ROG Ally X的驱动版本号更新至`32.0.12011.7001`。
 
 ### * 不需要开启SAM
 
@@ -590,6 +784,8 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 ![Experience&Setup_Win11_3.png](Experience&Setup_Win11_3.png)
 
+> Legion Go上的 *AMD Ryzen Z1 extreme APU* 驱动只能通过 *Legion Space* 软件或者在 *”联想支持 - 联想PC支持 - 驱动及应用程序”* 中下载显卡驱动安装包更新。
+
 20241026更新：在刚才打开 *Legion Space* 软件的时候，它自动更新了自身软件并安装了新的手柄固件。正当我想要查查这次更新了什么内容时，发现官网只有`v1.1.2.11`版本（3个月之前）的Readme，并且只有`v1.1.2.14`版本（1个月之前）的软件安装程序可供下载。稍微搜索一下网络，发现Reddit的r/LegionGo下的一篇帖子：[Legion Space Update 1.1.3.3 : r/LegionGo](https://www.reddit.com/r/LegionGo/comments/1gb85fd/comment/ltjmglg/)
 
 <img alt="Experience&Setup_Win11_25.png" src="Experience&Setup_Win11_25.png" width="90%" title="This image has been scaled to 90% of its original size.">  
@@ -663,7 +859,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 但到我上手的时候， *Legion Space* 和 *“LS侧边栏”* 已经处于一个可用的状态了，唯一让我感到难以忍受的点是按下 *Legion L键* 退出 *Legion Space* 时，它居然只是最小化而不是退出到托盘，强迫症看见它占用在任务栏难受的一批。其他倒是无可指摘。
 
-使用 *Legion R键* 呼出 *“LS侧边栏”* （ 若切换过按键布局，则为 *Menu键* ），在最上方状态栏中从左至右分别显示 *“WiFi连接状态、主机与手柄连接状态、TrueStrike左手柄电量、Legion Go电量、TrueStrike右手柄电量、当前时间”* 。
+使用 *“Legion R”键* 呼出 *“LS侧边栏”* （ 若切换过按键布局，则为 *Menu键* ），在最上方状态栏中从左至右分别显示 *“WiFi连接状态、主机与手柄连接状态、TrueStrike左手柄电量、Legion Go电量、TrueStrike右手柄电量、当前时间”* 。
 
 ![Experience&Setup_Win11_16.png](Experience&Setup_Win11_16.png)
 
@@ -673,12 +869,12 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 - 查看性能监控
 - 调整散热模式 
   - 安静模式：TDP 8W
-  - 均衡模式：TDP 15W
+  - 均衡模式：TDP 15W （怀疑实际为20W，见 *二、14.3* ）
   - 野兽（性能）模式：TDP 25W
   - 自定义模式可调整TDP、SPPT、FPPT，解释见下方。
 - 调整风扇曲线
 - 开关FPS限制器
-- 调整电源模式
+- 调整电源模式（同 *“设置 - 系统 - 电源和电池 - 电源模式”* ）
 - 恢复默认设定
 
 第二个是 *“通用”* 页面，功能有：
@@ -712,11 +908,11 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 >  *（不是联想，25W输出好意思叫野兽模式？我一开始寻思着野兽模式不得小超到35W结果查了才知道是25W？一开始开着野兽模式测3DMark差点吓得我要退货了）* 
 
-> 我发现当分离使用 *TrueStrike手柄* 时， *TrueStrike右手柄* 无法在休眠计时超时后自动关闭。目前只能通过按住 *Legion R键* 三秒将其手动关闭。
+> 我发现当分离使用 *TrueStrike手柄* 时， *TrueStrike右手柄* 无法在休眠计时超时后自动关闭。目前只能通过按住 *“Legion R”键* 三秒将其手动关闭。
 
 ![Experience&Setup_Win11_17.png](Experience&Setup_Win11_17.png)
 
-第四个是 *“系统快设”* 页面，方便在没有外接键盘时快速使用手柄或触摸屏幕向系统发送系统级快捷键，如切换窗口等。由于 *“LS侧边栏”* 是作为全局置顶覆盖层，向系统发送 *“Alt + Tab”* 组合快捷键不会影响 *“LS侧边栏”* 显示在最上层（它甚至可以覆盖在锁屏上）。
+第四个是 *“系统快设”* 页面，方便在没有外接键盘时快速使用手柄或触摸屏幕向系统发送系统级快捷键，如切换窗口等。由于 *“LS侧边栏”* 是作为全局置顶覆盖层，向系统发送 *“Alt + Tab”* 组合键不会影响 *“LS侧边栏”* 显示在最上层（它甚至可以覆盖在锁屏上）。
 
 第五个是 *“生产力模式”* 页面，测试见 *二、13.4* 。
 
@@ -733,9 +929,23 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 > 有时 *Legion Space* 软件在允许其开机自启时不会自动启动。我猜测可能是因为检测到了 *Steam* 也被允许在Windows启动时运行，所以其自动让贤了。当然也可能是纯BUG。  
 > 20241016更新：好像是我想多了，应该就是BUG。
 
+&ensp;&ensp;&ensp;&ensp;**使用快捷方式调用Legion Space 侧边栏**
+
+在使用Legion Go的平板模式时，即在不连接 *TrueStrike手柄* 时，由于没有 *“Legion R”键* ，便无法呼出 *Legion Space 侧边栏* 。但实际上 *Legion Space 侧边栏* 是一个可执行程序，其位置就位于 *Legion Space* 软件的安装路径下：
+
+`C:\Program Files\Lenovo\LegionSpace\[版本号]\LegionSettingMenu.exe`
+
+为该应用创建快捷方式即可通过按下 *“Legion R”键* 以外的方式启动 *Legion Space 侧边栏* 。
+1. 创建快捷方式到 *桌面* ：参见本章的 *5.1.g* 。
+2. 固定链接到 *任务栏* ：打开 *文件资源管理器* 并定位到`LegionSettingMenu.exe`，在其上按住 *“右键”* 并将其拖动到 *任务栏* ，然后松开 *“右键”* 。
+   ![Experience&Setup_Win11_41.png](Experience&Setup_Win11_41.png)
+   可以使用 *“Windows徽标 + 数字α”* 组合键将启动该链接。其中，“α”为链接固定在 *任务栏* 的左起第α位：例如，假设链接是第二位，那么就是 *“Windows徽标 + 2”* 组合键。
+
+来源：[Open Legion Space side bar with keyboard shortcut : r/LegionGo](https://www.reddit.com/r/LegionGo/comments/1fyaj4b/open_legion_space_side_bar_with_keyboard_shortcut/)
+
 #### b. Steam与Steam 大屏幕模式
 
-呃……Steam需要介绍吗？[Steam — 高质量游戏平台](https://store.steampowered.com/about/)
+呃…… *Steam* 需要介绍吗？[Steam — 高质量游戏平台](https://store.steampowered.com/about/)
 
  *Steam 大屏幕模式* 一开始是专门设计给 *Steam Machine* 、 *Steam Link* 和 *HTPC* 的，这些机器常常放置在客厅，连接电视和手柄玩游戏，类似于家用游戏主机的定位。虽然 *Steam Machine* 最后黄了， *Steam 大屏幕模式* 却造福了后来的 *Steam deck* 和各式Windows游戏主机，也正好可以活用于Legion Go。
 
@@ -805,9 +1015,81 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 #### b. Windows Subsystem for Android
 
-// TODO：在11月11日之后
+> 由于本小节是在 *c. Android模拟器* 之后才开始写的，所以本小节中与 *c.* 中重复的部分视作已经提过，不再重复介绍。
 
-[MustardChef/WSABuilds: Run Windows Subsystem For Android on your Windows 10 and Windows 11 PC using prebuilt binaries with Google Play Store (MindTheGapps) and/or Magisk or KernelSU (root solutions) built in.](https://github.com/MustardChef/WSABuilds)
+ *适用于Windows的Android子系统* （Windows Subsystem for Android，以下简称为WSA）是 *微软* 向Windows 11中添加的一项独占功能，使用 *Hyper-V* 技术创建的、微软编译的、专用于Windows的Android虚拟机，实现在Windows 11上无感使用Android应用。此处的“无感”指的是安装在WSA中的Android应用就像其他Win32（.exe）应用一样，可以显示在 *“开始”* 中，且运行时也会显示为Windows窗口（类似于 *VMWare Workstation Pro* 中的 *Unity模式* ），而不会像其他Android虚拟机一样先显示平台或Android启动器，再在其中启动Android应用且Android应用窗口无法脱离Android虚拟机窗口。
+
+虽然 *微软* 的官方文档中定义WSA仅是面向Android开发者设置的在Windows下的开发环境，类似于 *适用于Windows的Linux子系统* ，WSA还是展现出了 *微软* 想要扩展个人移动PC领域（如平板和轻薄本）中Windows的使用场景，剑指 *苹果* 还是 *Android* 就不好说了。不过， *微软* 在2024年3月5日正式宣布WSA停止开发并在2025年同日彻底结束支持，我个人猜想是微软并未放弃扩展个人移动PC领域的想法，不过把路线图从让Windows支持运行Android ARM应用，改为直接让整个Windows能够跑在ARM转译上了。对于微软来说这条路反而比原来还要更可行一些，毕竟让Windows装Android应用多少也是有点砸自己锅的感觉，这也是选择和没什么人用的 *亚马逊应用商店* 合作，而不与更理所应当的 *Google Play 商店* 合作的原因。商业上这么说得过去，但对于我们折腾玩家来说就挺晴天霹雳的，想到今年3月刚刷到这条消息还是在早晨赖床的时候，结果一下不困了，就难受。好在WSA留下了不少遗产，容器设计也让爱好者更容易塞入新的Android映像，相信以后会有开源项目接棒更新的。
+
+> 你可能发现了， *“适用于Windows的Android子系统”* 并不符合 *微软* 的官方译名：“适用于 Android 的 Windows 子系统”。 *“适用于Windows的Android子系统”* 是我更正后的译名，其实更白话一点，“适用于Windows的子系统：Android容器”更合适。考量了 *韦氏词典* 对于“Subsystem”的解释：“……属于更大系统一部分的系统：气候系统的这些子系统包括大气、海洋……”，因此，Windows在此处是“更大系统”，而（微软编译的）适用于Windows的Android系统则是“子系统”。
+
+> 本小节的截图来自于3台PC，所以截图中体现的配置上会有不同。最终应用及游戏测试均在Legion Go上完成。
+
+&ensp;&ensp;&ensp;&ensp;**b.0 WSABuilds项目的介绍以及WSA的系统需求**
+
+ *WSABuilds* 是一个开源项目，使用内置有 Google Play Store（MindTheGapps社区提供）和/或 Magisk 或 KernelSU（root解决方案）的，在 Windows 10 和 Windows 11 PC 上运行适用于Windows的Android子系统的预编译映像和安装脚本。仓库链接：[MustardChef/WSABuilds: Run Windows Subsystem For Android on your Windows 10 and Windows 11 PC using prebuilt binaries with Google Play Store (MindTheGapps) and/or Magisk or KernelSU (root solutions) built in.](https://github.com/MustardChef/WSABuilds)
+
+虽然 *微软* 官方提供的WSA仅适用于Windows 11，但由于Windows 11和Windows 10使用相同的Windows NT 10内核（在不同构建版本上会有微小区别），且都能使用 *UWP* 平台，因此WSA也可以移植到Windows 10上。详细要求可见项目仓库README文档中的 *“Requirements（需求）”* 部分，这里仅提几个比较重要的要求：
+
+- Windows 11 21H2 (22000.526)及以上，或Windows 10 20H1 (19041.264) （要求安装过服务堆栈更新和积累更新）及以上
+- 4GB以上内存（最好8GB以上）
+- 无处理器代数要求，但最好是8代英特尔酷睿处理器及以上或AMD锐龙Zen 2处理器及以上
+- x86_64处理器或ARM处理器均可，但必须支持虚拟化，并开启虚拟化
+- Windows 10/11 专业版/教育版/企业版：启用 *“Hyper-V”* 和 *“Windows 虚拟机监控程序平台”* ；Windows 10/11 家庭版：启用 *“虚拟机平台”* 和 *“Windows 虚拟机监控程序平台”* 
+
+对于最后两项，可以通过在 *“任务管理器 - 性能 - CPU - 虚拟化：”* 处查看虚拟化开启状态；在 *“设置 - 系统 - 可选功能 - 更多 Windows 功能”* 打开的 *“打开或关闭 Windows 功能”* 窗口中，勾选相应复选框并 *“确定”* 和 *“重启”* 。
+
+![Experience&Setup_Win11Android40.png](Experience&Setup_Win11Android40.png) 
+
+![Experience&Setup_Win11Android41.png](Experience&Setup_Win11Android41.png) 
+
+&ensp;&ensp;&ensp;&ensp;**b.1 为什么使用WSABuilds以及WSABuilds的安装**
+
+为什么使用第三方的预编译映像和脚本，而不使用微软官方的安装方式？首先，微软官方的镜像中没有提供 *Google Play 商店* 和root权限，其次，微软官方已经停止更新WSA，意味着WSA将来的更新将全面依赖开源社区。
+
+**全面卸载已安装的WSA**
+
+Legion Go预装了WSA，但该WSA版本是微软官方版本。要安装 *WSABuilds* ，必须彻底卸载已经安装的WSA。具体方式可以参照该教程文章：[Uninstall Windows Subsystem for Android (WSA) in Windows 11 | Windows 11 Forum](https://www.elevenforum.com/t/uninstall-windows-subsystem-for-android-wsa-in-windows-11.2373/)
+
+**下载WSABuilds**
+
+点击仓库内README文件的 *“Downloads（下载）”* 部分中的链接即可进入发行版下载页面，根据系统和指令集下载即可。**请选择“PRE-RELEASE BUILDS”，因为在微软停止更新WSA之后“STABLE BUILDS”便失去了它的意义，除了怀旧。** 进入发行版下载页面后，根据 *“Difference Between Versions In This Release:（此版本之间的差异：）”* 中提示的不同，按照偏好下载。
+
+![Experience&Setup_Win11Android42.png](Experience&Setup_Win11Android42.png) 
+
+**安装WSABuilds**
+
+关于安装方式， *WSABuilds* 项目已经尽可能地向小白考虑了，其仓库内的官方文档写得已经足够使用且脚本也足够傻瓜化，因此此处不再赘述具体方式。对于需要视频安装方法的，可以看下面这个视频：[【安卓子】在你的Win10/11上安装全新的带有MagiskWSA安卓子系统_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV17a4y1A76v/)
+
+**注意：解压的文件夹在安装后不能被删除！如果要安装，将解压的文件夹放在一个合理的位置，例如`%LOCALAPPDATA%`下。**
+
+虽然教程里没提，但我觉得还是在安装完成后重启一下比较好。
+
+&ensp;&ensp;&ensp;&ensp;**b.3 简单设置WSA以及与子系统传输文件**
+
+打开 *开始 - 所有应用 - 适用于 Android™ 的 Windows 子系统（下称“WSA管理”）* ，打开 *WSA管理应用* 。点击左侧栏中的 *“高级设置”* 项，在右侧 *“高级设置”* 页面中，调整各项设置。其中， *“子系统资源”* 指的是Windows是否在后台随时运行WSA。
+
+打开下方 *“实验性功能”* 中的 *“共享用户文件夹”* 可以更方便地在Windows和WSA之间传输数据（以前我都是用ADB传的）。设定Windows上的一个文件夹，该文件夹在两个系统间共享。更改后需要重启WSA才能生效。
+
+![Experience&Setup_Win11Android43.png](Experience&Setup_Win11Android43.png) 
+
+点击 *WSA管理应用* 左侧栏中的 *“系统”* 项，在右侧 *“系统”* 页面中，点击 *“文件”* 横幅右侧的 *“☐↗”* 按钮，打开WSA中的 *“文件（AOSP）”* 应用。可以看到Windows共享的文件在WSA的`内部存储空间/Windows`下出现。
+
+![Experience&Setup_Win11Android44.png](Experience&Setup_Win11Android44.png) 
+
+> 如果安装了内建 *KernelSU* 或 *Magisk* 的 *WSABuilds* ，需要安装对应的管理应用。
+
+&ensp;&ensp;&ensp;&ensp;**b.4 性能测试**
+
+使用 *Gamepad Tester* 测试，WSA支持连接Xbox手柄。
+
+![Experience&Setup_Win11Android45.png](Experience&Setup_Win11Android45.png) 
+
+// TODO
+
+&ensp;&ensp;&ensp;&ensp;**b.5 游戏测试**
+
+// TODO
 
 #### c. Android模拟器
 
@@ -1126,9 +1408,25 @@ Google Gemini生成
 
 ![Experience&Setup_Win11Emulator17.png](Experience&Setup_Win11Emulator17.png)  
 
-### 4. Xbox 游戏/Microsoft 商店游戏
+### 4. Xbox PC游戏/Microsoft Store游戏
 
-// TODO：在11月11日之后
+ *Xbox* 是全球知名的主机游戏平台，隶属于 *微软* 旗下，其系统架构一向是根据 *Windows NT 内核* 深度定制，因此也使游戏开发者们在同时面向PC和Xbox平台开发时，减少了不少工作量。微软早在 *初代Xbox* 时就考虑过要融合Xbox和PC生态，如 *《光环：战斗进化》* 在2003年9月从 *初代Xbox* 移植到了 *Windows XP* ， *《光环2》* 在2007年5月从 *初代Xbox* 移植到了 *Windows Vista* ，并通过 *Games for Windows – Live* 提供经 *Windows Live账号* 的线上联机功能。如今 *Windows Live账号* 被统一的 *微软账户* 替代， *Games for Windows – Live* 被 *Xbox App* 替代，融合Xbox和PC生态的思路被 *通用 Windows 平台（UWP）* 所继承。
+
+ *Xbox* 平台推出了订阅制的 *“Xbox Game Pass(XGP)”* ，“Xbox Game Pass Ultimate 包括網上主機多玩家遊戲和數百款高品質遊戲。在主機和電腦上與朋友一起玩遊戲，並取得 EA Play 會員資格 – 全部只要單一超低月費。”“PC Game Pass 專為電腦玩家而設計。遊玩高品質電腦遊戲，包括上市當天推出的遊戲，並尊享 EA Play 會員資格、Riot Games 禮遇、折扣優惠及更多精彩福利。” *“PC Game Pass (PGP)”* 属于XGP内的分级订阅项目，在降低价格的同时，拥有所有XGP中包含PC游戏的基础游戏，在订阅期内无限制游玩的权利。
+
+因为微软服务经由统一的 *微软账户* 理念而实现，因此无论是Windows账户、Microsoft Store账户、Microsoft 365账户、个人版OneDrive和个人版Azure，还是Xbox账户，可以统统使用同一个微软账户登录。对于现在（202412）Windows 10/11上的 *Xbox App* ，其仅作为社区使用，安装、更新和管理游戏文件的功能由 *Microsoft Store* 提供，因此此处可以将“Xbox PC游戏”和“Microsoft Store游戏”视作同一事物；而通过 *Microsoft Store* 安装的Xbox PC游戏则均为 *UWP* 应用。
+
+以上双引号（“”）内的文字来自于：[PC Game Pass | Xbox](https://www.xbox.com/zh-HK/xbox-game-pass/pc-game-pass)
+
+![Experience&Setup_Win11_39.png](Experience&Setup_Win11_39.png)  
+
+// TODO：游戏截图和手柄适配
+
+&ensp;&ensp;&ensp;&ensp;**Xbox PC游戏在非C盘下的默认安装位置**
+
+如果调整了 *Xbox App* 中的游戏默认安装位置（打开 *Xbox App* ，调整 *“档案和设置 - 设置 - 安装选项 - 游戏安装选项 - 更改此应用程序默认情况下安装游戏的位置”* ），则其会在位置的根目录下生成四个文件夹`Program Files`、`WindowsApps`、`WpSystem`和`XboxGames`。**如果该目录下已存在重名文件夹，则文件夹会被强制配置为 *UWP 应用* 的权限配置**，如假设根目录为`D:`，其中已存在`Program Files`文件夹，则无论里面有没有用户的文件，该文件夹会被设置为限制用户读取的权限。这也是我`Program Files (UWPfree)`文件夹名称的由来。
+
+![Experience&Setup_Win11_40.png](Experience&Setup_Win11_40.png)  
 
 ### 5. 统一游戏库
 
@@ -1166,11 +1464,25 @@ Google Gemini生成
 
 由于潜在的版权问题，本节将略过。
 
-&ensp;&ensp;&ensp;&ensp;**f. Xbox 游戏/Microsoft 商店游戏**
+&ensp;&ensp;&ensp;&ensp;**f. Xbox PC游戏/Microsoft Store游戏**
 
-[UWPHook by BrianLima](https://briano.dev/UWPHook/)
+由 *Microsoft Store* 安装的游戏，虽然其会自动在桌面生成快捷方式，但快捷方式中并没有URI可供复制，如果强行让 *Steam* 将该快捷方式添加为非Steam游戏则会出现 *“灾难性故障”* 错误（见下图）。
 
-// TODO：在11月11日之后
+![Experience&Setup_Win11Library61.png](Experience&Setup_Win11Library61.png) 
+
+好在早在2016年，就有人试图解决这个问题，且时至今日仍在不断更新。 *“UWPHook”* 是一个开源工具，目的很简单：一键将由 *Microsoft Store* 安装的游戏添加到 *Steam 库* 中。进入官网链接：[UWPHook by BrianLima](https://briano.dev/UWPHook/)，点击右侧栏中的 *“Download (Latest Release)（下载最新发行版本）”* 按钮，在跳转的Github仓库发行版本下载页面中，点击 *“UWPHook.exe”* 链接下载软件安装包，或者点击 *“UWPHook.zip”* 链接下载软件压缩包。
+
+![Experience&Setup_Win11Library62.png](Experience&Setup_Win11Library62.png)  
+
+安装完成后运行 *“UWPHook”* ，首先弹出 *“Do you want to automatically import grid images for imported games?（你想要自动为添加的游戏添加卡片封面吗？）”* 对话框，如果你有 *“SteamGridDB API key”* ，可以点击 *“是”* 按钮；如果你不知道那是什么鬼，可以在此处点击 *“否”* 按钮，在后面的 *5.2* 小节会谈到。之后弹出 *“UWPHook”* 的设置界面，可以不用动任何东西，直接关闭即可。在之后弹出的 *“UWPHook”* 的主界面中，在界面下方的 *“Filter:（筛选：）”* 中，输入想要添加的 *Xbox PC游戏/Microsoft Store游戏/UWP应用* 关键字；在上方的筛选结果中，找到想要添加的 *Xbox PC游戏/Microsoft Store游戏/UWP应用* ，勾选其前面的复选框，然后点击下方的 *“Export selected apps to Steam（绑定选择的应用到Steam）”* 按钮。之后， *“UWPHook”* 将进行一系列绑定操作，期间可能重启Steam，当弹出 *“Your apps were successfully exported!（你的应用被成功绑定！）”* 对话框后，点击 *“确定”* 按钮退出。
+
+![Experience&Setup_Win11Library63.png](Experience&Setup_Win11Library63.png)  
+
+重新打开 *Steam* ，可以在 *库* 中看到新添加的 *Xbox PC游戏/Microsoft Store游戏/UWP应用* 。查看其 *“游戏属性”* ，可以看到 *“UWPHook”* 实际上是将自己作为一个启动器来启动 *UWP应用* 。
+
+![Experience&Setup_Win11Library64.png](Experience&Setup_Win11Library64.png)  
+
+这里的目标、起始位置和启动选项也可视作URI和运行参数来使用。
 
 &ensp;&ensp;&ensp;&ensp;**g. 任意可执行程序**
 
@@ -1232,7 +1544,7 @@ Google Gemini生成
 
 最后，点击 *“确定”* 按钮保存。对创建的快捷方式重命名为合适的名称。
 
-要使全屏启动生效，必须要保证启动之前没有 *Microsoft Edge* 的进程在后台运行。打开 *Microsoft Edge* ，点击右上角的 *“...（设置及其他）”* 按钮或按下 *“Alt + F”* 组合快捷键。在弹出的 *“设置及其他”* 菜单中，滚动到下方并点击 *“设置”* 项。在弹出的 *“设置”* 网页中，点击左上角的 *“☰（设置 菜单）”* 按钮，然后点击左侧栏中的 *“系统和性能”* 项。
+要使全屏启动生效，必须要保证启动之前没有 *Microsoft Edge* 的进程在后台运行。打开 *Microsoft Edge* ，点击右上角的 *“...（设置及其他）”* 按钮或按下 *“Alt + F”* 组合键。在弹出的 *“设置及其他”* 菜单中，滚动到下方并点击 *“设置”* 项。在弹出的 *“设置”* 网页中，点击左上角的 *“☰（设置 菜单）”* 按钮，然后点击左侧栏中的 *“系统和性能”* 项。
 
 ![Experience&Setup_Win11Library55.png](Experience&Setup_Win11Library55.png) 
 
@@ -1240,7 +1552,13 @@ Google Gemini生成
 
 ![Experience&Setup_Win11Library56.png](Experience&Setup_Win11Library56.png)  
 
-一些网页还支持作为Web App安装到系统。具体操作方式，请参考另一篇文章《[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)》。
+一些网页还支持作为Web App安装到系统。具体操作方式，请参考另一篇文章《[Windows 11 + Kubuntu双系统安全启动和使用体验](../Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)》中的 *三、11.4* 。安装的Web App将自动添加快捷方式到桌面。
+
+&ensp;&ensp;&ensp;&ensp;**j. WSA**
+
+已安装的WSA中的Android应用会像其他安装在Windows中的应用一样显示在 *开始* 里，打开 *“开始 - 全部”* ，定位到要创建桌面快捷方式的WSA中的Android应用，在其上 *“右键 - 更多> - 打开文件位置”* ，在打开的`%APPDATA%\Microsoft\Windows\Start Menu\Programs`文件夹中，复制该快捷方式到桌面即可。
+
+![Experience&Setup_Win11Library60.png](Experience&Setup_Win11Library60.png)  
 
 &ensp;&ensp;&ensp;&ensp;**z. 获取URI和运行参数**
 
@@ -1306,7 +1624,7 @@ Google Gemini生成
 ![Experience&Setup_Win11Library11.png](Experience&Setup_Win11Library11.png)  
 
 > 在主页面中，每个分类最多显示两行。如果需要看每个分类中全部用户上传的图像，点击游戏标题下方的分类标签页。  
-> 该网站在高缩放比例下会产生问题。
+> 该网站在高屏幕缩放比例下会产生问题。
 
 在跳转的下载页面中，点击右侧的 *“📥DOWNLOAD（下载）”* 按钮，并跳转到图片页进行保存。由于该网站主要依靠用户上传，其中也不仅包含游戏的图像，如下图中的 *“Xbox Cloud Gaming”* 应用和 *“Amazon Prime Video”* 网站。
 
@@ -1315,6 +1633,19 @@ Google Gemini生成
 如果对添加的Logo在详细信息背景上的位置和大小不满意，可以在详细信息背景上 *“右键 - 调整徽标位置”* ，然后在调整模式中拉抻 *蓝色虚线* 调整Logo缩放大小，点击 *绿色位置锚点* 将Logo移动到背景的正上方、正中央、正下方、左下角处。最后，点击 *“完成”* 按钮保存。该分布也将同步到 *大屏幕模式* 下的库中的游戏详细信息中。
 
 ![Experience&Setup_Win11Library15.png](Experience&Setup_Win11Library15.png) 
+
+20241108更新：**卡片动态封面和卡片横向封面**
+
+虽然 *Steam* 没有明说，但是我自己试了一下，它是支持动态PNG图片（.apng，Animated PNG）作为卡片封面的。在 *SteamGridDB* 中，点击上方 *“GRIDS”* 分类，在下方的筛选选项中，点击 *“Types - Animated”* 项，结果中便会仅显示卡片动态封面（APNG图像）。
+
+![Experience&Setup_Win11Library58.png](Experience&Setup_Win11Library58.png)  
+ *（效果见下面动图）* 
+
+前面说的更改卡片封面仅限卡片纵向封面。要修改卡片横向封面，先通过 *Steam* 运行一遍要设置卡片横向封面的游戏，退出游戏，然后在 *Steam 库* 中找到 *“最近游戏 - 今天”* 中排在首位的游戏卡片，在其上 *“右键 - 管理 - 设置自定义艺术作品”* ，然后选择下载的卡片横向封面。
+
+![Experience&Setup_Win11Library57.gif](Experience&Setup_Win11Library57.gif) 
+
+![Experience&Setup_Win11Library59.png](Experience&Setup_Win11Library59.png) 
 
 &ensp;&ensp;&ensp;&ensp;**游戏库示例成果展示**
 
@@ -1358,7 +1689,7 @@ Google Gemini生成
 
 ![Experience&Setup_Win11Library18.png](Experience&Setup_Win11Library18.png) 
 
-启动安装程序，点击 *“Options（选项）”* 控件，更改 *“Destination Folder”* 可以更改 *Playnite* 安装位置（不推荐安装在`%ProgramFiles%`或`%ProgramFiles(x86)%`下）；勾选 *“Portable（便携模式）”* 复选框，则软件的配置文件和游戏数据库将被保存在程序安装文件夹内，这样方便直接将整个程序文件夹复制到其他PC而保留设置。最后，点击 *“Install（安装）”* 按钮进行安装。
+启动安装程序，点击 *“Options（选项）”* 控件，更改 *“Destination Folder”* 可以更改 *Playnite* 安装位置（不推荐安装在`%ProgramFiles%`或`%ProgramFiles(x86)%`下）；勾选 *“Portable（便携式）”* 复选框，则软件的配置文件和游戏数据库将被保存在程序安装文件夹内，这样方便直接将整个程序文件夹复制到其他PC而保留设置。最后，点击 *“Install（安装）”* 按钮进行安装。
 
 <img alt="Experience&Setup_Win11Library19.png" src="Experience&Setup_Win11Library19.png" width="60%" title="This image has been scaled to 60% of its original size.">  
 
@@ -1483,7 +1814,7 @@ Google Gemini生成
  *（如 *“Helium”* 主题插件可以让 *Playnite* 的桌面模式看上去就像 *Steam* 桌面模式一样。）* 
 
 ![Experience&Setup_Win11Library42.png](Experience&Setup_Win11Library42.png)  
- *（由于使Windows开启了高倍缩放，排版显得比较奇怪，低缩放倍数下是没有问题的。）* 
+ *（由于使Windows开启了高屏幕缩放比例，排版显得比较奇怪，低缩放比例下是没有问题的。）* 
 
 在 *“浏览 - 全屏模式主题”* 项中，安装这些插件可以更改 *Playnite* 的全屏模式主题。这些主题还可以添加没有被 *Playnite* 官方提供的自定义的控件、功能等。
 
@@ -1498,7 +1829,7 @@ Google Gemini生成
  *（该全屏模式主题插件还包含启动动画。）* 
 
 ![Experience&Setup_Win11Library45.png](Experience&Setup_Win11Library45.png)  
- *（全屏模式不受Windows高倍缩放影响。）* 
+ *（全屏模式不受Windows高屏幕缩放比例影响。）* 
 
 ![Experience&Setup_Win11Library46.png](Experience&Setup_Win11Library46.png)  
 
@@ -1530,11 +1861,11 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 不过，用户“m33ts4k0z m33ts4k0z”提到了一个词：“HandheldCompanion”。什么是“HandheldCompanion”？
 
-#### 6.1 Handheld Companion（掌机伴侣）
+#### a. Handheld Companion（掌机伴侣）
 
 经过简单搜索发现， *Handheld Companion* 是一个旨在优化Windows掌机体验的第三方系统工具软件，拥有陀螺仪控制与映射（支持接收外部陀螺仪）、侧边快捷工具栏、映射手柄按键、按程序启动脚本、3D控制器屏显和系统参数屏显等功能。
 
-&ensp;&ensp;&ensp;&ensp;**a. 下载并安装Handheld Companion**
+&ensp;&ensp;&ensp;&ensp;**a.1 下载并安装Handheld Companion**
 
 进入官方仓库发布页链接：[Releases · Valkirie/HandheldCompanion](https://github.com/Valkirie/HandheldCompanion/releases/)，点击带有 *“Latest（最新）”* 标签的发布卡片中的 *“Assets（资源） - HandheldCompanion-\*.exe
 ”* 链接，下载 *Handheld Companion* 安装程序。
@@ -1557,7 +1888,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ![Experience&Setup_Win11_34.png](Experience&Setup_Win11_34.png)  
 
-&ensp;&ensp;&ensp;&ensp;**b. 使用Handheld Companion**
+&ensp;&ensp;&ensp;&ensp;**a.2 使用Handheld Companion**
 
 点击左侧栏 *“热键”* 项，在右侧的页面中，点击 *“New Hotkey”* 按钮可以新建一个热键，点击下方新建热键的右侧 *“v”* 按钮展开设置，点击 *“Press to define hotkey input（点击来定义热键输入）”* 按钮，然后按下要绑定的热键。注意此时 *Handheld Companion* 录入的是原生输入，即如果你按下的是 *Legion Space* 默认映射的 *“Xbox键”* 组合键： *“Legion L + RS”* ， *Handheld Companion* 将录入 *“Legion L + RS”* 组合键而不是 *“Xbox键”* 。
 
@@ -1571,11 +1902,11 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 不过用了之后感觉就为了这一个功能装整个软件有点臃肿了……虽然 *Legion Space* 按键映射功能和 *“Xbox键”* 很幽默，但其他功能还是挺好用的。
 
-#### 6.2 Legion Space + PowerToys
+#### b. Legion Space + PowerToys
 
 兜兜转转还是想起了之前在Chromebook上装Windows 11之后用来在Windows 11上重映射按键的工具—— *Microsoft PowerToys* 。 *PowerToys* 是一系列用在Windows上的小工具集合，原本是开源的，后来被微软收编为旗下软件但代码仍为开源。
 
- *PowerToys* 可从 *Microsoft Store* 安装：[Microsoft PowerToys - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp89dcgq3k6vld)。安装后转到 *PowerToys* 设置，在左侧栏向下滚动并选择 *“键盘管理器”* 项，在右侧的页面中点击 *“重新映射快捷键”* 项，在弹出的 *“重新映射快捷键”* 窗口中，先点击下方的 *“➕ 添加快捷方式重新映射”* ，在上方新增的卡片中，点击 *“选择 - 快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下想要绑定的、不与其他应用和系统快捷键冲突的组合快捷键（如 *“Windows徽标 + Alt + 字母”* 组合键）作为 *“中间快捷键”* ，一会儿解释；然后，点击 *“选择 - 映射到： - 操作”* 右侧的下拉菜单，选择 *“发送键/快捷键”* ，然后点击下方 *“快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下要映射的键，如 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键。
+ *PowerToys* 可从 *Microsoft Store* 安装：[Microsoft PowerToys - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp89dcgq3k6vld)。安装后转到 *PowerToys* 设置，在左侧栏向下滚动并选择 *“键盘管理器”* 项，在右侧的页面中点击 *“重新映射快捷键”* 项，在弹出的 *“重新映射快捷键”* 窗口中，先点击下方的 *“➕ 添加快捷方式重新映射”* ，在上方新增的卡片中，点击 *“选择 - 快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下想要绑定的、不与其他应用和系统快捷键冲突的组合键（如 *“Windows徽标 + Alt + 字母”* 组合键）作为 *“中间快捷键”* ，一会儿解释；然后，点击 *“选择 - 映射到： - 操作”* 右侧的下拉菜单，选择 *“发送键/快捷键”* ，然后点击下方 *“快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下要映射的键，如 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键。
 
 ![Experience&Setup_Win11_38.png](Experience&Setup_Win11_38.png)  
 
@@ -1583,28 +1914,150 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 现在打开 *Legion Space* 并将 *TrueStrike左手柄* 背部的 *“Y3”* 键绑定为 *“Windows徽标 + Alt + S”* 组合键，便可以触发 *PowerToys* 发送 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键，以触发Windows全屏截图。虽然拐来拐去的，起码我的设想实现了，而且 *Legion Space* 也避免了被禁用的命运。但使用 *TrueStrike手柄* 功能键发送 *“Xbox键”* 的设想还是没实现，因为虽然 *PowerToys* 可以检测到按下 *“Xbox键”* 为 *“VK 7键”* ，但无法将其发送至系统。
 
-## 四、安装类SteamOS双系统
+## 四、更换内置SSD、贴膜、自制脚垫
 
-### 1. 整盘备份或获取恢复镜像
+我这款Legion Go自带的 *西部数据SN740 512G M.2 2242 SSD* 容量太小了，尤其是在想要装双系统的情况下。从 *Aliexpress* 上买了块 *西部数据SN740 2TB M.2 2230 SSD* ，打开 *CrystalDiskInfo* 一看，心凉半截，OEM盘0通电次数0小时通电时间，很难不怀疑是被清零过。插到台式机上测了一下，好家伙待机53°C，一跑测试马上跳90+°C，跑的过程中两次突破105°C直接把主控干重启两次，喜提两次0A（这还是在台式机里）（20241226更新：放到Legion Go里未合后盖测试，最高87°C，再次喜提三次0A，但未触发主控重启）：
 
-// TODO：在11月11日之后
+![WD%20PC%20SN740%20SDDPTQE-2T00%202048.4%20GB.png](WD%20PC%20SN740%20SDDPTQE-2T00%202048.4%20GB.png)  
 
-### 2. 安装前碎碎念
+要更换内置SSD，可以参考联想官方的硬件维护手册（只有英文版）：[Hardware Maintenance Manual](https://download.lenovo.com/consumer/mobiles_pub/legion_go_hmm.pdf)。或者也可以参考这个视频：[小秋拆机 联想拯救者LEGION Go掌机拆机视频掌上游戏机拆机_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV14N411G7QK/)。
 
-// TODO：在11月11日之后
+**在不连接外置电源时**，按照 *二、5.2* 中介绍的方式进入Legion Go的UEFI设置界面，点击左侧栏 *“系统设置”* ，在右侧设置页面找到 *“临时禁用电池”* ，点击右侧 *“[进入]”* 下拉菜单，然后在弹出的 *“确认”* 弹窗中点击 *“是”* 按钮。Legion Go将会临时禁用电池与主板的供电连接，因此也避免了拆机时拔下电源排线的操作（但仍应避免静电），在下次接入外置电源时恢复电池供电。 **要求BIOS版本在`N3CN28WW(V1.10)`及以上。** 此时再按 *“电源键”* ，应该不会有任何反应。
 
-由于目前在Windows下挂载 *EXT4* 文件系统没有成熟的免费方案，而反过来，在Linux下挂载 *NTFS* 文件系统已经存在成熟的开源方案（[NTFS - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/NTFS)），因此如果想要双系统而本地存储空间紧张，可以使用“大Windows小Linux”的形式给磁盘分区：即Linux仅保留较小存储空间，而大部分空间分给Windows，这样将Windows分区认作文件共享分区而两个系统都可以访问并写入。
+![Hardware_Modifications2.jpeg](Hardware_Modifications2.jpeg)
 
+我自己的经验是，Legion Go背部下方的凹槽处最容易撬开，反而视频里提到的从出风口撬是最难的。
 
-// FIXME
-聪明的你可能已经想到了，那既然 *SteamOS* 通过 *Proton兼容层* 运行Windows下的游戏，而我们又有Windows共享分区，那么是不是可以实现同一份游戏文件在Windows下原生游玩，在Linux下通过Proton兼容层运行，而不需要多下载一份呢？
-答案是可以的，
-但仅限Windows原生版本：
-Steam本地游戏库在位于Windows和Linux的相对路径都是相同的，均为`Steam\steamapps\common`；而每份Steam下的Proton兼容Windows游戏都有一个专有的虚拟空间（类似 *Python* 的`venv`），位于意味着他们与Steam本地游戏库是不同的文件夹。如果要使得在Linux下的Steam本地游戏库内的游戏可以被Windows下的Steam识别，那就需要逐个修改游戏安装位置，麻烦的一批，在游戏量大的情况下完全没有可操作性。
+![Hardware_Modifications3.jpeg](Hardware_Modifications3.jpeg)
 
-而如果是不需经由游戏平台启动的游戏，或是应用，则上面的设想是可以成立的。不过仍要注意：即使程序可以在两个系统中分别运行，其用户设置文件也是分别放置的。对于可以在线同步设置的程序这不是问题，如果不是，就需要手动同步了。
-// END FIXME
+在Legion Go内部视图（背部视角）的右侧，可以见到被石墨导热贴盖住的 *西部数据SN740 512G M.2 2242 SSD* 。该SSD被一层 *Mylar* 抗干扰薄膜覆盖，然后贴在上面的石墨导热片将热量传导到电池组支架上。我猜测电池组支架的作用是为了加强结构强度，但我觉得省下支架的空间增大电池容量或许是更好的选择，毕竟Legion Go有着x86掌机里数一数二的身板，但这个电池容量太，呃，对，“反直觉”了。
+
+<img alt="Hardware_Modifications4.jpeg" src="Hardware_Modifications4.jpeg" width="40%" title="This image has been scaled to 40% of its original size."> 
+
+话说就这么一个小抗干扰薄膜要卖15.44刀税前，真是赚钱啊。
+
+![Hardware_Modifications8.png](Hardware_Modifications8.png)
+
+卸下的 *西部数据SN740 512G M.2 2242 SSD* （上）与买来的 *西部数据SN740 2TB M.2 2230 SSD* （下，加了2230 to 2242延长片）对比。这块2242的SSD是西数给联想的OEM定制款，应该是没有零售的。
+
+<img alt="Hardware_Modifications5.png" src="Hardware_Modifications5.png" width="40%" title="This image has been scaled to 40% of its original size."> 
+
+把原装的 *Mylar* 撕下来给2T的SN740贴上，然后联想装的这个M.2 SSD固定螺丝太容易刮花了，找了以前也不知道买啥剩下的M.2 SSD固定螺丝换上；因为螺丝比联想给的长而且延长片预留孔位稍大，还加了个垫片。把石墨导热贴贴回，还在电池组支架上贴了以前给 *微星 GT83VR* 贴剩下的 *莱尔德380导热贴* ，希望可以将热量传导给背部外壳辅助散热。
+
+![Hardware_Modifications6.jpeg](Hardware_Modifications6.jpeg)
+
+再扣上后盖的前一刻，又调整了下位置。
+
+![Hardware_Modifications7.jpeg](Hardware_Modifications7.jpeg)
+
+因为屏幕在强光直射下泛光有些严重（镜面屏特性），所以贴了个防眩光膜（磨砂膜）。这个膜还是之前给 *华硕 Chromebook Vibe CX55 Flip* 贴剩下的， *Amazon* 上最少都是三张一包，15.6寸的防眩光膜的短边正好适合9寸屏幕的长边，就纵着裁了；第一次飘了，用剪刀剪的，结果剪个S型的边，第二次老老实实上工具刀裁的（第一次的失败结果在图中左侧）。
+
+![Hardware_Modifications0.jpeg](Hardware_Modifications0.jpeg)
+
+本来想从 *Aliexpress* 上找个保护套，后来一想SSD需要贴合外壳散热就算了，套上还捂着。用之前给工控机贴脚贴剩的一点边角料粘在Legion Go底部和桌子的接触点上了：
+
+![Hardware_Modifications1.jpeg](Hardware_Modifications1.jpeg)
+
+## 五、更换SSD后的文件操作，和安装类SteamOS双系统
+
+由于更换了SSD，来回搬文件是没跑了；我买的Legion Go是美版，预装的英文版Windows 11还存在中文化不完全的问题（从Windows NT时代就落下的屎山），又因买回来之后没来得及办公，所以换完SSD之后直接重装系统根本不带犹豫的。
+
+### 1. 整盘备份/恢复，和获取恢复镜像
+
+关于全盘备份，在之前的《[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)》文章中的 *一、4* 中已经介绍过，在此不再赘述。
+
+联想提供了Legion Go的 *恢复镜像* ，对于购买了Legion Go的用户，可以在其官方产品支持页面免费获取。进入该页面：[laptops and netbooks :: legion series :: legion go 8apu1 - Lenovo Support US](https://pcsupport.lenovo.com/us/zc/products/laptops-and-netbooks/legion-series/legion-go-8apu1/downloads/)，点击左侧栏 *“驱动及应用程序”* 项，在右侧的 *“驱动及应用程序”* 页面中点击 *“获取恢复介质 - 立即订购”* 按钮。在跳转的 *“恢复媒体系统计划支持”* 页面中，点击 *“点击继续”* 按钮。
+
+![Dual_Boot0.png](Dual_Boot0.png)
+
+在跳转的 *“联想恢复媒体”* 页面中，在 *“1. 确定资格”* 处，输入机器的序列号（SN号）并点击 *“提交”* 按钮；或者点击 *“检测我的联想设备”* 按钮。Legion Go的SN号打印在背部支架的里面，打开支架即可看到。之后，在跳转的页面中，在 *“2. 添加订单 - 订单数据”* 处，检查是否是正确的设备。若是，更改 *“操作系统”* 下方的 *“操作系统语言”* 下拉菜单为偏好的语言，然后勾选右侧出现的 *“选择媒体类型”* 中的 *“📥电子下载”* 单选框，并勾选 *“我接受 联想许可协议 & 联想软件隐私声明”* 复选框。然后，点击 *“下一步”* 按钮。
+
+![Dual_Boot1.png](Dual_Boot1.png)
+
+在这一步中，要继续，必须登录 *联想账户* 。在登陆联想账户之后，跳转到 *“3. Customer Info（客户信息）”* 页面中。在 *“Customer Information（客户信息）”* 表单中输入对应的信息，然后点击 *“Submit（提交）”* 按钮。之后，在跳转的页面中，在 *“4. Review & Confirmation（审核与确认） - Order Summary（订单摘要）”* 处，点击 *“Digital Download（电子下载）”* 按钮。
+
+![Dual_Boot2.png](Dual_Boot2.png)
+
+之后便会下载一个名为`USBRecoveryCreator.exe`的工具软件。根据联想官方支持说明：[Lenovo数字下载恢复服务 (DDRS) - 下载创建Lenovo USB恢复密钥所需的文件 - Lenovo Support US](https://support.lenovo.com/us/zc/solutions/ht103653)操作即可。
+
+> 联想官方提供的 *恢复镜像* 仅在提交订单的72小时内有效。逾期将需要再次提交订单。  
+> 该工具软件将会把文件下载到第四步——选择的下载目录中。  
+> 如果下载进度很抽象地卡在99%，关闭工具软件并重新操作，已下载的文件不需要重新下载。  
+> 最后指望联想能干成什么事是我幽默了。哥们自己分完区之后找不到分过的区了。我那么大一个盘符还给我干没了。  
+> ![Dual_Boot3.png](Dual_Boot3.png)
+
+但由于我本来就想换掉出厂预装的Windows 11，所以也就没想着备份，因此这节我就不适用了。
+
+### 2. Windows同步，或系统迁移
+
+如果不想重装系统而是只做系统迁移，或是仅备份重要设置和文件，在重新安装系统后再将它们恢复，可以使用Windows自带的同步工具： *Windows 备份* 和 *Microsoft Onedrive - 个人* 。
+
+非企业版的Windows 10和11都预装了 *Onedrive - 个人* ，如果在OOBE时使用了 *微软账户* 登录，则用户文件将自动在该 *微软账户* 下的 *Onedrive - 个人* 云空间中备份，且可以跨设备备份。在重装系统后，于OOBE时再次使用 *微软账户* 登录，则用户文件将会自动恢复。
+
+对于那些不是用户文件的设置、注册表项、微软拼音设置、Windows凭据等，则可以通过依次打开 *“开始 - 全部 - Windows 备份”* ，启动 *Windows 备份* 应用。该应用作用类似于 *Onedrive - 个人* 。 ~~但只有在重装后的第一次启动会显示恢复选项。~~ 目前恢复的时机还有点迷，还需要再观察。
+
+![Dual_Boot4.png](Dual_Boot4.png)
+
+如果想要保留Legion Go上预装的Windows 11，将其迁移到另一块SSD上，依旧推荐使用《[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)》文章中的 *一、4* 中推荐过的 *DiskGenius* 软件，可以参考官方的操作说明：[迁移Windows系统到ssd固态硬盘或其他硬盘，DiskGenius特色功能介绍](https://www.diskgenius.cn/exp/system-migration.php)。 **极不推荐热迁移！迁移系统请通过 *Windows PE* 环境！** 因此，为Legion Go系统迁移需要1个闲置U盘、1个SSD硬盘盒和1个USB HUD。（如果硬盘盒和U盘均可通过USB Type-C连接Legion Go则不需要USB HUD，但要考虑Windows PE工具包是否支持触摸屏和触摸键盘或触摸板或HID设备，若都不支持，则仍需要USB HUD和键鼠。）
+
+### 3. 安装前碎碎念
+
+由于目前在Windows下挂载 *EXT4* 文件系统没有成熟的免费方案，但反过来，在Linux下挂载 *NTFS* 文件系统已经存在成熟的开源方案（[NTFS - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/NTFS)），因此如果想要双系统而本地存储空间紧张，最好的方式是分出三个（或以上）分区，保证两个系统分区（较小）和一个共享分区（较大），即两个系统都能够进行读写的分区，如NTFS分区。
+
+// TODO：换SSD后
+
+### 4. 关闭安全启动
+
+ *“关闭安全启动”* 对于我来说算是一个违背祖宗的决定，如果你看过我之前的文章就知道，我一向是推荐打开 *安全启动* 和 *HVCI* 甚至是 *Bitlocker* 的，因为数据安全和隐私数据保护非常重要。什么你说开启 *Bitlocker* 怎么做数据恢复，数据就不是用来恢复的啊，数据是用来备份的好不啦。但是安全启动确实会影响到一些Linux发行版的引导，如著名的 *Arch Linux* 和其衍生发行版就一向跟 *安全启动* 不对付。目前原生支持的Linux社区发行版有： *Fedora* 、部分 *Debian* 发行版、 *Ubuntu* 及其衍生发行版、 *openSUSE* 等。因为要在Legion Go上安装各种Linux发行版，我还计划尝试一下 *ChromeOS Flex* ，也不打算在上面存放什么重要数据， *Bitlocker* 也可以在无TPM的机器上实施（已在Chromebook上的Windows 11验证），所以最后还是决定关掉Legion Go上的 *安全启动* 。
+
+微软为 *Windows 11* 加入了强制性的 *安全启动* 要求，这也意味着默认情况下如果关闭 *安全启动* ， *Windows 11 安装程序* 会直接拒绝进行安装。在之前的《[用树莓派躺床上玩PC游戏](../Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)》文章中的 *二、1.2* 中介绍过 *Rufus* 这款启动盘烧写软件，其内置了绕过 *Windows 11 安装程序* 的 *安全启动* 强制要求的功能。按文章中的说明烧录Windows 11安装盘，在点击 *“开始”* 按钮后，在弹出的 *“Windows 用户体验”* 窗口中，勾选 *“自定义 Windows 安装？”* 下的 *“移除对 4GB+ 内存、安全引导和 TPM 2.0 的要求”* 和 *“禁止数据收集（跳过隐私设置）”* 复选框，其他按需勾选，最后点击 *“确定”* 按钮。
+
+<img alt="Dual_Boot5.png" src="Dual_Boot5.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+这样制作的Windows 11安装盘便不会再要求 *安全启动* 处于启用状态。
+
+> 对于Windows 11，因其对用户组权限设置的调整，如果决定使用本地账户登录而不是微软账户，则请维持这一点，因为如果先使用本地账户登录然后切换到微软账户，会使当前账户丢失管理员账户身份，直到切回或更改登录的账户，反之亦然。
+
+按照 *二、5.2* 中介绍的方式进入Legion Go的UEFI设置界面，点击左侧栏 *“安全设置”* ，在右侧设置页面找到 *“安全启动”* ，点击右侧下拉菜单，选择 *“关闭”* 。然后按下 *“F10键”* 或点击 *“退出 - 保存并退出”* ，在弹出的 *“确认”* 弹窗中点击 *“是”* 按钮。
+
+![Dual_Boot6.jpeg](Dual_Boot6.jpeg)
+
+### 5. 安装Windows 11
+
+老生常谈问题，就不细讲了。这里说一下我分配系统分区大小的一般计算公式：
+
+对于像下图这种，整个磁盘是空盘（未分配空间）的情况下， *Windows NT 6.2* 及以上的Windows安装程序（在GPT + UEFI模式下）会将第一个分配的分区视作启动分区，创建共三个分区：`EFI分区`、`MSR分区`和`Windows启动分区`。因此，此处的大小是这三个分区的总大小。
+
+首先确定C盘（`Windows启动分区`）的大小。我一般是以下公式计算：
+
+要装机的PC的 C盘大小 ≈ (另一台PC C盘的已用大小 - 另一台PC C盘的页面交换空间 + 要装机的PC的内存大小) × 2
+
+这里另一台PC C盘的已用大小包含了Windows 11系统文件、我日常使用的装在C盘的软件、一些程序文档和另一台PC C盘的页面交换空间。因此，只要减去另一台PC C盘的页面交换空间，剩下的就差不多是我日常使用所需的C盘空间。另一台PC C盘的页面交换空间，即C盘根目录下的`hiberfil.sys`、`pagefile.sys`和`swapfile.sys`的总大小。该三个文件控制了Windows的休眠/快速启动转储页面空间、虚拟内存页面空间和交换页面空间。它们的总大小默认情况下由Windows自动控制，但会在4GB~内存总大小之间频繁改变，但不会超过内存总大小。比如我另一台PC *“SIXGE-K3pro-V2”* 的内存是64GB，那么这三个文件的大小就在4~64之间改变。同理，加入要装机的PC的内存大小也是因为要装机的PC的 C盘中也会包含这3个文件，这里就以顶格计算了。
+
+以我为例，Legion Go的 C盘大小 ≈ ( *“SIXGE-K3pro-V2”* C盘的已用大小：133GB -  *“SIXGE-K3pro-V2”* C盘的页面交换空间：64GB + Legion Go的内存大小：16GB) × 2 = (133-64+16)×2 ≈ 160GB，取160是觉得数比170好看。
+
+`Windows启动分区`的大小确定了之后，再加上`EFI分区`和`MSR分区`就是要分配系统分区的大小了。Windows安装程序固定给`EFI分区`分100MB空间，而`MSR分区`则在600到900MB不等，这里取近中间值800MB，那么就有：
+
+分配系统分区的大小 = 100MB + 800MB + 160GB * 1,024MB/GB = 164,740MB
+
+![Dual_Boot7.jpeg](Dual_Boot7.jpeg)
+
+你看装完后是不是差不多160GB，比159GB好看吧。
+
+![Dual_Boot8.png](Dual_Boot8.png)
+
+一般情况下我给16GB内存的PC都是分160GB给系统盘，32GB的分200GB给系统盘，64GB的分256GB给系统盘。
+
+但是目前的Windows 11 24H2安装程序没有内置 *联发科RZ 616 无线网卡* 的驱动，需要在OOBE时登录微软账户的需要注意，提前准备驱动包在安装盘中或者连接扩展坞。
+
+![Dual_Boot9.jpeg](Dual_Boot9.jpeg)
+
+### 6. 安装类SteamOS的Linux发行版
+
+// TODO
 
 ## 五、携带办公体验
 
-// TODO
+办公续航时间体验
+
+// TODO 坑
