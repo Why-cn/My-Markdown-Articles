@@ -208,18 +208,16 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 在调整屏幕缩放比例到较高值之后，Windows 11的任务栏高度也会相应地放大；更绝的是Windows 11不像以往的Windows那样可以调整任务栏高度，甚至无法调整位于桌面的位置，导致在桌面下方的任务栏占用了太多空间。
 
-![Experience&Setup_Win11Library52.png](Experience&Setup_Win11Library52.png)
- *设定前* 
-
 在网上搜索了很多办法，修改注册表的方式已经随着更新作废了，使用第三方修补程序还收费，最后找到这篇文章：[How To Change Taskbar Size in Windows 11? - GeeksforGeeks](https://www.geeksforgeeks.org/how-to-change-taskbar-size-in-windows-11/)，终于是找到开源的解决办法了。
 
 首先，下载 *Windhawk* ： *Windhawk* 是一个通过注入.dll动态链接库等方式以实现对Windows个性化的开源工具，通过社区提供的模组进行调整。进入官方网站：[Windhawk](https://windhawk.net/)，点击 *“Download（下载）”* 按钮下载安装程序。
 
 ![Characterization76.png](Characterization76.png)
 
- *Windhawk* 在安装过程中和下载模组时都需要连接到Github下载支持文件。安装完成后，根据前面GeeksforGeeks文章中的 *Method 2 Step 3* 继续操作即可。
+ *Windhawk* 在安装过程中和下载模组时都需要连接到Github下载支持文件。安装完成后，根据前面GeeksforGeeks文章中的 *Method 2 Step 3* 继续操作即可。（安装 *“Taskbar height and icon size”* 模组。）
 
-// TODO 设定后
+![Characterization83.png](Characterization83.png)
+ *设定前后对比，借用了 *三、5.1.i.* 中的图* 
 
  *Windhawk* 还有很多有用的模组，如：[Vertical Taskbar for Windows 11 - Windhawk](https://windhawk.net/mods/taskbar-vertical)，可以让Windows 11的任务栏放置在屏幕的左侧，但不兼容前面的 *“Taskbar height and icon size”* 模组；[Windows 11 Start Menu Styler - Windhawk](https://windhawk.net/mods/windows-11-start-menu-styler)，可以去掉Windows 11 *开始* 中烦人的 *“推荐的项目”* ，并将其改为类Windows 10、7、Android启动器抽屉、混合等样式（但无法恢复Windows 10 开始菜单中的磁贴）；[Windows 11 Taskbar Styler - Windhawk](https://windhawk.net/mods/windows-11-taskbar-styler)，可以更改Windows 11任务栏的样式，如全透明任务栏、类Dock任务栏等；[Better file sizes in Explorer details - Windhawk](https://windhawk.net/mods/explorer-details-better-file-sizes)，可以让 *文件资源管理器* 中显示文件大小均从`?B`改为显示`?iB`；[Force Chinese IME Mode - Windhawk](https://windhawk.net/mods/force-chinese-ime)，可以让微软拼音输入法锁定为输入中文，而不是那个脑瘫的自动切换英文；等等。
 
@@ -784,7 +782,8 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 ![Experience&Setup_Win11_3.png](Experience&Setup_Win11_3.png)
 
-> Legion Go上的 *AMD Ryzen Z1 extreme APU* 驱动只能通过 *Legion Space* 软件或者在 *”联想支持 - 联想PC支持 - 驱动及应用程序”* 中下载显卡驱动安装包更新。
+> Legion Go上的 *AMD Ryzen Z1 extreme APU* 驱动只能通过 *Legion Space* 软件或者在 *”联想支持 - 联想PC支持 - 驱动及应用程序”* 中下载显卡驱动安装软件更新。  
+> 20241226更新：我在使用 *Legion Space* 软件安装 *AMD Ryzen Z1 extreme APU* 驱动后会导致 *AMD Software: Adrenalin Edition* 软件在打开时报错，暂不清楚是否为个案。使用官网下载的显卡驱动安装软件正常。
 
 20241026更新：在刚才打开 *Legion Space* 软件的时候，它自动更新了自身软件并安装了新的手柄固件。正当我想要查查这次更新了什么内容时，发现官网只有`v1.1.2.11`版本（3个月之前）的Readme，并且只有`v1.1.2.14`版本（1个月之前）的软件安装程序可供下载。稍微搜索一下网络，发现Reddit的r/LegionGo下的一篇帖子：[Legion Space Update 1.1.3.3 : r/LegionGo](https://www.reddit.com/r/LegionGo/comments/1gb85fd/comment/ltjmglg/)
 
@@ -851,7 +850,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 应该为Legion Go的电池健康度担忧吗？或者换句话说，应该为任何电子设备的电池健康担忧吗？我个人的想法是，应该又不应该。当我可以简单点一个键就能延长寿命且对我的使用影响不大的时候，我乐意去点那个键；但如果说天天检查健康度，掉了1%心疼3个月，那我觉得也太强迫症了。对于非富哥的我来说，去恩造设备，坏了直接买新的不现实；但也没必要把电子设备供起来使用，毕竟它们是消耗品，得接受它们随着时间慢慢积灰、剐蹭、反应迟缓和产生损耗的现实。
 
- *“截图快捷方式”* ：按下该组合键便可使用 *Legion Space* 软件进行全屏截图。但这里的截图快捷组合键是写死的：更换左右 *“Legion键”* 为 *“View键”* 和 *“Menu键”* 并不会将这里的快捷键改为 *“Menu键 + Y3键”* 。而且如果玩游戏的时候突然想截图了，按这两个键还挺别扭的，更别提他这个是非系统级功能，有延迟而且有的时候不生效，还不如直接让某个键映射为 *“Share键”* 更有用。
+ *“截图快捷方式”* ：按下该组合键便可使用 *Legion Space* 软件进行全屏截图。但这里的截图快捷组合键是写死的：更换左右 *“Legion键”* 为 *“View键”* 和 *“Menu键”* 并不会将这里的快捷键改为 *“Menu键 + Legion Y3键”* 。而且如果玩游戏的时候突然想截图了，按这两个键还挺别扭的，更别提他这个是非系统级功能，有延迟而且有的时候不生效，还不如直接让某个键映射为 *“Share键”* 更有用。
 
 **Legion Space 侧边栏**
 
@@ -1019,7 +1018,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
  *适用于Windows的Android子系统* （Windows Subsystem for Android，以下简称为WSA）是 *微软* 向Windows 11中添加的一项独占功能，使用 *Hyper-V* 技术创建的、微软编译的、专用于Windows的Android虚拟机，实现在Windows 11上无感使用Android应用。此处的“无感”指的是安装在WSA中的Android应用就像其他Win32（.exe）应用一样，可以显示在 *“开始”* 中，且运行时也会显示为Windows窗口（类似于 *VMWare Workstation Pro* 中的 *Unity模式* ），而不会像其他Android虚拟机一样先显示平台或Android启动器，再在其中启动Android应用且Android应用窗口无法脱离Android虚拟机窗口。
 
-虽然 *微软* 的官方文档中定义WSA仅是面向Android开发者设置的在Windows下的开发环境，类似于 *适用于Windows的Linux子系统* ，WSA还是展现出了 *微软* 想要扩展个人移动PC领域（如平板和轻薄本）中Windows的使用场景，剑指 *苹果* 还是 *Android* 就不好说了。不过， *微软* 在2024年3月5日正式宣布WSA停止开发并在2025年同日彻底结束支持，我个人猜想是微软并未放弃扩展个人移动PC领域的想法，不过把路线图从让Windows支持运行Android ARM应用，改为直接让整个Windows能够跑在ARM转译上了。对于微软来说这条路反而比原来还要更可行一些，毕竟让Windows装Android应用多少也是有点砸自己锅的感觉，这也是选择和没什么人用的 *亚马逊应用商店* 合作，而不与更理所应当的 *Google Play 商店* 合作的原因。商业上这么说得过去，但对于我们折腾玩家来说就挺晴天霹雳的，想到今年3月刚刷到这条消息还是在早晨赖床的时候，结果一下不困了，就难受。好在WSA留下了不少遗产，容器设计也让爱好者更容易塞入新的Android映像，相信以后会有开源项目接棒更新的。
+虽然 *微软* 的官方文档中定义WSA仅是面向Android开发者设置的在Windows下的开发环境，类似于 *适用于Windows的Linux子系统* ，WSA还是展现出了 *微软* 想要扩展个人移动PC领域（如平板和轻薄本）中Windows的使用场景，剑指 *苹果* 还是 *Android* 就不好说了。不过， *微软* 在2024年3月5日正式宣布WSA停止开发并在2025年同日彻底结束支持，我个人猜想是微软并未放弃扩展个人移动PC领域的想法，不过把路线图从让Windows支持运行Android ARM应用，改为直接让整个Windows能够跑在ARM转译上了。对于微软来说这条路反而比原来还要更可行一些，毕竟让Windows装Android应用多少也是有点砸自己锅，这也是选择和没什么人用的 *亚马逊应用商店* 合作，而不与更理所应当的 *Google Play 商店* 合作的原因。商业上这么说得过去，但对于我们折腾玩家来说就挺晴天霹雳的，想到今年3月刚刷到这条消息还是在早晨赖床的时候，结果一下不困了，就难受。好在WSA留下了不少遗产，容器设计也让爱好者更容易塞入新的Android映像，相信以后会有开源项目接棒更新的。
 
 > 你可能发现了， *“适用于Windows的Android子系统”* 并不符合 *微软* 的官方译名：“适用于 Android 的 Windows 子系统”。 *“适用于Windows的Android子系统”* 是我更正后的译名，其实更白话一点，“适用于Windows的子系统：Android容器”更合适。考量了 *韦氏词典* 对于“Subsystem”的解释：“……属于更大系统一部分的系统：气候系统的这些子系统包括大气、海洋……”，因此，Windows在此处是“更大系统”，而（微软编译的）适用于Windows的Android系统则是“子系统”。
 
@@ -1067,7 +1066,7 @@ Legion Go预装了WSA，但该WSA版本是微软官方版本。要安装 *WSABui
 
 &ensp;&ensp;&ensp;&ensp;**b.3 简单设置WSA以及与子系统传输文件**
 
-打开 *开始 - 所有应用 - 适用于 Android™ 的 Windows 子系统（下称“WSA管理”）* ，打开 *WSA管理应用* 。点击左侧栏中的 *“高级设置”* 项，在右侧 *“高级设置”* 页面中，调整各项设置。其中， *“子系统资源”* 指的是Windows是否在后台随时运行WSA。
+打开 *开始 - 所有应用 - 适用于 Android™ 的 Windows 子系统（下称“WSA管理”）* ，打开 *WSA 管理* 应用。点击左侧栏中的 *“高级设置”* 项，在右侧 *“高级设置”* 页面中，调整各项设置。其中， *“子系统资源”* 指的是Windows是否在后台随时运行WSA；在Legion Go上， *“Vulkan 驱动程序”* 设定为 *“系统默认”* 可以运行需要硬件加速的Android程序，而 *“D3D12”* 则无法正常调用硬件加速功能。
 
 打开下方 *“实验性功能”* 中的 *“共享用户文件夹”* 可以更方便地在Windows和WSA之间传输数据（以前我都是用ADB传的）。设定Windows上的一个文件夹，该文件夹在两个系统间共享。更改后需要重启WSA才能生效。
 
@@ -1083,13 +1082,26 @@ Legion Go预装了WSA，但该WSA版本是微软官方版本。要安装 *WSABui
 
 使用 *Gamepad Tester* 测试，WSA支持连接Xbox手柄。
 
-![Experience&Setup_Win11Android45.png](Experience&Setup_Win11Android45.png) 
+![Experience&Setup_Win11Android45.png](Experience&Setup_Win11Android45.png)  
 
-// TODO
+使用 *Geekbench 6* 测试，CPU测试得分为单核1701，多核7445（在Windows 11中的测试结果为单核2286，多核10656，损失约单核26%，多核30%）；GPU (Vulkan)测试得分为29963（在Windows 11中的测试结果为35873，损失约17%）。
+
+![Experience&Setup_Win11Android46.png](Experience&Setup_Win11Android46.png)  
+ *（ *WSABuilds* 将WSA的机型修改为了 *Google Pixel 5* ）* 
+
+使用 *3DMark* 测试， *3DMark Wild Life* 测试得分为5501（在Windows 11中的测试结果为18591，损失约70%，怀疑跳过了一些子测试项）。
+
+<img alt="Legion_Go-WSA-Vulkan默认-内存4G-3DMark-Wild_Life.png" src="Legion_Go-WSA-Vulkan默认-内存4G-3DMark-Wild_Life.png" width="40%" title="This image has been scaled to 40% of its original size.">  
 
 &ensp;&ensp;&ensp;&ensp;**b.5 游戏测试**
 
-// TODO
+ *《明日方舟》* ，高画质+60帧，在控件加载和画面波动大时会卡顿。总体可以忍受。
+
+![Experience&Setup_Win11Android47.png](Experience&Setup_Win11Android47.png)  
+
+ *《尘白禁区》* 要求的 *OpenES 3.1* 比WSA的 *OpenES 3.0* 要高，无法加载主界面。 *《Epic Anime RPG》* 则直接闪退。 *《賽馬娘 Pretty Derby》* 在加载完主界面后白屏。
+
+总结是，WSA在玩游戏这方面可能还不如Android模拟器，但使用其他日常Android应用比Android模拟器理论上体验更好。
 
 #### c. Android模拟器
 
@@ -1348,7 +1360,7 @@ Google Gemini生成
 
 ![Experience&Setup_Win11Emulator6.png](Experience&Setup_Win11Emulator6.png)  
 
-在上一步中，也可以在软件缩略图上长按/按下 *“Y键”* 进入软件详情页，点击/选择 *“启动”* 按钮来启动软件。也可以点击/选择 *“创建快捷方式”* 按钮在桌面上创建一个直接启动该软件的快捷方式。
+在上一步中，也可以在软件缩略图上长按/按下 *“Xbox Y键”* 进入软件详情页，点击/选择 *“启动”* 按钮来启动软件。也可以点击/选择 *“创建快捷方式”* 按钮在桌面上创建一个直接启动该软件的快捷方式。
 
 ![Experience&Setup_Win11Emulator7.png](Experience&Setup_Win11Emulator7.png)  
 
@@ -1669,7 +1681,7 @@ Google Gemini生成
 
 打开 *开始 - 所有应用 - LegionSpace* ，或者按下 *“Legion L键”* （ 若切换过按键布局，则为 *“View键”* ），进入到 *Legion Space* 软件中。（图见本大节 *1.a.* ）
 
- *Legion Space* 软件的 *“游戏库”* 会自动探测一部分安装在Legion Go上的游戏，对于没有探测到的游戏，导航到 *“游戏库”* 界面右上角的 *“➕添加游戏”* 按钮，并按下 *“A键”* 选择。选择列表中出现的应用添加，并按下 *“A键”* 确认；或者导航到最下方 *“从本地添加游戏/应用程序”* 按钮，并按下 *“A键”* 选择。在弹出的打开文件窗口，直接选择桌面上的游戏快捷方式即可。
+ *Legion Space* 软件的 *“游戏库”* 会自动探测一部分安装在Legion Go上的游戏，对于没有探测到的游戏，导航到 *“游戏库”* 界面右上角的 *“➕添加游戏”* 按钮，并按下 *“Xbox A键”* 选择。选择列表中出现的应用添加，并按下 *“Xbox A键”* 确认；或者导航到最下方 *“从本地添加游戏/应用程序”* 按钮，并按下 *“Xbox A键”* 选择。在弹出的打开文件窗口，直接选择桌面上的游戏快捷方式即可。
 
 ![Experience&Setup_Win11Library16.png](Experience&Setup_Win11Library16.png) 
 
@@ -1946,6 +1958,10 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ![Hardware_Modifications6.jpeg](Hardware_Modifications6.jpeg)
 
+对于512G的M.2 SSD，这个小盒才是你永远的家啊。
+
+![Hardware_Modifications9.jpeg](Hardware_Modifications9.jpeg)
+
 再扣上后盖的前一刻，又调整了下位置。
 
 ![Hardware_Modifications7.jpeg](Hardware_Modifications7.jpeg)
@@ -1986,7 +2002,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 > 最后指望联想能干成什么事是我幽默了。哥们自己分完区之后找不到分过的区了。我那么大一个盘符还给我干没了。  
 > ![Dual_Boot3.png](Dual_Boot3.png)
 
-但由于我本来就想换掉出厂预装的Windows 11，所以也就没想着备份，因此这节我就不适用了。
+但由于我本来就想换掉出厂预装的英文版Windows 11，所以也就没想着备份，因此这节我就不适用了。
 
 ### 2. Windows同步，或系统迁移
 
@@ -2000,15 +2016,31 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 如果想要保留Legion Go上预装的Windows 11，将其迁移到另一块SSD上，依旧推荐使用《[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)》文章中的 *一、4* 中推荐过的 *DiskGenius* 软件，可以参考官方的操作说明：[迁移Windows系统到ssd固态硬盘或其他硬盘，DiskGenius特色功能介绍](https://www.diskgenius.cn/exp/system-migration.php)。 **极不推荐热迁移！迁移系统请通过 *Windows PE* 环境！** 因此，为Legion Go系统迁移需要1个闲置U盘、1个SSD硬盘盒和1个USB HUD。（如果硬盘盒和U盘均可通过USB Type-C连接Legion Go则不需要USB HUD，但要考虑Windows PE工具包是否支持触摸屏和触摸键盘或触摸板或HID设备，若都不支持，则仍需要USB HUD和键鼠。）
 
-### 3. 安装前碎碎念
+#### *.从另一台Windows PC的注册表迁移到本地的Windows PC中
 
-由于目前在Windows下挂载 *EXT4* 文件系统没有成熟的免费方案，但反过来，在Linux下挂载 *NTFS* 文件系统已经存在成熟的开源方案（[NTFS - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/NTFS)），因此如果想要双系统而本地存储空间紧张，最好的方式是分出三个（或以上）分区，保证两个系统分区（较小）和一个共享分区（较大），即两个系统都能够进行读写的分区，如NTFS分区。
+在我风风火火地换完SSD之后，我才发现我忘了备份之前用于各种系统传感器监测的 *HWiNFO* 的设置了（精调，重调挺麻烦的）。 *HWiNFO* 的设置可从软件设置中备份，其将备份出整个 *HWiNFO* 位于 *Windows注册表* 中的键值，地址为`计算机\HKEY_CURRENT_USER\Software\HWiNFO64`。我先尝试将原装的 *西部数据SN740 512G M.2 2242 SSD* 放进硬盘盒里，让Legion Go进行引导，失败。那只能寄希望于直接提取原盘里的注册表文件了，搜索了下，找到这篇文章：[Accessing Another Windows Computer’s Registry from a Disk in Windows 8.1 | Outside the Asylum](https://jchornsey.wordpress.com/2015/03/11/accessing-another-windows-computers-registry-from-a-disk-in-windows-8-1/)，其中介绍的方法如下（由于原文中有很多截图，这里犯懒就不截了）：
 
-// TODO：换SSD后
+1. 首先将另一台Windows PC的系统盘连接到一台本地的Windows PC中。按下 *“Windows徽标 + R”* 组合键打开 *“运行”* 窗口，输入`regedit`并按下 *“Enter（回车）键”* 打开 *“注册表编辑器”* ，或者在 *开始* 中搜索`注册表编辑器`并打开。
+2. 在左栏树状列表中，定位到 *“计算机 - HKEY_LOCAL_MACHINE”* 。此时点击上方菜单栏中的 *“文件 - 加载配置单元”* 项。
+3. 在弹出的 *“加载配置单元”* 文件选择窗口中，选择另一台Windows PC的系统盘中对应的注册表存储文件。假设另一台Windows PC的系统盘符是`X:`，其`HKEY_CURRENT_USER`在本例中就为`X:\Users\<用户名>\NTUSER.DAT`（需要打开 *“显示 - 隐藏的文件”* ）。
+4. 在弹出的 *“加载配置单元”* 对话框中，向 *“项名称”* 文本框中输入为该注册表起的名称，名称随意（在本例中为`Windows-SSD`）。
+5. 在 *注册表编辑器* 中定位到`计算机\HKEY_LOCAL_MACHINE\Windows-SSD\Software\HWiNFO64`，在`HWiNFO64`键值上 *“右键 - 导出”* 到本地注册文件。
+6. 在 *注册表编辑器* 中定位到刚才在第4步中起的注册表键值（在本例中为`计算机\HKEY_LOCAL_MACHINE\Windows-SSD`），点击上方菜单栏中的 *“文件 - 卸载配置单元”* 项。 *注册表编辑器* 部分完毕。
+7. 回到第5步中导出的本地注册文件，在其上 *“右键 - 在记事本中编辑”* ，在打开的 *记事本* 应用中，按下 *“Ctrl + H”* 组合键或点击上方菜单栏中的 *“编辑 - 替换”* 项，打开 *“查找和替换”* 组件。在 *“查找”* 文本框中，输入刚才在第4步中起的注册表键值（在本例中为`HKEY_LOCAL_MACHINE\Windows-SSD\`），在 *“替换”* 文本框中，输入`HKEY_CURRENT_USER\`，然后点击 *“全部替换”* 按钮。最后，保存文件并退出。
 
-### 4. 关闭安全启动
+最后，双击导出的本地注册文件并将其插入本机注册表中，即完成了从另一台Windows PC的注册表迁移到本地的Windows PC中的操作。
+
+### 3. 关闭安全启动
 
  *“关闭安全启动”* 对于我来说算是一个违背祖宗的决定，如果你看过我之前的文章就知道，我一向是推荐打开 *安全启动* 和 *HVCI* 甚至是 *Bitlocker* 的，因为数据安全和隐私数据保护非常重要。什么你说开启 *Bitlocker* 怎么做数据恢复，数据就不是用来恢复的啊，数据是用来备份的好不啦。但是安全启动确实会影响到一些Linux发行版的引导，如著名的 *Arch Linux* 和其衍生发行版就一向跟 *安全启动* 不对付。目前原生支持的Linux社区发行版有： *Fedora* 、部分 *Debian* 发行版、 *Ubuntu* 及其衍生发行版、 *openSUSE* 等。因为要在Legion Go上安装各种Linux发行版，我还计划尝试一下 *ChromeOS Flex* ，也不打算在上面存放什么重要数据， *Bitlocker* 也可以在无TPM的机器上实施（已在Chromebook上的Windows 11验证），所以最后还是决定关掉Legion Go上的 *安全启动* 。
+
+按照 *二、5.2* 中介绍的方式进入Legion Go的UEFI设置界面，点击左侧栏 *“安全设置”* ，在右侧设置页面找到 *“安全启动”* ，点击右侧下拉菜单，选择 *“关闭”* 。然后按下 *“F10键”* 或点击 *“退出 - 保存并退出”* ，在弹出的 *“确认”* 弹窗中点击 *“是”* 按钮。
+
+![Dual_Boot6.jpeg](Dual_Boot6.jpeg)
+
+### 4. 安装Windows 11
+
+（安装Windows 11可能需要连接键鼠。）
 
 微软为 *Windows 11* 加入了强制性的 *安全启动* 要求，这也意味着默认情况下如果关闭 *安全启动* ， *Windows 11 安装程序* 会直接拒绝进行安装。在之前的《[用树莓派躺床上玩PC游戏](../Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)》文章中的 *二、1.2* 中介绍过 *Rufus* 这款启动盘烧写软件，其内置了绕过 *Windows 11 安装程序* 的 *安全启动* 强制要求的功能。按文章中的说明烧录Windows 11安装盘，在点击 *“开始”* 按钮后，在弹出的 *“Windows 用户体验”* 窗口中，勾选 *“自定义 Windows 安装？”* 下的 *“移除对 4GB+ 内存、安全引导和 TPM 2.0 的要求”* 和 *“禁止数据收集（跳过隐私设置）”* 复选框，其他按需勾选，最后点击 *“确定”* 按钮。
 
@@ -2018,13 +2050,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 > 对于Windows 11，因其对用户组权限设置的调整，如果决定使用本地账户登录而不是微软账户，则请维持这一点，因为如果先使用本地账户登录然后切换到微软账户，会使当前账户丢失管理员账户身份，直到切回或更改登录的账户，反之亦然。
 
-按照 *二、5.2* 中介绍的方式进入Legion Go的UEFI设置界面，点击左侧栏 *“安全设置”* ，在右侧设置页面找到 *“安全启动”* ，点击右侧下拉菜单，选择 *“关闭”* 。然后按下 *“F10键”* 或点击 *“退出 - 保存并退出”* ，在弹出的 *“确认”* 弹窗中点击 *“是”* 按钮。
-
-![Dual_Boot6.jpeg](Dual_Boot6.jpeg)
-
-### 5. 安装Windows 11
-
-老生常谈问题，就不细讲了。这里说一下我分配系统分区大小的一般计算公式：
+实际上手安装是老生常谈问题，就不细讲了。这里说一下我在全新安装 *Windows NT 6.2* 及以上的Windows的时候，分配系统分区大小的一般计算公式：
 
 对于像下图这种，整个磁盘是空盘（未分配空间）的情况下， *Windows NT 6.2* 及以上的Windows安装程序（在GPT + UEFI模式下）会将第一个分配的分区视作启动分区，创建共三个分区：`EFI分区`、`MSR分区`和`Windows启动分区`。因此，此处的大小是这三个分区的总大小。
 
@@ -2048,15 +2074,170 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 一般情况下我给16GB内存的PC都是分160GB给系统盘，32GB的分200GB给系统盘，64GB的分256GB给系统盘。
 
-但是目前的Windows 11 24H2安装程序没有内置 *联发科RZ 616 无线网卡* 的驱动，需要在OOBE时登录微软账户的需要注意，提前准备驱动包在安装盘中或者连接扩展坞。
+但是目前的Windows 11 24H2安装程序没有内置 *联发科RZ 616 无线网卡* 的驱动，需要在OOBE时登录微软账户的需要注意，请提前在安装盘中准备驱动包，或者连接扩展坞。
 
 ![Dual_Boot9.jpeg](Dual_Boot9.jpeg)
 
+### 5. 如何制定双系统磁盘分区结构？
+
+如果想要双系统而本地存储空间紧张，最好的方式是分出三个（或以上）分区，保证两个系统分区（较小）和一个共享分区（较大），即两个系统都能够进行读写的分区，如NTFS分区。
+
+详细解释，请查阅另一篇文章《[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)》中的 *二、9.4* 。
+
+本章介绍先安装Windows 11，再安装类SteamOS系统的操作。因此，建议在安装完Windows 11之后，可为类SteamOS系统先创建一个预留的磁盘分区。在Windows的 *“此电脑”* 上 *“右键 - 显示更多选项 - 管理”* ，或按住 *“Shift键”* 的同时按 *“右键 - 管理”* ，进入 *“计算机管理”* 窗口，点击左栏中的 *“存储 - 磁盘管理”* ，在右侧的 *“磁盘管理”* 界面中，在系统磁盘中的 *“未分配”* 空间上 *“右键 - 新建简单卷”* 。
+
+![Dual_Boot21.png](Dual_Boot21.png)
+
+在弹出的 *“新建简单卷向导”* 窗口的 *“欢迎使用新建简单卷向导”* 页面中，点击 *“下一页”* 按钮。在转到的 *“指定卷大小”* 页面中，在 *“简单卷大小(MB)：”* 数字框中输入想要设定的分区大小（MB），如想要分配128GB，则为(128GB × 1024MB/GB) = 131702MB。然后点击 *“下一页”* 按钮。在转到的 *“分配驱动器号和路径”* 页面中，选择 *“不分配驱动器号或驱动器路径”* 单选框，然后点击 *“下一页”* 按钮。在转到的 *“格式化分区”* 页面中，选择 *“不要格式化这个卷”* 单选框，然后点击 *“下一页”* 按钮。在转到的 *“正在完成新建简单卷向导”* 页面中，点击 *“完成”* 按钮。
+
+![Dual_Boot22.png](Dual_Boot22.png)
+
+之后，在原磁盘分区图上将显示一个新的、无盘符和卷标的、文件系统为`RAW`的分区。这个分区就是预留给类SteamOS系统的磁盘分区。
+
+![Dual_Boot23.png](Dual_Boot23.png)
+
 ### 6. 安装类SteamOS的Linux发行版
+
+> 本节仅介绍在Legion Go上下载和安装这些Linux发行版，体验留在下一章介绍。
+
+可以说如今x86掌机的兴盛，甚至让人们将PC游戏的眼光望向Linux平台， *Steam deck* 功不可没。 *SteamOS 3.0* 作为 *Valve* 公司专为 *Steam deck* 设计的掌机Linux操作系统，可以说是最适合x86掌机的Linux发行版了。可惜的是，虽然 *Valve* 已经确认将来会为更多热门x86掌机如 *ROG Ally X* 提供官方的 *SteamOS* 支持，现在的 *SteamOS 3.0* 仍然仅供 *Steam deck* 使用（Steam官网提供的 *SteamOS* 下载仍是SteamOS 2.0）。目前，要想在非 *Steam deck* 上感受类似 *SteamOS 3.0* 的体验，只能依靠第三方移植/复刻了。
+
+在这篇文章中，介绍了一些类SteamOS的Linux发行版：[Steam-Deck-Guide/Games and Software/Operating Systems.md at main · mikeroyal/Steam-Deck-Guide](https://github.com/mikeroyal/Steam-Deck-Guide/blob/main/Games%20and%20Software/Operating%20Systems.md)。我将依次尝试互联网上比较火的两个发行版： *Bazzite* 和 *Nobara Linux* 。
+
+> 由于 *ChimeraOS* 明确不支持双重启动，很遗憾的，无法体验。
+
+#### 6.1 Bazzite
+
+本来想总结一下 *Bazzite* ，但是它细化的功能太多了，想要对 *Bazzite* 有一个笼统的认识建议看官方README中的 *总览和功能* ：[bazzite/README.md at main · ublue-os/bazzite](https://github.com/ublue-os/bazzite/blob/main/README.md#about--features)。 *Bazzite* 是一个开源的、社区驱动的项目，基于 *Fedora Atomic Desktops* 。
+
+&ensp;&ensp;&ensp;&ensp;**a. 下载Bazzite**
+
+进入 *Bazzite* 官网：[Bazzite – The next generation of Linux gaming](https://bazzite.gg/)，点击右上方的 *“Download bazzite（下载bazzite）”* 按钮，在跳转的 *“Download bazzite”* 页面位置中，先点击 *“What hardware are you using?（你在使用什么硬件？）”* 下方的下拉菜单，选择对应的硬件平台（本例中为 *“Handhelds - Lenovo Legion Go（掌机 - 联想Legion Go）”* ）。点击涌现的 *“What desktop environment do you prefer?（你偏好的桌面环境是哪个？）”* 下方的下拉菜单，选择 *“KDE (Like SteamOS)”* 。
+
+![Dual_Boot10.png](Dual_Boot10.png)
+
+之后，将网页向下滚动，找到 *“New Users（新用户）”* ，点击下方的 *“Download bazzite-deck📥（下载bazzite-deck版）”* 按钮，下载 *Bazzite* 安装镜像。点击右侧的 *“📄”* 图标，下载安装镜像的SHA256校验值。
+
+![Dual_Boot11.png](Dual_Boot11.png)
+
+&ensp;&ensp;&ensp;&ensp;**b. 烧录安装U盘并引导至安装程序**
+
+（安装Bazzite可能需要连接键盘。）
+
+个人推荐使用 *Rufus* 这款软件进行系统盘烧写。具体操作步骤，在之前的《[用树莓派躺床上玩PC游戏](../Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)》文章中的 *二、1.2* 中已经介绍过，在此不再赘述。注意在 *“分区类型”* 下拉菜单中选择 *“GPT”* ，在开始后弹出的 *“检测到 ISOHybrid 镜像”* 中选择 *“以 ISO 镜像 模式写入(推荐)”* 单选框，并点击 *“OK”* 按钮。
+
+<img alt="Dual_Boot12.png" src="Dual_Boot12.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+在Legion Go关机时插入烧录好的安装U盘，并按照前面 *二、5.2* 中介绍的方法进入 *“Novo Button Menu”* ，选择第三项 *“Boot Menu”* 。在进入的 *“Please select boot device:（请选择引导设备：）”* 界面中，选择安装U盘。
+
+<img alt="Dual_Boot13.jpeg" src="Dual_Boot13.jpeg" width="40%" title="This image has been scaled to 40% of its original size.">  
+
+&ensp;&ensp;&ensp;&ensp;**c. 安装Bazzite**
+
+*（由于饶罗翔实在是太难绷了，此处选择在虚拟机上安装来方便截图。具体操作和实体机上相同，实在无法同步的点会继续饶罗翔）*
+
+成功引导后，会进入到 *GRUB 2* 引导菜单中。保持默认的 *“Test this media & Install bazzite-deck <版本号>（测试这个引导媒体并安装bazzite-deck）”* 选项不变，按下 *“Enter（回车）键”* 确认。
+
+<img alt="Dual_Boot14.png" src="Dual_Boot14.png" width="80%" title="This image has been scaled to 80% of its original size.">  
+
+等待加载进度。
+
+<img alt="Dual_Boot15.png" src="Dual_Boot15.png" width="80%" title="This image has been scaled to 80% of its original size.">  
+
+![Dual_Boot16.png](Dual_Boot16.png)
+
+正式进入bazzite-deck安装界面。在 *“WELCOME TO BAZZITE-DECK <版本号>”* 界面中，先在左栏选择偏好的语言，然后在右栏选择地区变体。最后，点击右下角 *“继续”* 按钮。
+
+![Dual_Boot17.png](Dual_Boot17.png)  
+
+在进入的 *“安装信息摘要”* 界面中，可以看到 *“本地化”* 列已经自动适配了。现在需要对三个选项进行设置： *“安装目标位置”* 、 *“网络和主机名”* 和 *“创建用户”* 。依次点击它们：
+
+![Dual_Boot18.png](Dual_Boot18.png)  
+
+1. *“安装目标位置”* - 进入 *“安装目标位置”* 界面。  
+   选中 *“设备选择 - 本地标准磁盘”* 中的SSD，然后选中下方 *“储存配置”* 中的 *“自定义”* 单选框。最后，点击左上角的 *“完成”* 按钮。  
+   ![Dual_Boot24.jpeg](Dual_Boot24.jpeg)  
+   在转到的 *“手动分区”* 界面中，点击展开左栏树状图中的 *“未知”* 父项，在下方找到之前在Windows中预留的给类SteamOS系统的磁盘分区。点击选中它，然后点击下方的 *“-（删除分区）”* 按钮，在弹出的 *“您确定要删除<分区>中的所有数据吗？”* 对话框中，点击 *“删除”* 按钮。  
+   ![Dual_Boot25.jpeg](Dual_Boot25.jpeg)  
+   在 *“手动分区”* 界面中，点击展开左栏树状图中的 *“新bazzite-deck <版本号>安装”* 父项，然后点击 *“点击这里自动创建它们。”* 链接。之后，安装程序应该会自动创建一系列 *Bazzite* 系统需要的分区。最后，点击左上角的 *“完成”* 按钮。  
+   ![Dual_Boot26.jpeg](Dual_Boot26.jpeg)  
+   安装程序会弹出 *“更改摘要”* 窗口，最后核实要删除的分区是否为之前分配的预留的给类SteamOS系统的磁盘分区，确定之后点击 *“接受更改”* 按钮。
+   ![Dual_Boot27.jpeg](Dual_Boot27.jpeg)  
+2. *“网络和主机名”* - 进入 *“网络和主机名”* 界面。  
+   如果要让Legion Go在此时联网，先在左栏中选择 *“ᯤ无线 (wlp1s0)”* 项，打开右栏 *“ᯤ无线 (wlp1s0)”* 右侧的 *“开关”* ，再点击下方的 *“选择网络”* 按钮，根据提示连接无线网络。填写下方的 *“主机名：”* 文本框中的文本为合适的主机名，如`Legion-Go-Bazzite`，其将作为局域网上定位Legion Go上的 *Bazzite* 系统的标识，并点击 *“应用”* 按钮。最后，点击左上角的 *“完成”* 按钮。
+   ![Dual_Boot20.jpeg](Dual_Boot20.jpeg)  
+3. *“创建用户”* - 进入 *“创建用户”* 界面。  
+   在 *“全名”* 、 *“用户名”* 文本框和 *“密码”* 、 *“确认密码”* 密码文本框中输入对应信息。 *“用户名”* 可自定义或保留默认的`bazzite`。最后，点击左上角的 *“完成”* 按钮。
+   ![Dual_Boot19.png](Dual_Boot19.png)  
+   > 不建议取消勾选 *“需要密码才能使用该账户”* 复选框。
+
+以上三项全部设置完毕之后，就可以回到 *“安装信息摘要”* 界面中，点击右下角的 *“开始安装”* 按钮，正式开始安装 *Bazzite* 系统了。
+
+![Dual_Boot28.png](Dual_Boot28.png)  
+
+等待 *“安装进度”* 走完进度条，点击右下角的 *“重启系统”* 按钮就可以重启系统，正式进入 *Bazzite* 系统了。
+
+![Dual_Boot29.png](Dual_Boot29.png)  
+
+&ensp;&ensp;&ensp;&ensp;**d. 首次启动Bazzite**
+
+UEFI引导界面，下方会显示 *Bazzite* logo。
+
+![Dual_Boot30.jpeg](Dual_Boot30.jpeg)  
+
+首次启动需要下载 *Steam* 程序文件。
+
+![Dual_Boot31.jpeg](Dual_Boot31.jpeg)  
+
+之后，便会进入 *SteamOS* OOBE。此时已经可以使用手柄操控了。首先，选择偏好的语言。（由于虚拟机中的bazzite-deck系统会自动检测PC形式而切换到桌面模式，没法继续截图了，只能饶罗翔了凑活看吧。）
+
+![Dual_Boot32.jpeg](Dual_Boot32.jpeg)  
+
+然后，选择时区。
+
+![Dual_Boot33.jpeg](Dual_Boot33.jpeg)  
+
+然后，选择网络连接。如果在安装程序中已经连接了网络，此时便不需要再输入密码。
+
+![Dual_Boot34.jpeg](Dual_Boot34.jpeg)  
+
+然后，等待下载更新并安装。安装完成后， *Bazzite* 会自动重启Legion Go。
+
+![Dual_Boot35.jpeg](Dual_Boot35.jpeg)  
+
+重启后，便会显示熟悉的 *Steam* 登录界面。
+
+![Dual_Boot36.jpeg](Dual_Boot36.jpeg)  
+
+欢迎使用 Steam Deck。
+
+![Dual_Boot37.jpeg](Dual_Boot37.jpeg)  
+
+要切换回Windows，需要在启动 *Bazzite* 之后，在 *SteamOS Deck模式* 下，从屏幕右侧 *“向内滑动”* ，或者按下 *Legion Y3键* ，唤出 *Bazzite 侧边栏* ，然后按下 *“Xbox Y键”* ，
+
+![Dual_Boot38.jpeg](Dual_Boot38.jpeg)  
+
+进入 *Bazzite 菜单* ，使用 *“RB键”* 导航到 *“Gamemode”* 项，然后使用 *“十字键”* 选中 *“Reboot into Windows（重启至Windows）”* ，按下 *“Xbox A键”* ，Legion Go将重启至Windows。在Windows重启后恢复启动到 *Bazzite* 系统。
+
+![Dual_Boot39.jpeg](Dual_Boot39.jpeg)  
+
+要自定义启动选项，参见本章的 *7.* 大节。 *Bazzite* 系统体验，参见 *六、* 章。
+
+#### 6.2 Nobara Linux
+
+[Nobara Linux | The Nobara Project](https://nobaraproject.org/)
 
 // TODO
 
-## 五、携带办公体验
+### 7. 自定义双系统启动菜单：rEFInd
+
+// TODO
+
+## 六、在类SteamOS系统上玩游戏
+
+// TODO
+
+## 七、携带办公体验
 
 办公续航时间体验
 
