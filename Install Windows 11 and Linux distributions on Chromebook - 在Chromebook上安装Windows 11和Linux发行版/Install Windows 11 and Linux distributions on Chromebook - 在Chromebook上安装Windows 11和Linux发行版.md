@@ -2,7 +2,7 @@
 
 *版本：1.0*
 
-查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“菜单”（⋮☰）按钮。
+查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“大纲”（⋮☰）按钮。
 
 ---
 
@@ -111,6 +111,8 @@
  *华硕* 官方的配置信息页面：[ASUS Chromebook Vibe CX55 Flip (CX5501, 11th Gen Intel) - Tech Specs｜Laptops For Home｜ASUS USA](https://www.asus.com/us/laptops/for-home/chromebook/asus-chromebook-vibe-cx55-flip-cx5501-11th-gen-intel/techspec/)，貌似只在北美售卖。
 
 500多刀拿下二合一、144hz触摸屏、16GB内存、双全功能USB-C接口，还要啥自行车。配置这么高的 *Chromebook* ，官方是以“ *Chromebook* 游戏本”的卖点卖的，随机送了一个月的 *Xbox Game Pass Ultimate* （支持 *Xbox云游戏* ）和三个月的 *英伟达 Geforce Now* 云游戏。
+
+然后这个玩意用了一年之后风扇有异响（响得像个拖拉机似的），拆出来发现是轴坏了。还好在保修期前一周坏的，打算走售后吧， *华硕* 售后倒是给个人送保，但是运费自理，要9刀， *Ebay* 上买一个二手散热模组也就9刀，售后修还要费时间、还有可能把它刷回 *ChromeOS* ，想想就算了，我还是自己修吧。华硕品质，坚如磐石my ass。
 
 ## 一、替换Chromebook固件为coreboot (MrChromebox) UEFI固件
 
