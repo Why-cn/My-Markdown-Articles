@@ -1,6 +1,6 @@
 # 技巧集合
 
-*版本：1.2; This article is not available in English.*
+*版本：1.3; This article is not available in English.*
 
 一些杂七杂八的小技巧合集，主要是怕忘了，哪天可以捡起来接着看。
 
@@ -16,7 +16,9 @@
 [Windows查询校验和](#windows查询校验和)  
 [卸载Windows 11小组件](#卸载windows-11小组件)  
 [关闭Windows 11开始菜单的Bing网络搜索](#关闭windows-11开始菜单的bing网络搜索)  
-[跳过Windows 11 OOBE时的登入微软账户需求](#跳过windows-11-oobe时的登入微软账户需求)
+[跳过Windows 11 OOBE时的登入微软账户需求](#跳过windows-11-oobe时的登入微软账户需求)  
+[把另一台Windows PC的注册表迁移到本地的Windows PC中（用本地Windows PC的注册表编辑器读取另一台Windows PC的注册表）](#把另一台windows-pc的注册表迁移到本地的windows-pc中用本地windows-pc的注册表编辑器读取另一台windows-pc的注册表)  
+[备份Windows激活密钥](#备份windows激活密钥)
 
 ### Andriod
 
@@ -203,3 +205,11 @@ Windows Registry Editor Version 5.00
 3. 在 *“运行命令”* 面板中，输入`Screenshot`或`截图`关键字来搜索截图相关功能。
    <img alt="Chrome_Screenshot.png" src="Chrome_Screenshot.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 4.  *“截取完整尺寸的屏幕截图”* 可以截取网页目前渲染出的整个页面（Chrome设置页面和插件内部页面无法完整截图）； *“截取屏幕截图”* 则可以截取到目前网页显示在Chrome浏览器的网页浏览区域。
+
+## 把另一台Windows PC的注册表迁移到本地的Windows PC中（用本地Windows PC的注册表编辑器读取另一台Windows PC的注册表）
+
+参见《[联想Legion Go使用体验和自定义](../Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义/Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义.md)》中的 *五、2.\*1* 。
+
+## 备份Windows激活密钥
+
+参见《[联想Legion Go使用体验和自定义](../Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义/Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义.md)》中的 *五、2.\*2* 。
