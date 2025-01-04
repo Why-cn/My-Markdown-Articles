@@ -1,6 +1,6 @@
 # Windows 11 + Kubuntu双系统安全启动和使用体验
 
-*版本：1.0*
+*版本：1.1*
 
 查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“目录”（⋮☰）按钮。
 
@@ -39,13 +39,13 @@
 
 ### 2. 烧写启动U盘
 
-个人推荐使用 *Rufus* 这款软件进行系统盘烧写。具体操作步骤，在之前的[用树莓派躺床上玩PC游戏](../Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)文章中的 *二、1.2* 中已经介绍过，在此不再赘述。
+个人推荐使用 *Rufus* 这款软件进行系统盘烧写。具体操作步骤，在之前的《[用树莓派躺床上玩PC游戏](../Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)》文章中的 *二、1.2* 中已经介绍过，在此不再赘述。
 
 > Rufus可能会默认以MBR分区类型进行刷写，我还是推荐更改为GPT分区类型。
 
 ### 3. 进行必要备份
 
-由于当下任何安装现代系统的操作都涉及到对EFI分区的读写，而且在操作过程中存在误操作将全盘擦除的风险（大佬小白都有可能湿鞋），所以提前对电脑重要数据进行备份，甚至直接进行全盘备份也是必要的，给自己留后悔药。关于全盘备份，在之前的[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)文章中的 *一、4* 中已经介绍过，在此不再赘述。
+由于当下任何安装现代系统的操作都涉及到对EFI分区的读写，而且在操作过程中存在误操作将全盘擦除的风险（大佬小白都有可能湿鞋），所以提前对电脑重要数据进行备份，甚至直接进行全盘备份也是必要的，给自己留后悔药。关于全盘备份，在之前的《[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)》文章中的 *一、4* 中已经介绍过，在此不再赘述。
 
 ### 4. 确定有足够空余存储空间
 
@@ -92,7 +92,7 @@
 
 ### 2. 安装Kubuntu
 
-*（由于饶罗翔实在是太难绷了，因此此处选择在虚拟机上安装来方便截图。具体操作和实体机上相同，实在无法同步的点会继续饶罗翔）*
+*（由于饶罗翔实在是太难绷了，此处选择在虚拟机上安装来方便截图。具体操作和实体机上相同，实在无法同步的点会继续饶罗翔）*
 
 在上一步的操作之后，应该可以引导到安装U盘的GRUB界面；等待自动进入默认选项，或者使用键盘上的 *方向键* ，将高亮的选项选择到第一项 *“Try or Install Kubuntu”* ，然后按下 *回车（Enter）键* 。
 
@@ -174,7 +174,7 @@
 
 由于这篇文章是在另一台Windows PC上用VS Code写的，我习惯使用[PairDrop | Transfer Files Cross-Platform. No Setup, No Signup.](https://pairdrop.net/)来通过网页在局域网中传输少量数据，这就必须要先经过网络浏览器，我还是惯用自己习惯的浏览器。
 
-很不幸地，KDE官方应用市场（[Discover 软件管理中心 - KDE 应用程序](https://apps.kde.org/zh-cn/discover/)）并未提供Google Chrome浏览器（可能是因为不开源？记得以前在Arch系中的AUX装过）。不过，可以通过Chrome浏览器官网安装.deb包的形式来安装。
+KDE官方应用市场（[Discover 软件管理中心 - KDE 应用程序](https://apps.kde.org/zh-cn/discover/)）在未添加第三方软件源时，未提供Google Chrome浏览器。不过，可以先通过Chrome浏览器官网安装.deb包的形式来安装。
 
 首先，下载Chrome浏览器：
 [Google Chrome - 快速安全的网络浏览器，专为您而打造](https://www.google.com/chrome/)，进入官网后，点击 *“下载 Chrome”* ，然后在弹出的控件中保持默认选项 *“64 位 .deb （适用于 Debian/Ubuntu）”* ，然后点击 *“接受并安装”* 。 
@@ -264,9 +264,9 @@ $$PPI = \frac{\sqrt{像素宽度（个）^2 + 像素高度（个）^2}}{屏幕�
 
 &ensp;&ensp;&ensp;&ensp;**3.1.b 使用APT安装字体**
 
-其实没想这么早就进入到命令行内容的，毕竟对于想从Windows丝滑过渡到Windows的新人来说，最劝退的一步就是命令行了。但说实在，Windows和Mac可能还好，但日用Linux不可能绕得过命令行，只不过是早晚的事。之前看过LTT的日用Linux代替Windows的视频，他要是把“CLI Warning”写在片头，那完播率估计只有现在的一半。
+其实没想这么早就进入到命令行内容的，毕竟对于想从Windows丝滑过渡到Windows的新人来说，最劝退的一步就是命令行了。但说实在，Windows和Mac可能还好，但日用Linux不可能绕得过命令行，只不过是早晚的事。之前看过 *LinusTechTips* 的日用Linux代替Windows的视频，他要是把“CLI Warning”写在片头，那完播率估计只有现在的一半。
 
-有些字体被收录到Kubuntu的官方软件仓库中，如我喜欢用的[tonsky/FiraCode: Free monospaced font with programming ligatures](https://github.com/tonsky/FiraCode)。这种收录到库中的字体，会有自动脚本帮助用户下载并安装到系统中，仅需一条命令即可。
+有些字体被收录到Ubuntu的官方软件仓库中，如我喜欢用的[tonsky/FiraCode: Free monospaced font with programming ligatures](https://github.com/tonsky/FiraCode)。这种收录到库中的字体，会有自动脚本帮助用户下载并安装到系统中，仅需一条命令即可。
 
 依次打开 *“应用程序启动器 - 系统 - Konsole 命令行终端”* ，或者按下 *“Ctrl + Alt + T”* 进入 *Konsole（以下称“终端”）* 。
 
@@ -323,6 +323,8 @@ sudo apt install <字体包名>
 在 *系统设置* 中点击左侧栏的 *“输入设备 - 键盘”* ，在右侧的 *“键盘”* 设置页面中，选择 *“硬件”* 选项卡，调整 *“NumLock 在 Plasma 启动时的状态”* 选项，然后点击 *“应用”* 按钮。
 
 ![KDE_settings10.png](KDE_settings10.png)
+
+> 如果发现在登录屏幕时，NumLock状态与此处设置不同步，可参照本大节下方的 *16.* 。
 
 **4.2 更改光标速度**
 
@@ -471,7 +473,7 @@ sudo apt install <字体包名>
 
 1. 你电脑上不存在非开源驱动涉及到的硬件。比如对于显卡来说，Intel、AMD官方均为Linux提供了开源驱动，所以如果你使用的这两个提供商提供的显卡（集成显卡、独立显卡），那么Ubuntu软件源中应该已经提供了能够很好支持的开源驱动。
 2.  *驱动管理器* 无法检测到你想要找的硬件。比如我手上这台Chromebook的声卡驱动。这种情况就只能搜索解决方案了。
-3.  *软件源* 中没有涵盖你想要找的硬件，或网络连通性问题。对于前者，如果你知道其他软件源，或者你的硬件提供商提供了第三方软件源，可以在 *“驱动管理器”* 窗口中，点击 *“Other Software”* 选项卡，点击左下角的 *“Add...”* 按钮，在弹出的 *“Add APT repository”* 窗口中，输入第三方软件源命令行，然后点击 *“确定”* 按钮。对于后者，尝试改变网络环境。
+3.  *软件源* 中没有涵盖你想要找的硬件，或网络连通性问题。对于前者，如果你知道其他软件源，或者你的硬件提供商提供了第三方软件源，可以在 *“驱动管理器”* 窗口中，点击 *“Other Software”* 选项卡，点击左下角的 *“Add...”* 按钮，在弹出的 *“Add APT repository”* 窗口中，输入第三方软件源命令行，然后点击 *“确定”* 按钮。对于后者，尝试改变网络环境。  
    <img alt="KDE_settings36.png" src="KDE_settings36.png" width="50%" title="This image has been scaled to 50% of its original size.">  
 
 如果以上都无法解决你的问题，那可能需要手动安装驱动，从硬件提供商或者网络上的其他资源来安装。
@@ -505,7 +507,7 @@ inxi -G
 
 在 *inxi* 输出的结果中，查找`API:`部分。对于任何显卡，若显卡驱动被正确安装，则其`drivers:`或`renderer:`属性下应存在驱动/渲染器名称。
 
-![KDE_settings80.png](KDE_settings80.png) 
+<img alt="KDE_settings80.png" src="KDE_settings80.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 
 > Intel将其在Linux上的开源驱动程序统称为 *“i915”* 。详情可见[Intel - Gentoo Wiki](https://wiki.gentoo.org/wiki/Intel/zh-cn)。
 
@@ -581,7 +583,11 @@ inxi -G
 
 由于操作系统也是由许多软件（包）构成，所以此处 *Discover 软件管理中心* 对所有软件源内的软件（包）更新，也可以覆盖到**系统更新**。这点与许多商业操作系统不同，它们（如 *Windows* 、 *MacOS* 、*Andriod* 等）往往将系统更新放在单独的设置页面中。
 
-![KDE_settings77.png](KDE_settings77.png) 
+![KDE_settings49.png](KDE_settings49.png)  
+
+可以设定系统进行自动更新。在 *系统设置* 中点击左侧栏的 *“系统管理 - 软件更新”* ，在右侧的 *“软件更新”* 设置页面中，调整自动/手动更新、更新/提醒频率、是否使用离线更新。
+
+![KDE_settings84.png](KDE_settings84.png)  
 
 > 有些应用/软件包要在应用重启/系统重启后才能使更新生效。  
 > 系统软件更新必须在系统重启后才能生效。  
@@ -591,23 +597,23 @@ inxi -G
 
 **11.2 使用下载的软件包安装应用**
 
-有时， *Discover 软件管理中心* 并不能囊括我们想要下载的所有软件，尤其是那些不开源的专利软件，比如Google Chrome浏览器。具体使用下载到的软件包安装应用的方法，在本大节的1. 便介绍过了。
+.deb软件包是Debian Linux及其衍生发行版（如Ubuntu和其衍生发行版（如Kubuntu））的可携带软件包格式。具体使用下载到的.deb软件包安装应用的方法，在本大节的1. 便介绍过了。
 
 **11.3 使用包管理器APT安装、更新、卸载应用/系统**
 
-在本大节的3. 曾简略地提到过使用`apt`命令来安装软件包，这个命令即是Linux中最知名的几个命令之一——高级打包工具（Advanced Packaging Tools），APT。
+在本大节的 *3.* 曾简略地提到过使用`apt`命令来安装软件包，这个命令即是Linux中最知名的几个命令之一——高级打包工具（Advanced Packaging Tools）， *APT* 。
 
-此维基页面介绍了APT的一些基础操作：[APT - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-cn/APT)
+此维基页面介绍了 *APT* 的一些基础操作：[APT - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-cn/APT)
 
-你可能发现了，既然是APT的维基页面，为什么其中给出的所有命令都是`apt-get`？这有一篇AWS的文章解释了这一点：[apt 与 apt-get — Linux 中软件包管理工具的区别 — AWS](https://aws.amazon.com/cn/compare/the-difference-between-apt-and-apt-get/)。简而言之，如果要使用，使用`apt`便可；但如果要编写脚本文件（如.sh文件），则**或许**`apt-get`更好一点。
+你可能发现了，既然是 *APT* 的维基页面，为什么其中给出的所有命令都是`apt-get`？这有一篇AWS的文章解释了这一点：[apt 与 apt-get — Linux 中软件包管理工具的区别 — AWS](https://aws.amazon.com/cn/compare/the-difference-between-apt-and-apt-get/)。简而言之，如果要使用，使用`apt`便可；但如果要编写脚本文件（如.sh文件），则**或许**`apt-get`更好一点。
 
-> 与其使用`apt upgrade`命令，我更推荐使用`apt full-upgrade`。
+和之前在本大节的 *1.* 中描述的一样，使用 *APT* 对所有软件源内的软件（包）更新，也可以覆盖到**系统更新**。但与其使用`apt upgrade`命令，我更推荐使用 **`apt full-upgrade`** 。
 
 ![KDE_settings44.png](KDE_settings44.png) 
 
 &ensp;&ensp;&ensp;&ensp;**11.3.a apt list**
 
-维基中没有提到的另一项十分重要的`apt`命令：查看软件包列表。在 *“终端”* 中输入以下命令并执行：
+维基中没有提到的另一项十分重要的 *APT* 命令：查看软件包列表。在 *“终端”* 中输入以下命令并执行：
 
 ```Shell
 apt list | grep <你想要查找的软件包关键字>
@@ -623,7 +629,7 @@ apt list --installed | grep <你想要查找的软件包关键字>
 
 &ensp;&ensp;&ensp;&ensp;**11.3.b apt autoremove**
 
-维基中没有提到的另一项十分重要的`apt`命令：自动卸载不再被依赖的软件包，尤其适用于 *Discover 软件管理中心* 卸不干净的应用。在 *“终端”* 中输入以下命令并执行：
+维基中没有提到的另一项十分重要的 *APT* 命令：自动卸载不再被依赖的软件包，尤其适用于 *Discover 软件管理中心* 卸不干净的应用。在 *“终端”* 中输入以下命令并执行：
 
 ```Shell
 sudo apt autoremove
@@ -631,7 +637,7 @@ sudo apt autoremove
 
 在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。若有残留软件包，则`apt autoremove`会提问用户是否执行自动卸载。再确认一下给出的卸载列表中没有需要保留的软件包，然后按 *“回车（Enter）键”* 确认，或输入 *n* 再按 *“回车（Enter）键”* 取消。
 
-![KDE_settings82.png](KDE_settings82.png)  
+<img alt="KDE_settings82.png" src="KDE_settings82.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 
 **11.4 使用网络应用程序代替一般应用程序**
 
@@ -673,6 +679,12 @@ sudo apt autoremove
 ![KDE_settings47.png](KDE_settings47.png) 
 
 因为有时Web应用所能提供的功能已经足够轻量级使用，更别提有些所谓桌面应用就是网页套壳，所以有些时候与其去找一款在Linux上的Windows平替软件，不如看看这些软件是否已经提供了Web应用，逛逛Chrome应用商店也挺好的。
+
+**11.5 使用Flatpak**
+
+在另一篇文章[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)中介绍了使用 *Flatpak软件包* 安装应用的方式，均可使用在Kubuntu中，此处不再赘述。摘录其中介绍 *Flatpak* 的描述如下：
+
+“Flatpak 是一种软件包管理工具，允许开发人员打包和分发软件。它也是允许最终用户在其 Linux 系统上下载和安装该软件的同一种技术。与使用默认软件包管理器（apt、dnf、pacman等）相比，它有一些优势，因为它可以访问 Linux 社区贡献的大量应用程序，并且通常非常安全地安装和运行软件，因为它为应用程序创建了一个沙盒环境。最重要的是，它在任何发行版中都以相同的方式工作。”
 
 ### 12. Kubuntu的磁盘管理
 
@@ -720,54 +732,7 @@ KDE中的 *Dolphin 文件管理器* 已经整合了访问Bitlocker加密的卷�
 
 ![KDE_settings48.png](KDE_settings48.png) 
 
-### 14. 安装Linux上的Chromebook音频驱动（可选）
-
-**本小节仅适用于解决在Chromebook上于本地硬盘安装的Linux中音频驱动出现问题的情况。**
-
-为了省钱买的Chromebook就得花时间解决各种问题。本来它装Windows就得想办法弄第三方声卡驱动吧，没想到装了Linux依旧不出声：
-
-<img alt="KDE_settings52.png" src="KDE_settings52.png" width="50%" title="This image has been scaled to 50% of its original size.">   
-
-要解决这个问题，首先到如下仓库：[GitHub - WeirdTreeThing/chromebook-linux-audio: Script to enable audio support on many Chrome devices](https://github.com/WeirdTreeThing/chromebook-linux-audio)，用`git clone`或下载整个源码zip包均可。本节以下载源码zip包为例，下载后解压到本地路径，使用 *Dolphin 文件管理器* 导航到该路径，在`setup-audio`文件上 *右键 - “使用 Kate文本编辑器 打开”* 。在打开的 *“Kate文本编辑器”* 中，找到约55行的位置，在`ubuntu()`函数下，将
-```Python
-    exit()
-```
-改为
-```Python
-    #exit()
-```
-，然后保存并退出。
-
-![KDE_settings49.png](KDE_settings49.png) 
-
-![KDE_settings50.png](KDE_settings50.png) 
-
-还是刚才的路径，在 *Dolphin 文件管理器* 的文件夹内空白处 *右键 - “在此位置打开终端”* 或按下 *Alt + Shift + F4* ，在这个路径下打开 *“终端”* 。
-
-![KDE_settings51.png](KDE_settings51.png) 
-
-打开的 *“终端”* 窗口中，应该显示目前处于刚才的路径下。输入以下命令并执行：
-
-```Shell
-sudo ./setup-audio
-```
-
-在`sudo`提示输入当前账户的密码时盲输 *“账户密码”* 并按 *回车（Enter）键* 确定。
-
-![KDE_settings53.png](KDE_settings53.png) 
-
-当脚本执行完毕，显示`Audio installed successfully! Reboot to finish setup.`后，重启Chromebook。
-
-![KDE_settings54.png](KDE_settings54.png) 
-
-重启后，在 *系统设置* 中点击左侧栏的 *“硬件 - 音频”* ；或点击 *任务栏 - 系统托盘 - 音量* 按钮，在弹出的 *音频音量* 面板上，点击右上角的 *“配置音频设备…”* 按钮。在打开的 *“音频”* 设置页面中，点击 *“播放设备”* 中的 *“Speaker（扬声器）”* 右边的下拉菜单，将默认的 *“Off”* 改为 *“Default”* 。
-
-😆幸运的是，这样Chromebook终于出声了；🥲不幸的是左右声道都只在左扬声器出声……测试了一下USB无线耳机和蓝牙耳机，均工作正常，只有内置扬声器有这个问题，估计是声卡驱动没事但是线路驱动有问题，但只要能响就行了，我也不指望去图书馆或者教室里外放，回家就用Windows了。
-
-参考：
-[sound - How to install Chromebook audio drivers in Ubuntu? - Ask Ubuntu](https://askubuntu.com/questions/1486278/how-to-install-chromebook-audio-drivers-in-ubuntu)
-
-### 15. 修改GRUB菜单
+### 14. 修改GRUB菜单
 
  *GRUB 2* 是Linux上一款经典的跨平台通用引导加载器，其功能类似于Windows的 *Windows Boot Manager（Windows启动管理器）* ，可以通过该引导加载器引导进入系统。我曾经尝试过让 *Windows Boot Manager* 引导几个Linux发行版，均以失败告终；而让 *GRUB 2* 引导Windows则可以正常进入系统，两个引导加载器均是引导至.efi文件，可能我当初在 *Windows Boot Manager* 注册错了.efi文件，反正也懒得管了，有个能用的就行。
 
@@ -821,7 +786,7 @@ sudo update-grub
 
 ![KDE_settings63.png](KDE_settings63.png)  
 
-### 16. 登录屏幕配套和行为
+### 15. 登录屏幕配套和行为
 
 在自定义 *登录屏幕（SDDM）* 之后，登录屏幕居然不像进入桌面之后那样会自动将NumLock打开。一开始无头绪地折腾了一会，后来瞎点居然给弄好了。
 
@@ -833,7 +798,7 @@ sudo update-grub
 
 <img alt="KDE_settings65.png" src="KDE_settings65.png" width="70%" title="This image has been scaled to 70% of its original size."> 
 
-### 17. 修改注销屏幕超时时间
+### 16. 修改注销屏幕超时时间
 
 厌倦了每次想关机/重启的时候都要弹出的30秒 *注销屏幕* 吗？在 *系统设置* 中点击左侧栏的 *“工作区 - 开机与关机 - 桌面会话”* ，在右侧的 *桌面会话* 设置页面中，取消 *“显示：”* 复选框即可。
 
@@ -854,20 +819,37 @@ property real timeout: 30
 参考：  
 [Change the 30 second timeout for shutdown, reboot, and log off? - Help - KDE Discuss](https://discuss.kde.org/t/change-the-30-second-timeout-for-shutdown-reboot-and-log-off/1502)
 
-### 18. 修改键盘键位映射
-
-在用奇奇怪怪的脚本之前，先记得全盘备份。具体方式在之前的[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)文章中的 *一、4* 中已经介绍过，在此不再赘述。
-
-参考：  
-[keyboard - How to make function keys work on a Chromebook running Ubuntu? - Ask Ubuntu](https://askubuntu.com/questions/1451097/how-to-make-function-keys-work-on-a-chromebook-running-ubuntu)
-
-// TODO 修好电脑后
-
-### 19. 更改桌面图标排列方式
+### 17. 更改桌面图标排列方式
 
 KDE Plasma桌面图标的默认排列方式是横向从左到右的，有点不习惯。在 *桌面* 的空白处上 *右键 - 图标 - 排列方式 - 从上到下* 可将图标的排列方式改为纵向从上到下排列。
 
 <img alt="KDE_settings71.png" src="KDE_settings71.png" width="70%" title="This image has been scaled to 70% of its original size."> 
+
+### 18. 同步Linux与Windows的硬件时间
+
+在成功安装好Windows 11 + Kubuntu双系统后，切换这两个系统时总会发生系统时间与实际当地时间有差别的情况。以下解决方案部分为 *ChatGPT* 生成：
+
+问题原因：  
+&ensp;&ensp;&ensp;&ensp;Linux默认硬件时间 (RTC) 是 UTC（协调世界时）时间，然后根据系统时区调整为本地时间。  
+&ensp;&ensp;&ensp;&ensp;Windows默认硬件时间 (RTC) 是本地时间，因此不对时间做时区调整。
+
+因此，当在Windows中同步时间后，再次启动Linux，其错误地认为是UTC时间，需要再次同步时间；再次启动Windows，其错误地认为是本地时间，需要再次同步时间。仅有部分国家/地区如格陵兰、冰岛、圣赫勒拿等，因为使用UTC+0时区且不使用日光节约时间，所以这个问题是可以忽略的。
+
+解决方法：
+- 配置Windows：适合常用Linux而不常用Windows
+  1. 按下 Win + R 打开运行框，输入 regedit 并按回车，打开 *“注册表编辑器”* 。
+  2. 定位到以下路径：`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation`
+  3. 右键空白处，选择 *“新建 -> DWORD (32 位) 值”* ，命名为`RealTimeIsUniversal`。
+  4. 双击新建的键，将值设置为 1。
+  5. 重启 Windows。
+- 配置Linux：适合常用Windows而不常用Linux
+  1. 打开 *终端* 并运行以下命令：`timedatectl set-local-rtc 1 --adjust-system-clock`
+  2. 验证设置：打开 *终端* 并运行以下命令：`timedatectl`
+  3. 输出中应该显示`RTC in local TZ: yes`。
+
+潜在问题：
+- Linux配置后：如果使用双时区或 UTC 的某些功能（如日志记录），可能会引起混淆。
+- Windows配置后：一些旧版 Windows 程序或设备可能不支持此设置。
 
 ## 四、个性化设置、个人应用偏好、小技巧
 
@@ -965,6 +947,12 @@ sudo update-grub
 要想使蓝牙的开关在每次启动时都保持上次关机前的状态，在 *系统设置* 中点击左侧栏的 *“硬件 - 蓝牙”* ，在右侧的 *“蓝牙”* 设置页面中，更改 *“登录时”* 右侧的单选框 *“恢复之前的状态”* 。
 
 ![Personal_perf10.png](Personal_perf10.png)  
+
+#### 9. 更改应用程序启动器中应用的类别
+
+在安装一些应用后，其将会把启动快捷方式放置在 *应用程序启动器* 中。有时可能想要改变其快捷方式的分类，以 *“爱思助手”* 为例：依次打开 *“应用程序启动器 - 系统 - 菜单编辑器”* ，打开 *“KDE 菜单编辑器”* 。在 *KDE 菜单编辑器* 左栏列表中，选择想要更改分类的快捷方式，使用 *“左键”* 按住它，然后拖动到偏好的分类中。在分类中拖动，还可以改变其在分类中的位置。最后，点击上方工具栏中的 *“保存”* 按钮。
+
+![Personal_perf30.png](Personal_perf30.png)  
 
 ### b. 个人Kubuntu下的应用偏好
 
@@ -1127,6 +1115,16 @@ sudo systemsettings5
 
 ![Personal_perf29.png](Personal_perf29.png)  
 
+#### 6. Ubuntu系死机无屏重启
+
+记录这一节的动机很简单：我刚才死机了，从睡眠中唤醒后桌面除了光标什么也没有，切换TTY更是一片漆黑。
+
+简短版：
+- 按下 *“Ctrl + Alt + SysRq/Prt Scr/Ptrsc”* 组合键，持续一秒，不要松开 *“Ctrl + Alt”* 组合键，松开“SysRq/Prt Scr/Ptrsc键”* 。
+- 在前面按住 *“Ctrl + Alt”* 组合键的同时，依次按下并松开 *“R、E、I、S、U、B”* 键（“busier”反过来）。
+
+来源：[Ubuntu卡机重启快捷键总结 - 风行天下-2080 - 博客园](https://www.cnblogs.com/yaok430/p/17593974.html)
+
 ### d. 个人卸载预装应用偏好
 
 这里没有特别提到卸载方式的，均可按 *三、11.* 中介绍的方式进行卸载。
@@ -1143,16 +1141,7 @@ sudo systemsettings5
 
 官网说是个端到端的开源IM程序，我个人觉得没啥用。
 
-## 五、无法解决的问题
-
-个人遇到的一些无法解决的问题的集合，你不一定会遇到相同问题，这里只是留着以后钻牛角尖用。
-
-- Fcitx5界面无法更改为中文。
-- 我的Chromebook内置左扬声器会播放两个声道的音频，而内置右扬声器则完全不发声。
-- 我的Chromebook在设置 *“硬件 - 电源管理 - 省电功能 - 合上笔记本盖时 - 关机”* 后，在合盖时会死机，强行重启后GRUB会进入到“上次未正常关机，关闭倒计时引导默认选项”的状态。怀疑是Kubuntu对Chromebook的AHCI支持还不够完好。
-- 我的Chromebook在使用Kubuntu时，如果某个USB端口没有在开机的时候插入usb设备，则该端口会直接关闭，直到下次重启。排除了GRUB的`usbcore.autosuspend`项，因为无论如何设置，GRUB也检测不到后插入的USB设备。Windows下没有这个问题，再次怀疑是Kubuntu对Chromebook的AHCI支持还不够完好。
-
-## 六、与Windows 11的性能对比测试
+## 五、与Windows 11的性能对比测试
 
 测试平台：  
 
