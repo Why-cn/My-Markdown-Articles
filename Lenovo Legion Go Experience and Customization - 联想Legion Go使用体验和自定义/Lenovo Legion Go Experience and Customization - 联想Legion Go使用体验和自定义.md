@@ -512,16 +512,20 @@ Miracast功能使得在旅行中位于支持Miracast投放的酒店时，可以�
 
 #### 13.4 生产力模式
 
- *Legion Space 侧边栏* 提供了 *“生产力模式”* ，开启该模式可以使外屏成为主显示器，避免如新程序弹窗只在主屏幕中弹出、缩放有误、屏幕设置中相对位置乱动的问题。具体开启方式见 *三、1.a. Legion Space 侧边栏* 。我开了，什么变化也没有，不知道是哪里的问题，不如在显示设置里设为 *“仅在 2 上显示”* 来的直接。
+ *Legion Space 侧边栏* 提供了 *“生产力模式”* ，开启该模式可以使外屏成为主显示器，避免如新程序弹窗只在主屏幕中弹出、缩放有误、屏幕设置中相对位置乱动的问题。具体开启方式见 *三、1.a. Legion Space 侧边栏* 。我开了，什么变化也没有，不知道是不是哪里没注意到，不如在显示设置里设为 *“仅在 2 上显示”* 来的直接。
 
 不过仅在外屏显示确实解决了游玩《星际争霸2》在Legion Go的屏幕上字看不清的问题，可预见地，生产力也应该能提高吧（笑）。
 
 ![Characterization57.jpeg](Characterization57.jpeg)  
  *（《星际争霸2》不支持多屏幕，上图为两张图片拼贴而成。）* 
 
+#### 13.5 双屏设置不同的缩放比例
+
+// TODO
+
 ### 14. 调整电源计划与续航测试
 
-Legion Go有着在 *零、* 里几个x86掌机中最小的电池容量（仅49.2Wh，仅多于ROG Ally），同时拥有着最大的屏幕（无论是大小还是分别率），这不得让人对其续航能力产生一些担忧。由于没有拿到专业的续航测试脚本，也买不起昂贵的 *PCMark 10 Professional Edition* ，所以只能拿现有的免费软件和买过的游戏凑活测试一下这样子。至于办公续航，放到 *五、* 大节中再讨论。
+Legion Go有着在 *零、* 里几个x86掌机中最小的电池容量（仅49.2Wh，仅多于ROG Ally），同时拥有着最大的屏幕（无论是大小还是分别率），这不得让人对其续航能力产生一些担忧。由于没有拿到专业的续航测试脚本，也买不起昂贵的 *PCMark 10 Professional Edition* ，所以只能拿现有的免费软件和买过的游戏凑活测试一下这样子。至于办公续航，放到 *七、* 大节中再讨论。
 
 #### 14.1 调整电源计划
 
@@ -564,6 +568,8 @@ Windows 11 23H2并未将所有原 *控制面板* 中的设置项目移动到新�
 从图中可以看出，电池在大部分时间下的输出功率在34W附近，平均为32.6W（除去日志开始和结束处没有启动游戏的时间）。以34W计，Legion Go在30W TDP下的续航时间为
 
 $$\frac{49.2Wh \cdot (100\% - 5\%)}{34W} = 1.375h = 85min$$
+
+// FIXME Github渲染
 
 约1小时25分钟。
 
@@ -858,7 +864,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 但到我上手的时候， *Legion Space* 和 *“LS侧边栏”* 已经处于一个可用的状态了，唯一让我感到难以忍受的点是按下 *Legion L键* 退出 *Legion Space* 时，它居然只是最小化而不是退出到托盘，强迫症看见它占用在任务栏难受的一批。其他倒是无可指摘。
 
-使用 *“Legion R”键* 呼出 *“LS侧边栏”* （ 若切换过按键布局，则为 *Menu键* ），在最上方状态栏中从左至右分别显示 *“WiFi连接状态、主机与手柄连接状态、TrueStrike左手柄电量、Legion Go电量、TrueStrike右手柄电量、当前时间”* 。
+使用 *“Legion R”键* 呼出 *“LS侧边栏”* （ 若切换过按键布局，则为 *“Menu键”* ），在最上方状态栏中从左至右分别显示 *“WiFi连接状态、主机与手柄连接状态、TrueStrike左手柄电量、Legion Go电量、TrueStrike右手柄电量、当前时间”* 。
 
 ![Experience&Setup_Win11_16.png](Experience&Setup_Win11_16.png)
 
@@ -967,7 +973,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 ### 2. Android游戏
 
-之前写过一篇文章[用树莓派躺床上玩PC游戏](../Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)，当时设想的是用手头已有的设备串流玩PC游戏和运行在PC上的手游。结果写完文章玩了没两天就扔下吃灰了。但我躺床上拿PC玩手游的热情还没消退，这Legion Go简直就是为此而生的。
+之前写过一篇文章《[用树莓派躺床上玩PC游戏](../Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏/Playing%20PC%20games%20in%20bed%20with%20a%20Raspberry%20Pi%20-%20用树莓派躺床上玩PC游戏.md)》，当时设想的是用手头已有的设备串流玩PC游戏和运行在PC上的手游。结果写完文章玩了没两天就扔下吃灰了。但我躺床上拿PC玩手游的热情还没消退，这Legion Go简直就是为此而生的。
 
 #### a. Google Play Games beta
 
@@ -1036,7 +1042,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 - x86_64处理器或ARM处理器均可，但必须支持虚拟化，并开启虚拟化
 - Windows 10/11 专业版/教育版/企业版：启用 *“Hyper-V”* 和 *“Windows 虚拟机监控程序平台”* ；Windows 10/11 家庭版：启用 *“虚拟机平台”* 和 *“Windows 虚拟机监控程序平台”* 
 
-对于最后两项，可以通过在 *“任务管理器 - 性能 - CPU - 虚拟化：”* 处查看虚拟化开启状态；在 *“设置 - 系统 - 可选功能 - 更多 Windows 功能”* 打开的 *“打开或关闭 Windows 功能”* 窗口中，勾选相应复选框并 *“确定”* 和 *“重启”* 。
+对于最后两项，可以通过在 *“任务管理器 - 性能 - CPU - 虚拟化：”* 处查看虚拟化开启状态；在 *“设置 - 系统 - 可选功能 - 相关设置 - 更多 Windows 功能”* 打开的 *“打开或关闭 Windows 功能”* 窗口中，勾选相应复选框并 *“确定”* 和 *“重启”* 。
 
 ![Experience&Setup_Win11Android40.png](Experience&Setup_Win11Android40.png) 
 
@@ -1904,7 +1910,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 点击左侧栏 *“热键”* 项，在右侧的页面中，点击 *“New Hotkey”* 按钮可以新建一个热键，点击下方新建热键的右侧 *“v”* 按钮展开设置，点击 *“Press to define hotkey input（点击来定义热键输入）”* 按钮，然后按下要绑定的热键。注意此时 *Handheld Companion* 录入的是原生输入，即如果你按下的是 *Legion Space* 默认映射的 *“Xbox键”* 组合键： *“Legion L + RS”* ， *Handheld Companion* 将录入 *“Legion L + RS”* 组合键而不是 *“Xbox键”* 。
 
-这里我以 *TrueStrike左手柄* 背部的 *“Y3”* 键绑定为Windows全屏截图快捷键 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键为例：更改 *“Command type（指令类别）”* 下来菜单为 *“Key strokes（映射按键）”* ，设定 *“Command name（指令名称）”* 为偏好的名称，最后点击 *“Output（输出）”* 右侧的 *“Press to define hotkey output（点击来定义热键输出）”* 按钮，然后按下想要映射的组合键： *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 。
+这里我以 *TrueStrike左手柄* 背部的 *“Legion Y3”* 键绑定为Windows全屏截图快捷键 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键为例：更改 *“Command type（指令类别）”* 下来菜单为 *“Key strokes（映射按键）”* ，设定 *“Command name（指令名称）”* 为偏好的名称，最后点击 *“Output（输出）”* 右侧的 *“Press to define hotkey output（点击来定义热键输出）”* 按钮，然后按下想要映射的组合键： *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 。
 
 ![Experience&Setup_Win11_36.png](Experience&Setup_Win11_36.png)  
 
@@ -1916,7 +1922,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 #### b. Legion Space + PowerToys
 
-兜兜转转还是想起了之前在Chromebook上装Windows 11之后用来在Windows 11上重映射按键的工具—— *Microsoft PowerToys* 。 *PowerToys* 是一系列用在Windows上的小工具集合，原本是开源的，后来被微软收编为旗下软件但代码仍为开源。
+兜兜转转还是想起了之前在Chromebook上装Windows 11之后用来在Windows 11上重映射按键的工具—— *Microsoft PowerToys* 。 *PowerToys* 是一系列在Windows上的小工具合集，原本是开源的，后来被微软收编为旗下软件但代码仍为开源。
 
  *PowerToys* 可从 *Microsoft Store* 安装：[Microsoft PowerToys - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp89dcgq3k6vld)。安装后转到 *PowerToys* 设置，在左侧栏向下滚动并选择 *“键盘管理器”* 项，在右侧的页面中点击 *“重新映射快捷键”* 项，在弹出的 *“重新映射快捷键”* 窗口中，先点击下方的 *“➕ 添加快捷方式重新映射”* ，在上方新增的卡片中，点击 *“选择 - 快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下想要绑定的、不与其他应用和系统快捷键冲突的组合键（如 *“Windows徽标 + Alt + 字母”* 组合键）作为 *“中间快捷键”* ，一会儿解释；然后，点击 *“选择 - 映射到： - 操作”* 右侧的下拉菜单，选择 *“发送键/快捷键”* ，然后点击下方 *“快捷键：”* 右侧的 *“✏️”* 按钮，在弹出的 *“选择快捷方式中的键”* 页面中，按下要映射的键，如 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键。
 
@@ -1924,7 +1930,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 上面提到的 *“中间快捷键”* 的作用是，既然 *Legion Space* 的按键映射功能中没有需要按下的键，但它起码已经有很多键能按了，其中还包括了 *“Windows徽标键”* ，那可以先让 *Legion Space* 将 *TrueStrike手柄* 中的功能键映射到一个作“中间人”的快捷键中，然后通过 *PowerToys* 接收到这个“中间人”，而使用 *PowerToys* 去映射更为丰富的按键，甚至触发复杂操作。
 
-现在打开 *Legion Space* 并将 *TrueStrike左手柄* 背部的 *“Y3”* 键绑定为 *“Windows徽标 + Alt + S”* 组合键，便可以触发 *PowerToys* 发送 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键，以触发Windows全屏截图。虽然拐来拐去的，起码我的设想实现了，而且 *Legion Space* 也避免了被禁用的命运。但使用 *TrueStrike手柄* 功能键发送 *“Xbox键”* 的设想还是没实现，因为虽然 *PowerToys* 可以检测到按下 *“Xbox键”* 为 *“VK 7键”* ，但无法将其发送至系统。
+现在打开 *Legion Space* 并将 *TrueStrike左手柄* 背部的 *“Legion Y3”* 键绑定为 *“Windows徽标 + Alt + S”* 组合键，便可以触发 *PowerToys* 发送 *“Windows徽标 + Print Screen/Prt Scr/Ptrsc”* 组合键，以触发Windows全屏截图。虽然拐来拐去的，起码我的设想实现了，而且 *Legion Space* 也避免了被禁用的命运。但使用 *TrueStrike手柄* 功能键发送 *“Xbox键”* 的设想还是没实现，因为虽然 *PowerToys* 可以检测到按下 *“Xbox键”* 为 *“VK 7键”* ，但无法将其发送至系统。
 
 ## 四、更换内置SSD、贴膜、自制脚垫
 
@@ -2016,9 +2022,9 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 如果想要保留Legion Go上预装的Windows 11，将其迁移到另一块SSD上，依旧推荐使用《[制作自己的Windows 7安装镜像](../Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像/Build%20your%20own%20Windows%207%20installation%20image%20-%20制作自己的Windows%207安装镜像.md)》文章中的 *一、4* 中推荐过的 *DiskGenius* 软件，可以参考官方的操作说明：[迁移Windows系统到ssd固态硬盘或其他硬盘，DiskGenius特色功能介绍](https://www.diskgenius.cn/exp/system-migration.php)。 **极不推荐热迁移！迁移系统请通过 *Windows PE* 环境！** 因此，为Legion Go系统迁移需要1个闲置U盘、1个SSD硬盘盒和1个USB HUD。（如果硬盘盒和U盘均可通过USB Type-C连接Legion Go则不需要USB HUD，但要考虑Windows PE工具包是否支持触摸屏和触摸键盘或触摸板或HID设备，若都不支持，则仍需要USB HUD和键鼠。）
 
-#### *.从另一台Windows PC的注册表迁移到本地的Windows PC中
+#### *1 把另一台Windows PC的注册表迁移到本地的Windows PC中（用本地Windows PC的注册表编辑器读取另一台Windows PC的注册表）
 
-在我风风火火地换完SSD之后，我才发现我忘了备份之前用于各种系统传感器监测的 *HWiNFO* 的设置了（精调，重调挺麻烦的）。 *HWiNFO* 的设置可从软件设置中备份，其将备份出整个 *HWiNFO* 位于 *Windows注册表* 中的键值，地址为`计算机\HKEY_CURRENT_USER\Software\HWiNFO64`。我先尝试将原装的 *西部数据SN740 512G M.2 2242 SSD* 放进硬盘盒里，让Legion Go进行引导，失败。那只能寄希望于直接提取原盘里的注册表文件了，搜索了下，找到这篇文章：[Accessing Another Windows Computer’s Registry from a Disk in Windows 8.1 | Outside the Asylum](https://jchornsey.wordpress.com/2015/03/11/accessing-another-windows-computers-registry-from-a-disk-in-windows-8-1/)，其中介绍的方法如下（由于原文中有很多截图，这里犯懒就不截了）：
+在我风风火火地换完SSD之后，我才发现我忘了备份之前用于各种系统传感器监测的 *HWiNFO* 的设置了（精调，重调挺麻烦的）。 *HWiNFO* 的设置可从软件设置中备份，其将备份出整个 *HWiNFO* 位于 *Windows注册表* 中的键值，地址为`计算机\HKEY_CURRENT_USER\Software\HWiNFO64`。我先尝试将原装的 *西部数据SN740 512G M.2 2242 SSD* 放进硬盘盒里，让Legion Go进行引导，失败。那只能寄希望于直接提取原盘里的注册表文件了，搜索了下，找到这篇文章：[Accessing Another Windows Computer’s Registry from a Disk in Windows 8.1 | Outside the Asylum](https://jchornsey.wordpress.com/2015/03/11/accessing-another-windows-computers-registry-from-a-disk-in-windows-8-1/)，其中介绍的方法如下（由于原文中有很多截图，这里犯懒就不截了，建议看原文获得最佳体验）：
 
 1. 首先将另一台Windows PC的系统盘连接到一台本地的Windows PC中。按下 *“Windows徽标 + R”* 组合键打开 *“运行”* 窗口，输入`regedit`并按下 *“Enter（回车）键”* 打开 *“注册表编辑器”* ，或者在 *开始* 中搜索`注册表编辑器`并打开。
 2. 在左栏树状列表中，定位到 *“计算机 - HKEY_LOCAL_MACHINE”* 。此时点击上方菜单栏中的 *“文件 - 加载配置单元”* 项。
@@ -2029,6 +2035,22 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 7. 回到第5步中导出的本地注册文件，在其上 *“右键 - 在记事本中编辑”* ，在打开的 *记事本* 应用中，按下 *“Ctrl + H”* 组合键或点击上方菜单栏中的 *“编辑 - 替换”* 项，打开 *“查找和替换”* 组件。在 *“查找”* 文本框中，输入刚才在第4步中起的注册表键值（在本例中为`HKEY_LOCAL_MACHINE\Windows-SSD\`），在 *“替换”* 文本框中，输入`HKEY_CURRENT_USER\`，然后点击 *“全部替换”* 按钮。最后，保存文件并退出。
 
 最后，双击导出的本地注册文件并将其插入本机注册表中，即完成了从另一台Windows PC的注册表迁移到本地的Windows PC中的操作。
+
+#### *2 备份Windows激活密钥
+
+现今，Windows的OEM激活密钥在Windows PC于OEM出厂时就写入了主板的 *NVRAM* 中的 *MSDM （Microsoft Digital Marker，微软数字标识）* 表中。通常情况下，Windows安装程序会在全新安装时读取主板 *NVRAM* 中的这部分数据，如果找到，便会自动确定Windows的许可证版本并激活，因此不需要备份 *MSDM* 中的激活密钥。如果想要备份其他密钥，可以使用这款工具：[ShowKeyPlus - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/9pkvzcprx9nv)；
+
+安装后打开，首页即会显示当前Windows系统的 *“Product Name（Windows 版本）”* 、 *“Product ID（产品ID）”* 、 *“Build Version（操作系统版本）”* 、 *“Installed Key（已安装密钥）”* 、 *“OEM Key（ *MSDM* 中的OEM密钥）”* 。
+
+![Dual_Boot40.png](Dual_Boot40.png)
+
+>  *“已安装密钥”* 的作用有两个：1. 确定当前的 *Windows 版本* ，如 *家庭普通版* 、 *专业版* 等；2. 引导激活程序使用该密钥激活系统。注意系统的激活成功与否由激活程序决定，而不由 *“已安装密钥”* 决定。 *“已安装密钥”* 若与 *MSDM* 中的OEM密钥不同，则说明用户在初次使用过后安装过其他的密钥。
+
+点击左栏中的 *“💾Save”* 按钮，可以将首页中的信息保存为文本文件，该文件可作为激活密钥备份。
+
+> 一些消息源指出注册表中的`BackupProductKeyDefault`或`DigitalProductId`键值为当前Windows系统的 *“已安装密钥”* ，该方法自202007便已失效。
+
+来源：[How to Find Your Windows 10 Product Key Using the Command Prompt](https://www.howtogeek.com/660517/how-to-find-your-windows-10-product-key-using-the-command-prompt/)
 
 ### 3. 关闭安全启动
 
@@ -2050,7 +2072,11 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 > 对于Windows 11，因其对用户组权限设置的调整，如果决定使用本地账户登录而不是微软账户，则请维持这一点，因为如果先使用本地账户登录然后切换到微软账户，会使当前账户丢失管理员账户身份，直到切回或更改登录的账户，反之亦然。
 
-实际上手安装是老生常谈问题，就不细讲了。这里说一下我在全新安装 *Windows NT 6.2* 及以上的Windows的时候，分配系统分区大小的一般计算公式：
+安装Windows 11是老生常谈问题，就不细讲了。
+
+#### * 个人分配系统分区大小的一般计算公式
+
+我在全新安装 *Windows NT 6.2* 及以上的Windows的时候，分配系统分区大小的一般计算公式：
 
 对于像下图这种，整个磁盘是空盘（未分配空间）的情况下， *Windows NT 6.2* 及以上的Windows安装程序（在GPT + UEFI模式下）会将第一个分配的分区视作启动分区，创建共三个分区：`EFI分区`、`MSR分区`和`Windows启动分区`。因此，此处的大小是这三个分区的总大小。
 
@@ -2058,7 +2084,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 要装机的PC的 C盘大小 ≈ (另一台PC C盘的已用大小 - 另一台PC C盘的页面交换空间 + 要装机的PC的内存大小) × 2
 
-这里另一台PC C盘的已用大小包含了Windows 11系统文件、我日常使用的装在C盘的软件、一些程序文档和另一台PC C盘的页面交换空间。因此，只要减去另一台PC C盘的页面交换空间，剩下的就差不多是我日常使用所需的C盘空间。另一台PC C盘的页面交换空间，即C盘根目录下的`hiberfil.sys`、`pagefile.sys`和`swapfile.sys`的总大小。该三个文件控制了Windows的休眠/快速启动转储页面空间、虚拟内存页面空间和交换页面空间。它们的总大小默认情况下由Windows自动控制，但会在4GB~内存总大小之间频繁改变，但不会超过内存总大小。比如我另一台PC *“SIXGE-K3pro-V2”* 的内存是64GB，那么这三个文件的大小就在4~64之间改变。同理，加入要装机的PC的内存大小也是因为要装机的PC的 C盘中也会包含这3个文件，这里就以顶格计算了。
+这里另一台PC C盘的已用大小包含了Windows 11系统文件、我日常使用的装在C盘的软件、一些程序文档和另一台PC C盘的页面交换空间。因此，只要减去另一台PC C盘的页面交换空间，剩下的就差不多是我日常使用所需的C盘空间。另一台PC C盘的页面交换空间，即C盘根目录下的`hiberfil.sys`、`pagefile.sys`和`swapfile.sys`的总大小。该三个文件控制了Windows的休眠/快速启动转储页面空间、虚拟内存页面空间和交换页面空间。它们的总大小默认情况下由Windows自动控制，但会在4GB \~ 内存总大小之间频繁改变，但不会超过内存总大小。比如我另一台PC *“SIXGE-K3pro-V2”* 的内存是64GB，那么这三个文件的大小就在4 \~ 64之间改变。同理，加入要装机的PC的内存大小也是因为要装机的PC的 C盘中也会包含这3个文件，这里就以顶格计算了。
 
 以我为例，Legion Go的 C盘大小 ≈ ( *“SIXGE-K3pro-V2”* C盘的已用大小：133GB -  *“SIXGE-K3pro-V2”* C盘的页面交换空间：64GB + Legion Go的内存大小：16GB) × 2 = (133-64+16)×2 ≈ 160GB，取160是觉得数比170好看。
 
@@ -2102,13 +2128,21 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 可以说如今x86掌机的兴盛，甚至让人们将PC游戏的眼光望向Linux平台， *Steam deck* 功不可没。 *SteamOS 3.0* 作为 *Valve* 公司专为 *Steam deck* 设计的掌机Linux操作系统，可以说是最适合x86掌机的Linux发行版了。可惜的是，虽然 *Valve* 已经确认将来会为更多热门x86掌机如 *ROG Ally X* 提供官方的 *SteamOS* 支持，现在的 *SteamOS 3.0* 仍然仅供 *Steam deck* 使用（Steam官网提供的 *SteamOS* 下载仍是SteamOS 2.0）。目前，要想在非 *Steam deck* 上感受类似 *SteamOS 3.0* 的体验，只能依靠第三方移植/复刻了。
 
-在这篇文章中，介绍了一些类SteamOS的Linux发行版：[Steam-Deck-Guide/Games and Software/Operating Systems.md at main · mikeroyal/Steam-Deck-Guide](https://github.com/mikeroyal/Steam-Deck-Guide/blob/main/Games%20and%20Software/Operating%20Systems.md)。我将依次尝试互联网上比较火的两个发行版： *Bazzite* 和 *Nobara Linux* 。
+在这篇文章中，介绍了一些类SteamOS的Linux发行版：[Steam-Deck-Guide/Games and Software/Operating Systems.md at main · mikeroyal/Steam-Deck-Guide](https://github.com/mikeroyal/Steam-Deck-Guide/blob/main/Games%20and%20Software/Operating%20Systems.md)。我将依次尝试互联网上比较火的两个发行版： *Bazzite* 和 *Nobara* 。
+
+> **不可变Linux发行版（Immutable Linux Distributions）**  
+> “不可变发行版确保操作系统的核心保持不变。对于不可变发行版来说，根文件系统保持为只读状态使得它可以在多个实例中保持相同。当然，如果你仍希望更改某些内容，则可以进行更改。但默认情况下该能力会被禁用。”  
+> 与人们在传统上对Linux的认知，即“只要获取到sudo权限或者使用root账户，用户可以掌控操作系统中的一切”相悖， *不可变Linux发行版* 设计的理念是限制用户对操作系统进行高级操作。系统核心和重要支持文件是被保护的，用“原子化”理念将它们视作镜像；传统Linux进行系统更新是通过 *包管理器* 更新系统中的所有软件，甚至包括 *Linux内核* ，而 *不可变Linux发行版* 的系统更新则是直接释放镜像，或释放其中更改的部分并覆盖。  
+> *SteamOS* 是 *不可变Linux发行版* ，一个明显的特点是： *SteamOS* 不预装包管理器，也无法修改系统空间。  
+> 以上双引号（“”）内的文字来自于：[12 Future-Proof Immutable Linux Distributions](https://itsfoss.com/immutable-linux-distros/)
 
 > 由于 *ChimeraOS* 明确不支持双重启动，很遗憾的，无法体验。
 
+> 这篇文章介绍了 *ChimeraOS* ， *Nobara* 和 *Bazzite* 的使用体验和对比：[更好的 Steam Deck？ROG Ally 安装 Linux 折腾笔记 - 少数派](https://sspai.com/post/86975)
+
 #### 6.1 Bazzite
 
-本来想总结一下 *Bazzite* ，但是它细化的功能太多了，想要对 *Bazzite* 有一个笼统的认识建议看官方README中的 *总览和功能* ：[bazzite/README.md at main · ublue-os/bazzite](https://github.com/ublue-os/bazzite/blob/main/README.md#about--features)。 *Bazzite* 是一个开源的、社区驱动的项目，基于 *Fedora Atomic Desktops* 。
+ *Bazzite* 是一个开源的、社区驱动的项目，基于 *Fedora Atomic Desktops* 。本来想总结一下 *Bazzite* ，但是它细化的功能太多了，想要对 *Bazzite* 有一个笼统的认识建议看官方README中的 *总览和功能* ：[bazzite/README.md at main · ublue-os/bazzite](https://github.com/ublue-os/bazzite/blob/main/README.md#about--features)。 *Bazzite* 是 *不可变Linux发行版* 。
 
 &ensp;&ensp;&ensp;&ensp;**a. 下载Bazzite**
 
@@ -2167,7 +2201,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
    如果要让Legion Go在此时联网，先在左栏中选择 *“ᯤ无线 (wlp1s0)”* 项，打开右栏 *“ᯤ无线 (wlp1s0)”* 右侧的 *“开关”* ，再点击下方的 *“选择网络”* 按钮，根据提示连接无线网络。填写下方的 *“主机名：”* 文本框中的文本为合适的主机名，如`Legion-Go-Bazzite`，其将作为局域网上定位Legion Go上的 *Bazzite* 系统的标识，并点击 *“应用”* 按钮。最后，点击左上角的 *“完成”* 按钮。
    ![Dual_Boot20.jpeg](Dual_Boot20.jpeg)  
 3. *“创建用户”* - 进入 *“创建用户”* 界面。  
-   在 *“全名”* 、 *“用户名”* 文本框和 *“密码”* 、 *“确认密码”* 密码文本框中输入对应信息。 *“用户名”* 可自定义或保留默认的`bazzite`。最后，点击左上角的 *“完成”* 按钮。
+   在 *“全名”* 、 *“用户名”* 文本框和 *“密码”* 、 *“确认密码”* 密码文本框中输入对应信息。 *“用户名”* 可使用`deck`或保留默认的`bazzite`。最后，点击左上角的 *“完成”* 按钮。
    ![Dual_Boot19.png](Dual_Boot19.png)  
    > 不建议取消勾选 *“需要密码才能使用该账户”* 复选框。
 
@@ -2175,7 +2209,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ![Dual_Boot28.png](Dual_Boot28.png)  
 
-等待 *“安装进度”* 走完进度条，点击右下角的 *“重启系统”* 按钮就可以重启系统，正式进入 *Bazzite* 系统了。
+等待 *“安装进度”* 走完进度条，点击右下角的 *“重启系统”* 按钮就可以进行重启，正式进入 *Bazzite* 系统了。
 
 ![Dual_Boot29.png](Dual_Boot29.png)  
 
@@ -2213,7 +2247,7 @@ UEFI引导界面，下方会显示 *Bazzite* logo。
 
 ![Dual_Boot37.jpeg](Dual_Boot37.jpeg)  
 
-要切换回Windows，需要在启动 *Bazzite* 之后，在 *SteamOS Deck模式* 下，从屏幕右侧 *“向内滑动”* ，或者按下 *Legion Y3键* ，唤出 *Bazzite 侧边栏* ，然后按下 *“Xbox Y键”* ，
+要切换回Windows，需要在启动 *Bazzite* 之后，在 *SteamOS Deck模式* 下，从屏幕右侧 *“向内滑动”* ，或者按下 *“Legion Y3键”* ，唤出 *掌机精灵 侧边栏* ，然后按下 *“Xbox Y键”* ，
 
 ![Dual_Boot38.jpeg](Dual_Boot38.jpeg)  
 
@@ -2223,19 +2257,319 @@ UEFI引导界面，下方会显示 *Bazzite* logo。
 
 要自定义启动选项，参见本章的 *7.* 大节。 *Bazzite* 系统体验，参见 *六、* 章。
 
-#### 6.2 Nobara Linux
+#### 6.2 Nobara
 
-[Nobara Linux | The Nobara Project](https://nobaraproject.org/)
+ *Nobara* 是一个开源的、社区驱动的项目，基于 *Fedora Linux* 。“该项目旨在解决大部分（Linux发行版作为游戏系统而缺少开箱即用的）问题，并提供更好的游戏、流媒体和内容创建体验。更重要的是，我们希望更加方便点击，避免基本用户必须打开终端。这并不是说终端和/或终端使用是一件坏事，我们非常欢迎高级用户继续使用终端，但对于新用户来说，通常希望点击易于使用。” *Nobara* 是可变Linux发行版。
+
+以上双引号（“”）内的文字来自于：[Nobara Linux | The Nobara Project](https://nobaraproject.org/)
+
+&ensp;&ensp;&ensp;&ensp;**a. 下载Nobara**
+
+进入 *Nobara* 官网：[Nobara Linux | The Nobara Project](https://nobaraproject.org/)，点击右上方的 *“Download Nobara（下载Nobara）”* 链接，跳转到镜像版本选择下载页面：
+
+![Dual_Boot41.png](Dual_Boot41.png)   
+
+其中被分为了两大类： *“Standard”* ：标准 *Nobara* 发行版（不含 *英伟达* 专利显卡驱动），和 *“Nvidia”* ：含 *英伟达* 专利显卡驱动并修改了内核模块加载器的变体 *Nobara* 发行版。这两大类均有以下桌面环境/模式的变体：
+
+- Official: *KDE桌面环境* + *Nobara* 官方主题包
+- KDE: *KDE桌面环境* 
+- GNOME: *GNOME桌面环境* 
+- Steam-HTPC: *KDE桌面环境* + *Nobara* 仿Steam Machine桌面模式
+
+另外， *“Standard”* 还包含：
+
+- Steam-Handheld:  *KDE桌面环境* + *Nobara* 仿Steam Deck桌面模式
+
+挑选偏好的镜像版本，点击右侧的 *“Download（下载）”* 按钮，在弹出的 *“END USER LICENSE AGREEMENT（最终用户许可协议）”* 弹窗中，点击 *“I agree（我同意）”* ，开始下载 *Nobara* 安装镜像。点击 *“下载”* 按钮下方的链接，下载安装镜像的SHA256校验值。
+
+![Dual_Boot42.png](Dual_Boot42.png)   
+
+&ensp;&ensp;&ensp;&ensp;**b. 使用Ventoy制作安装U盘并引导至安装程序**
+
+在我照常使用 *rufus* 烧录 *Nobara* 的安装U盘后，安装程序总是出问题。我注意到 *rufus* 无法在烧录 *Nobara* 的安装镜像时以 *NTFS* 以外的文件系统格式化U盘，而一般情况下应该以 *FAT32* 或 *exFAT* 文件系统格式化。搜索了一下，得到了 *rufus* 作者的解答：[Cannot format USB flash drive to FAT32 while writing Linux Mint Cinnamon Edge using Rufus - Super User](https://superuser.com/a/1816478)；原因是因为一些 *Linux发行版* 的安装程序使用了带有 *符号链接* 的文件系统，而 *FAT32* 文件系统是不支持 *符号链接* 的； *NTFS* 是 *rufus* 唯一能够格式化的、支持 *符号链接* 的文件系统，而 *UEFI* 不支持从 *NTFS* 引导.efi文件；即使使用了`DD`模式（扇区对扇区对拷）的方式致使 *Nobara* 的安装镜像可以被引导，也会因为磁盘分区表损坏（除非拷到一张和制作镜像格式相同的光盘上）被安装镜像拒绝继续执行。换句话说， *rufus* 这条路是完全走不通。
+
+ *Nobara* 官网的镜像下载页在一开始就推荐使用 *Ventoy* 制作安装U盘，我没听，现在已老实。 *Ventoy* 是一个制作可启动U盘的开源工具，优点是不需要重复烧录U盘，只需要烧录一次，之后直接将各种启动镜像文件放在对应的路径下就可以达到一盘多启的作用。其官方网站为：[Ventoy](https://www.ventoy.net/)，其中官方文档写得十分详尽，照着官方文档一步步做就可以，完全不需要找其他教程。
+
+**安装 *Nobara* 必须连接键盘，以在 *Ventoy* 菜单中选择引导镜像。或者，也可以设置让 *Ventoy* 默认引导 *Nobara* 的安装镜像。 *Nobara* 安装程序本身可以脱离实体键盘安装。**
+
+在Legion Go关机时插入烧录好的 *Ventoy* U盘，并按照前面 二、5.2 中介绍的方法进入 “Novo Button Menu” ，选择第三项 “Boot Menu” 。在进入的 “Please select boot device:（请选择引导设备：）” 界面中，选择 *Ventoy* U盘。
+
+&ensp;&ensp;&ensp;&ensp;**c. 安装Nobara**
+
+*（由于饶罗翔实在是太难绷了，此处选择在虚拟机上安装来方便截图。具体操作和实体机上相同，实在无法同步的点会继续饶罗翔）*
+
+成功引导后，会进入到 *GRUB 2* 引导菜单中。保持默认的 *“Test this media & Start Nobara <版本号>（测试这个引导媒体并启动Nobara）”* 选项不变，按下 *“Enter（回车）键”* 确认。
+
+<img alt="Dual_Boot43.png" src="Dual_Boot43.png" width="80%" title="This image has been scaled to 80% of its original size.">  
+
+等待加载进度。
+
+![Dual_Boot44.jpeg](Dual_Boot44.jpeg)  
+ *（ *Nobara* 贴心地考虑到大部分的x86掌机都是原生竖屏，所以默认把`tty`输出也旋转了90°，就是在Legion Go上方向不太对……）* 
+
+在短暂地显示 *Steam Deck* Logo之后，进入 *Nobara* Live-CD系统。
+
+>  *Live-CD系统* 是一个可随U盘携带的临时Linux系统，类似于 *Windows-PE* 。
+
+![Dual_Boot45.png](Dual_Boot45.png)  
+
+由于 *Live-CD系统* 是一个基础功能完备的系统，其已经内置了操作系统UI界面和无线网卡驱动，因此可以直接在 *任务栏托盘* 中点击 *“🛜Networks（网络）”* 图标，唤出 *“Networks（网络）”* 组件弹窗来接入Wi-Fi。 *Nobara安装程序* 会在 *Live-CD系统* 中自行启动。在 *“Welcome（欢迎）* 界面中，点击右下角的 *“Next（下一步）”* 按钮。
+
+![Dual_Boot46.png](Dual_Boot46.png)  
+
+在 *“Location（位置）”* 界面中，设定 *“Region（地区）”* 和 *“Zone（区域）”* （也可在 *地图* 上点击）。点击下方 *“The system language will be set to ...（系统语言将会设置为……）”* 右侧的 *“Change（更改）”* 按钮，在弹出的 *“System Locale Setting（系统本地化设置）”* 窗口中，设置偏好的语言。点击下方 *“The numbers and dates locale will be set to ...（数字和日期将会设置为……）”* 右侧的 *“Change（更改）”* 按钮，在弹出的 *“System Locale Setting（系统本地化设置）”* 窗口中，设置偏好的数字和日期格式。最后，点击右下角的 *“Next（下一步）”* 按钮。
+
+![Dual_Boot47.png](Dual_Boot47.png)  
+
+在 *“Keyboard（键盘）”* 界面中，选择 *键盘布局* 。然后，点击右下角的 *“Next（下一步）”* 按钮。
+
+![Dual_Boot48.png](Dual_Boot48.png)  
+
+在 *“Users（用户）”* 界面中，按下图提示按偏好输入重要信息。点击右上角的 *“⌨️Virtual keyboard（虚拟键盘）”* 按钮可唤出虚拟键盘。最后，点击右下角的 *“Next（下一步）”* 按钮。
+
+![Dual_Boot49.png](Dual_Boot49.png)  
+
+在 *“Partitions（分区）”* 界面中，首先确定上方 *“Select storage device:（选择存储设备：）”* 右侧的下拉菜单中是Legion Go的本地磁盘。然后，选择下方的 *“Replace a partition（替换一个分区）”* 单选框。之后，在下方 *“Select a partition to install on（选择一个分区来安装） - Current:（目前：）”* 右侧的磁盘分区条状图中，点击选中之前在Windows中预留的给类SteamOS系统的磁盘分区；在选中后，分区条形区块中将显示一个边框，同时下方的分区图例中对应的分区色块中也将显示一个边框，仔细确认该分区无误。最后，点击右下角的 *“Next（下一步）”* 按钮。
+
+![Dual_Boot52.png](Dual_Boot52.png)  
+
+在 *“Summary（总结）”* 界面中，再次检查其中的各项，若均正确，点击右下角的 *“Install（安装）”* 按钮，在弹出的 *“Continue with Installation?（进入安装过程？）”* 确认窗口中，点击 *“Install Now（立即安装）”* 按钮，进行 *Nobara* 的安装。
+
+![Dual_Boot50.png](Dual_Boot50.png)  
+
+在 *“Install（安装）”* 界面中，等待 *“安装进度”* 走完进度条。
+
+![Dual_Boot51.png](Dual_Boot51.png)  
+
+进入 *“Finish（完成）”* 界面中，勾选 *“Restart now（现在重启）”* 复选框，然后点击右下角的 *“Done（完成）”* 按钮就可以进行重启，正式进入 *Nobara* 系统了。
+
+![Dual_Boot53.png](Dual_Boot53.png)  
+
+&ensp;&ensp;&ensp;&ensp;**d. 首次启动Nobara**
+
+首次重启进入 *Nobara* 前会先黑屏约几分钟的时间，耐心等待，系统会自动下载 *Steam* 程序文件。
+
+![Dual_Boot54.jpeg](Dual_Boot54.jpeg)  
+
+之后，便会进入 *SteamOS* OOBE。此处的操作与 *Bazzite* 系统首次启动相同，详情可参考上一小节，此处不再赘述。
+
+### 7. （可选）创建从Steam Deck模式切换至Windows 11的选项
+
+在下一大节中安装的 *rEFInd* 只能在系统启动时选择哪个操作系统进行引导，而在已经引导的系统中切换到另一系统时，也就只能重启再次选择，多少有点麻烦。下面介绍一种从 *Steam Deck模式* 直接通过运行 *“非Steam游戏”* 来进行操作系统切换的方法。（本操作将在 *Nobara* 下进行， *Bazzite* 大同小异。）大体思路是，创建一个“切换至Windows 11”的 *“非Steam游戏”* ，在运行时，让 *Steam* 执行“切换下一次UEFI引导项为Windows 11”的命令，并重启。
+
+首先，在 *Steam Deck模式* 中，使用触摸操作或者手柄，依次选择 *“菜单 - 电源 - 切换至桌面”* ，先切换到 *Nobara 桌面模式* 。
+
+![Dual_Boot55.jpeg](Dual_Boot55.jpeg)  
+
+**7.1 为某个命令免除使用sudo运行的密码要求**
+
+由于切换UEFI引导项属于高权限操作，该命令需要 *超级管理员* 权限批准。`sudo`是实现该批准的一种方法，在命令或批处理脚本前加入此命令字段可以使之后的操作获得 *超级管理员* 批准。但对于每个线程，`sudo`要求提供 *当前用户* 的 *账户密码* ，这无疑多了一道繁琐的步骤；我不想每次切换操作系统时还要输入一遍密码。在Linux中，`/etc/sudoers`文件掌控着使用`sudo`执行命令的限制和范围，要修改该文件，依次打开 *“应用程序启动器 - 系统 - Konsole 终端”* ，或者按下 *“Ctrl + Alt + T”* 组合键进入 *Konsole（以下称“终端”）* 。
+
+<img alt="Dual_Boot57.png" src="Dual_Boot57.png" width="60%" title="This image has been scaled to 60% of its original size.">
+
+在 *“终端”* 中输入以下命令，并按 *“回车（Enter）键”* 执行。`sudo`要求提供 *当前用户* 的 *账户密码* 。**该密码在 *“终端”* 中输入时不会显示任何字符，包括“\*（星号）”。** 在盲输完成后，按 *“回车（Enter）键”* 确定。
+
+```Shell
+sudo visudo
+```
+
+![Dual_Boot58.png](Dual_Boot58.png)  
+
+`visudo`会先把`sudoers`文件复制一份副本，重命名为`sudoers.tmp`，然后再交由控制台文本编辑器编辑，在文本编辑器保存`sudoers.tmp`后，将其替换回`sudoers`文件。在 *Nobara* 中，`visudo`由 *Nano* 进行编辑。使用 *“方向键”* 将光标滚动到文本末，另起一行，输入以下文本：
+
+```text
+<你的用户名> ALL=(ALL) NOPASSWD: <要免除sudo运行的密码要求的可执行文件或脚本的完整路径>
+```
+
+其中，<你的用户名>是你当前的账户名，在安装时由 *“Users（用户）”* 界面中创建。`efibootmgr`是修改UEFI启动项的Linux软件包，一般情况下的完整路径为`/usr/sbin/efibootmgr`。假设你的账户名为`deck`，那么此处的文本就是`deck ALL=(ALL) NOPASSWD: /usr/sbin/efibootmgr`。然后，按下 *“Ctrl + O”* 组合键进行保存，在提示 *“要写入的文件名： /etc/sudoers.tmp”* 时，按 *“回车（Enter）键”* 确定，提示 *“[已写入 \* 行]”* 即为保存成功，最后，按下 *“Ctrl + X”* 组合键退出 *Nano* 。
+
+![Dual_Boot59.png](Dual_Boot59.png)  
+
+退出 *“终端”* 并重新打开一个新的 *“终端”* ，直接输入以下命令，并按 *“回车（Enter）键”* 执行：
+
+```Shell
+efibootmgr
+```
+
+在输出的结果中，查找含有`Windows Boot Manager`的行；其行首的`Boot????*`中的数字即是 *Windows Boot Manager* 的 *启动项序号* ；记住该序号。
+
+![Dual_Boot56.png](Dual_Boot56.png)  
+
+**7.2 （可选）更改sudoers编辑工具为nano**
+
+`visudo`命令是唯一能够合法地修改`sudoers`文件的命令，其在被执行后将使用默认的控制台文本编辑器编辑`sudoers.tmp`副本。如果你的发行版使用了 *Vim* 而你想从中解放自己的话，可以根据以下文档将默认的控制台文本编辑器改为 *Nano* ：[Sudoers - Community Help Wiki](https://help.ubuntu.com/community/Sudoers)。
+
+**7.3 向Steam 库添加非Steam游戏**
+
+参照本文 *三、5.2* ，在 *SteamOS 桌面模式* 下的 *Steam 库* 中随便添加一个应用程序。然后，编辑该非Steam游戏的属性，
+
+![Dual_Boot61.png](Dual_Boot61.png)  
+
+在 *“快捷方式”* 窗口中，修改程序名称，然后清空 *“目标”* 、 *“起始位置”* 文本框，在 *“启动选项”* 文本框中填写以下内容：
+
+```text
+sudo efibootmgr --bootnext <Windows Boot Manager的启动项序号> && reboot
+```
+
+其中，“Windows Boot Manager的启动项序号”就是前面记下的序号。
+
+Linux上的 *Steam* 在引用系统的“打开文件”窗口时，有时不像在Windows中那样会筛选所有可用文件扩展名，如在 *“KDE系统门户”* 中，像下图；这时，只要点击 *“过滤：”* 右侧的下拉菜单，选择 *“All Files (\*)（全部文件（\*））”* ，就可以看到文件夹下的全部文件了。
+
+![Dual_Boot60.png](Dual_Boot60.png)  
+
+调整好后，在 *Steam Deck模式* 下就可以一键切换到Windows 11了。
+
+![Dual_Boot62.jpeg](Dual_Boot62.jpeg)  
+
+在Windows 11下重启，便可恢复到类SteamOS的Linux发行版中了。
+
+### 8. 自定义双系统启动菜单：rEFInd
+
+虽然无论是 *Windows 10/11* 还是 *Bazzite* 都支持在启动后切换到双系统的另一个系统中，但这还是需要完整启动其中一个系统再切换，十分不便，最好是在启动时用户能选择其中一个系统启动就好了。
+
+ *rEFInd* 是一个第三方的、开源的 *EFI引导管理器* 。现代计算机的启动过程是从主板上电开始，先初始化关键硬件，再加载UEFI驱动程序，再引导启动 *EFI引导管理器* （Boot Manager），由该引导管理器引导引导加载程序来加载操作系统。常见的 *EFI引导管理器* 有Windows系统自带的 *Windows Boot Manager* ，就是 *Windows 10/11* 的那个蓝色的界面（不是蓝屏！）、许多Linux系统自带的 *GRUB 2* 、黑苹果常见的EFI引导管理器 *Clover* 和 *OpenCore* 等。
+
+ *rEFInd* 的优点是其支持触摸屏，而且支持 *Windows EFI引导加载程序* 、 *Linux EFI引导加载程序* 和黑苹果等。 *GRUB 2* 不支持触摸屏，而 *Windows Boot Manager* 虽然支持触摸屏，但对 *Linux EFI引导加载程序* 支持不佳，因此*rEFInd* 一向被 *微软Surface* 双系统用户所青睐。 *rEFInd* 还支持自定义主题。
+
+ *rEFInd* 支持 *安全启动* ，但需要手动录入密钥。由于已经在前面事先关闭了 *安全启动* ，因此后面的操作将不再涉及 *安全启动* 下的处理。
+
+**8.1 Nobara安装rEFInd**
+
+首次进入 *Nobara 桌面模式* ， *“Nobara Welcome App（Nobara欢迎应用）”* 将会启动并弹出 *“Question”* 窗口，询问用户是否进行一次系统更新。点击 *“Yes（是）”* 按钮。在之后弹出的 *“需要进行身份验证”* 窗口中，输入 *账户密码* ，然后点击 *“确认”* 按钮，将会打开 *Nobara* 的 *“Update System（更新系统）”* 应用。
+
+![Dual_Boot63.png](Dual_Boot63.png)  
+
+如果 *“更新系统”* 应用出现了如下图的提示，点击 *“Yes（是）”* 按钮，安装额外的音视频解码器。
+
+![Dual_Boot64.png](Dual_Boot64.png)  
+
+当 *“更新系统”* 应用检查完可用的系统更新后，应用中央的 *“STATUS（状态）”* 窗口将显示 *“Updates Available.（更新可用。）”* 。此时，点击下方的 *“Install Updates（安装更新）”* 按钮， *“更新系统”* 应用将会开始对系统进行更新。
+
+![Dual_Boot65.png](Dual_Boot65.png)  
+
+如果 *“更新系统”* 应用出现了如下图的提示，点击 *“Yes（是）”* 按钮，重启并应用系统更新。
+
+![Dual_Boot66.png](Dual_Boot66.png)  
+
+打开 *“终端”* ，输入如下命令，并按 *“回车（Enter）键”* 执行，将 *rEFInd* 程序安装进 *Nobara* ：
+
+```Shell
+sudo dnf -y install rEFInd
+```
+
+> 如果在启用了 *安全启动* 的机器上安装，则需要在安装后执行附加步骤，具体可见rEFInd文档，在此略过。
+
+![Dual_Boot67.png](Dual_Boot67.png)  
+
+输入如下命令，并按 *“回车（Enter）键”* 执行，将 *rEFInd* 安装进 *EFI分区* ：
+
+```Shell
+sudo refind-install
+```
+
+![Dual_Boot68.png](Dual_Boot68.png)  
+
+输入如下命令，并按 *“回车（Enter）键”* 执行，将 *rEFInd* 设置为默认启动项：
+
+```Shell
+sudo refind-mkdefault
+```
+
+![Dual_Boot69.png](Dual_Boot69.png)  
+
+> 类 *Fedora* 发行版和 *Windows NT 10* 偶尔会在启动后把默认启动项更改为自己的 *EFI引导管理器* ，从而使 *rEFInd* 失效。此时只需要重复前面的“将 *rEFInd* 安装进 *EFI分区* 、将 *rEFInd* 设置为默认启动项”两步即可恢复 *rEFInd* 。
+
+**8.2 自定义rEFInd**
+
+刚装好的 *rEFInd* ，字小、方向不对、不支持触摸：
+
+![Dual_Boot70.jpeg](Dual_Boot70.jpeg)  
+
+回到类SteamOS的Linux发行版，本小节仍以 *Nobara 桌面模式* 为例。 *“Dolphin 文件管理器”* 是 *KDE桌面环境* 的默认 *“文件资源管理器”* ，依次打开 *“应用程序启动器 - 系统 - Dolphin 文件管理器”* ，或者按下 *“Windows徽标/超级（Super）/元（Meta） + E”* 组合键，进入 *Dolphin 文件管理器* 。点击左侧栏中 *“存储设备”* 中的 *“🎴boot”* 挂载分区，在右侧的文件夹视图中，双击 *“efi”* 🔒文件夹；在进入`/boot/efi/`路径前， *Dolphin 文件管理器* 会提示 *“进入此文件夹需要身份验证”* 。点击 *“👥以管理员身份操作”* 按钮，在弹出的 *“以管理员身份操作的风险 - Dolphin”* 窗口中，点击 *“我明白并同意承担上述风险”* 按钮。
+
+![Dual_Boot71.png](Dual_Boot71.png)  
+
+在之后弹出的 *“需要进行身份验证”* 窗口中，输入 *账户密码* ，然后点击 *“确认”* 按钮，就可以访问`/boot/efi/`路径下的文件了。之后，定位到`/boot/efi/EFI/refind/`，然后双击打开 *“refind.conf”* 配置文件。
+
+![Dual_Boot72.png](Dual_Boot72.png)  
+
+这中间还会弹出多次 *“需要进行身份验证”* 窗口。在弹出的 *“选择应用程序”* 窗口中，勾选 *“总是使用所选应用打开 Plain text document 文件”* 复选框，然后选择下方应用程序图标中的 *“Kate 编辑器”* 。 *Kate 编辑器* 是 *KDE 桌面环境* 的默认文本编辑器。之后，文件便会在 *Kate 编辑器* 中打开。
+
+![Dual_Boot73.png](Dual_Boot73.png)  
+
+在配置文件结尾加入以下文本：
+
+```text
+enable_touch
+big_icon_size <数字>
+small_icon_size <数字>
+```
+
+其中，`enable_touch`的作用是开启触摸屏支持；`big_icon_size <数字>`的作用是设置大图标的边长为指定数字的像素数；`small_icon_size <数字>`的作用是设置小图标的边长为指定数字的像素数。
+
+（可选）在配置文件结尾加入以下文本：
+```text
+default_selection fedora
+timeout <数字>
+```
+
+其中，`default_selection fedora`的作用是将默认的启动项设为 *Fedora* （ *Nobara* 基于 *Fedora* ）；`timeout <数字>`的作用是当用户在指定数字的秒数后没有输入，则自动启动默认启动项。这样做的好处是在测试时如果调错了某个参数导致 *rEFInd* 显示不正常，还能回到 *Nobara* 中更改配置文件；如果默认回到Windows了，我懒得写。
+
+设置完成后，点击工具栏中的 *“💾保存”* 按钮或是按下 *“Ctrl + S”* 组合键保存配置文件。保存时仍需要在 *“需要进行身份验证”* 窗口中输入 *账户密码* 。之后再重启Legion Go，可以查看自定义 *rEFInd* 的效果。
+
+&ensp;&ensp;&ensp;&ensp;**自定义rEFInd显示的字体字号**
+
+ *rEFInd* 显示的字体是带透明遮罩的.png图像，它们只接受 *ASCII字符* ，且必须是 *等宽字体* ，且字号也是固定的。好在 *rEFInd* 的作者提供了制作自定义字体图像的脚本，但 *Fedora* 软件仓库中的 *rEFInd* 没有提供该脚本，需要用户自行去托管 *rEFInd* 源码的网站获取。
+
+打开 *“终端”* ，输入如下命令，并按 *“回车（Enter）键”* 执行：
+
+```Shell
+sudo wget -O /boot/efi/EFI/refind/fonts/mkfont.sh "https://sourceforge.net/p/refind/code/ci/master/tree/fonts/mkfont.sh?format=raw"
+```
+
+下载或通过包管理器安装偏好的字体。具体操作方式，请参考另一篇文章《[Windows 11 + Kubuntu双系统安全启动和使用体验](../Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)》中的 *三、3.* 。本小节以 *“Fira Code”* 为例。
+
+打开 *“终端”* ，输入如下命令，并按 *“回车（Enter）键”* 执行，生成自定义字体图像：
+
+```Shell
+sudo bash -c "cd /boot/efi/EFI/refind/fonts/ && ./mkfont.sh <字体名> <字号> <偏移量> <输出文件名>"
+```
+
+其中，`<字体名>`是已安装的字体的字体名；`<字号>`是要显示的字体的字号；`<偏移量>`是“许多字体需要向上调整（负值），有时需要向下调整（正值）才能适合 PNG 图像区域。您必须反复试验才能使此功能正常工作。”`<输出文件名>`是输出的自定义字体图像文件名（需要带.png扩展名，不可带空格）。
+
+要想知道安装的某个字体的字体名，在 *“终端”* 中输入如下命令，并按 *“回车（Enter）键”* 执行：
+
+```Shell
+fc-list :family | grep "<部分字体名称>"
+```
+
+结果中的路径后的名称即是已安装的字体的字体名，将其中的空格（` `）替换为连字符（`-`）；在字体名后方加入`-style`可以更改字体的样式。本小节以 *“FiraCode-Medium.ttf”* 为例，则字体名就为`Fira-Code-Medium`，前面“生成自定义字体图像”的命令就为`sudo bash -c "cd /boot/efi/EFI/refind/fonts/ && ./mkfont.sh Fira-Code-Medium 24 0 Fira-Code-Medium-24.png"`。
+
+![Dual_Boot74.png](Dual_Boot74.png)  
+
+可见生成的自定义字体图像下方被截断，此时需要调整“生成自定义字体图像”的命令中的`<偏移量>`。具体最合适的`<偏移量>`应该是多少，只能一点一点试出来。
+
+![Dual_Boot75.png](Dual_Boot75.png)  
+
+要想使用这个自定义字体图像，首先需要在 *“终端”* 中输入如下命令，并按 *“回车（Enter）键”* 执行：
+
+```Shell
+sudo cp /boot/efi/EFI/refind/fonts/<输出文件名> /boot/efi/EFI/refind/<输出文件名>
+```
+
+其次，需要在前面的 *“refind.conf”* 配置文件结尾加入以下文本：
+
+```text
+font <输出文件名>
+```
 
 // TODO
 
-### 7. 自定义双系统启动菜单：rEFInd
+以上双引号（“”）内的文字来自于：[The rEFInd Boot Manager: Theming rEFInd](https://www.rodsbooks.com/refind/themes.html#fonts)
 
-// TODO
+## 六、类SteamOS系统的体验
 
-## 六、在类SteamOS系统上玩游戏
-
-// TODO
+由于篇幅限制，另开一篇讲：《// TODO》。
 
 ## 七、携带办公体验
 
