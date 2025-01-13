@@ -567,7 +567,7 @@ Windows 11 23H2并未将所有原 *控制面板* 中的设置项目移动到新�
 
 从图中可以看出，电池在大部分时间下的输出功率在34W附近，平均为32.6W（除去日志开始和结束处没有启动游戏的时间）。以34W计，Legion Go在30W TDP下的续航时间为
 
-$$\frac{49.2Wh \cdot (100\% - 5\%)}{34W} = 1.375h = 85min$$
+$$\frac{49.2Wh \cdot (100 \% - 5 \%)}{34W} = 1.375h = 85min$$
 
 // FIXME Github渲染
 
@@ -2497,15 +2497,20 @@ sudo refind-mkdefault
 
 ![Dual_Boot73.png](Dual_Boot73.png)  
 
-在配置文件结尾加入以下文本：
+对于配置文件的编辑，可以参考 *rEFInd* 官方文档中的 *“Configuring the Boot Manager - Table 1: Global options in refind.conf（设置启动管理器 - 表1：refind.conf中的全局设置）”* ：
+
+https://www.rodsbooks.com/refind/configfile.html#:~:text=the%20Table%201.-,Table%201,-%3A%20Global%20options%20in
+
+比如，在配置文件结尾加入以下文本：
 
 ```text
 enable_touch
 big_icon_size <数字>
 small_icon_size <数字>
+resolution <横向像素数> <纵向像素数>
 ```
 
-其中，`enable_touch`的作用是开启触摸屏支持；`big_icon_size <数字>`的作用是设置大图标的边长为指定数字的像素数；`small_icon_size <数字>`的作用是设置小图标的边长为指定数字的像素数。
+其中，`enable_touch`的作用是开启触摸屏支持；`big_icon_size <数字>`的作用是设置大图标的边长为指定数字的像素数；`small_icon_size <数字>`的作用是设置小图标的边长为指定数字的像素数；`resolution`的作用是为 *rEFInd* 指定主显示器的分辨率，如果设置为`resolution 2560 1600`还能神奇地使 *rEFInd* 横向显示（但在引导Windows时会使引导加载程序的显示出现问题，不影响进入系统）。
 
 （可选）在配置文件结尾加入以下文本：
 ```text
@@ -2519,53 +2524,128 @@ timeout <数字>
 
 &ensp;&ensp;&ensp;&ensp;**自定义rEFInd显示的字体字号**
 
- *rEFInd* 显示的字体是带透明遮罩的.png图像，它们只接受 *ASCII字符* ，且必须是 *等宽字体* ，且字号也是固定的。好在 *rEFInd* 的作者提供了制作自定义字体图像的脚本，但 *Fedora* 软件仓库中的 *rEFInd* 没有提供该脚本，需要用户自行去托管 *rEFInd* 源码的网站获取。
+~~*rEFInd* 显示的字体是带透明遮罩的.png图像，它们只接受 *ASCII字符* ，且必须是 *等宽字体* ，且字号也是固定的。好在 *rEFInd* 的作者提供了制作自定义字体图像的脚本，但 *Fedora* 软件仓库中的 *rEFInd* 没有提供该脚本，需要用户自行去托管 *rEFInd* 源码的网站获取。~~
 
-打开 *“终端”* ，输入如下命令，并按 *“回车（Enter）键”* 执行：
+~~打开 *“终端”* ，输入如下命令，并按 *“回车（Enter）键”* 执行：~~
 
 ```Shell
 sudo wget -O /boot/efi/EFI/refind/fonts/mkfont.sh "https://sourceforge.net/p/refind/code/ci/master/tree/fonts/mkfont.sh?format=raw"
 ```
 
-下载或通过包管理器安装偏好的字体。具体操作方式，请参考另一篇文章《[Windows 11 + Kubuntu双系统安全启动和使用体验](../Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)》中的 *三、3.* 。本小节以 *“Fira Code”* 为例。
+~~下载或通过包管理器安装偏好的字体。具体操作方式，请参考另一篇文章《[Windows 11 + Kubuntu双系统安全启动和使用体验](../Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)》中的 *三、3.* 。本小节以 *“Fira Code”* 为例。~~
 
-打开 *“终端”* ，输入如下命令，并按 *“回车（Enter）键”* 执行，生成自定义字体图像：
+~~打开 *“终端”* ，输入如下命令，并按 *“回车（Enter）键”* 执行，生成自定义字体图像：~~
 
 ```Shell
 sudo bash -c "cd /boot/efi/EFI/refind/fonts/ && ./mkfont.sh <字体名> <字号> <偏移量> <输出文件名>"
 ```
 
-其中，`<字体名>`是已安装的字体的字体名；`<字号>`是要显示的字体的字号；`<偏移量>`是“许多字体需要向上调整（负值），有时需要向下调整（正值）才能适合 PNG 图像区域。您必须反复试验才能使此功能正常工作。”`<输出文件名>`是输出的自定义字体图像文件名（需要带.png扩展名，不可带空格）。
+~~其中，`<字体名>`是已安装的字体的字体名；`<字号>`是要显示的字体的字号；`<偏移量>`是“许多字体需要向上调整（负值），有时需要向下调整（正值）才能适合 PNG 图像区域。您必须反复试验才能使此功能正常工作。”`<输出文件名>`是输出的自定义字体图像文件名（需要带.png扩展名，不可带空格）。~~
 
-要想知道安装的某个字体的字体名，在 *“终端”* 中输入如下命令，并按 *“回车（Enter）键”* 执行：
+~~要想知道安装的某个字体的字体名，在 *“终端”* 中输入如下命令，并按 *“回车（Enter）键”* 执行：~~
 
 ```Shell
 fc-list :family | grep "<部分字体名称>"
 ```
 
-结果中的路径后的名称即是已安装的字体的字体名，将其中的空格（` `）替换为连字符（`-`）；在字体名后方加入`-style`可以更改字体的样式。本小节以 *“FiraCode-Medium.ttf”* 为例，则字体名就为`Fira-Code-Medium`，前面“生成自定义字体图像”的命令就为`sudo bash -c "cd /boot/efi/EFI/refind/fonts/ && ./mkfont.sh Fira-Code-Medium 24 0 Fira-Code-Medium-24.png"`。
+~~结果中的路径后的名称即是已安装的字体的字体名，将其中的空格（` `）替换为连字符（`-`）；在字体名后方加入`-style`可以更改字体的样式。本小节以 *“FiraCode-Medium.ttf”* 为例，则字体名就为`Fira-Code-Medium`，前面“生成自定义字体图像”的命令就为`sudo bash -c "cd /boot/efi/EFI/refind/fonts/ && ./mkfont.sh Fira-Code-Medium 24 0 Fira-Code-Medium-24.png"`。~~
 
 ![Dual_Boot74.png](Dual_Boot74.png)  
 
-可见生成的自定义字体图像下方被截断，此时需要调整“生成自定义字体图像”的命令中的`<偏移量>`。具体最合适的`<偏移量>`应该是多少，只能一点一点试出来。
+~~可见生成的自定义字体图像下方被截断，此时需要调整“生成自定义字体图像”的命令中的`<偏移量>`。具体最合适的`<偏移量>`应该是多少，只能一点一点试出来。~~
 
 ![Dual_Boot75.png](Dual_Boot75.png)  
 
-要想使用这个自定义字体图像，首先需要在 *“终端”* 中输入如下命令，并按 *“回车（Enter）键”* 执行：
+~~要想使用这个自定义字体图像，首先需要在 *“终端”* 中输入如下命令，并按 *“回车（Enter）键”* 执行：~~
 
 ```Shell
 sudo cp /boot/efi/EFI/refind/fonts/<输出文件名> /boot/efi/EFI/refind/<输出文件名>
 ```
-
-其次，需要在前面的 *“refind.conf”* 配置文件结尾加入以下文本：
+~~其次，需要在前面的 *“refind.conf”* 配置文件结尾加入以下文本：~~
 
 ```text
 font <输出文件名>
 ```
 
-// TODO
+---
 
-以上双引号（“”）内的文字来自于：[The rEFInd Boot Manager: Theming rEFInd](https://www.rodsbooks.com/refind/themes.html#fonts)
+咱们凡人还是别去凑这个热闹了。
+
+&ensp;&ensp;&ensp;&ensp;**自定义rEFInd要显示的图标和提示**
+
+在前面刚装好 *rEFInd* 的图示中，能够看到只装了一个 *Nobara* 就多出来四个启动图标，可Legion Go上就两个操作系统。好在 *rEFInd* 提供了隐藏启动条目和工具标签的功能。
+
+在 *rEFInd* 界面中，使用 *“方向键”* 选中想要隐藏的启动条目，然后按下 *“-（减号）键”* ， *rEFInd* 会提示 *“Hide EFI OS Tag（隐藏EFI启动条目）”* ，选择 *“Yes（确定）”* 并按下 *“Enter（回车）键”* ，确认隐藏该启动条目。
+
+![Dual_Boot76.jpeg](Dual_Boot76.jpeg)  
+
+如果想要恢复隐藏的启动条目，选择 *rEFInd* 界面中小图标行中的 *“♻️Manage Hidden Tags（管理隐藏条目）”* ，进入 *“Manage Hidden Tags Menu（管理隐藏条目菜单）”* 中，使用 *“方向键”* 选中想要取消隐藏的条目，然后按下 *“Enter（回车）键”* 。
+
+![Dual_Boot77.jpeg](Dual_Boot77.jpeg)  
+
+如果想要控制 *rEFInd* 界面中小图标要显示哪些图标，请参考 *rEFInd* 官方文档中的 *“Configuring the Boot Manager - Table 1: Global options in refind.conf - showtools（设置启动管理器 - 表1：refind.conf中的全局设置 - showtools）”* ：
+
+https://www.rodsbooks.com/refind/configfile.html#:~:text=may%20be%20ugly.)-,showtools,-shell%2C%20memtest
+
+假设只想留下 *“关机”* 和 *“进入UEFI设置页面”* ，则可将以下行加入之前设置过的 *“refind.conf”* 配置文件：
+
+```text
+showtools shutdown, firmware
+```
+
+> 202501：目前该设置项存在问题。相关讨论：[rEFInd / Discussion / General Discussion: Duplicate tools](https://sourceforge.net/p/refind/discussion/general/thread/ed3185fb40/)，目前也只能等待作者更新。
+
+如果想要控制 *rEFInd* 界面中不显示哪些文字提示，请参考 *rEFInd* 官方文档中的 *“Configuring the Boot Manager - Table 1: Global options in refind.conf - hideui（设置启动管理器 - 表1：refind.conf中的全局设置 - hideui）”* ：
+
+https://www.rodsbooks.com/refind/configfile.html#:~:text=press%20a%20key.-,hideui,-banner%2C%20label
+
+假设想要删除 *“引导设备类型图标”* 和 *“基础按键操作介绍”* ，则可将以下行加入之前设置过的 *“refind.conf”* 配置文件：
+
+```text
+hideui badges, hints
+```
+
+是不是比刚安装后好用点了。
+
+![Dual_Boot78.jpeg](Dual_Boot78.jpeg)  
+
+&ensp;&ensp;&ensp;&ensp;**安装rEFInd主题**
+
+ *rEFInd* 支持使用主题修改界面显示样式。这个Github仓库收集了一些 *rEFInd* 主题：[martinmilani/rEFInd-theme-collection: A small collection of refind themes from github's that allow you to effortlessly chose your favorite and style your linux boot manager.](https://github.com/martinmilani/rEFInd-theme-collection)。下面是一些我认为不错的、且未长时间断更的 *rEFInd* 主题仓库：
+
+- 一个简单的暗色扁平化主题：[AdityaGarg8/rEFInd-minimal-modded: Minimal rEFInd theme.](https://github.com/AdityaGarg8/rEFInd-minimal-modded)
+- 类 *微软 Fluent 2* 设计语言的主题：[voduong404/rEFInd-All-Themes: Nơi sưu tầm các chủ đề cho rEFInd Boot Manager](https://github.com/voduong404/rEFInd-All-Themes)
+- *rEFInd* 早期经典主题refind-theme-regular，停更后被接管的新仓库：[bobafetthotmail/refind-theme-regular](https://github.com/bobafetthotmail/refind-theme-regular)
+- 这个主题仓库中的图标设计的很棒，但界面有点花里胡哨了：[rEFInd-theme-Yours/Settings/icon at main · M-L-P/rEFInd-theme-Yours](https://github.com/M-L-P/rEFInd-theme-Yours/tree/main/Settings/icon)
+
+以 *“rEFInd-Fluent-themes”* 主题为例，在下载了主题包之后，解压其中的文件。由于各主题开发者的标准不同，主题安装方式也不尽相同，但其基本遵从以下格式：
+
+- 全部主题文件都应该放在`/boot/efi/EFI/refind/themes/`中的子目录下。比如 *“rEFInd-Fluent-themes”* 的目录名为`Fluent`，则其主题文件路径应为`/boot/efi/EFI/refind/themes/Fluent/`。
+- 主题文件应提供对应的`theme.conf`主题配置文件，其是`refind.conf`的副本，要使主题配置文件生效，需要用户在`refind.conf`中加入以下文本：
+  ```text
+  include themes/<主题目录名>/theme.conf
+  ```
+  `refind.conf`文件中，如果有重复配置项，则后面的项覆盖前面的项。因此如果用户决定使用自己的配置项，这些项应该在`include`行的后面。
+
+ *“rEFInd-Fluent-themes”* 主题中的格式并不是很标准，首先开发者是直接将自己PC中安装的 *rEFInd* 直接整个打包发在Github上了，其次其主题文件结构也不规整。
+
+![Dual_Boot79.png](Dual_Boot79.png)  
+
+直接解压压缩包中的 *“themes”* 文件夹，将`theme.conf`文件移动到`Fluent`文件夹内。按理来说应该把`fonts`文件夹也移动到`Fluent`文件夹内，不过不移动也可以。如果要移动，注意还要相应地修改`theme.conf`中字体配置项的相对路径。
+
+之后，将整个`themes`文件夹复制到`/boot/efi/EFI/refind/`下。在`refind.conf`文件中的较前部分加入以下文本：
+
+```text
+# Include the theme's configuration. All other settings after this section 
+# will override the configurations in the themes.
+include themes/Fluent/theme.conf
+```
+
+<img alt="Dual_Boot80.png" src="Dual_Boot80.png" width="90%" title="This image has been scaled to 90% of its original size.">
+
+`theme.conf`文件中的内容可酌情修改。
+
+![Dual_Boot81.jpeg](Dual_Boot81.jpeg)  
 
 ## 六、类SteamOS系统的体验
 
@@ -2575,4 +2655,4 @@ font <输出文件名>
 
 办公续航时间体验
 
-// TODO 坑
+// TODO
