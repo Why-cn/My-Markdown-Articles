@@ -92,7 +92,7 @@
    - SD Card（SD读卡器）：安装Windows后，有SD读卡器驱动支持（Yes），或虽有支持但BUG频出（Buggy），或该设备无SD读卡器（N/A）
    - Webcam（摄像头）：安装Windows后，有摄像头驱动支持（Yes），或无（No）
 
-制作该表的是在 *iOS越狱* 界和 *Chrultrabook* 界均知名的人物： *CoolStar* （Github页面：[coolstar (CoolStar)](https://github.com/coolstar)）。他一人制作了很多在 *Chromebook* 上的Windows下的驱动，他对 *Chrultrabook* 社区做出了不可磨灭的贡献。他制作的大部分驱动是开源的，但一部分声卡和USB-C数据接口驱动是付费的，每设备USD$10，可无限更换设备，// TODO但同时只能有一个设备激活。毕竟人家也做了许多工作，需要付费也无可厚非，实在不想付钱的也可以通过外接USB-A扩展坞的方式使用。在202405，他在 *Chrultrabook* 社区中的活跃度似乎减少了，该表更新速度也在减缓。
+制作该表的是在 *iOS越狱* 界和 *Chrultrabook* 界均知名的人物： *CoolStar* （Github页面：[coolstar (CoolStar)](https://github.com/coolstar)）。他一人制作了很多在 *Chromebook* 上的Windows下的驱动，他对 *Chrultrabook* 社区做出了不可磨灭的贡献。他制作的大部分驱动是开源的，但一部分声卡和USB-C数据接口驱动是付费的，每设备USD$10（在不对硬件做大变更的情况下可迁移驱动），但同时只能有一个设备激活。毕竟人家也做了许多工作，需要付费也无可厚非，实在不想付钱的也可以通过外接USB-A扩展坞的方式使用。在202405，他在 *Chrultrabook* 社区中的活跃度似乎减少了，该表更新速度也在减缓。
 
 ### 如何确认我的Chromebook在安装Linux后支持哪些功能？
 
@@ -128,7 +128,7 @@
 
 一些去年留存的图：
 
-![MrChromebox1.jpg](MrChromebox1.jpg)
+![MrChromebox1.jpg](MrChromebox1.jpg)  
  *（我关闭CX55固件写保护的方式是拔电池，顺便把SSD也换了。 *英特尔 670P M.2 SSD* ， *华硕* 到底屯了多少这东西？）* 
 
 ![MrChromebox0.png](MrChromebox0.png)  
@@ -282,13 +282,13 @@ Powershell -ExecutionPolicy bypass -file .\autoinstall-intel.ps1
 
 &ensp;&ensp;&ensp;&ensp;**安装触摸板驱动**
 
-点击 *“Install Touchpad Driver（安装CR50驱动）”* 卡片下方 *“Download:（下载：）”* 右侧的 *“Link（链接）”* 来下载 *CoolStar* 触摸板驱动安装程序。
+点击 *“Install Touchpad Driver（安装CR50驱动）”* 卡片下方 *“Download:（下载：）”* 右侧的 *“Link（链接）”* 来下载 *CoolStar* 触摸板驱动安装程序。其中，如果你不知道你的 *Chromebook* 中使用的是哪个厂商的触摸板，保持全选即可。
 
 ![Windows_for_Chromebook16.png](Windows_for_Chromebook16.png)
 
-其中，如果你不知道你的 *Chromebook* 中使用哪个厂商的触摸板，保持全选即可。在安装后，于Windows的 *“此电脑”* 上 *“右键 - 显示更多选项 - 管理”* ，或按住 *“Shift键”* 的同时按 *“右键 - 管理”* ，进入 *“计算机管理”* 窗口，点击左侧 *“控制台树”* 中的 *“设备管理器”* 项，在右侧 *“MMC窗口”* 的树状图中，展开 *“人体学输入设备”* ，寻找其中带有`Touchpad`字样的设备。从下图可见，CX55使用的触摸板是 *Elan* 触摸板。
+在安装后，于Windows的 *“此电脑”* 上 *“右键 - 显示更多选项 - 管理”* ，或按住 *“Shift键”* 的同时按 *“右键 - 管理”* ，进入 *“计算机管理”* 窗口，点击左侧 *“控制台树”* 中的 *“设备管理器”* 项，在右侧 *“MMC窗口”* 的树状图中，展开 *“人体学输入设备”* ，寻找其中带有`Touchpad`字样的设备。从下图可见，CX55使用的触摸板是 *Elan* 触摸板。
 
-<img alt="Windows_for_Chromebook17.png" src="Windows_for_Chromebook17.png" width="70%" title="This image has been scaled to 80% of its original size.">
+<img alt="Windows_for_Chromebook17.png" src="Windows_for_Chromebook17.png" width="70%" title="This image has been scaled to 70% of its original size.">
 
 &ensp;&ensp;&ensp;&ensp;**购买和安装声卡和USB-C数据接口驱动**
 
@@ -300,20 +300,42 @@ Powershell -ExecutionPolicy bypass -file .\autoinstall-intel.ps1
 
 在购买完成并在 *“CoolStar许可证管理器”* 网站注册后便可进入许可证管理器个人页面。在 *“Purchased Licences（已购买的许可证）”* 页面中，点击已购买的许可证卡片。在弹出的 *“Driver Details（驱动详情）”* 窗口中，点击左栏中的 *“Download（下载）”* 按钮，下载驱动安装包。
 
-![Windows_for_Chromebook20.png](Windows_for_Chromebook20.png)
+![Windows_for_Chromebook20.png](Windows_for_Chromebook20.png)  
  *（我已经激活过一次，所以截图里跟首次下载不一样）* 
 
  *CoolStar* 的付费驱动安装方式都一样，这里以 *CoolStar 英特尔声卡驱动* 为例：解压下载的驱动安装包到有用户权限的路径，如`下载`文件夹下。打开其中的`gui`文件夹，双击运行 *“GenLicense.exe”* 。在打开的 *“Generate License（生成许可证）”* 软件中，点击 *“1.”* 下的 *“Generate Unsigned License（生成未签名的许可证）”* 按钮，软件会在该文件夹下生成未签名的许可证文件（.BIN）。
 
 ![Windows_for_Chromebook21.png](Windows_for_Chromebook21.png)
 
-回到 *“CoolStar许可证管理器”* 网站中个人页面的 *“驱动详情”* 窗口，点击 *“Register License（注册许可证）”* 卡片下的 *“Unsigned License File（未签名的许可证文件）”* 右侧的 *“选择文件”* 按钮，并打开刚才生成的未签名的许可证文件。然后在下方 *“Device Name（设备名称）”* 文本框中输入任意设备名称。最后，点击下方的 *“Submit（提交）”* 按钮，网站会将许可证文件签名并自动下载已签名的许可证文件。
+回到 *“CoolStar许可证管理器”* 网站中个人页面的 *“驱动详情”* 窗口，点击 *“Register License（注册许可证）”* 卡片下的 *“Unsigned License File（未签名的许可证文件）”* 右侧的 *“选择文件”* 按钮，在弹出的 *“打开”* 文件选择窗口中打开刚才生成的未签名的许可证文件。然后在下方 *“Device Name（设备名称）”* 文本框中输入任意设备名称。最后，点击下方的 *“Submit（提交）”* 按钮，网站会将许可证文件签名并自动下载已签名的许可证文件。
 
 ![Windows_for_Chromebook22.png](Windows_for_Chromebook22.png)
 
-回到 *“生成许可证”* 软件中，点击 *“3.”* 下的 *“Select Signed License（选择已签名的许可证）”* 按钮，
+回到 *“生成许可证”* 软件中，点击 *“3.”* 下的 *“Select Signed License（选择已签名的许可证）”* 按钮，在弹出的 *“Load Signed license file（加载已签名的许可证文件）”* 文件选择窗口中选择刚才下载的已签名的许可证文件。成功安装后，软件将弹窗 *“License successfully installed! Reboot to activate!（许可证文件成功安装！重启来激活！）”* ，点击 *“确定”* 按钮并重启 *Chromebook* 。
 
-// TODO 免费驱动？
+![Windows_for_Chromebook26.png](Windows_for_Chromebook26.png)
+
+重启后回到之前解压的驱动安装包文件夹内，运行`csaudiointcsof.*-installer.exe`（USB-C数据接口驱动为`inteltcss.*-installer.exe`）。和安装触摸板驱动时相同，如果你不知道你的 *Chromebook* 中使用的是哪块音频芯片，保持全选即可。
+
+![Windows_for_Chromebook27.png](Windows_for_Chromebook27.png)
+
+> 部分 *Chromebook* 可能能通过安装 *“Waves MaxxAudio”* 音频优化软件来提升音质。请阅读 *CoolStar 英特尔声卡驱动* 驱动安装包中的`README.txt`中的 *“For the following devices:”* 部分。
+
+在安装后，于Windows的 *“此电脑”* 上 *“右键 - 显示更多选项 - 管理”* ，或按住 *“Shift键”* 的同时按 *“右键 - 管理”* ，进入 *“计算机管理”* 窗口，点击左侧 *“控制台树”* 中的 *“设备管理器”* 项，在右侧 *“MMC窗口”* 的树状图中，展开 *“声音、视频和游戏控制器”* ，寻找其中除了`CoolStar SOF Audio (WDM)`字样的设备。从下图可见，CX55使用的音频芯片是 *瑞昱 ALC5682* ，其中扬声器的两个通道使用的是 *美信 98373* 解码器。
+
+<img alt="Windows_for_Chromebook28.png" src="Windows_for_Chromebook28.png" width="70%" title="This image has been scaled to 70% of its original size.">
+
+如果你的 *Chromebook* 存在 *雷电技术（Thunderbolt）* ，那么在 *设备管理器* 中继续向下寻找并展开 *“通用串行总线控制器”* ，在其中找到并双击所有 *“Intel(R) USB 3.2\* 可扩展主机控制器\*”* ，在打开的 *“Intel(R) USB 3.2\* 可扩展主机控制器\* 属性”* 窗口中，点击 *“电源管理”* 选项卡，取消勾选下面的 *“允许计算机关闭此设备的电源”* 复选框，最后，点击下方的 *“确定”* 按钮。
+
+![Windows_for_Chromebook29.png](Windows_for_Chromebook29.png)
+
+> 如果你的 *Chromebook* 存在 *雷电技术（Thunderbolt）* 并且你想通过它连接存在 *雷电技术（Thunderbolt）* 的 *外置显卡（eGPU）* ，请阅读 *USB-C数据接口驱动* 驱动安装包中的`README.txt`中的 *“Note, if you would like to use an eGPU:”* 部分。
+
+> 如果你的 *Chromebook* 在安装了 *USB-C数据接口驱动* 之后仍存在问题，请阅读 *USB-C数据接口驱动* 驱动安装包中的`README.txt`中的 *“Troubleshooting”* 部分。
+
+安装好驱动并设置完毕后，重启 *Chromebook* 。在启动后，点击 *任务栏* 中的 *快速设置* 按钮，在弹出的 *快速设置* 面板中，点击下方 *输出音频音量滑动条* 右侧的 *“🎛️>选择声音输出”* 按钮，在转到的 *“声音输出”* 面板中，选择 *“扬声器 (CoolStar SOF Audio (WDM))”* ，声音便可从 *Chromebook* 的扬声器中输出。
+
+![Windows_for_Chromebook30.png](Windows_for_Chromebook30.png)
 
 #### 2.3 （可选）解决使用Tiger Lake处理器的Chromebook在安装完驱动后风扇狂转的问题
 
@@ -323,13 +345,26 @@ Powershell -ExecutionPolicy bypass -file .\autoinstall-intel.ps1
 
 本小节双引号（“”）内的文字来自于：[英特尔® Dynamic Tuning Technology （英特尔® DTT） 用户指南](https://www.intel.cn/content/www/cn/zh/support/articles/000058479/graphics.html)
 
-这听上去就废物点心是吧，Reddit上更是一大帮人声讨这东西嗯降功耗墙，和 *戴尔* 笔记本固件坐一桌的玩意。就我觉得吧，就是它没出问题，卸了也比装着好。
+这听上去就废物点心是吧，Reddit上更是一大帮人声讨这东西嗯降功耗墙，和 *戴尔* 笔记本固件坐一桌的玩意。就我觉得吧，就是它没出问题，卸了也比装着好。如果你需要使用到 *英特尔 Application Optimization（APO）* ，则不要卸载这些设备。
 
 在前面提到的 *“计算机管理”* 的 *“设备管理器”*  *“MMC窗口”* 中，展开 *“系统设备”* ，寻找其中 **所有** 带有`Intel(R) Dynamic Tuning`字样的设备。依次在它们上 *“右键 - 卸载设备”* ，在弹出的 *“卸载设备”* 对话框中勾选 *“尝试删除此设备的驱动程序。”* 复选框，然后点击 *“卸载”* 按钮。全部卸载完毕后，重启启动，问题解决。
 
 ![Windows_for_Chromebook18.png](Windows_for_Chromebook18.png)
 
 > “英特尔® DTT在以下系统上受支持：第十一代智能英特尔®处理器及更新版本、英特尔锐®炬 Xe MAX 显卡或英特尔® Arc 显卡”
+
+#### 2.4 Chromebook上的Windows中的失效硬件
+
+即使按本章前面的几大节中安装好了所有的驱动， *设备管理器* 中仍会存在有问题的设备。双击图标上带有 *“⚠️”* 的设备，在打开的 *“\* 属性”* 窗口中，点击 *“详细信息”* 选项卡，在其中 *“属性”* 下方的下拉菜单中选择 *“硬件 Id”* ，在 *“值”* 列表中查看第一行值。其中，`VEN_<数字>`代表了该设备的厂商，如 *“VEN_8086”* 是 *英特尔* ；`DEV_<数字>`代表了该设备的厂商内部设备序号。要查找该设备究竟是什么设备，可将这两个值在搜索引擎中搜索。
+
+![Windows_for_Chromebook31.png](Windows_for_Chromebook31.png)
+
+CX55的几个有问题的设备有：
+
+- VEN_8086 DEV_9A03： *英特尔 DTT* 相关组件，如果在上一小节中卸载了 *英特尔 DTT* 驱动，可以忽略。
+- VEN_INTC DEV_1040： *英特尔 DTT* 相关组件，如果在上一小节中卸载了 *英特尔 DTT* 驱动，可以忽略。
+- VEN_PRP DEV_0001： *谷歌 Chromebook* 专用硬件，可能是 *廣明光電* 的原件，怀疑是 *谷歌 Chromebook* 的 *谷歌H1安全芯片* ，这个Windows用不了。
+- VEN_8086 DEV_A0C5： *英特尔 串行IO I2C* 驱动，这个确实我没修明白。反正放着也没见有什么问题就不管了。
 
 ### 3. （可选）安装Windows下的工具软件
 
@@ -361,9 +396,9 @@ Chrultrabook-Tools是适用于运行其他操作系统的 *Chromebook* 的带有
 
 安装Linux发行版的方式和其他PC大同小异，这里略过，感兴趣的可以阅读我写的以下两篇文章：
 
-[Windows 11 + Kubuntu双系统安全启动和使用体验](../Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)
+《[Windows 11 + Kubuntu双系统安全启动和使用体验](../Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)》
 
-[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)
+《[Linux下的个人偏好应用的安装和使用体验，以及运行Windows应用](../Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验/Installation%20and%20experience%20of%20personal%20preference%20applications%20under%20Linux%20-%20Linux下的个人偏好应用的安装和使用体验.md)》
 
 本章以文章中介绍的 *Kubuntu* 发行版为例。
 
@@ -446,7 +481,7 @@ sudo ./setup-audio
 
  *Ubuntu* 系发行版需要先按照链接中的操作安装`curl`。
 
-![Linux_for_Chromebook6.png](Linux_for_Chromebook6.png) 
+![Linux_for_Chromebook6.png](Linux_for_Chromebook6.png)   
  *（当 *“Fw Ver:（固件版本）”* 下方显示 *“Update Available（更新可用）”* 时，有新的固件可更新。）*
 
 <img alt="Linux_for_Chromebook7.png" src="Linux_for_Chromebook7.png" width="70%" title="This image has been scaled to 70% of its original size."></p>
