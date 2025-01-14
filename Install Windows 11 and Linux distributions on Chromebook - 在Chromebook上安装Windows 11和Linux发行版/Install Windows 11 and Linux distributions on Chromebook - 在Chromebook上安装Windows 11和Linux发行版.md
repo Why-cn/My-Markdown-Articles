@@ -290,7 +290,7 @@ Powershell -ExecutionPolicy bypass -file .\autoinstall-intel.ps1
 
 <img alt="Windows_for_Chromebook17.png" src="Windows_for_Chromebook17.png" width="70%" title="This image has been scaled to 70% of its original size.">
 
-&ensp;&ensp;&ensp;&ensp;**购买和安装声卡和USB-C数据接口驱动**
+&ensp;&ensp;&ensp;&ensp;**（可选）购买和安装声卡和USB-C数据接口驱动**
 
 如果你的 *Chromebook* 在 *零、如何确认我的Chromebook在安装Windows后支持哪些功能？ - Audio（声卡驱动） 和 USB 4* 中为付费驱动，则你可能需要购买这些驱动才能使用声卡和USB-C数据接口。
 
@@ -345,7 +345,7 @@ Powershell -ExecutionPolicy bypass -file .\autoinstall-intel.ps1
 
 本小节双引号（“”）内的文字来自于：[英特尔® Dynamic Tuning Technology （英特尔® DTT） 用户指南](https://www.intel.cn/content/www/cn/zh/support/articles/000058479/graphics.html)
 
-这听上去就废物点心是吧，Reddit上更是一大帮人声讨这东西嗯降功耗墙，和 *戴尔* 笔记本固件坐一桌的玩意。就我觉得吧，就是它没出问题，卸了也比装着好。如果你需要使用到 *英特尔 Application Optimization（APO）* ，则不要卸载这些设备。
+这听上去就废物点心是吧，Reddit上更是一大帮人声讨这东西嗯降功耗墙，和 *戴尔* 笔记本固件坐一桌的玩意。就我觉得吧，就是它没出问题，卸了也比装着好。不过，如果你需要使用到 *英特尔 Application Optimization（APO）* ，则不要卸载这些设备。
 
 在前面提到的 *“计算机管理”* 的 *“设备管理器”*  *“MMC窗口”* 中，展开 *“系统设备”* ，寻找其中 **所有** 带有`Intel(R) Dynamic Tuning`字样的设备。依次在它们上 *“右键 - 卸载设备”* ，在弹出的 *“卸载设备”* 对话框中勾选 *“尝试删除此设备的驱动程序。”* 复选框，然后点击 *“卸载”* 按钮。全部卸载完毕后，重启启动，问题解决。
 
