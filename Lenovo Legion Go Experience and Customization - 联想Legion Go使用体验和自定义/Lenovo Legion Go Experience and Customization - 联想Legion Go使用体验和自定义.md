@@ -2,7 +2,7 @@
 
 *版本：1.2*
 
-查看Github渲染器中的**目录**：使用Github Markdown渲染页面右上角的“目录”（⋮☰）按钮。
+查看Github渲染器中的**大纲**：使用Github Markdown渲染页面右上角的“大纲”（⋮☰）按钮。
 
 ---
 
@@ -12,7 +12,7 @@
 Lenovo Legion Go 1（以下简称为 *“Legion Go”* ）有两种不同的SoC规格： *AMD Ryzen Z1* 和 *AMD Ryzen Z1 Extreme* 。前者只提供于256G版本且仅限特定区域。  
 参考：[Z1 and Z1 Extreme : r/LegionGo](https://www.reddit.com/r/LegionGo/comments/18f3kyu/z1_and_z1_extreme/)
 
-（本来一直在联想美国官网找驱动和文档啥的，用着挺舒服，突发奇想去联想中国官网 - 拯救者掌机找一下商品支持页面看有没有提供官方壁纸当个封面啥的，结果逛了10分钟屁也没找到，干啥啥都要登录，给自己逗乐了，太幽默了，我看啊，还是lenovo.com/us/zc/适合我。）
+（本来一直在联想美国官网找驱动和文档啥的，用着挺舒服，突发奇想去联想中国官网 - 拯救者掌机找一下商品支持页面看有没有提供官方壁纸当个封面啥的，结果逛了10分钟屁也没找到，干啥啥都要微信登录，给自己逗乐了，太幽默了，我看啊，还是lenovo.com/us/zc/适合我。）
 
 ## 零、理论规格与废话
 
@@ -71,7 +71,7 @@ Screen is like new with no visible scratches. Item will come in original packagi
 
 ### 1. 跳过Windows 11 OOBE的强制联网要求
 
-怕在30天退货期内出岔子，所以在到手的头30天内我打算先用本地账户。Windows 11 OOBE的强制联网要求，实在是老生常谈的问题，在此我觉得没有比 *Microsoft Learn* 更为权威的了：[Windows 11 setup without internet - Microsoft Q&A](https://learn.microsoft.com/en-us/answers/questions/1179311/windows-11-setup-without-internet)；微软不想主动告诉用户，但它肯定得告诉供应商。
+怕在30天退货期内出岔子，所以在到手的头30天内我打算先用本地账户。Windows 11 OOBE的强制联网要求，实在是老生常谈的问题，在此我觉得没有比 *Microsoft Learn* 更为权威的了：[Windows 11 setup without internet - Microsoft Q&A](https://learn.microsoft.com/en-us/answers/questions/1179311/windows-11-setup-without-internet)；微软不想主动告诉用户，但它肯定得告诉OEM。
 
 ### 2. 更改系统显示语言
 
@@ -104,7 +104,7 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 ![Characterization5.png](Characterization5.png)  
 
-之后，Windows 11会自动检查并更新当前系统所需要的系统更新、（与微软合作的）软件更新、系统固件更新、驱动更新等并自动安装。
+之后，Windows 11会自动检查并更新当前系统所需要的系统更新、（推送到微软服务器的）软件更新、系统固件更新、驱动更新等并自动安装。
 
 > Legion Go使用的 *AMD Ryzen Z1 extreme APU* 的显示驱动由AMD和联想共同推出，但推送显示驱动由OEM（即联想）负责（见此AMD社区讨论贴[Graphics Drivers for Ryzen Z1 Extreme - AMD Community](https://community.amd.com/t5/pc-drivers-software/graphics-drivers-for-ryzen-z1-extreme/m-p/614065)），因此AMD官网驱动下载页面是找不到Z1 extreme的 *AMD Radeon GPU (780M)* 驱动的。一般来说，当OEM厂商会将驱动同步推送到微软更新库，因此 *“Windows 更新”* 也可以接收并更新Legion Go的显示驱动。
 > ![Characterization8.png](Characterization8.png)
@@ -122,22 +122,22 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 常与 *Microsoft Defender* 安全软件打交道的朋友们，可能见过其“先斩后奏”和“宁可错杀一千，不可放过一个”的特性，但最让我头疼的还是这个B吧特别特别喜欢疯狂全盘扫描。PC要是放着一会不管然后风扇狂转，那十有八九不是在系统更新就是 *Microsoft Defender* 又双叒叕开始扫起盘了。既然跟它斗智斗勇、用各种方法都没法彻底关掉它（以前跟它战斗过，我只能说实在置不起这个气），不如直接利用“安装第三方安全软件会让 *Microsoft Defender* 待机”这个特性，装个第三方杀软给它禁言好了。
 
-本小节以安装 *火绒安全软件* 为例：
+~~本小节以安装 *火绒安全软件* 为例：~~
 
-首先我得提一下， *火绒* 在用户不自己进行调试下的预设情景中，其防病毒和杀毒能力还有待进步，与国际大厂（包括 *面向企业的 Microsoft Defender* 和 *奇虎360* ）还有一段差距。我个人将 *火绒安全软件* 视作“嵌入式安全解决方案”或“ *Microsoft Defender* 禁用器”。
+~~首先我得提一下， *火绒* 在用户不自己进行调试下的预设情景中，其防病毒和杀毒能力还有待进步，与国际大厂（包括 *面向企业的 Microsoft Defender* 和 *卡巴斯基防病毒软件* ）还有一段差距。我个人将 *火绒安全软件* 视作“嵌入式安全解决方案”或“ *Microsoft Defender* 禁用器”。~~
 
-打开 *开始 - 所有应用 - Microsoft Store* ，进入到 *“Microsoft Store”* 应用中。在上方的搜索框中输入`huorong`，按 *“Enter（回车）键”* 发起检索。在下方的搜索结果中，选择想要的应用，点击其卡片。
+~~打开 *开始 - 所有应用 - Microsoft Store* ，进入到 *“Microsoft Store”* 应用中。在上方的搜索框中输入`huorong`，按 *“Enter（回车）键”* 发起检索。在下方的搜索结果中，选择想要的应用，点击其卡片。~~
 
-![Characterization13.png](Characterization13.png)
+~~![Characterization13.png](Characterization13.png)~~
 
-在应用详情页面中，点击 *“安装”* 按钮，进行应用安装。
+~~在应用详情页面中，点击 *“安装”* 按钮，进行应用安装。~~
 
-![Characterization14.png](Characterization14.png)
- *（这个安装过程就不需要再介绍了吧……）* 
+~~![Characterization14.png](Characterization14.png)~~
+~~ *（这个安装过程就不需要再介绍了吧……）* ~~
 
-> 直到最近我才明白 *Microsoft Store* 应用详情页里的这个 *“由...提供和更新”* 的意思是 *Microsoft Store* 只管装上，不管更新和卸载。
+~~> 直到最近我才明白 *Microsoft Store* 应用详情页里的这个 *“由...提供和更新”* 的意思是 *Microsoft Store* 只管装上，不管更新和卸载。~~
 
-在成功安装火绒之后，打开 *系统托盘 - Windows 安全中心* 或  *设置 - 隐私和安全性 - 安全性 - Windows 安全中心* 进入到 *Windows 安全中心* ，在其中点击 *“病毒与威胁防护”* 按钮，在其页面中若出现安装的第三方安全软件提供保护，且点击 *“Microsoft Defender 防病毒选项”* 链接将其展开后， *“定期扫描”* 开关为 *“关”* ，则说明 *Microsoft Defender* 禁用成功。
+~~在成功安装火绒之后，~~打开 *系统托盘 - Windows 安全中心* 或  *设置 - 隐私和安全性 - 安全性 - Windows 安全中心* 进入到 *Windows 安全中心* ，在其中点击 *“病毒与威胁防护”* 按钮，在其页面中若出现安装的第三方安全软件提供保护，且点击 *“Microsoft Defender 防病毒选项”* 链接将其展开后， *“定期扫描”* 开关为 *“关”* ，则说明 *Microsoft Defender* 禁用成功。
 
 ![Characterization15.png](Characterization15.png)
 
@@ -150,9 +150,9 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 ![Characterization18.png](Characterization18.png)  
  *（在 *“任务管理器 - 内存”* 页面中可以看到为硬件保留的内存，通常情况下是为集显保留的专用显存大小。）* 
 
-这个集显专用显存的大小，无论设置为多少，都是动态调整的。一般逻辑是，当集显使用显存到达了这个大小，集显会继续向内存申请显存；而当没有到达这个大小时，系统也不会将未使用的专用显存释放出来。假设共有16G内存，一款游戏将占用4G显存，当集显专用显存设置为1G时，游戏在运行时仍然会占用4G显存，而在空置时系统将有15G内存可用；当集显专用显存设置为6G时，游戏在运行时会占用4G显存，而在空置时系统只有10G内存可用。
+这个集显专用显存的大小，无论设置为多少，都是动态调整的。对于 ***AMD APU*** 来说，当集显使用显存到达了这个大小，集显会继续向内存申请显存；而当没有到达这个大小时，系统也不会将未使用的专用显存释放出来。假设共有16G内存，一款游戏将占用4G显存，当集显专用显存设置为1G时，游戏在运行时仍然会占用4G显存，而在空置时系统将有15G内存可用；当集显专用显存设置为6G时，游戏在运行时会占用4G显存，而在空置时系统只有10G内存可用。
 
-为什么前面说是“一般逻辑”？因为有一些集成显卡是不采用这个设置的：无论设置为多大的专用显存，集成显卡永远是从一个初始值动态调整；而有的游戏会读取启动时的显存容量而调整画面效果，比如启动时读取到1G显存，即使后面集成显卡能够将专用显存申请到8G，游戏仍按1G显存进行优化调整，导致画面缩水。因为不同软硬件的调度之间差别很大，所以没有一个万金油设置，只能具体情况具体分析。
+一些集成显卡是不采用这个设置的：无论设置为多大的专用显存，集成显卡永远是从一个初始值动态调整（ ***Intel核芯显卡*** ）；而有的游戏会读取启动时的显存容量而调整画面效果，比如启动时读取到1G显存，即使后面集成显卡能够将专用显存申请到8G，游戏仍按1G显存进行优化调整，导致画面缩水。因为不同软硬件的调度之间差别很大，所以没有一个万金油设置，只能具体情况具体分析。
 
 那么设置成多少为好呢？如果你像我一样，主要使用场景是看剧、看课件和大屏网聊，那么设置为 *Auto（自动）* 就可以了；毕竟越多内存分配给系统（或 *Google Chrome* 浏览器），系统越流畅（日用情况下，在16G以上的内存，扩大内存大小将使提升进入边际效应）。
 
@@ -175,11 +175,11 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 <img alt="Characterization82.jpeg" src="Characterization82.jpeg" width="40%" title="This image has been scaled to 40% of its original size.">  
 
-或者，在开机并进入Windows 11系统中时，点击 *“开始菜单 - 电源”*，然后在按住键盘上的 *“Shift键”* 的同时，点击 *电源选项* 中的 *“↺重启”*。
+或者，在开机并进入Windows 11系统中时，点击 *“开始菜单 - 电源”*，然后在按住键盘上的 *“Shift键”* 的同时，点击 *电源选项* 中的 *“↺重启”* ，进入 *Windows高级启动菜单* 。
 
 <img alt="Characterization17.png" src="Characterization17.png" width="80%" title="This image has been scaled to 80% of its original size.">  
 
-之后Windows将进入到 *Windows Boot Manager（Windows启动管理器）* 页面。依次点击 *“Troubleshoot - Advanced Options - UEFI Firmware Settings - Restart”* ，重启后即可进入UEFI设置界面。
+之后Windows将进入到 *Windows高级启动菜单* 。依次点击 *“Choose an option（选择一项操作）”* 界面中的 *“Troubleshoot - Advanced Options - UEFI Firmware Settings - Restart”* ，重启后即可进入UEFI设置界面。
 
 ![Characterization8.jpeg](Characterization9.jpeg)  
  *（这张图也说明了Legion Go的屏幕是原生竖屏的。）*
@@ -219,7 +219,7 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 ![Characterization83.png](Characterization83.png)
  *设定前后对比，借用了 *三、5.1.i.* 中的图* 
 
- *Windhawk* 还有很多有用的模组，如：[Vertical Taskbar for Windows 11 - Windhawk](https://windhawk.net/mods/taskbar-vertical)，可以让Windows 11的任务栏放置在屏幕的左侧，但不兼容前面的 *“Taskbar height and icon size”* 模组；[Windows 11 Start Menu Styler - Windhawk](https://windhawk.net/mods/windows-11-start-menu-styler)，可以去掉Windows 11 *开始* 中烦人的 *“推荐的项目”* ，并将其改为类Windows 10、7、Android启动器抽屉、混合等样式（但无法恢复Windows 10 开始菜单中的磁贴）；[Windows 11 Taskbar Styler - Windhawk](https://windhawk.net/mods/windows-11-taskbar-styler)，可以更改Windows 11任务栏的样式，如全透明任务栏、类Dock任务栏等；[Better file sizes in Explorer details - Windhawk](https://windhawk.net/mods/explorer-details-better-file-sizes)，可以让 *文件资源管理器* 中显示文件大小均从`?B`改为显示`?iB`；[Force Chinese IME Mode - Windhawk](https://windhawk.net/mods/force-chinese-ime)，可以让微软拼音输入法锁定为输入中文，而不是那个脑瘫的自动切换英文；等等。
+ *Windhawk* 还有很多有用的模组，如：[Vertical Taskbar for Windows 11 - Windhawk](https://windhawk.net/mods/taskbar-vertical)，可以让Windows 11的任务栏放置在屏幕的左侧，但不兼容前面的 *“Taskbar height and icon size”* 模组；[Windows 11 Start Menu Styler - Windhawk](https://windhawk.net/mods/windows-11-start-menu-styler)，可以去掉Windows 11 *开始* 中烦人的 *“推荐的项目”* ，并将其改为类Windows 10、7、Android启动器抽屉、混合等样式（但无法恢复Windows 10 开始菜单中的磁贴）；[Windows 11 Taskbar Styler - Windhawk](https://windhawk.net/mods/windows-11-taskbar-styler)，可以更改Windows 11任务栏的样式，如全透明任务栏、类Dock任务栏等；[Better file sizes in Explorer details - Windhawk](https://windhawk.net/mods/explorer-details-better-file-sizes)，可以让 *文件资源管理器* 中显示文件大小均从`?B`改为显示`?iB`；等等。
 
 ### 8. 垂直鼠标模式与分体手柄设计
 
@@ -360,7 +360,7 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 ![Characterization44.png](Characterization45.png)  
 
-之后会发现， *AIDA64* 的界面将会显示乱码。原因在于，AIDA64默认情况下是不开启Unicode支持的。可以调整系统设置，调整不支持Unicode的程序的默认字符集。打开 *“设置 - 时间和语言 - 语言和区域 - 管理语言设置”* 进入到 *“区域 - 管理”* 设置页面。
+如果不是出厂安装的Windows中文版系统， *AIDA64* 的界面将会显示乱码。原因在于，AIDA64是没有Unicode支持的。可以调整系统设置，调整不支持Unicode的程序的默认字符集。打开 *“设置 - 时间和语言 - 语言和区域 - 管理语言设置”* 进入到 *“区域 - 管理”* 设置页面。
 
 ![Characterization44.png](Characterization46.png)  
 
@@ -416,13 +416,15 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 
 ### 11. SSD性能测试、管理软件与TF(Micro SD)卡槽测试
 
-Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 SSD作为内部存储，型号为`SDDPMQD-512G-1101`，寿命为300TBW，跑测试完成之后可以达到66°C（运行温度区间为0~85°C）。（20241026更新：不是测试完成后66°C，而是这货待机就小70°C）
+Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 TLC SSD作为内部存储，型号为`SDDPMQD-512G-1101`，这货待机就小70°C，跑起SSD性能测试温度更加炸裂。
 
 <img alt="CrystalDiskMark_SN740-SDDPMQD-512G.png" src="CrystalDiskMark_SN740-SDDPMQD-512G.png" width="70%" title="This image has been scaled to 70% of its original size.">  
 
 西部数据为旗下SSD产品提供了管理软件 *“Western Digital Dashboard”* ，可在此链接：[Download, Install, Test Drive and Update Firmware Using Western Digital Dashboard](https://support-en.wd.com/app/answers/detailweb/a_id/31759)进行下载。进入页面后，点击两个 *“Western Digital Dashboard”* 链接中的任一链接开始下载，然后运行安装程序进行安装。
 
 ![Characterization51.png](Characterization51.png)
+
+> 20250323更新：由于 *西部数据* 和 *闪迪* 正式分家， *西部数据* 的前SSD部门（前前 *闪迪* SSD部门）正式回归 *闪迪* ， *“Western Digital Dashboard”* 软件正式结束支持周期，被 *Western Digital Kitfox* 替代：[Download, Install, Test Drive and Erase Using Western Digital Kitfox](https://support-en.wd.com/app/answers/detailweb/a_id/51537/)。已结束支持周期的 *西部数据* SSD将不会再接收固件更新。
 
 如果在安装时选择使用中文安装，那么在看到安装程序显示 *“卸载成功！”* 便已成功安装。
 
@@ -446,7 +448,7 @@ Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 SSD作为�
 
 因此，Legion Go选择在机身背部上方放置两个扬声器并在机身上方开口，使声音向上发出（见上一小节最后图中橙圈内）。这样除了会导致正面音质降低以外，还会和散热口发出的噪音相混合，所以如果是玩游戏并使用内置扬声器的话，那基本也就听个参与度。但我一般玩游戏的时候戴无线2.4G或者蓝牙耳机，所以这个不算是个大问题。只能说要让我做产品设计，这也是我能想到的最佳解决方案了。但如果是对掌机扬声器音质有需求的人，那就得考虑考虑这一点了。
 
-一个折中的方案是使用第三方软件EQ来有限地改善音质，或者连接有线外置音响。对于软件EQ，我在台式机上一直使用免费的[FxSound - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8jk4tbq03lz4):
+一个折中的方案是使用第三方软件EQ来有限地改善音质，或者连接有线外置音响。对于软件EQ，我在台式PC上一直使用免费的[FxSound - Windows官方下载 | 微软应用商店 | Microsoft Store](https://apps.microsoft.com/detail/xp8jk4tbq03lz4):
 
 ![Characterization27.png](Characterization27.png)
 
@@ -492,7 +494,7 @@ Legion Go的两个全功能USB Type-C接口为其扩展到办公场景提供了�
 
 将一台Windows 10/11设备的屏幕通过 *Miracast* 投影到另一台Windows 10/11设备，在Windows 10/11中内建了这个功能，具体开启和投屏方式，在微软官方的文档中写的很详细：[屏幕镜像和投影到电脑或无线显示器 - Microsoft 支持](https://support.microsoft.com/zh-cn/windows/%E5%B1%8F%E5%B9%95%E9%95%9C%E5%83%8F%E5%92%8C%E6%8A%95%E5%BD%B1%E5%88%B0%E7%94%B5%E8%84%91%E6%88%96%E6%97%A0%E7%BA%BF%E6%98%BE%E7%A4%BA%E5%99%A8-5af9f371-c704-1c7f-8f0d-fa607551d09c)
 
-但不知为何，投过来的画面感觉像是糊了一层白雾。
+但不知为何，投过来的画面感觉像是糊了一层白雾。（HDR？）
 
 ![Characterization36.png](Characterization36.png)
 
@@ -521,7 +523,20 @@ Miracast功能使得在旅行中位于支持Miracast投放的酒店时，可以�
 
 #### 13.5 双屏设置不同的缩放比例
 
-// TODO
+当连接双屏的时候，因为屏幕分辨率、大小和视距的不同，默认情况下的双屏画面复制和相同缩放比例可能会降低屏幕使用感受。在系统设置中提供了对不同屏幕分别进行设置的选项：导航到 *设置 - 系统 - 屏幕* 项，在 *“屏幕”* 设置界面中点击 *“选择显示器以更改其设置。拖动显示器以重新排列它们。”* 下方的下拉菜单，将 *“复制这些显示器”* 改为 *“扩展这些显示器”* 或 *“仅在 \* 上显示”* 。
+
+![Characterization84.png](Characterization84.png)
+
+> 对于使用Legion Go连接外部显示设备进行演示的情况， *“复制这些显示器”* 或许更合适。
+
+默认情况下，设备内置屏幕永远是 *显示器1* 。如果你不知道连接的屏幕都是几号，可以点击 *“标记”* 按钮，在屏幕的左下角会显示当前的显示器号。
+
+![Characterization85.png](Characterization85.png)  
+ *（使用扩展屏幕的时候全屏截图居然能把两个屏一起截下来，我一直以为是只截活动屏幕）* 
+
+选中 *“选择显示器以更改其设置。拖动显示器以重新排列它们。”* 下方的屏幕，那么 **下方的设置都是针对该屏幕的设置，而不影响其他屏幕** 。勾选 *“设为主显示器”* ，可以将该屏幕设置为主显示器，默认新弹出的窗口、系统托盘等都会显示在主显示器中。还可以为每个显示器设置 *颜色配置文件* 、缩放比例、分辨率和显示方向。
+
+![Characterization86.png](Characterization86.png)  
 
 ### 14. 调整电源计划与续航测试
 
@@ -533,7 +548,7 @@ Legion Go有着在 *零、* 里几个x86掌机中最小的电池容量（仅49.2
 
 ![Characterization58.png](Characterization58.png)
 
-Windows 11 23H2并未将所有原 *控制面板* 中的设置项目移动到新的 *设置* UWP应用中。想要调整如 *“关键电池水平”* 这类高级电源设置，需要从 *控制面板* 中的 *“编辑电源计划”* 中进行设置。点击 *开始* ，在 *“开始”菜单* 上面的搜索框中输入`电池`关键字，在下面的搜索结果中，选择 *“编辑电源计划”* 并点击右侧卡片中的 *“打开”* 项。在打开的 *“控制面板 - 硬件和声音 - 电源选项 - 选择或自定义电源计划”* 页面中，可以看到只有一个活动的电源计划 *“平衡”* 。点击其右侧 *“更改计划设置”* 链接，在跳转的 *“更改计划的设置：平衡”* 页面中，可以看到其中的显示和睡眠设置与之前 *设置* UWP应用中的相同。点击 *“更改高级电源设置”* 链接。
+Windows 11 23H2（20250114更新：24H2）并未将所有原 *控制面板* 中的设置项目移动到新的 *设置* UWP应用中。想要调整如 *“关键电池水平”* 这类高级电源设置，需要从 *控制面板* 中的 *“编辑电源计划”* 中进行设置。点击 *开始* ，在 *“开始”菜单* 上面的搜索框中输入`电池`关键字，在下面的搜索结果中，选择 *“编辑电源计划”* 并点击右侧卡片中的 *“打开”* 项。在打开的 *“控制面板 - 硬件和声音 - 电源选项 - 选择或自定义电源计划”* 页面中，可以看到只有一个活动的电源计划 *“平衡”* 。点击其右侧 *“更改计划设置”* 链接，在跳转的 *“更改计划的设置：平衡”* 页面中，可以看到其中的显示和睡眠设置与之前 *设置* UWP应用中的相同。点击 *“更改高级电源设置”* 链接。
 
 ![Characterization59.png](Characterization59.png)
 
@@ -567,7 +582,7 @@ Windows 11 23H2并未将所有原 *控制面板* 中的设置项目移动到新�
 
 从图中可以看出，电池在大部分时间下的输出功率在34W附近，平均为32.6W（除去日志开始和结束处没有启动游戏的时间）。以34W计，Legion Go在30W TDP下的续航时间为
 
-$$\frac{49.2Wh \cdot (100 \% - 5 \%)}{34W} = 1.375h = 85min$$
+$$\frac{49.2Wh \cdot (100\\% - 5\\%)}{34W} = 1.375h = 85min$$
 
 // FIXME Github渲染
 
@@ -700,7 +715,7 @@ $$\frac{49.2Wh \cdot (100 \% - 5 \%)}{34W} = 1.375h = 85min$$
 
 > 20241030补充：在Bilibili上看到了安装7840U上的780M驱动教程：[ROG ALLY X 外接AMD显卡，拯救者掌机安装7840U公版驱动 | ONEXGPU、GPD G1显卡坞 Legion Go连接教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Ea4y1y7vM/)，但看反应说小问题不少，那暂且先观望吧。
 
-> 20241222补充：在20241213，联想给Legion Go更新到`32.0.11030.1`，此时AMD官方驱动版本号更新至`32.0.12033.1030`，华硕ROG Ally X的驱动版本号更新至`32.0.12011.7001`。
+> 20250323补充：联想在20241213、20250124，联想给Legion Go又更新了两次 *AMD Radeon GPU (780M)* 驱动软件，不过从202501开始，我就再也没通过在 *Legion Space* 上更新显示驱动成功过，手动通过官网更新包更新正常。
 
 ### * 不需要开启SAM
 
@@ -710,7 +725,7 @@ $$\frac{49.2Wh \cdot (100 \% - 5 \%)}{34W} = 1.375h = 85min$$
 
 ![Characterization1.png](Characterization1.png)
 
-### * 提取联想预装壁纸（可选）
+### * （可选）提取联想预装壁纸
 
 使用 *Windows 资源管理器* 导航至`C:\Windows\Web\Wallpaper\Lenovo\`下，里面的文件即是联想预装壁纸。
 
@@ -724,7 +739,7 @@ $$\frac{49.2Wh \cdot (100 \% - 5 \%)}{34W} = 1.375h = 85min$$
 
 我认为这可能是联想调整了预装系统的 *Windows 安全中心* 策略，猜测是通过关闭 *Microsoft Defender* 防病毒软件来减少 *Microsoft Defender* 对Legion Go续航时间的影响。但微软推 *Microsoft Defender* 的决心岂是区区OEM能控制的，据我的观察 *Microsoft Defender* 仍然会在系统空闲时进行疯狂地全盘扫描。与其通过策略关闭，还不如预装个什么Lenovo PC Manager之流给 *Microsoft Defender* 卡掉好了。
 
-### * 屏幕校色文件（可选）
+### * （可选）屏幕校色文件
 
  *“屏幕校色”* 是系统调整向显示器的颜色输出以确保其与标准色彩值匹配，来保证图像的准确显示和一致性。对于Windows来说，由于显示器和驱动多种多样，不可能保证颜色输出在所有显示器上都是准确的，而使用 *屏幕校色文件* 可以告诉系统如何调整颜色映射空间，以实现最贴近真实的色彩。
 
@@ -789,7 +804,10 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 ![Experience&Setup_Win11_3.png](Experience&Setup_Win11_3.png)
 
 > Legion Go上的 *AMD Ryzen Z1 extreme APU* 驱动只能通过 *Legion Space* 软件或者在 *”联想支持 - 联想PC支持 - 驱动及应用程序”* 中下载显卡驱动安装软件更新。  
-> 20241226更新：我在使用 *Legion Space* 软件安装 *AMD Ryzen Z1 extreme APU* 驱动后会导致 *AMD Software: Adrenalin Edition* 软件在打开时报错，暂不清楚是否为个案。使用官网下载的显卡驱动安装软件正常。
+
+> 20241226更新：我在使用 *Legion Space* 软件安装 *AMD Ryzen Z1 extreme APU* 驱动后会导致 *AMD Software: Adrenalin Edition* 软件在打开时报错，暂不清楚是否为个案。使用官网下载的显卡驱动安装包正常。  
+
+> 20250323更新：看我去年自己写的这段我都绷不住了，现在使用 *Legion Space* 软件安装驱动不是 *AMD Software: Adrenalin Edition* 软件报错了，现在是完全装不上。使用官网下载的显卡驱动安装包正常。  
 
 20241026更新：在刚才打开 *Legion Space* 软件的时候，它自动更新了自身软件并安装了新的手柄固件。正当我想要查查这次更新了什么内容时，发现官网只有`v1.1.2.11`版本（3个月之前）的Readme，并且只有`v1.1.2.14`版本（1个月之前）的软件安装程序可供下载。稍微搜索一下网络，发现Reddit的r/LegionGo下的一篇帖子：[Legion Space Update 1.1.3.3 : r/LegionGo](https://www.reddit.com/r/LegionGo/comments/1gb85fd/comment/ltjmglg/)
 
@@ -799,7 +817,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 **手柄设置**
 
-按键映射配置与快速切换。它调整按键映射的时候，UI会有2~10秒的延迟，不过也习惯了比微星的软件快多了。这里仅截取部分画面。
+按键映射配置与快速切换。它调整按键映射的时候，UI会有2~10秒的延迟，不过也习惯了比 *微星* 的软件快多了。这里仅截取部分画面。
 
 ![Experience&Setup_Win11_4.png](Experience&Setup_Win11_4.png)
 
@@ -830,6 +848,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 ![Experience&Setup_Win11_26.png](Experience&Setup_Win11_26.png)
 
 更多设置，包括更改那个逆天的 *Legion L\R键* 为 *View键* 和 *Menu键* 。
+20250323更新：不改了，我习惯了。
 
 ![Experience&Setup_Win11_12.png](Experience&Setup_Win11_12.png)
 
@@ -862,7 +881,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 我是在Legion Go发售后的一年（202410）才拿到的机器，再回看发售时搭配的早期版 *Legion Space 侧边栏* ，简直不忍直视，逻辑堪称究极逆天（[AMD·拯救者掌机！Legion Go超深度评测_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1nh4y1i7pi?t=668.4)）。
 
-但到我上手的时候， *Legion Space* 和 *“LS侧边栏”* 已经处于一个可用的状态了，唯一让我感到难以忍受的点是按下 *Legion L键* 退出 *Legion Space* 时，它居然只是最小化而不是退出到托盘，强迫症看见它占用在任务栏难受的一批。其他倒是无可指摘。
+但到我上手的时候， *Legion Space* 和 *“LS侧边栏”* 已经处于一个可用的状态了，唯一让我感到难以忍受的点是按下 *Legion L键* 退出 *Legion Space* 时，它居然只是最小化而不是退出到托盘，强迫症看见它占用在任务栏难受的一批。其他倒是无可指摘。20250323更新：联想官方看到这篇文章了？反正这个退出到托盘是更新了。
 
 使用 *“Legion R”键* 呼出 *“LS侧边栏”* （ 若切换过按键布局，则为 *“Menu键”* ），在最上方状态栏中从左至右分别显示 *“WiFi连接状态、主机与手柄连接状态、TrueStrike左手柄电量、Legion Go电量、TrueStrike右手柄电量、当前时间”* 。
 
@@ -940,7 +959,9 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 `C:\Program Files\Lenovo\LegionSpace\[版本号]\LegionSettingMenu.exe`
 
-为该应用创建快捷方式即可通过按下 *“Legion R”键* 以外的方式启动 *Legion Space 侧边栏* 。
+为该应用创建快捷方式即可通过按下 *“Legion R”键* 以外的方式启动 *Legion Space 侧边栏* 。  
+（20250323更新：最新版 *Legion Space* 软件v1.2.3.8更新了添加 *Legion Space 侧边栏* 快捷方式到桌面的选项： *“设置 - 通用 - 右侧快捷菜单其他唤起方式 - 通过创建桌面快捷图标唤起”* ）
+
 1. 创建快捷方式到 *桌面* ：参见本章的 *5.1.g* 。
 2. 固定链接到 *任务栏* ：打开 *文件资源管理器* 并定位到`LegionSettingMenu.exe`，在其上按住 *“右键”* 并将其拖动到 *任务栏* ，然后松开 *“右键”* 。
    ![Experience&Setup_Win11_41.png](Experience&Setup_Win11_41.png)
@@ -977,7 +998,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 #### a. Google Play Games beta
 
- *Google Play Games beta* （链接：[Google Play 游戏 - 在 Windows PC 平台上畅玩手游](https://play.google.com/googleplaygames)，以下称为 *“Play Games”* ）使Android 手游登陆 PC 端，可以在谷歌的 PC 版游戏平台上畅玩精选手游，体验画面更宏大、画质更清晰的版本。
+“ *Google Play Games beta* 使Android手游登录PC端，可以在谷歌的PC版游戏平台上畅玩精选手游，体验画面更宏大、画质更清晰的版本。”（来源：[Google Play 游戏 - 在 Windows PC 平台上畅玩手游](https://play.google.com/googleplaygames)，以下称为 *“Play Games”* ）
 
  *“Play Games”* 实现在PC上游玩Android游戏有两条途径：
 
@@ -1008,7 +1029,7 @@ Legion Go可以在关机时插上电源的一刻显示当前电池电量，此�
 
 <img alt="Experience&Setup_Win11Android4.png" src="Experience&Setup_Win11Android4.png" width="40%" title="This image has been scaled to 40% of its original size.">  
 
-不止我遇到这个问题，来自全世界的许多人都遇到了这个问题：[When I try to install google play games beta I get error code NUFFFFFFFF - Google Play Community](https://support.google.com/googleplay/thread/244105829/when-i-try-to-install-google-play-games-beta-i-get-error-code-nuffffffff?hl=en)
+不止我遇到这个问题，来自全世界的许多人都遇到了这个问题：[When I try to install google play games beta I get error code NUFFFFFFFF - Google Play Community](https://support.google.com/googleplay/thread/244105829/when-i-try-to-install-google-play-games-beta-i-get-error-code-nuffffffff)
 
 解决方案其实很简单，使用 *Windows 资源管理器* 导航到`C:\Program Files (x86)\Google`文件夹下，然后把里面的所有文件都删了就行。不会影响到 *Google Chrome浏览器* 。
 
@@ -1113,7 +1134,7 @@ Legion Go预装了WSA，但该WSA版本是微软官方版本。要安装 *WSABui
 
 在 *蓝叠（BlueStacks）5* 和微星 *MSI App Player* 之间踌躇了好久，最后决定先试一下 *MSI App Player* ，听说是 *蓝叠（BlueStacks）5* 的换皮但是没有那么多内置广告。我之前在 *微星GS 66* 的随附软件中见过这个 *MSI App Player* ，但当时没在意，现在正好趁着这个机会试试。
 
-因为是新机就脏测试了，反正之后怎样都要重装系统的。
+因为是新机就脏测试了，反正之后怎样都要重装系统的。20241031更新：由于持续不断的问题，MSI App Player / 蓝叠（BlueStacks）5 只能无奈卸载，本小节仅留档，不作推荐。
 
 &ensp;&ensp;&ensp;&ensp;**c.1 下载并安装MSI App Player**
 
@@ -1426,19 +1447,134 @@ Google Gemini生成
 
 ![Experience&Setup_Win11Emulator17.png](Experience&Setup_Win11Emulator17.png)  
 
+#### d. Xenia Canary
+
+ *Xenia* 是一个在 *Windows 10/11* 或 *Linux* ( *“Xenia Canary”* 版本)上运行的开源的 *微软Xbox 360* 模拟器，可以让 *Xbox 360* 的游戏在PC上运行。由于 *Xbox 360* 的图形API是基于 *DirectX 8.1* 定制的 *“Xenos”* API，模拟器更容易在已经内置了 *DirectX 12* 的 *Windows 10/11* 系统上进行转译，不过自从Linux上的 *Proton* 的出现，Linux也可通过转译为 *Vulkan* API来游玩了。截至20250328，社区反馈有311个游戏“在调整后基本可玩”，1058个游戏“部分可玩但有错误”，348个游戏无法进入到游戏流程中。
+
+BiliBili上已经有人写了 *Xenia* 的下载到游玩游戏的全过程，在此不再赘述：
+[PC端Xbox360模拟器：xenia模拟器下载、安装、加载游戏、参数设置全套教程 - 哔哩哔哩](https://www.bilibili.com/opus/799231940170350596)。推荐安装 *“Xenia Canary”* 版本，因为此版本的更新频率更高，更有可能获得新特性和优化支持，当然也更有可能遇到新BUG；不过话又说回来，难道稳定版BUG就少了。
+
+要查看对某款游戏的兼容性，进入 *Xenia* 的 *“game-compatibility（游戏兼容性）”* 仓库的 *议题* 板块：[Issues · xenia-project/game-compatibility](https://github.com/xenia-project/game-compatibility/issues)和 *Xenia Canary* 的 *“game-compatibility（游戏兼容性）”* 仓库的 *议题* 板块：[Issues · xenia-canary/game-compatibility](https://github.com/xenia-canary/game-compatibility/issues)，在下方的搜索框内搜索游戏的关键词，点击 *“🔍”* 按钮发起搜索；或者也可以点击下方的 *“Labels（标签）”* 下拉菜单，勾选想要筛选的标签，进行筛选。点击进入游戏标题相应的 *议题* 中可以查看社区对游戏运行情况的反馈。
+
+![Experience&Setup_Win11Emulator19.png](Experience&Setup_Win11Emulator19.png)  
+
+对于游戏的获取，可以通过以下文章从连接到PC的光驱上转储自己拥有的 *Xbox 360* 游戏光盘镜像。通过这种方式在模拟器上游玩镜像是不违法的。
+[Disc Dumping Guide (MPF) - Redump Wiki](http://wiki.redump.org/index.php?title=Microsoft_Xbox_and_Xbox_360_Dumping_Guide)
+
+Windows上的 *Xenia Canary* 十分小巧，仅不到20M的大小。首次运行 *Xenia Canary* 会弹出 *“No Profiles Found（没有找到用户资料）”* 窗口，点击 *“Create Profile（创建用户资料）”* 按钮，在弹出的 *“Create Profile”* 窗口中的 *“Gamertag（玩家代号）”* 中输入 *Xbox 玩家代号* ，并点击 *“Create（创建）”* 按钮。
+
+<img alt="Experience&Setup_Win11Emulator18.png" src="Experience&Setup_Win11Emulator18.png" width="60%" title="This image has been scaled to 60% of its original size.">  
+
+> 如果 *Xbox 玩家代号* 中包含不可用字符（如“-”），则 *“Create”* 按钮无法点击。
+
+ *Xenia Canary* 可以在少量绘图错误的情况下游玩《命令与征服3：凯恩之怒》Xbox 360版，但战局结束后模拟器将会跳出。《命令与征服3：凯恩之怒》Xbox 360版有着PC版没有的主机独占“凯恩的挑战”模式，PC版则独占“全球征服”模式。由于《命令与征服3：凯恩之怒》主机和PC版游戏均限制在30FPS，因此无法测试更高的帧数表现。
+
+![Experience&Setup_Win11Emulator20.jpeg](Experience&Setup_Win11Emulator20.jpeg)  
+
+![Experience&Setup_Win11Emulator21.jpeg](Experience&Setup_Win11Emulator21.jpeg)  
+
+#### e. RPCS3
+
+“ *RPCS3* 是一款适用于 *索尼 PlayStation 3* 的免费开源模拟器，可在Windows、Linux、FreeBSD和macOS操作系统上运行，允许在PC上游玩和调试 *PlayStation 3* 游戏和软件。它采用C++编程语言开发，针对x86-64和ARM64 CPU，以OpenGL和Vulkan为后端渲染器。
+
+截至20250329，69.53%的 *PlayStation 3* 游戏被归类为“完全可玩”，这意味着原生库中的很大一部分游戏可以从头到尾畅玩，不会出现任何重大问题。”
+
+以上双引号（“”）内的部分文字来自于：[RPCS3 - Wikipedia](https://en.wikipedia.org/wiki/RPCS3)
+
+&ensp;&ensp;&ensp;&ensp;**e.1 下载和安装RPCS3**
+
+可以参考 *RPCS3* 官方的 *“Quickstart（快速上手指南）”* ：[RPCS3 - Quickstart](https://rpcs3.net/quickstart)，或这个BiliBili视频：[【RPCS3】九分钟带你入门PS3模拟器_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1V94y1e7ta/)来进行 *RPCS3* 的下载、安装更新、游玩游戏的全过程，在此不再赘述。
+
+对于 *RPCS3* 的中文界面，可以在网络上搜索“`RPCS3 汉化`”关键字，或在这个百度贴吧帖子中下载：[最新rpcs3简体中文汉化 适配2024新版本_rpcs3吧_百度贴吧](https://tieba.baidu.com/p/8941053382)，但不保证时效性。
+
+ *PlayStation 3* 的系统固件可以从 *索尼* 官网下载：[如何更新PS3主機系統軟體](https://www.playstation.com/zh-hant-hk/support/hardware/ps3/system-software/?country-selector=true)，进入网页后，向下滚动到 *“如何重新安裝PS3系統軟體（如何重新安装PS3系统固件）”* ，点击 *“使用電腦重新安裝”* 横幅，在展开的内容中点击 *“下載PS3更新”* 。将下载下来的`PS3UPDAT.PUP`文件放置在某个文件夹中，如`RPCS3\games\`。
+
+![Experience&Setup_Win11Emulator22.png](Experience&Setup_Win11Emulator22.png)  
+ *（ *RPCS3* 的 *“快速上手指南”* （左图）中还有Legion Go。）* 
+
+&ensp;&ensp;&ensp;&ensp;**e.2 转储PlayStation 3游戏光盘**
+
+对于游戏的获取，可以通过以下文章从连接到PC的蓝光光驱上转储自己拥有的 *PlayStation 3* 游戏光盘镜像。通过这种方式在模拟器上游玩镜像是不违法的。[Help:Dumping PlayStation 3 games - RPCS3 Wiki](https://wiki.rpcs3.net/index.php?title=Help:Dumping_PlayStation_3_games#An_important_note_about_dumping_Disc_games_on_PC_with_Blu-ray_Disc_Drives)
+
+对于一些 *PlayStation 3* 游戏光盘，其中可能还包含了离线 *PlayStation 3* 升级固件和用于推广的试玩版游戏。以我拥有的这张《死亡空间™》 *PlayStation 3* 游戏光盘为例：在成功转储后，位于游戏文件夹内有两个文件夹：`PS3_GAME`和`PS3_UPDATE`，其中`PS3_GAME`文件夹内即是 *PlayStation 3* 游戏文件，`PS3_UPDATE`内则为离线 *PlayStation 3* 升级固件，可以删除以节省空间。打开`PS3_GAME`文件夹，然后打开`PKGDIR`文件夹，其中可能包含多个`PKG**`文件夹。依次打开这些文件夹，查看其中的.png图片是否与 *PlayStation 3* 游戏光盘相关；若不相关（如下图中《死亡空间™》 *PlayStation 3* 游戏光盘中附赠的是《战地风云：叛逆连队》和《火爆狂飙：天堂》的试玩版游戏），则可以依次删除。如果均不相关，则可以将整个`PKGDIR`文件夹删除以节省空间。以上操作均不会影响到游戏正常运行。
+
+![Experience&Setup_Win11Emulator23.png](Experience&Setup_Win11Emulator23.png)  
+ *（对于《死亡空间™》 *PlayStation 3* 游戏光盘，删除这些文件夹节省了2.37GB的空间。）* 
+
+&ensp;&ensp;&ensp;&ensp;**e.3 下载游戏更新**
+
+转储的 *PlayStation 3* 游戏光盘无法获取到游戏的后续更新，[PS3 Games Updates](http://ps3.aldostools.org/updates.html)网站收录了所有的 *PlayStation 3* 游戏在 *PlayStation Network* 上的 **下载链接** ：进入该网站，在上方的搜索框中输入游戏关键字或游戏ID，（可选）在右上角选择游戏售卖区域进行筛选，点击下方的搜索结果进行下载。
+
+![Experience&Setup_Win11Emulator27.png](Experience&Setup_Win11Emulator27.png)  
+
+&ensp;&ensp;&ensp;&ensp;**e.4 调整部分（游戏）设置**
+
+ **手柄设置** ：点击 *RPCS3* 主界面中上方的工具栏中的 *“🎮控制器”* 按钮，在弹出的 *“游戏控制器设置”* 窗口中进行调整。 *RPCS3* 对于不同的输入设备类型会有自动的映射配置，大部分的情况下默认即可。对于某款游戏或情景下的特殊配置，可以点击右侧的 *“配置文件 - Add Configuration（添加配置）”* 按钮，在弹出的 *“命名唯一的名称”* 对话框中，在 *“Configuration Name:（配置名称：）”* 输入框中输入配置名称，最后点击 *“确定”* 按钮保存。这样在以后便可以根据情景快速切换配置设置了。
+
+![Experience&Setup_Win11Emulator24.png](Experience&Setup_Win11Emulator24.png)  
+
+左上角的 *“手柄类型”* 表示了用于输入的手柄类型，对于 *微软Xbox 360手柄、Xbox手柄（2015）、Xbox手柄（2016）、Xbox手柄（2020）、Xbox One精英手柄、Xbox Series精英手柄* 和兼容XInput的手柄（包含Legion Go的 *TrueStrike* 手柄），选择 *“XInput”* 。点击下方映射配置中的各按键/输入按钮，按键会显示 *“[ 等候 5 ]”* 字样，在5秒内按下键盘/手柄上想要映射的按键/按钮/输入即可。对于《死亡空间™》 *PlayStation 3* 版，当时的制作组选择配合 *PlayStation 3* 射击游戏主流的 *R1键* 开火、 *R2键* 副模式/扔手雷的键位组合，正与当时 *Xbox 360* 射击游戏对应的 *RT键* 开火、 *RB键* 副模式/扔手雷的键位组合相反，还不给出调整键位选项。为了配合习惯，我给调换了一下。最后，不要忘记最后点击右下角的 *“保存”* 按钮保存配置。
+
+![Experience&Setup_Win11Emulator25.png](Experience&Setup_Win11Emulator25.png)  
+ *（无法截取 *“[ 等候 5 ]”* 字样的截图）* 
+
+> 也可在 *“游戏列表”* 中特定的游戏上 *“右键 - 建立自定义游戏控制器设置”* 来对特定游戏设定特定的
+
+ **游戏画面内FPS显示** ：点击 *RPCS3* 主界面中上方的工具栏中的 *“🎚️设置”* 按钮，在弹出的 *“设置”* 窗口中点击 *“模拟器”* 选项卡，调整右方的 *“性能监测”* 栏。以在左上角显示最基本的FPS为例：勾选 *“启用性能监测”* 复选框以启用性能监测显示，在 *“详细程度：”* 下拉菜单中选择性能监测的详细程度， *“最小”* 意味着只显示FPS数据；在 *“方位：”* 下拉菜单中选择性能监测位于屏幕的位置； *“水平边距”* 和 *“垂直边距”* 确定了性能监测位于屏幕据 *“方位：”* 的像素边距处； *“更新间隔：”* 为性能监测信息更新的间隔，其中1000毫秒=1秒。最后，点击右下角的 *“保存”* 按钮保存设置。
+
+![Experience&Setup_Win11Emulator26.png](Experience&Setup_Win11Emulator26.png)  
+
+ **全屏游戏** ：在游戏开始后，对于 *Windows 10/11* ，可以使用系统级快捷键  *“Alt + Enter（回车）”* 键在全屏和窗口化模式下切换。若要 *RPCS3* 默认以全屏模式启动游戏，在前面的 *“设置”* 窗口中点击 *“模拟器”* 选项卡，勾选左侧 *“模拟器设置”* 中的 *“以全屏幕模式开始游戏”* 复选框。最后，点击右下角的 *“保存”* 按钮保存设置。
+
+ **模拟PlayStation 3系统配置** ：
+
+点击 *RPCS3* 主界面中上方的工具栏中的 *“🎚️设置”* 按钮，在弹出的 *“设置”* 窗口中点击 *“系统”* 选项卡，可以调整相应的 *“PS3主机区域”* 和 *“输入按钮设定”* 。 *“PS3系统语言”* 仅用于 *PlayStation 3* 游戏进行主机语言检测，并不会影响到模拟器模拟 *XMB* 界面的语言。最后，点击右下角的 *“保存”* 按钮保存设置。
+
+![Experience&Setup_Win11Emulator30.png](Experience&Setup_Win11Emulator30.png)  
+
+ **调整游戏渲染画质**：
+
+跟着这个BiliBili视频做即可：[【教你如何将RPCS3的画质调至最佳 三档分辨率分比演示】4K60帧_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Xp4y1H7oe/)
+
+&ensp;&ensp;&ensp;&ensp;**e.5 使用XMB界面**
+
+ *RPCS3* 也可以模拟 *PlayStation 3* 的 *XMB* 界面。点击菜单栏中的 *“文件 - 运行VSH/XMB”* ， *RPCS3* 会从系统固件中提取 *XMB* 界面相关的文件并开始转译/渲染，这需要一段相对漫长的过程。完成后， *RPCS3* 将可以进入完整的 *XMB* 界面。
+
+![Experience&Setup_Win11Emulator28.png](Experience&Setup_Win11Emulator28.png)  
+
+ **请注意** ： *RPCS3* 仅可以模拟 *PlayStation 3* 的 *XMB* 界面，但无法从该界面内启动任何游戏。具体可以参见 *RPCS3* 的解释和优化该界面的说明：[Help:Frequently Asked Questions - RPCS3 Wiki](https://wiki.rpcs3.net/index.php?title=Help:Frequently_Asked_Questions#Running_VSH/XMB_in_RPCS3)。因为实现全功能的 *XMB* 界面难度大且并不是开发组开发的目标，所以从 *XMB* 界面内启动游戏的愿景可能永远无法实现。
+
+ **退出XMB界面** ：请通过在 *XMB* 界面中导航并执行 *“用户 - 切断主机的电源”* 来退出 *XMB* 界面，待FPS数值冻结后再执行游戏退出。否则可能会导致 *RPCS3* 闪退、下次启动 *XMB* 界面时需要重建系统存储等问题。
+
+&ensp;&ensp;&ensp;&ensp;**e.6 游玩游戏**
+
+![Experience&Setup_Win11Emulator29.jpeg](Experience&Setup_Win11Emulator29.jpeg)  
+ *（// TODO：过热？）* 
+
 ### 4. Xbox PC游戏/Microsoft Store游戏
 
  *Xbox* 是全球知名的主机游戏平台，隶属于 *微软* 旗下，其系统架构一向是根据 *Windows NT 内核* 深度定制，因此也使游戏开发者们在同时面向PC和Xbox平台开发时，减少了不少工作量。微软早在 *初代Xbox* 时就考虑过要融合Xbox和PC生态，如 *《光环：战斗进化》* 在2003年9月从 *初代Xbox* 移植到了 *Windows XP* ， *《光环2》* 在2007年5月从 *初代Xbox* 移植到了 *Windows Vista* ，并通过 *Games for Windows – Live* 提供经 *Windows Live账号* 的线上联机功能。如今 *Windows Live账号* 被统一的 *微软账户* 替代， *Games for Windows – Live* 被 *Xbox App* 替代，融合Xbox和PC生态的思路被 *通用 Windows 平台（UWP）* 所继承。
 
  *Xbox* 平台推出了订阅制的 *“Xbox Game Pass(XGP)”* ，“Xbox Game Pass Ultimate 包括網上主機多玩家遊戲和數百款高品質遊戲。在主機和電腦上與朋友一起玩遊戲，並取得 EA Play 會員資格 – 全部只要單一超低月費。”“PC Game Pass 專為電腦玩家而設計。遊玩高品質電腦遊戲，包括上市當天推出的遊戲，並尊享 EA Play 會員資格、Riot Games 禮遇、折扣優惠及更多精彩福利。” *“PC Game Pass (PGP)”* 属于XGP内的分级订阅项目，在降低价格的同时，拥有所有XGP中包含PC游戏的基础游戏，在订阅期内无限制游玩的权利。
 
-因为微软服务经由统一的 *微软账户* 理念而实现，因此无论是Windows账户、Microsoft Store账户、Microsoft 365账户、个人版OneDrive和个人版Azure，还是Xbox账户，可以统统使用同一个微软账户登录。对于现在（202412）Windows 10/11上的 *Xbox App* ，其仅作为社区使用，安装、更新和管理游戏文件的功能由 *Microsoft Store* 提供，因此此处可以将“Xbox PC游戏”和“Microsoft Store游戏”视作同一事物；而通过 *Microsoft Store* 安装的Xbox PC游戏则均为 *UWP* 应用。
+因为微软服务经由统一的 *微软账户* 理念而实现，因此无论是Windows账户、Microsoft Store账户、Microsoft 365账户、个人版OneDrive和个人版Azure，还是Xbox账户，可以统统使用同一个微软账户登录。对于现在（202412）Windows 10/11上的 *Xbox App* ，其仅作为社区使用，安装、更新和管理游戏文件的功能由 *Microsoft Store* 提供，因此此处可以将 *“Xbox PC游戏”* 和 *“Microsoft Store应用”* 视作同一事物；而通过 *Microsoft Store* 安装的 *Xbox PC游戏* 则均为 *UWP* 应用。
 
 以上双引号（“”）内的文字来自于：[PC Game Pass | Xbox](https://www.xbox.com/zh-HK/xbox-game-pass/pc-game-pass)
 
 ![Experience&Setup_Win11_39.png](Experience&Setup_Win11_39.png)  
 
-// TODO：游戏截图和手柄适配
+每个 *微软账户* 登录的Microsoft Store的设备，在每365天内有三次切换为可离线游戏的设备的机会。这意味着：对于每个 *微软账户* ，从第一次设置某个PC为可离线游戏的PC，自那天起的365天内，它还有两次更换到另一台PC并设置为可离线游戏的PC；同时只允许一台PC为可离线游戏的PC，意味着切换后之前的那台PC便不可离线游戏；若365天内切换了三次，那么下次可切换的时间为第一次设置可离线游戏的PC的第365天后。
+
+![Experience&Setup_Win11_43.png](Experience&Setup_Win11_43.png)  
+
+对于一些 *Xbox PC游戏* ，其需要在启动时在线才能进入游戏。因此将Legion Go设置为可离线游戏的PC很重要，因为移动场景中并不一定都有WiFi连接，或信号太弱。未设置为可离线游戏的Legion Go在游玩这类游戏时没有连接到Xbox服务器，就会出现以下情况：
+
+![Experience&Setup_Win11_44.png](Experience&Setup_Win11_44.png)  
+
+Xbox PC游戏/Microsoft Store游戏对手柄的支持程度基于游戏本身对手柄的支持程度。
+
+![Experience&Setup_Win11_42.png](Experience&Setup_Win11_42.png)  
+ *（《极限竞速：地平线5》完全支持手柄操作（但不支持DualSense/DualShock 4手柄按键布局））* 
 
 &ensp;&ensp;&ensp;&ensp;**Xbox PC游戏在非C盘下的默认安装位置**
 
@@ -1488,11 +1624,13 @@ Google Gemini生成
 
 ![Experience&Setup_Win11Library61.png](Experience&Setup_Win11Library61.png) 
 
-好在早在2016年，就有人试图解决这个问题，且时至今日仍在不断更新。 *“UWPHook”* 是一个开源工具，目的很简单：一键将由 *Microsoft Store* 安装的游戏添加到 *Steam 库* 中。进入官网链接：[UWPHook by BrianLima](https://briano.dev/UWPHook/)，点击右侧栏中的 *“Download (Latest Release)（下载最新发行版本）”* 按钮，在跳转的Github仓库发行版本下载页面中，点击 *“UWPHook.exe”* 链接下载软件安装包，或者点击 *“UWPHook.zip”* 链接下载软件压缩包。
+好在早在2016年，就有人试图解决这个问题，且时至今日仍在不断更新。 *“UWPHook”* 是一个开源工具，目的很简单：一键将由 *Microsoft Store* 安装的游戏添加到 *Steam 库* 中。进入官网链接：[UWPHook by BrianLima](https://briano.dev/UWPHook/)，点击右侧栏中的 *“Download (Latest Release)（下载最新发行版本）”* 按钮，在跳转的Github仓库发行版本下载页面中，点击 *“UWPHook.exe”* 链接下载软件安装包。
 
 ![Experience&Setup_Win11Library62.png](Experience&Setup_Win11Library62.png)  
 
 安装完成后运行 *“UWPHook”* ，首先弹出 *“Do you want to automatically import grid images for imported games?（你想要自动为添加的游戏添加卡片封面吗？）”* 对话框，如果你有 *“SteamGridDB API key”* ，可以点击 *“是”* 按钮；如果你不知道那是什么鬼，可以在此处点击 *“否”* 按钮，在后面的 *5.2* 小节会谈到。之后弹出 *“UWPHook”* 的设置界面，可以不用动任何东西，直接关闭即可。在之后弹出的 *“UWPHook”* 的主界面中，在界面下方的 *“Filter:（筛选：）”* 中，输入想要添加的 *Xbox PC游戏/Microsoft Store游戏/UWP应用* 关键字；在上方的筛选结果中，找到想要添加的 *Xbox PC游戏/Microsoft Store游戏/UWP应用* ，勾选其前面的复选框，然后点击下方的 *“Export selected apps to Steam（绑定选择的应用到Steam）”* 按钮。之后， *“UWPHook”* 将进行一系列绑定操作，期间可能重启Steam，当弹出 *“Your apps were successfully exported!（你的应用被成功绑定！）”* 对话框后，点击 *“确定”* 按钮退出。
+
+> 目前来看，貌似只有将 *“UWPHook”* 安装在默认的`%APPDATA%\UWPHook`路径下，软件功能才能正常运作。
 
 ![Experience&Setup_Win11Library63.png](Experience&Setup_Win11Library63.png)  
 
@@ -1515,7 +1653,7 @@ Google Gemini生成
 
 &ensp;&ensp;&ensp;&ensp;**h. Vita3K**
 
-首先使用上面小节 *g.* 中的方法，创建 *Vita3K* 的快捷方式到 *桌面* 上。然后复制一份 *Vita3K* 的快捷方式：
+首先使用本小节 *g.* 中的方法，创建 *Vita3K* 可执行文件的快捷方式到 *桌面* 上。然后复制一份 *Vita3K* 的快捷方式：
 
 1. 在按住 *Ctrl键* 的同时， *左键* 选中该快捷方式并拖动到 *桌面* 的任意空白位置，然后松开 *左键* ，再松开 *Ctrl键* 。（图中橙色）
 2. 选中该快捷方式，复制，然后粘贴。
@@ -1552,7 +1690,7 @@ Google Gemini生成
 
 ![Experience&Setup_Win11Library53.png](Experience&Setup_Win11Library53.png) 
 
-类似于上一子节 *i.* 中添加参数的方式，在 *“目标：”* 文本框的后方输入以下参数：
+使用类似于本小节 *h.* 中添加参数的方式，在 *“目标：”* 文本框的后方输入以下参数：
 
 ```cmd
  --start-fullscreen <网址>
@@ -1572,11 +1710,29 @@ Google Gemini生成
 
 一些网页还支持作为Web App安装到系统。具体操作方式，请参考另一篇文章《[Windows 11 + Kubuntu双系统安全启动和使用体验](../Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验/Dual%20boot%20Windows%2011%20and%20Kubuntu%20with%20secure%20boot%20on,%20and%20experience%20-%20Windows%2011%20+%20Kubuntu双系统安全启动和使用体验.md)》中的 *三、11.4* 。安装的Web App将自动添加快捷方式到桌面。
 
-&ensp;&ensp;&ensp;&ensp;**j. WSA**
+&ensp;&ensp;&ensp;&ensp;**j. Windows Subsystem for Android**
 
 已安装的WSA中的Android应用会像其他安装在Windows中的应用一样显示在 *开始* 里，打开 *“开始 - 全部”* ，定位到要创建桌面快捷方式的WSA中的Android应用，在其上 *“右键 - 更多> - 打开文件位置”* ，在打开的`%APPDATA%\Microsoft\Windows\Start Menu\Programs`文件夹中，复制该快捷方式到桌面即可。
 
 ![Experience&Setup_Win11Library60.png](Experience&Setup_Win11Library60.png)  
+
+&ensp;&ensp;&ensp;&ensp;**k. Xenia Canary**
+
+首先使用本小节 *g.* 中的方法，创建 *Xenia Canary* 可执行文件的快捷方式到 *桌面* 上。然后，使用类似于本小节 *h.* 中添加参数的方式，在 *“目标：”* 文本框的后方输入以下参数：
+
+```cmd
+ "<游戏镜像路径>" --fullscreen
+```
+
+其中，`<游戏镜像路径>`是游戏镜像的绝对路径。` --fullscreen`参数用于控制以全屏方式打开 *Xenia Canary* ，若不需要全屏打开，可以将参数去掉。最后，点击 *“确定”* 按钮保存。
+
+来源：[How to create a direct game shortcut ? : r/xenia](https://www.reddit.com/r/xenia/comments/i4ch0f/how_to_create_a_direct_game_shortcut/)
+
+&ensp;&ensp;&ensp;&ensp;**l. RPCS3**
+
+在 *RPCS3* 主界面下的 *“游戏列表”* 中，在想要添加至桌面快捷方式的游戏上 *“右键 - Manage Game（管理游戏） - 发送快捷方式到桌面”* 。
+
+![Experience&Setup_Win11Library65.png](Experience&Setup_Win11Library65.png) 
 
 &ensp;&ensp;&ensp;&ensp;**z. 获取URI和运行参数**
 
@@ -1952,7 +2108,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 <img alt="Hardware_Modifications4.jpeg" src="Hardware_Modifications4.jpeg" width="40%" title="This image has been scaled to 40% of its original size."> 
 
-话说就这么一个小抗干扰薄膜要卖15.44刀税前，真是赚钱啊。
+话说就这么一个小抗干扰薄膜要卖15.44美元税前，真是赚钱啊。
 
 ![Hardware_Modifications8.png](Hardware_Modifications8.png)
 
@@ -1980,6 +2136,8 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ![Hardware_Modifications1.jpeg](Hardware_Modifications1.jpeg)
 
+20250330更新：大概只粘住一个月，之后就连上3M强力双面胶都粘不住了；这里受力正好成一个杠杆结构，受压的那部分会把整个脚垫翘起来。如果还是想要贴缓冲，用绝缘胶带或许更好。
+
 ## 五、更换SSD后的文件操作，和安装类SteamOS双系统
 
 由于更换了SSD，来回搬文件是没跑了；我买的Legion Go是美版，预装的英文版Windows 11还存在中文化不完全的问题（从Windows NT时代就落下的屎山），又因买回来之后没来得及办公，所以换完SSD之后直接重装系统根本不带犹豫的。
@@ -1996,7 +2154,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ![Dual_Boot1.png](Dual_Boot1.png)
 
-在这一步中，要继续，必须登录 *联想账户* 。在登陆联想账户之后，跳转到 *“3. Customer Info（客户信息）”* 页面中。在 *“Customer Information（客户信息）”* 表单中输入对应的信息，然后点击 *“Submit（提交）”* 按钮。之后，在跳转的页面中，在 *“4. Review & Confirmation（审核与确认） - Order Summary（订单摘要）”* 处，点击 *“Digital Download（电子下载）”* 按钮。
+在这一步中，要继续，必须登录 *联想账户* 。在登录联想账户之后，跳转到 *“3. Customer Info（客户信息）”* 页面中。在 *“Customer Information（客户信息）”* 表单中输入对应的信息，然后点击 *“Submit（提交）”* 按钮。之后，在跳转的页面中，在 *“4. Review & Confirmation（审核与确认） - Order Summary（订单摘要）”* 处，点击 *“Digital Download（电子下载）”* 按钮。
 
 ![Dual_Boot2.png](Dual_Boot2.png)
 
@@ -2257,13 +2415,13 @@ UEFI引导界面，下方会显示 *Bazzite* logo。
 
 要自定义启动选项，参见本章的 *7.* 大节。 *Bazzite* 系统体验，参见 *六、* 章。
 
-#### 6.2 Nobara
+#### 6.2 Nobara Linux
 
- *Nobara* 是一个开源的、社区驱动的项目，基于 *Fedora Linux* 。“该项目旨在解决大部分（Linux发行版作为游戏系统而缺少开箱即用的）问题，并提供更好的游戏、流媒体和内容创建体验。更重要的是，我们希望更加方便点击，避免基本用户必须打开终端。这并不是说终端和/或终端使用是一件坏事，我们非常欢迎高级用户继续使用终端，但对于新用户来说，通常希望点击易于使用。” *Nobara* 是可变Linux发行版。
+ *Nobara Linux* 是一个开源的、社区驱动的项目，基于 *Fedora Linux* 。“该项目旨在解决大部分（Linux发行版作为游戏系统而缺少开箱即用的）问题，并提供更好的游戏、流媒体和内容创建体验。更重要的是，我们希望更加方便点击，避免基本用户必须打开终端。这并不是说终端和/或终端使用是一件坏事，我们非常欢迎高级用户继续使用终端，但对于新用户来说，通常希望点击易于使用。” *Nobara Linux* 是可变Linux发行版。
 
 以上双引号（“”）内的文字来自于：[Nobara Linux | The Nobara Project](https://nobaraproject.org/)
 
-&ensp;&ensp;&ensp;&ensp;**a. 下载Nobara**
+&ensp;&ensp;&ensp;&ensp;**a. 下载Nobara Linux**
 
 进入 *Nobara* 官网：[Nobara Linux | The Nobara Project](https://nobaraproject.org/)，点击右上方的 *“Download Nobara（下载Nobara）”* 链接，跳转到镜像版本选择下载页面：
 
@@ -2355,7 +2513,7 @@ UEFI引导界面，下方会显示 *Bazzite* logo。
 
 ### 7. （可选）创建从Steam Deck模式切换至Windows 11的选项
 
-在下一大节中安装的 *rEFInd* 只能在系统启动时选择哪个操作系统进行引导，而在已经引导的系统中切换到另一系统时，也就只能重启再次选择，多少有点麻烦。下面介绍一种从 *Steam Deck模式* 直接通过运行 *“非Steam游戏”* 来进行操作系统切换的方法。（本操作将在 *Nobara* 下进行， *Bazzite* 大同小异。）大体思路是，创建一个“切换至Windows 11”的 *“非Steam游戏”* ，在运行时，让 *Steam* 执行“切换下一次UEFI引导项为Windows 11”的命令，并重启。
+有没有一种在 *Steam Deck模式* 直接通过运行 *“非Steam游戏”* 来进行操作系统切换的方法？有，大体思路是，创建一个“切换至Windows 11”的 *“非Steam游戏”* ，在运行时，让 *Steam* 执行“切换下一次UEFI引导项为Windows 11”的命令，并重启。（本操作将在 *Nobara* 下进行， *Bazzite* 大同小异。）
 
 首先，在 *Steam Deck模式* 中，使用触摸操作或者手柄，依次选择 *“菜单 - 电源 - 切换至桌面”* ，先切换到 *Nobara 桌面模式* 。
 
@@ -2407,11 +2565,11 @@ efibootmgr
 
 在 *“快捷方式”* 窗口中，修改程序名称，然后清空 *“目标”* 、 *“起始位置”* 文本框，在 *“启动选项”* 文本框中填写以下内容：
 
-```text
+```shell
 sudo efibootmgr --bootnext <Windows Boot Manager的启动项序号> && reboot
 ```
 
-其中，“Windows Boot Manager的启动项序号”就是前面记下的序号。
+其中，`<Windows Boot Manager的启动项序号>`就是前面记下的序号。
 
 Linux上的 *Steam* 在引用系统的“打开文件”窗口时，有时不像在Windows中那样会筛选所有可用文件扩展名，如在 *“KDE系统门户”* 中，像下图；这时，只要点击 *“过滤：”* 右侧的下拉菜单，选择 *“All Files (\*)（全部文件（\*））”* ，就可以看到文件夹下的全部文件了。
 
@@ -2512,13 +2670,16 @@ resolution <横向像素数> <纵向像素数>
 
 其中，`enable_touch`的作用是开启触摸屏支持；`big_icon_size <数字>`的作用是设置大图标的边长为指定数字的像素数；`small_icon_size <数字>`的作用是设置小图标的边长为指定数字的像素数；`resolution`的作用是为 *rEFInd* 指定主显示器的分辨率，如果设置为`resolution 2560 1600`还能神奇地使 *rEFInd* 横向显示（但在引导Windows时会使引导加载程序的显示出现问题，不影响进入系统）。
 
+![Dual_Boot83.jpeg](Dual_Boot83.jpeg)  
+
 （可选）在配置文件结尾加入以下文本：
+
 ```text
-default_selection fedora
+default_selection <文本>
 timeout <数字>
 ```
 
-其中，`default_selection fedora`的作用是将默认的启动项设为 *Fedora* （ *Nobara* 基于 *Fedora* ）；`timeout <数字>`的作用是当用户在指定数字的秒数后没有输入，则自动启动默认启动项。这样做的好处是在测试时如果调错了某个参数导致 *rEFInd* 显示不正常，还能回到 *Nobara* 中更改配置文件；如果默认回到Windows了，我懒得写。
+其中，`default_selection <文本>`的作用是将默认的启动项设为包含`<文本>`的启动项，如设置为`+`则为启动上次启动的启动项，具体设置方式可见 *rEFInd* 官方文档；`timeout <数字>`的作用是当用户在指定数字的秒数后没有输入，则自动启动默认启动项。这样做的好处是在测试时如果调错了某个参数导致 *rEFInd* 显示不正常，还能回到 *Nobara* 中更改配置文件；如果默认回到Windows了，我懒得写。
 
 设置完成后，点击工具栏中的 *“💾保存”* 按钮或是按下 *“Ctrl + S”* 组合键保存配置文件。保存时仍需要在 *“需要进行身份验证”* 窗口中输入 *账户密码* 。之后再重启Legion Go，可以查看自定义 *rEFInd* 的效果。
 
@@ -2583,6 +2744,8 @@ font <输出文件名>
 
 ![Dual_Boot77.jpeg](Dual_Boot77.jpeg)  
 
+> 删除`/boot/efi/EFI/refind/vars/HiddenTags`文件，可以重置隐藏的启动条目。
+
 如果想要控制 *rEFInd* 界面中小图标要显示哪些图标，请参考 *rEFInd* 官方文档中的 *“Configuring the Boot Manager - Table 1: Global options in refind.conf - showtools（设置启动管理器 - 表1：refind.conf中的全局设置 - showtools）”* ：
 
 https://www.rodsbooks.com/refind/configfile.html#:~:text=may%20be%20ugly.)-,showtools,-shell%2C%20memtest
@@ -2621,11 +2784,11 @@ hideui badges, hints
 以 *“rEFInd-Fluent-themes”* 主题为例，在下载了主题包之后，解压其中的文件。由于各主题开发者的标准不同，主题安装方式也不尽相同，但其基本遵从以下格式：
 
 - 全部主题文件都应该放在`/boot/efi/EFI/refind/themes/`中的子目录下。比如 *“rEFInd-Fluent-themes”* 的目录名为`Fluent`，则其主题文件路径应为`/boot/efi/EFI/refind/themes/Fluent/`。
-- 主题文件应提供对应的`theme.conf`主题配置文件，其是`refind.conf`的副本，要使主题配置文件生效，需要用户在`refind.conf`中加入以下文本：
+- 主题文件应提供对应的`theme.conf`主题配置文件，其是`refind.conf`的副本，要使主题配置文件生效，需要用户在`refind.conf`中加入以下文本：  
   ```text
   include themes/<主题目录名>/theme.conf
   ```
-  `refind.conf`文件中，如果有重复配置项，则后面的项覆盖前面的项。因此如果用户决定使用自己的配置项，这些项应该在`include`行的后面。
+  `refind.conf`文件中，如果有重复配置项，则后面的项覆盖前面的项。因此如果用户决定使用自己的配置项，这些项应该在`include`行的后面。  
 
  *“rEFInd-Fluent-themes”* 主题中的格式并不是很标准，首先开发者是直接将自己PC中安装的 *rEFInd* 直接整个打包发在Github上了，其次其主题文件结构也不规整。
 
@@ -2647,12 +2810,87 @@ include themes/Fluent/theme.conf
 
 ![Dual_Boot81.jpeg](Dual_Boot81.jpeg)  
 
+#### *1 解决在Windows重启后rEFInd假死的问题 // TODO
+
+虽说安装完 *rEFInd* 后使用Linux各发行版是没什么问题了，但每次从Windows关机后，再次启动时， *rEFInd* 都会卡在界面上，任何输入都不好使。稍微搜索了一下，这个回答给出了答案：[PSA: Disable Fast Startup and Hibernation in Windows : r/linux4noobs](https://www.reddit.com/r/linux4noobs/comments/ucn1v7/comment/i6cab6h/)，写道：“（Windows 快速启动）让硬件处于初始化后的状态，而 Linux 驱动程序可能无法解决这个问题。它们认为硬件是未初始化的。”
+
+那么解决这个问题的方法也很显而易见了：关闭 *Windows快速启动* 。使用 *二、14.1* 中的方法打开 *控制面板* 中的 *“选择或自定义电源计划”* 页面，点击左侧栏中的 *“选择电源按钮的功能”* 链接，在打开的 *“定义电源按钮并启用密码保护”* 页面中，点击 *“🛡️更改当前不可用的设置”* 链接。然后，在下方的 *“关机设置”* 节中，取消勾选 *“启用快速启动(推荐)”* 复选框，最后点击 *“保存修改”* 按钮。
+
+![Dual_Boot86.png](Dual_Boot86.png)
+
+#### *2 解决Nobara系统更新终止于grub2的问题
+
+今天在 *Nobara* 中进行系统更新之后，发现无论重复更新、重启多少次，更新都没有被实际安装上。感觉可能跟 *rEFInd* 有点关系，毕竟我游戏都还没来得及玩，根本也没安装过其他的安装包。查看 *“nobara-updater（Nobara更新器）”* 位于`~/.local/share/nobara-updater`中的更新日志文件：
+
+![Dual_Boot87.png](Dual_Boot87.png)  
+ 
+其中所有带`nobara-sync.log`的文件都是更新日志文件，选择较近的一次，使用文本编辑器打开，滚动到日志较后方，发现有两行报错信息：
+
+![Dual_Boot88.png](Dual_Boot88.png)
+ *（不是咱都failed了为啥日志级别还是INFO）* 
+
+```log
+... INFO - Transaction failed: Rpm transaction failed.
+... INFO - - 乱码grub2-efi-ia32-1:2.12-16.fc41.x86_64乱码 3MB 乱码/boot/efi乱码
+... INFO - - 乱码grub2-efi-x64-1:2.12-16.fc41.x86_64乱码 5MB 乱码/boot/efi乱码
+```
+
+虽然有一堆乱码，但至少能提取出的信息是`Rpm`在安装`grub2-efi`相关的包遇到了某些问题，这些问题与数据量和`/boot/efi`路径有关。
+
+`/boot/efi`是GPT硬盘分区表上的EFI分区在Linux下挂载的路径……莫非是EFI分区满了？
+
+![Dual_Boot89.png](Dual_Boot89.png)
+
+使用 *“KDE 分区管理器”* 一看，还真是，EFI分区只剩4MB了。开启 *“终端”* 并尝试使用`sudo dnf update grub2*`命令对 *Grub2* 进行手动更新，果然发现了相同的报错：
+
+![Dual_Boot90.png](Dual_Boot90.png)
+
+总计需要EFI分区中14MB的空闲空间来更新 *Grub2* ，可是EFI分区已经快满了，没办法只能通过先卸载再安装这种方式更新了。还是在 *“终端”* 中，输入以下命令，并按 *“回车（Enter）键”* 执行:
+
+```Shell
+sudo rm -rf /boot/efi/EFI/fedora/ && sudo dnf -y update grub2*
+```
+
+![Dual_Boot91.png](Dual_Boot91.png)
+
+这样就解决了 *Grub2* 更新的问题，再次执行本大节初对 *Nobara* 中进行系统更新的操作，就可以正常进行了。
+
+> 究其原因，还是因为在安装了 *rEFInd* 和其主题之后的EFI分区基本被撑满了，而Linux中对引导管理器 *Grub2* 的更新策略是先复制进EFI分区再替换的方式，如果剩余空间不足，则无法进行复制。这常常发生在如本文中这样先安装Windows再安装Linux发行版双系统的情况下，因为Windows默认会给EFI分区分仅100MB的空间，而Linux各发行版则普遍选择给EFI分区分512MB的空间，最好的解决方案是给EFI分区扩容，而这在先进行Windows安装的情况下还墨迹一点，因为有MSR分区的存在。所以我这里就又犯懒了，等哪天这种更新方式也失效的时候，就得又请出 *DiskGenius* 来，到时候再更吧。
+
+### 9. 在Windows中清除Linux安装分区
+
+如果想要尝试其他的类SteamOS的Linux发行版，或是厌倦了使用Linux操作系统，想要将之前分配并安装Linux操作系统的分区释放出来，可以按本章中 *5.* 大节中的操作，进入 *“磁盘管理”* 窗口，在安装了Linux操作系统的分区上 *“右键 - 删除卷”* ，在弹出的 *“磁盘管理”* 窗口中点击 *“是”* 按钮。
+
+![Dual_Boot82.png](Dual_Boot82.png)
+
+如果想要将释放出的空间合并到前一个或后一个 *NTFS* 分区，在需要扩展的分区上 *“右键 - 扩展卷”* ，
+
+![Dual_Boot84.png](Dual_Boot84.png)
+
+在弹出的 *“扩展卷向导”* 中，依次点击 *“下一页”* 、 *“下一页”* 、 *“完成”* 按钮。
+
+![Dual_Boot85.png](Dual_Boot85.png)
+
+释放出的空间便会和选择的分区合并。如果将来需要再分离出来，在之前的操作中不要选择 *“扩展卷”* 菜单项，而是选择 *“压缩卷”* 。
+
 ## 六、类SteamOS系统的体验
 
-由于篇幅限制，另开一篇讲：《// TODO》。
+### Nobara Linux
+
+由于篇幅限制，另开一篇讲：《[类SteamOS的Linux发行版：Nobara的使用体验](../Nobara%20Linux%20user%20experience%20-%20类SteamOS的Linux发行版：Nobara的使用体验/Nobara%20Linux%20user%20experience%20-%20类SteamOS的Linux发行版：Nobara的使用体验.md)》。
 
 ## 七、携带办公体验
 
 办公续航时间体验
+
+使用1小时5分钟，在不同的系统中消耗的电量，保持散热模式为“性能（25W TDP）”（系统内电源模式：Windows最佳性能，Linux平衡）：
+
+Kubuntu 22.04 LTS：21%  
+Nobara 41：23%  
+Windows 11 24H2：24%  
+
+保持散热模式为“安静（8W TDP）”（系统内电源模式：最佳性能，性能）：
+
+Kubuntu 22.04 LTS：17%  
 
 // TODO
