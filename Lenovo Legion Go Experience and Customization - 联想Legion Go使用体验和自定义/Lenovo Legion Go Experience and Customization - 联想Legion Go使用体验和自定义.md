@@ -133,11 +133,11 @@ Windows从古至今，永远是全新安装的系统，其系统语言可以显�
 ~~在应用详情页面中，点击 *“安装”* 按钮，进行应用安装。~~
 
 ~~![Characterization14.png](Characterization14.png)~~
-~~ *（这个安装过程就不需要再介绍了吧……）* ~~
+~~*（这个安装过程就不需要再介绍了吧……）*~~
 
 ~~> 直到最近我才明白 *Microsoft Store* 应用详情页里的这个 *“由...提供和更新”* 的意思是 *Microsoft Store* 只管装上，不管更新和卸载。~~
 
-~~在成功安装火绒之后，~~打开 *系统托盘 - Windows 安全中心* 或  *设置 - 隐私和安全性 - 安全性 - Windows 安全中心* 进入到 *Windows 安全中心* ，在其中点击 *“病毒与威胁防护”* 按钮，在其页面中若出现安装的第三方安全软件提供保护，且点击 *“Microsoft Defender 防病毒选项”* 链接将其展开后， *“定期扫描”* 开关为 *“关”* ，则说明 *Microsoft Defender* 禁用成功。
+~~在成功安装火绒之后，~~ 打开 *系统托盘 - Windows 安全中心* 或  *设置 - 隐私和安全性 - 安全性 - Windows 安全中心* 进入到 *Windows 安全中心* ，在其中点击 *“病毒与威胁防护”* 按钮，在其页面中若出现安装的第三方安全软件提供保护，且点击 *“Microsoft Defender 防病毒选项”* 链接将其展开后， *“定期扫描”* 开关为 *“关”* ，则说明 *Microsoft Defender* 禁用成功。
 
 ![Characterization15.png](Characterization15.png)
 
@@ -424,7 +424,7 @@ Legion Go 512GB版本使用的是一块 *西部数据 SN740* M.2 2242 TLC SSD作
 
 ![Characterization51.png](Characterization51.png)
 
-> 20250323更新：由于 *西部数据* 和 *闪迪* 正式分家， *西部数据* 的前SSD部门（前前 *闪迪* SSD部门）正式回归 *闪迪* ， *“Western Digital Dashboard”* 软件正式结束支持周期，被 *Western Digital Kitfox* 替代：[Download, Install, Test Drive and Erase Using Western Digital Kitfox](https://support-en.wd.com/app/answers/detailweb/a_id/51537/)。已结束支持周期的 *西部数据* SSD将不会再接收固件更新。
+> 20250323更新：由于 *西部数据* 和 *闪迪* 正式分家， *西部数据* 的前SSD部门（前前 *闪迪* SSD部门）正式回归 *闪迪* ， *“Western Digital Dashboard”* 软件正式结束支持周期，被 *“Western Digital Kitfox”* 替代：[Download, Install, Test Drive and Erase Using Western Digital Kitfox](https://support-en.wd.com/app/answers/detailweb/a_id/51537/)。已结束支持周期的 *西部数据* SSD将不会再接收固件更新。
 
 如果在安装时选择使用中文安装，那么在看到安装程序显示 *“卸载成功！”* 便已成功安装。
 
@@ -583,8 +583,6 @@ Windows 11 23H2（20250114更新：24H2）并未将所有原 *控制面板* 中�
 从图中可以看出，电池在大部分时间下的输出功率在34W附近，平均为32.6W（除去日志开始和结束处没有启动游戏的时间）。以34W计，Legion Go在30W TDP下的续航时间为
 
 $$\frac{49.2Wh \cdot (100\\% - 5\\%)}{34W} = 1.375h = 85min$$
-
-// FIXME Github渲染
 
 约1小时25分钟。
 
@@ -1458,7 +1456,7 @@ BiliBili上已经有人写了 *Xenia* 的下载到游玩游戏的全过程，在
 
 ![Experience&Setup_Win11Emulator19.png](Experience&Setup_Win11Emulator19.png)  
 
-对于游戏的获取，可以通过以下文章从连接到PC的光驱上转储自己拥有的 *Xbox 360* 游戏光盘镜像。通过这种方式在模拟器上游玩镜像是不违法的。
+对于游戏的获取，可以阅读以下文章，从连接到PC的光驱上转储自己拥有的 *Xbox 360* 游戏光盘镜像。通过这种方式在模拟器上游玩镜像是不违法的。
 [Disc Dumping Guide (MPF) - Redump Wiki](http://wiki.redump.org/index.php?title=Microsoft_Xbox_and_Xbox_360_Dumping_Guide)
 
 Windows上的 *Xenia Canary* 十分小巧，仅不到20M的大小。首次运行 *Xenia Canary* 会弹出 *“No Profiles Found（没有找到用户资料）”* 窗口，点击 *“Create Profile（创建用户资料）”* 按钮，在弹出的 *“Create Profile”* 窗口中的 *“Gamertag（玩家代号）”* 中输入 *Xbox 玩家代号* ，并点击 *“Create（创建）”* 按钮。
@@ -1477,9 +1475,13 @@ Windows上的 *Xenia Canary* 十分小巧，仅不到20M的大小。首次运行
 
 “ *RPCS3* 是一款适用于 *索尼 PlayStation 3* 的免费开源模拟器，可在Windows、Linux、FreeBSD和macOS操作系统上运行，允许在PC上游玩和调试 *PlayStation 3* 游戏和软件。它采用C++编程语言开发，针对x86-64和ARM64 CPU，以OpenGL和Vulkan为后端渲染器。
 
-截至20250329，69.53%的 *PlayStation 3* 游戏被归类为“完全可玩”，这意味着原生库中的很大一部分游戏可以从头到尾畅玩，不会出现任何重大问题。”
+截至20250330，69.83%的 *PlayStation 3* 游戏被归类为“完全可玩”，这意味着原生库中的很大一部分游戏可以从头到尾畅玩，不会出现任何重大问题。”
 
 以上双引号（“”）内的部分文字来自于：[RPCS3 - Wikipedia](https://en.wikipedia.org/wiki/RPCS3)
+
+要查看 *RPCS3* 对某款游戏的兼容性，可以到其官方的 *“兼容性列表”* 网站：[RPCS3 - Compatibility List](https://rpcs3.net/compatibility)，在下方的搜索框内搜索游戏的关键词，按下 *“Enter（回车）键”* 发起检索。在下方的游戏搜索结果中，查看 *“Status（状态）”* 列对应的兼容情况。搜索栏上方给出了各种状态的解释。
+
+![Experience&Setup_Win11Emulator31.png](Experience&Setup_Win11Emulator31.png)  
 
 &ensp;&ensp;&ensp;&ensp;**e.1 下载和安装RPCS3**
 
@@ -1494,7 +1496,7 @@ Windows上的 *Xenia Canary* 十分小巧，仅不到20M的大小。首次运行
 
 &ensp;&ensp;&ensp;&ensp;**e.2 转储PlayStation 3游戏光盘**
 
-对于游戏的获取，可以通过以下文章从连接到PC的蓝光光驱上转储自己拥有的 *PlayStation 3* 游戏光盘镜像。通过这种方式在模拟器上游玩镜像是不违法的。[Help:Dumping PlayStation 3 games - RPCS3 Wiki](https://wiki.rpcs3.net/index.php?title=Help:Dumping_PlayStation_3_games#An_important_note_about_dumping_Disc_games_on_PC_with_Blu-ray_Disc_Drives)
+对于游戏的获取，可以阅读以下文章，从连接到PC的蓝光光驱上转储自己拥有的 *PlayStation 3* 游戏光盘镜像。通过这种方式在模拟器上游玩镜像是不违法的。[Help:Dumping PlayStation 3 games - RPCS3 Wiki](https://wiki.rpcs3.net/index.php?title=Help:Dumping_PlayStation_3_games#An_important_note_about_dumping_Disc_games_on_PC_with_Blu-ray_Disc_Drives)
 
 对于一些 *PlayStation 3* 游戏光盘，其中可能还包含了离线 *PlayStation 3* 升级固件和用于推广的试玩版游戏。以我拥有的这张《死亡空间™》 *PlayStation 3* 游戏光盘为例：在成功转储后，位于游戏文件夹内有两个文件夹：`PS3_GAME`和`PS3_UPDATE`，其中`PS3_GAME`文件夹内即是 *PlayStation 3* 游戏文件，`PS3_UPDATE`内则为离线 *PlayStation 3* 升级固件，可以删除以节省空间。打开`PS3_GAME`文件夹，然后打开`PKGDIR`文件夹，其中可能包含多个`PKG**`文件夹。依次打开这些文件夹，查看其中的.png图片是否与 *PlayStation 3* 游戏光盘相关；若不相关（如下图中《死亡空间™》 *PlayStation 3* 游戏光盘中附赠的是《战地风云：叛逆连队》和《火爆狂飙：天堂》的试玩版游戏），则可以依次删除。如果均不相关，则可以将整个`PKGDIR`文件夹删除以节省空间。以上操作均不会影响到游戏正常运行。
 
@@ -1518,7 +1520,7 @@ Windows上的 *Xenia Canary* 十分小巧，仅不到20M的大小。首次运行
 ![Experience&Setup_Win11Emulator25.png](Experience&Setup_Win11Emulator25.png)  
  *（无法截取 *“[ 等候 5 ]”* 字样的截图）* 
 
-> 也可在 *“游戏列表”* 中特定的游戏上 *“右键 - 建立自定义游戏控制器设置”* 来对特定游戏设定特定的
+> 也可在 *“游戏列表”* 中特定的游戏上 *“右键 - 建立自定义游戏控制器设置”* 来对特定游戏设定特定的映射设置。
 
  **游戏画面内FPS显示** ：点击 *RPCS3* 主界面中上方的工具栏中的 *“🎚️设置”* 按钮，在弹出的 *“设置”* 窗口中点击 *“模拟器”* 选项卡，调整右方的 *“性能监测”* 栏。以在左上角显示最基本的FPS为例：勾选 *“启用性能监测”* 复选框以启用性能监测显示，在 *“详细程度：”* 下拉菜单中选择性能监测的详细程度， *“最小”* 意味着只显示FPS数据；在 *“方位：”* 下拉菜单中选择性能监测位于屏幕的位置； *“水平边距”* 和 *“垂直边距”* 确定了性能监测位于屏幕据 *“方位：”* 的像素边距处； *“更新间隔：”* 为性能监测信息更新的间隔，其中1000毫秒=1秒。最后，点击右下角的 *“保存”* 按钮保存设置。
 
@@ -1532,9 +1534,23 @@ Windows上的 *Xenia Canary* 十分小巧，仅不到20M的大小。首次运行
 
 ![Experience&Setup_Win11Emulator30.png](Experience&Setup_Win11Emulator30.png)  
 
- **调整游戏渲染画质**：
+ **为游戏进行单独设置**：
+
+- 调整游戏渲染画质
 
 跟着这个BiliBili视频做即可：[【教你如何将RPCS3的画质调至最佳 三档分辨率分比演示】4K60帧_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Xp4y1H7oe/)
+
+- 调整键位映射
+
+见本子节“**手柄设置**”。
+
+- RPCS3社区维基给出的调试建议
+
+在前面官方的 *“兼容性列表”* 网站中，点击游戏搜索结果中的游戏名链接，可以进入到该 *PlayStation 3* 游戏在 *RPCS3* 维基中的页面。
+
+![Experience&Setup_Win11Emulator32.png](Experience&Setup_Win11Emulator32.png)  
+
+里面给出了如 *“Configuration（配置）”* 、 *“Known Issues（已知问题）”* 和 *“Special Notes（特别提示）”* 等节。
 
 &ensp;&ensp;&ensp;&ensp;**e.5 使用XMB界面**
 
@@ -1578,7 +1594,7 @@ Xbox PC游戏/Microsoft Store游戏对手柄的支持程度基于游戏本身对
 
 &ensp;&ensp;&ensp;&ensp;**Xbox PC游戏在非C盘下的默认安装位置**
 
-如果调整了 *Xbox App* 中的游戏默认安装位置（打开 *Xbox App* ，调整 *“档案和设置 - 设置 - 安装选项 - 游戏安装选项 - 更改此应用程序默认情况下安装游戏的位置”* ），则其会在位置的根目录下生成四个文件夹`Program Files`、`WindowsApps`、`WpSystem`和`XboxGames`。**如果该目录下已存在重名文件夹，则文件夹会被强制配置为 *UWP 应用* 的权限配置**，如假设根目录为`D:`，其中已存在`Program Files`文件夹，则无论里面有没有用户的文件，该文件夹会被设置为限制用户读取的权限。这也是我`Program Files (UWPfree)`文件夹名称的由来。
+如果调整了 *Xbox App* 中的游戏默认安装位置（打开 *Xbox App* ，调整 *“档案和设置 - 设置 - 安装选项 - 游戏安装选项 - 更改此应用程序默认情况下安装游戏的位置”* ），则其会在位置的根目录下生成四个文件夹`Program Files`、`WindowsApps`、`WpSystem`和`XboxGames`。 ~~**如果该目录下已存在重名文件夹，则文件夹会被强制配置为 *UWP 应用* 的权限配置**，如假设根目录为`D:`，其中已存在`Program Files`文件夹，则无论里面有没有用户的文件，用户都会丢失该文件夹的所有权。这也是我`Program Files (UWPfree)`文件夹名称的由来。~~ 20250330更新：经过3个月的观察，含有 *Microsoft Store* 应用的`Program Files`文件夹已不再强制用户丢失整个文件夹的所有权。
 
 ![Experience&Setup_Win11_40.png](Experience&Setup_Win11_40.png)  
 
@@ -2090,7 +2106,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ## 四、更换内置SSD、贴膜、自制脚垫
 
-我这款Legion Go自带的 *西部数据SN740 512G M.2 2242 SSD* 容量太小了，尤其是在想要装双系统的情况下。从 *Aliexpress* 上买了块 *西部数据SN740 2TB M.2 2230 SSD* ，打开 *CrystalDiskInfo* 一看，心凉半截，OEM盘0通电次数0小时通电时间，很难不怀疑是被清零过。插到台式机上测了一下，好家伙待机53°C，一跑测试马上跳90+°C，跑的过程中两次突破105°C直接把主控干重启两次，喜提两次0A（这还是在台式机里）（20241226更新：放到Legion Go里未合后盖测试，最高87°C，再次喜提三次0A，但未触发主控重启）：
+我这款Legion Go自带的 *西部数据SN740 512G M.2 2242 TLC SSD* 容量太小了，尤其是在想要装双系统的情况下。从 *Aliexpress* 上买了块 *西部数据SN740 2TB M.2 2230 TLC SSD* ，打开 *CrystalDiskInfo* 一看，心凉半截，OEM盘0通电次数0小时通电时间，很难不怀疑是被清零过。插到台式机上测了一下，好家伙待机53°C，一跑测试马上跳90+°C，跑的过程中两次突破105°C直接把主控干重启两次，喜提两次0A（这还是在台式机里）（20241226更新：放到Legion Go里未合后盖测试，最高87°C，再次喜提三次0A，但未触发主控重启）：
 
 ![WD%20PC%20SN740%20SDDPTQE-2T00%202048.4%20GB.png](WD%20PC%20SN740%20SDDPTQE-2T00%202048.4%20GB.png)  
 
@@ -2104,7 +2120,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ![Hardware_Modifications3.jpeg](Hardware_Modifications3.jpeg)
 
-在Legion Go内部视图（背部视角）的右侧，可以见到被石墨导热贴盖住的 *西部数据SN740 512G M.2 2242 SSD* 。该SSD被一层 *Mylar* 抗干扰薄膜覆盖，然后贴在上面的石墨导热片将热量传导到电池组支架上。我猜测电池组支架的作用是为了加强结构强度，但我觉得省下支架的空间增大电池容量或许是更好的选择，毕竟Legion Go有着x86掌机里数一数二的身板，但这个电池容量太，呃，对，“反直觉”了。
+在Legion Go内部视图（背部视角）的右侧，可以见到被石墨导热贴盖住的 *西部数据SN740 512G M.2 2242 TLC SSD* 。该SSD被一层 *Mylar* 抗干扰薄膜覆盖，然后贴在上面的石墨导热片将热量传导到电池组支架上。我猜测电池组支架的作用是为了加强结构强度，但我觉得省下支架的空间增大电池容量或许是更好的选择，毕竟Legion Go有着x86掌机里数一数二的身板，但这个电池容量太，呃，对，“反直觉”了。
 
 <img alt="Hardware_Modifications4.jpeg" src="Hardware_Modifications4.jpeg" width="40%" title="This image has been scaled to 40% of its original size."> 
 
@@ -2112,7 +2128,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 ![Hardware_Modifications8.png](Hardware_Modifications8.png)
 
-卸下的 *西部数据SN740 512G M.2 2242 SSD* （上）与买来的 *西部数据SN740 2TB M.2 2230 SSD* （下，加了2230 to 2242延长片）对比。这块2242的SSD是西数给联想的OEM定制款，应该是没有零售的。
+卸下的 *西部数据SN740 512G M.2 2242 TLC SSD* （上）与买来的 *西部数据SN740 2TB M.2 2230 TLC SSD* （下，加了2230 to 2242延长片）对比。这块2242的SSD是西数给联想的OEM定制款，应该是没有零售的。
 
 <img alt="Hardware_Modifications5.png" src="Hardware_Modifications5.png" width="40%" title="This image has been scaled to 40% of its original size."> 
 
@@ -2242,7 +2258,7 @@ Legion Go的 *TrueStrike 手柄* 有总共22个按键，却没有 *“Xbox键”
 
 要装机的PC的 C盘大小 ≈ (另一台PC C盘的已用大小 - 另一台PC C盘的页面交换空间 + 要装机的PC的内存大小) × 2
 
-这里另一台PC C盘的已用大小包含了Windows 11系统文件、我日常使用的装在C盘的软件、一些程序文档和另一台PC C盘的页面交换空间。因此，只要减去另一台PC C盘的页面交换空间，剩下的就差不多是我日常使用所需的C盘空间。另一台PC C盘的页面交换空间，即C盘根目录下的`hiberfil.sys`、`pagefile.sys`和`swapfile.sys`的总大小。该三个文件控制了Windows的休眠/快速启动转储页面空间、虚拟内存页面空间和交换页面空间。它们的总大小默认情况下由Windows自动控制，但会在4GB \~ 内存总大小之间频繁改变，但不会超过内存总大小。比如我另一台PC *“SIXGE-K3pro-V2”* 的内存是64GB，那么这三个文件的大小就在4 \~ 64之间改变。同理，加入要装机的PC的内存大小也是因为要装机的PC的 C盘中也会包含这3个文件，这里就以顶格计算了。
+这里另一台PC C盘的已用大小包含了Windows 11系统文件、我日常使用的装在C盘的软件、一些程序文档和另一台PC C盘的页面交换空间。因此，只要减去另一台PC C盘的页面交换空间，剩下的就差不多是我日常使用所需的C盘空间。另一台PC C盘的页面交换空间，即C盘根目录下的`hiberfil.sys`、`pagefile.sys`和`swapfile.sys`的总大小。该三个文件控制了Windows的休眠/快速启动转储页面空间、虚拟内存页面空间和交换页面空间。它们的总大小默认情况下由Windows自动控制，但会在4GB \~ 内存总大小之间频繁改变，但不会超过内存总大小。比如我另一台PC *“SIXGE-K3pro-V2”* 的内存是64GB，那么这三个文件的大小就在4 \~ 64GB之间改变。同理，加入要装机的PC的内存大小也是因为要装机的PC的 C盘中也会包含这3个文件，这里就以顶格计算了。
 
 以我为例，Legion Go的 C盘大小 ≈ ( *“SIXGE-K3pro-V2”* C盘的已用大小：133GB -  *“SIXGE-K3pro-V2”* C盘的页面交换空间：64GB + Legion Go的内存大小：16GB) × 2 = (133-64+16)×2 ≈ 160GB，取160是觉得数比170好看。
 
@@ -2409,7 +2425,7 @@ UEFI引导界面，下方会显示 *Bazzite* logo。
 
 ![Dual_Boot38.jpeg](Dual_Boot38.jpeg)  
 
-进入 *Bazzite 菜单* ，使用 *“RB键”* 导航到 *“Gamemode”* 项，然后使用 *“十字键”* 选中 *“Reboot into Windows（重启至Windows）”* ，按下 *“Xbox A键”* ，Legion Go将重启至Windows。在Windows重启后恢复启动到 *Bazzite* 系统。
+进入 *掌机精灵菜单* ，使用 *“RB键”* 导航到 *“Gamemode”* 项，然后使用 *“十字键”* 选中 *“Reboot into Windows（重启至Windows）”* ，按下 *“Xbox A键”* ，Legion Go将重启至Windows。在Windows重启后恢复启动到 *Bazzite* 系统。
 
 ![Dual_Boot39.jpeg](Dual_Boot39.jpeg)  
 
@@ -2810,7 +2826,7 @@ include themes/Fluent/theme.conf
 
 ![Dual_Boot81.jpeg](Dual_Boot81.jpeg)  
 
-#### *1 解决在Windows重启后rEFInd假死的问题 // TODO
+#### *1 解决在Windows重启后rEFInd假死的问题 // TODO：5月
 
 虽说安装完 *rEFInd* 后使用Linux各发行版是没什么问题了，但每次从Windows关机后，再次启动时， *rEFInd* 都会卡在界面上，任何输入都不好使。稍微搜索了一下，这个回答给出了答案：[PSA: Disable Fast Startup and Hibernation in Windows : r/linux4noobs](https://www.reddit.com/r/linux4noobs/comments/ucn1v7/comment/i6cab6h/)，写道：“（Windows 快速启动）让硬件处于初始化后的状态，而 Linux 驱动程序可能无法解决这个问题。它们认为硬件是未初始化的。”
 
@@ -2855,7 +2871,7 @@ sudo rm -rf /boot/efi/EFI/fedora/ && sudo dnf -y update grub2*
 
 这样就解决了 *Grub2* 更新的问题，再次执行本大节初对 *Nobara* 中进行系统更新的操作，就可以正常进行了。
 
-> 究其原因，还是因为在安装了 *rEFInd* 和其主题之后的EFI分区基本被撑满了，而Linux中对引导管理器 *Grub2* 的更新策略是先复制进EFI分区再替换的方式，如果剩余空间不足，则无法进行复制。这常常发生在如本文中这样先安装Windows再安装Linux发行版双系统的情况下，因为Windows默认会给EFI分区分仅100MB的空间，而Linux各发行版则普遍选择给EFI分区分512MB的空间，最好的解决方案是给EFI分区扩容，而这在先进行Windows安装的情况下还墨迹一点，因为有MSR分区的存在。所以我这里就又犯懒了，等哪天这种更新方式也失效的时候，就得又请出 *DiskGenius* 来，到时候再更吧。
+> 究其原因，还是因为在安装了 *rEFInd* 和其主题之后的EFI分区基本被撑满了，而Linux中对引导管理器 *Grub2* 的更新策略是先复制进EFI分区再替换的方式，如果剩余空间不足，则无法进行复制。这常常发生在如本文中这样先安装Windows再安装Linux发行版双系统的情况下，因为Windows默认会给EFI分区分仅100MB的空间，而Linux各发行版则普遍选择给EFI分区分512MB的空间，最好的解决方案是给EFI分区扩容，而这在先进行Windows安装的情况下还墨迹一点，因为有MSR分区的存在。所以我这里就又犯懒了，等哪天这种更新方式也失效的时候，就得又请出 *DiskGenius* 来，到时候再更吧。// TODO：5月
 
 ### 9. 在Windows中清除Linux安装分区
 
