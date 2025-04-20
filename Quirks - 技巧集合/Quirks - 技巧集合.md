@@ -1,6 +1,6 @@
 # 技巧集合
 
-*版本：1.3; This article is not available in English.*
+*版本：1.4; This article is not available in English.*
 
 一些杂七杂八的小技巧合集，主要是怕忘了，哪天可以捡起来接着看。
 
@@ -19,6 +19,7 @@
 [跳过Windows 11 OOBE时的登入微软账户需求](#跳过windows-11-oobe时的登入微软账户需求)  
 [把另一台Windows PC的注册表迁移到本地的Windows PC中（用本地Windows PC的注册表编辑器读取另一台Windows PC的注册表）](#把另一台windows-pc的注册表迁移到本地的windows-pc中用本地windows-pc的注册表编辑器读取另一台windows-pc的注册表)  
 [备份Windows激活密钥](#备份windows激活密钥)
+[Windows的“启动”文件夹路径](#windows的启动文件夹路径)
 
 ### Andriod
 
@@ -29,6 +30,7 @@
 [MIUI线刷降级报错MiFlash update sparse crc list failed](#miui线刷降级报错miflash-update-sparse-crc-list-failed)  
 [MIUI云控的一些讨论](#miui云控的一些讨论)  
 [监控哪些安卓应用在内部存储空间拉屎](#监控哪些安卓应用在内部存储空间拉屎)  
+[安卓以特定ABI安装APK](#安卓以特定abi安装apk)
 
 ### 虚拟机与跨平台
 
@@ -213,3 +215,33 @@ Windows Registry Editor Version 5.00
 ## 备份Windows激活密钥
 
 参见《[联想Legion Go使用体验和自定义](../Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义/Lenovo%20Legion%20Go%20Experience%20and%20Customization%20-%20联想Legion%20Go使用体验和自定义.md)》中的 *五、2.\*2* 。
+
+## Windows的“启动”文件夹路径
+
+在 Windows 系统中，“启动”文件夹有两个常用路径，一个是针对当前用户的，另一个是针对所有用户的。
+
+1. 针对当前用户的“启动”文件夹路径：
+   ```
+   %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
+   ```
+   通常可以通过在文件资源管理器的地址栏中输入 `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup` 来直接访问。
+
+2. 针对所有用户的“启动”文件夹路径：
+   ```
+   C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
+   ```
+   这个文件夹包含所有用户的启动项。
+
+也可以通过在运行对话框中输入 `shell:startup` 直接打开当前用户的“启动”文件夹。
+
+## 安卓以特定ABI安装APK
+
+1. 安装Termux。
+2. ```Shell
+   pkg update
+   pkg install android-tools
+   termux-setup-storage
+   adb devices
+   cd /storage/emulated/0/Download/
+   adb install --abi arm64-v8a <App>.apk
+   ```
